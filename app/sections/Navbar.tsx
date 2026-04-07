@@ -50,7 +50,7 @@ export function Navbar() {
               )}
               whileHover={{ scale: 1.02 }}
             >
-              LifePath
+              DENTALO
             </motion.a>
 
             {/* Desktop Navigation */}

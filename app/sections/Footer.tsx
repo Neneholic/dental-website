@@ -134,14 +134,14 @@ export function Footer() {
               WebkitTextStroke: '1px rgba(255,255,255,0.1)',
             }}
           >
-            LifePath
+            DENTALO
           </motion.h2>
         </motion.div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} LifePath. All rights reserved.
+            © {new Date().getFullYear()} DENTALO. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">

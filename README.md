@@ -1,4 +1,4 @@
-# Dental Website - LifePath
+# Dental Website - DENTALO
 
 Sitio web moderno para clínica dental con animaciones fluidas usando Framer Motion y base de datos PostgreSQL en Neon.
 
@@ -142,7 +142,7 @@ git push -u origin main
 ## 📝 Personalización
 
 ### Cambiar Logo
-Reemplaza el texto "LifePath" en:
+Reemplaza el texto "DENTALO" en:
 - `app/sections/Navbar.tsx`
 - `app/sections/Footer.tsx`
 

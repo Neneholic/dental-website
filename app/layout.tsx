@@ -9,11 +9,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "LifePath Dental - Seamless Dental Care",
+  title: "DENTALO - Cuidado Dental sin Esfuerzo",
   description: "Professional dental services with experienced professionals. Book your appointment today for a brighter smile.",
   keywords: ["dental", "dentist", "dental care", "teeth cleaning", "root canal", "oral surgery"],
   openGraph: {
-    title: "LifePath Dental - Seamless Dental Care",
+    title: "DENTALO - Cuidado Dental sin Esfuerzo",
     description: "Professional dental services with experienced professionals.",
     type: "website",
   },
