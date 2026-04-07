@@ -1,36 +1,159 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dental Website - LifePath
 
-## Getting Started
+Sitio web moderno para clínica dental con animaciones fluidas usando Framer Motion y base de datos PostgreSQL en Neon.
 
-First, run the development server:
+## 🛠️ Stack Tecnológico
+
+- **Next.js 14** - Framework React
+- **TypeScript** - Tipado estático
+- **Tailwind CSS** - Estilos utilitarios
+- **Framer Motion** - Animaciones
+- **Prisma** - ORM para base de datos
+- **Neon** - PostgreSQL serverless
+- **Vercel** - Hosting
+
+## 🚀 Inicio Rápido
+
+### 1. Clonar y Instalar
+
+```bash
+git clone <tu-repo>
+cd dental-website
+npm install
+```
+
+### 2. Configurar Variables de Entorno
+
+Crea un archivo `.env.local`:
+
+```env
+DATABASE_URL="postgresql://usuario:password@host.neon.tech/database?sslmode=require"
+```
+
+Obtén el connection string desde tu dashboard de [Neon](https://neon.tech).
+
+### 3. Configurar Base de Datos
+
+```bash
+# Generar cliente Prisma
+npx prisma generate
+
+# Crear migraciones
+npx prisma migrate dev --name init
+
+# (Opcional) Abrir Prisma Studio
+npx prisma studio
+```
+
+### 4. Desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estructura del Proyecto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── sections/          # Secciones de la página
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Services.tsx
+│   ├── Works.tsx
+│   ├── Consultation.tsx
+│   ├── Testimonials.tsx
+│   ├── Blog.tsx
+│   └── Footer.tsx
+├── components/        # Componentes reutilizables
+│   ├── AnimatedSection.tsx
+│   ├── AnimatedCounter.tsx
+│   └── MagneticButton.tsx
+├── hooks/             # Hooks personalizados
+├── lib/               # Utilidades y DB
+├── api/               # API Routes
+└── globals.css        # Estilos globales
 
-## Learn More
+prisma/
+└── schema.prisma      # Esquema de base de datos
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Animaciones Implementadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Navbar**: Slide down, blur en scroll, mobile menu
+- **Hero**: Split text, Ken Burns, botón magnético
+- **About**: Parallax en imágenes, contador animado
+- **Services**: Tarjetas con lift-up hover
+- **Works**: Color reveal, mask clip-path
+- **Testimonials**: Carrusel, estrellas stagger
+- **Blog**: Image zoom hover
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 API Endpoints
 
-## Deploy on Vercel
+### POST /api/appointments
+Crea una nueva cita en la base de datos.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Body:**
+```json
+{
+  "name": "string",
+  "email": "string",
+  "phone": "string?",
+  "service": "string?",
+  "date": "ISO date?",
+  "message": "string?"
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deploy en Vercel
+
+### Opción 1: Dashboard
+1. Ve a [vercel.com](https://vercel.com)
+2. Importa tu repo de GitHub
+3. Configura la variable `DATABASE_URL`
+4. Deploy!
+
+### Opción 2: CLI
+```bash
+npm i -g vercel
+vercel
+```
+
+## ⚙️ Configuración GitHub
+
+El proyecto ya está inicializado con git. Para conectar a tu cuenta:
+
+```bash
+# Crear repo en GitHub (si no existe)
+gh repo create dental-website --public --source=. --remote=origin
+
+# O conectar repo existente
+git remote add origin https://github.com/TU_USUARIO/dental-website.git
+
+# Push inicial
+git add .
+git commit -m "Initial commit - dental website"
+git branch -M main
+git push -u origin main
+```
+
+## 📝 Personalización
+
+### Cambiar Logo
+Reemplaza el texto "LifePath" en:
+- `app/sections/Navbar.tsx`
+- `app/sections/Footer.tsx`
+
+### Cambiar Colores
+Edita los colores en Tailwind:
+- Fondos pastel: `#FDF8F3`, `#D4E4D1`, `#E8D5F2`
+- Tarjetas: `#F5D5A8`, `#E8D5F2`, `#B8D4E8`
+
+### Agregar Imágenes Reales
+Reemplaza las URLs de Unsplash en cada sección con imágenes locales en `public/images/`.
+
+## 📄 Licencia
+
+MIT
