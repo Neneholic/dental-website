@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { AnimatedCounter } from '../components/AnimatedCounter'
 import { MagneticButton } from '../components/MagneticButton'
@@ -14,6 +15,7 @@ const images = [
 ]
 
 export function About() {
+  const t = useTranslations('about')
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -54,7 +56,7 @@ export function About() {
             <div className="flex flex-col gap-4">
               <AnimatedSection delay={0.3} className="text-center py-4">
                 <span className="text-sm text-gray-500 tracking-wider uppercase">
-                  (about us)
+                  {t('label')}
                 </span>
               </AnimatedSection>
 
@@ -101,7 +103,7 @@ export function About() {
                   <AnimatedCounter target={98} suffix="%" />
                 </div>
                 <div className="text-sm text-gray-600">
-                  Client satisfaction<br />with our service
+                  {t('statLabel')}
                 </div>
               </motion.div>
             </motion.div>
@@ -111,21 +113,19 @@ export function About() {
           <div className="order-1 lg:order-2 lg:pl-8">
             <AnimatedSection>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                A Simple Way to Save on Dental Care
+                {t('title')}
               </h2>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Our team of skilled and experienced dental professionals strives
-                to create comfortable and welcoming environment for each and
-                every patient. We offer a wide range of services.
+                {t('description')}
               </p>
             </AnimatedSection>
 
             <AnimatedSection delay={0.4}>
               <MagneticButton className="group inline-flex items-center gap-3 bg-gray-900 text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-colors">
-                Book Appointment
+                {t('cta')}
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1 transition-transform"

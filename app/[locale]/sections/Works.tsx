@@ -2,27 +2,18 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { MagneticButton } from '../components/MagneticButton'
 
-const works = [
-  {
-    id: 1,
-    title: 'Teeth Straightening',
-    description: 'Improve your smile with cleaning.',
-    image:
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=500&q=80',
-  },
-  {
-    id: 2,
-    title: 'Dental Implant',
-    description: 'Improve your smile with cleaning.',
-    image:
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=500&q=80',
-  },
+const images = [
+  'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=500&q=80',
+  'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=500&q=80',
 ]
 
 export function Works() {
+  const t = useTranslations('works')
+
   return (
     <section className="py-24 md:py-32 bg-[#D4E4D1] rounded-3xl mx-4 sm:mx-6 lg:mx-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,18 +22,16 @@ export function Works() {
           <div>
             <AnimatedSection>
               <span className="text-sm text-gray-600 tracking-wider uppercase mb-4 block">
-                (our works)
+                {t('label')}
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Services We Provide Are Listed Below
+                {t('title')}
               </h2>
               <p className="text-gray-700 mb-8 max-w-md">
-                Our team of skilled and experienced dental professionals
-                strives to create comfortable and welcoming environment for
-                each.
+                {t('description')}
               </p>
               <MagneticButton className="group inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
-                Book Appointment
+                {t('cta')}
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1 transition-transform"
@@ -91,7 +80,7 @@ export function Works() {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-gray-900">10K+</div>
-                  <div className="text-sm text-gray-600">happy member</div>
+                  <div className="text-sm text-gray-600">{t('happyMembers')}</div>
                 </div>
               </div>
             </AnimatedSection>
@@ -99,9 +88,12 @@ export function Works() {
 
           {/* Right - Work Cards */}
           <div className="grid sm:grid-cols-2 gap-6">
-            {works.map((work, index) => (
+            {[
+              { title: t('teethStraightening'), desc: t('improveSmile'), img: images[0] },
+              { title: t('dentalImplant'), desc: t('improveSmile'), img: images[1] },
+            ].map((work, index) => (
               <motion.div
-                key={work.id}
+                key={work.title}
                 initial={{ opacity: 0, y: 50, clipPath: 'inset(100% 0 0 0)' }}
                 whileInView={{ opacity: 1, y: 0, clipPath: 'inset(0% 0 0 0)' }}
                 viewport={{ once: true }}
@@ -114,7 +106,7 @@ export function Works() {
               >
                 <div className="relative rounded-2xl overflow-hidden mb-4">
                   <motion.img
-                    src={work.image}
+                    src={work.img}
                     alt={work.title}
                     className="w-full h-64 object-cover"
                     whileHover={{ scale: 1.05 }}
@@ -137,7 +129,7 @@ export function Works() {
                 <h3 className="text-xl font-bold text-gray-900 mb-1">
                   {work.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{work.description}</p>
+                <p className="text-gray-600 text-sm">{work.desc}</p>
               </motion.div>
             ))}
           </div>

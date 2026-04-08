@@ -2,19 +2,17 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phone, Menu, X } from 'lucide-react'
+import { Phone, Menu, X, Globe } from 'lucide-react'
+import { useTranslations, useLocale } from 'next-intl'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { MagneticButton } from '../components/MagneticButton'
 import { cn } from '../lib/utils'
 
-const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Product', href: '#services' },
-  { name: 'Services', href: '#services' },
-  { name: 'Appointment', href: '#contact' },
-]
-
 export function Navbar() {
+  const t = useTranslations('nav')
+  const locale = useLocale()
+  const pathname = usePathname()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -25,6 +23,17 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const navLinks = [
+    { name: t('home'), href: '#home' },
+    { name: t('about'), href: '#about' },
+    { name: t('product'), href: '#services' },
+    { name: t('services'), href: '#services' },
+    { name: t('appointment'), href: '#contact' },
+  ]
+
+  const switchLocale = locale === 'es' ? 'en' : 'es'
+  const newPath = pathname.replace(`/${locale}`, `/${switchLocale}`)
 
   return (
     <>
@@ -88,8 +97,22 @@ export function Navbar() {
               ))}
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
+            {/* CTA Button & Language Switch */}
+            <div className="hidden md:flex items-center gap-3">
+              {/* Language Switch */}
+              <Link
+                href={newPath}
+                className={cn(
+                  'flex items-center gap-1 px-3 py-2 rounded-full text-sm font-medium transition-colors',
+                  isScrolled
+                    ? 'text-gray-700 hover:bg-gray-100'
+                    : 'text-white hover:bg-white/20'
+                )}
+              >
+                <Globe size={16} />
+                {locale === 'es' ? 'EN' : 'ES'}
+              </Link>
+
               <MagneticButton
                 className={cn(
                   'flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all',
@@ -99,7 +122,7 @@ export function Navbar() {
                 )}
               >
                 <Phone size={16} />
-                Call Now
+                {t('callNow')}
               </MagneticButton>
             </div>
 
@@ -150,6 +173,17 @@ export function Navbar() {
                     {link.name}
                   </motion.a>
                 ))}
+                
+                {/* Language Switch Mobile */}
+                <Link
+                  href={newPath}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-2 text-lg font-medium text-gray-900 py-3 border-b border-gray-100"
+                >
+                  <Globe size={20} />
+                  {locale === 'es' ? 'Switch to English' : 'Cambiar a Español'}
+                </Link>
+
                 <motion.button
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -157,7 +191,7 @@ export function Navbar() {
                   className="mt-4 flex items-center justify-center gap-2 w-full px-5 py-3 bg-gray-900 text-white rounded-full font-medium"
                 >
                   <Phone size={18} />
-                  Call Now
+                  {t('callNow')}
                 </motion.button>
               </div>
             </motion.div>

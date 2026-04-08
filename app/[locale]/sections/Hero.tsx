@@ -2,10 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { MagneticButton } from '../components/MagneticButton'
 
 export function Hero() {
-  const titleWords = ['Seamless', 'Dental', 'Care']
+  const t = useTranslations('hero')
+  
+  const titleWords = [t('title1'), t('title2'), t('title3')]
 
   return (
     <section
@@ -77,8 +80,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Whether it&apos;s a leaky faucet or a major plumbing emergency, our
-            experienced professionals are just a call away
+            {t('subtitle')}
           </motion.p>
 
           {/* CTA Button */}
@@ -93,7 +95,7 @@ export function Hero() {
             }}
           >
             <MagneticButton className="group inline-flex items-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-full font-medium text-lg hover:bg-gray-100 transition-colors shadow-2xl">
-              Book Appointment
+              {t('cta')}
               <motion.span
                 className="inline-block"
                 whileHover={{ x: 4 }}

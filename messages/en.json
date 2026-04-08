@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "title": "DENTALO - Seamless Dental Care",
+    "description": "Professional dental services with experienced professionals. Book your appointment today for a brighter smile."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "product": "Product",
+    "services": "Services",
+    "appointment": "Appointment",
+    "callNow": "Call Now"
+  },
+  "hero": {
+    "title1": "Seamless",
+    "title2": "Dental",
+    "title3": "Care",
+    "subtitle": "Whether it's a routine checkup or a major dental emergency, our experienced professionals are just a call away",
+    "cta": "Book Appointment"
+  },
+  "about": {
+    "label": "(about us)",
+    "title": "A Simple Way to Save on Dental Care",
+    "description": "Our team of skilled and experienced dental professionals strives to create comfortable and welcoming environment for each and every patient. We offer a wide range of services.",
+    "cta": "Book Appointment",
+    "statNumber": "98%",
+    "statLabel": "Client satisfaction with our service",
+    "happyMembers": "10K+ happy member"
+  },
+  "services": {
+    "title": "Services We Provide Are Listed Below",
+    "description": "The blocks & components you need to build a professional website are based drivers.",
+    "cta": "Book Appointment",
+    "ourServices": "our services",
+    "cavityProtection": {
+      "title": "Cavity Protection",
+      "description": "As we move into this new era of technology, we tend to look at the future with confidence and pride, which is why our theme.",
+      "readMore": "Read More"
+    },
+    "rootCanal": {
+      "title": "Root Canal Treatment",
+      "description": "In the new era of technology we look in the future with certainty and pride, that's why our theme looks so good.",
+      "readMore": "Read More"
+    },
+    "oralSurgery": {
+      "title": "Oral Surgery",
+      "description": "In the new era of technology we look in the future with certainty and pride, that's why our theme looks so good.",
+      "readMore": "Read More"
+    }
+  },
+  "works": {
+    "label": "(our works)",
+    "title": "Services We Provide Are Listed Below",
+    "description": "Our team of skilled and experienced dental professionals strives to create comfortable and welcoming environment for each.",
+    "cta": "Book Appointment",
+    "teethStraightening": "Teeth Straightening",
+    "dentalImplant": "Dental Implant",
+    "improveSmile": "Improve your smile with cleaning."
+  },
+  "consultation": {
+    "label": "(cost care)",
+    "title": "Doctor Consultations Are 🧑‍⚕️ Free & Trusted",
+    "description": "Team carefully evaluates your results to provide actionable insights for improving your health & lifespan.",
+    "cta": "Book Appointment",
+    "statNumber": "98%",
+    "statLabel": "Client satisfaction with our service",
+    "detailedDescription": "Take control of your health with a comprehensive assessment unlike any other. We use the latest medical innovations, including next-generation MRI, cardiovascular & neurocognitive assessments, early cancer detection, and genetic testing."
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "description": "Team carefully evaluates your results to provide actionable insights for improving your health & lifespan.",
+    "review1": {
+      "title": "Schedules that work for you",
+      "content": "Our visual designer lets you quickly an of drag and drop your own way to custom-apps for both keep desktop, mobile & also tab for report.",
+      "author": "Kevin Martin"
+    },
+    "review2": {
+      "title": "Health screenings for seniors",
+      "content": "Our visual designer lets you quickly an of drag and drop your own way to custom-apps for both keep desktop, mobile & also tab for report.",
+      "author": "Kevin Martin"
+    },
+    "review3": {
+      "title": "Seniors stay independent",
+      "content": "Our visual designer lets you quickly an of drag and drop your own way to custom-apps for both keep desktop, mobile & also tab for report.",
+      "author": "Kevin Martin"
+    }
+  },
+  "blog": {
+    "title": "Latest Insights",
+    "articleTitle": "Medicare And Long Term Care",
+    "articleExcerpt": "As seniors age, understanding Medicare and the range of long-term care options becomes. Many families are unsure which services"
+  },
+  "footer": {
+    "newsletter": "Offerings From Bright News & Social",
+    "placeholder": "Your Email",
+    "company": "Company",
+    "mission": "Mission",
+    "social": "Social",
+    "copyright": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

@@ -2,49 +2,52 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { MagneticButton } from '../components/MagneticButton'
 
-const services = [
-  {
-    id: 1,
-    title: 'Cavity Protection',
-    description:
-      'As we move into this new era of technology, we tend to look at the future with confidence and pride, which is why our theme.',
-    color: 'bg-[#F5D5A8]',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-        <path d="M12 2C9.5 2 7.5 3.5 7.5 5.5c0 1.5.8 2.8 2 3.5-.5 1.5-1.5 2.5-2.5 3-1 .5-2 0-2.5-.5-.5 1-1 2.5-.5 4 .5 1.5 2 2.5 3.5 2.5 2 0 3.5-1.5 4-3.5.5 2 2 3.5 4 3.5 1.5 0 3-1 3.5-2.5.5-1.5 0-3-.5-4-.5.5-1.5 1-2.5.5-1-.5-2-1.5-2.5-3 1.2-.7 2-2 2-3.5 0-2-2-3.5-4.5-3.5z" />
-      </svg>
-    ),
-  },
-  {
-    id: 2,
-    title: 'Root Canal Treatment',
-    description:
-      "In the new era of technology we look in the future with certainty and pride, that's why our theme looks so good.",
-    color: 'bg-[#E8D5F2]',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-        <path d="M12 2C9.5 2 7.5 3.5 7.5 5.5c0 1.5.8 2.8 2 3.5-.5 1.5-1.5 2.5-2.5 3-1 .5-2 0-2.5-.5-.5 1-1 2.5-.5 4 .5 1.5 2 2.5 3.5 2.5 2 0 3.5-1.5 4-3.5.5 2 2 3.5 4 3.5 1.5 0 3-1 3.5-2.5.5-1.5 0-3-.5-4-.5.5-1.5 1-2.5.5-1-.5-2-1.5-2.5-3 1.2-.7 2-2 2-3.5 0-2-2-3.5-4.5-3.5z" />
-      </svg>
-    ),
-  },
-  {
-    id: 3,
-    title: 'Oral Surgery',
-    description:
-      "In the new era of technology we look in the future with certainty and pride, that's why our theme looks so good.",
-    color: 'bg-[#B8D4E8]',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-        <path d="M12 2C9.5 2 7.5 3.5 7.5 5.5c0 1.5.8 2.8 2 3.5-.5 1.5-1.5 2.5-2.5 3-1 .5-2 0-2.5-.5-.5 1-1 2.5-.5 4 .5 1.5 2 2.5 3.5 2.5 2 0 3.5-1.5 4-3.5.5 2 2 3.5 4 3.5 1.5 0 3-1 3.5-2.5.5-1.5 0-3-.5-4-.5.5-1.5 1-2.5.5-1-.5-2-1.5-2.5-3 1.2-.7 2-2 2-3.5 0-2-2-3.5-4.5-3.5z" />
-      </svg>
-    ),
-  },
-]
-
 export function Services() {
+  const t = useTranslations('services')
+
+  const services = [
+    {
+      id: 1,
+      title: t('cavityProtection.title'),
+      description: t('cavityProtection.description'),
+      readMore: t('cavityProtection.readMore'),
+      color: 'bg-[#F5D5A8]',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+          <path d="M12 2C9.5 2 7.5 3.5 7.5 5.5c0 1.5.8 2.8 2 3.5-.5 1.5-1.5 2.5-2.5 3-1 .5-2 0-2.5-.5-.5 1-1 2.5-.5 4 .5 1.5 2 2.5 3.5 2.5 2 0 3.5-1.5 4-3.5.5 2 2 3.5 4 3.5 1.5 0 3-1 3.5-2.5.5-1.5 0-3-.5-4-.5.5-1.5 1-2.5.5-1-.5-2-1.5-2.5-3 1.2-.7 2-2 2-3.5 0-2-2-3.5-4.5-3.5z" />
+        </svg>
+      ),
+    },
+    {
+      id: 2,
+      title: t('rootCanal.title'),
+      description: t('rootCanal.description'),
+      readMore: t('rootCanal.readMore'),
+      color: 'bg-[#E8D5F2]',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+          <path d="M12 2C9.5 2 7.5 3.5 7.5 5.5c0 1.5.8 2.8 2 3.5-.5 1.5-1.5 2.5-2.5 3-1 .5-2 0-2.5-.5-.5 1-1 2.5-.5 4 .5 1.5 2 2.5 3.5 2.5 2 0 3.5-1.5 4-3.5.5 2 2 3.5 4 3.5 1.5 0 3-1 3.5-2.5.5-1.5 0-3-.5-4-.5.5-1.5 1-2.5.5-1-.5-2-1.5-2.5-3 1.2-.7 2-2 2-3.5 0-2-2-3.5-4.5-3.5z" />
+        </svg>
+      ),
+    },
+    {
+      id: 3,
+      title: t('oralSurgery.title'),
+      description: t('oralSurgery.description'),
+      readMore: t('oralSurgery.readMore'),
+      color: 'bg-[#B8D4E8]',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+          <path d="M12 2C9.5 2 7.5 3.5 7.5 5.5c0 1.5.8 2.8 2 3.5-.5 1.5-1.5 2.5-2.5 3-1 .5-2 0-2.5-.5-.5 1-1 2.5-.5 4 .5 1.5 2 2.5 3.5 2.5 2 0 3.5-1.5 4-3.5.5 2 2 3.5 4 3.5 1.5 0 3-1 3.5-2.5.5-1.5 0-3-.5-4-.5.5-1.5 1-2.5.5-1-.5-2-1.5-2.5-3 1.2-.7 2-2 2-3.5 0-2-2-3.5-4.5-3.5z" />
+        </svg>
+      ),
+    },
+  ]
+
   return (
     <section id="services" className="py-24 md:py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,17 +55,16 @@ export function Services() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16">
           <AnimatedSection>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight max-w-md">
-              Services We Provide Are Listed Below
+              {t('title')}
             </h2>
           </AnimatedSection>
 
           <AnimatedSection delay={0.2} className="mt-6 lg:mt-0 lg:text-right">
             <p className="text-gray-600 max-w-sm mb-6">
-              The blocks & components you need to build a professional website
-              are based drivers.
+              {t('description')}
             </p>
             <MagneticButton className="group inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
-              Book Appointment
+              {t('cta')}
               <ArrowRight
                 size={18}
                 className="group-hover:translate-x-1 transition-transform"
@@ -76,7 +78,7 @@ export function Services() {
           {/* Vertical Label */}
           <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap z-10">
             <span className="text-xs tracking-[0.3em] text-gray-400 uppercase">
-              our services
+              {t('ourServices')}
             </span>
           </div>
 
@@ -118,7 +120,7 @@ export function Services() {
                 whileHover="hover"
               >
                 <span className="relative">
-                  Read More
+                  {service.readMore}
                   <motion.span
                     className="absolute bottom-0 left-0 h-0.5 bg-gray-900"
                     initial={{ width: 0 }}

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -8,25 +7,17 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export const metadata: Metadata = {
-  title: "DENTALO - Cuidado Dental sin Esfuerzo",
-  description: "Professional dental services with experienced professionals. Book your appointment today for a brighter smile.",
-  keywords: ["dental", "dentist", "dental care", "teeth cleaning", "root canal", "oral surgery"],
-  openGraph: {
-    title: "DENTALO - Cuidado Dental sin Esfuerzo",
-    description: "Professional dental services with experienced professionals.",
-    type: "website",
-  },
-};
-
+// Root layout doesn't need metadata as it's handled by [locale]/layout.tsx
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className={`${inter.className} antialiased`}>{children}</body>
+    <html className={inter.variable}>
+      <body className={`${inter.className} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "title": "DENTALO - Cuidado Dental sin Esfuerzo",
+    "description": "Servicios dentales profesionales con expertos calificados. Reserva tu cita hoy para una sonrisa más brillante."
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "product": "Producto",
+    "services": "Servicios",
+    "appointment": "Cita",
+    "callNow": "Llama Ahora"
+  },
+  "hero": {
+    "title1": "Cuidado",
+    "title2": "Dental",
+    "title3": "Perfecto",
+    "subtitle": "Ya sea un chequeo de rutina o una emergencia dental mayor, nuestros profesionales experimentados están a solo una llamada de distancia",
+    "cta": "Reservar Cita"
+  },
+  "about": {
+    "label": "(sobre nosotros)",
+    "title": "Una Forma Sencilla de Ahorrar en Cuidado Dental",
+    "description": "Nuestro equipo de profesionales dentales calificados y experimentados se esfuerza por crear un ambiente cómodo y acogedor para cada paciente. Ofrecemos una amplia gama de servicios.",
+    "cta": "Reservar Cita",
+    "statNumber": "98%",
+    "statLabel": "Satisfacción del cliente con nuestro servicio",
+    "happyMembers": "10K+ miembros felices"
+  },
+  "services": {
+    "title": "Servicios que Ofrecemos",
+    "description": "Los bloques y componentes que necesitas para construir un sitio web profesional son impulsores clave.",
+    "cta": "Reservar Cita",
+    "ourServices": "nuestros servicios",
+    "cavityProtection": {
+      "title": "Protección contra Caries",
+      "description": "A medida que avanzamos en esta nueva era de tecnología, tendemos a mirar el futuro con confianza y orgullo, por eso nuestro tema.",
+      "readMore": "Leer Más"
+    },
+    "rootCanal": {
+      "title": "Tratamiento de Conducto",
+      "description": "En la nueva era de la tecnología miramos el futuro con certeza y orgullo, por eso nuestro tema se ve tan bien.",
+      "readMore": "Leer Más"
+    },
+    "oralSurgery": {
+      "title": "Cirugía Oral",
+      "description": "En la nueva era de la tecnología miramos el futuro con certeza y orgullo, por eso nuestro tema se ve tan bien.",
+      "readMore": "Leer Más"
+    }
+  },
+  "works": {
+    "label": "(nuestros trabajos)",
+    "title": "Servicios que Ofrecemos",
+    "description": "Nuestro equipo de profesionales dentales calificados y experimentados se esfuerza por crear un ambiente cómodo y acogedor para cada paciente.",
+    "cta": "Reservar Cita",
+    "teethStraightening": "Alineación Dental",
+    "dentalImplant": "Implante Dental",
+    "improveSmile": "Mejora tu sonrisa con limpieza."
+  },
+  "consultation": {
+    "label": "(cuidado económico)",
+    "title": "Consultas con Doctores son 🧑‍⚕️ Gratis y Confiables",
+    "description": "El equipo evalúa cuidadosamente tus resultados para proporcionar información procesable para mejorar tu salud y longevidad.",
+    "cta": "Reservar Cita",
+    "statNumber": "98%",
+    "statLabel": "Satisfacción del cliente con nuestro servicio",
+    "detailedDescription": "Toma el control de tu salud con una evaluación integral como ninguna otra. Utilizamos las últimas innovaciones médicas, incluyendo MRI de próxima generación, evaluaciones cardiovasculares y neurocognitivas, detección temprana de cáncer y pruebas genéticas."
+  },
+  "testimonials": {
+    "title": "Lo que Dicen Nuestros Clientes",
+    "description": "El equipo evalúa cuidadosamente tus resultados para proporcionar información procesable para mejorar tu salud y longevidad.",
+    "review1": {
+      "title": "Horarios que funcionan para ti",
+      "content": "Nuestro diseñador visual te permite rápidamente arrastrar y soltar tu propia forma de crear aplicaciones personalizadas que mantienen escritorio, móvil y también tabletas para reportes.",
+      "author": "Kevin Martin"
+    },
+    "review2": {
+      "title": "Evaluaciones de salud para adultos mayores",
+      "content": "Nuestro diseñador visual te permite rápidamente arrastrar y soltar tu propia forma de crear aplicaciones personalizadas que mantienen escritorio, móvil y también tabletas para reportes.",
+      "author": "Kevin Martin"
+    },
+    "review3": {
+      "title": "Adultos mayores se mantienen independientes",
+      "content": "Nuestro diseñador visual te permite rápidamente arrastrar y soltar tu propia forma de crear aplicaciones personalizadas que mantienen escritorio, móvil y también tabletas para reportes.",
+      "author": "Kevin Martin"
+    }
+  },
+  "blog": {
+    "title": "Últimas Noticias",
+    "articleTitle": "Medicare y Cuidado a Largo Plazo",
+    "articleExcerpt": "A medida que las personas envejecen, comprender Medicare y la gama de opciones de cuidado a largo plazo se vuelve crucial. Muchas familias no están seguras de qué servicios"
+  },
+  "footer": {
+    "newsletter": "Ofertas de Noticias y Redes Sociales",
+    "placeholder": "Tu Email",
+    "company": "Empresa",
+    "mission": "Misión",
+    "social": "Redes",
+    "copyright": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  }
+}

@@ -1,52 +1,39 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight, Star } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 
-const testimonials = [
-  {
-    id: 1,
-    title: 'Schedules that work for you',
-    content:
-      'Our visual designer lets you quickly an of drag and drop your own way to custom-apps for both keep desktop, mobile & also tab for report.',
-    author: 'Kevin Martin',
-    rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
-  },
-  {
-    id: 2,
-    title: 'Health screenings for seniors',
-    content:
-      'Our visual designer lets you quickly an of drag and drop your own way to custom-apps for both keep desktop, mobile & also tab for report.',
-    author: 'Kevin Martin',
-    rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
-  },
-  {
-    id: 3,
-    title: 'Seniors stay independent',
-    content:
-      'Our visual designer lets you quickly an of drag and drop your own way to custom-apps for both keep desktop, mobile & also tab for report.',
-    author: 'Kevin Martin',
-    rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80',
-  },
-]
-
 export function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const t = useTranslations('testimonials')
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
-    )
-  }
+  const testimonials = [
+    {
+      id: 1,
+      title: t('review1.title'),
+      content: t('review1.content'),
+      author: t('review1.author'),
+      rating: 5,
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
+    },
+    {
+      id: 2,
+      title: t('review2.title'),
+      content: t('review2.content'),
+      author: t('review2.author'),
+      rating: 5,
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
+    },
+    {
+      id: 3,
+      title: t('review3.title'),
+      content: t('review3.content'),
+      author: t('review3.author'),
+      rating: 5,
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80',
+    },
+  ]
 
   return (
     <section className="py-24 md:py-32 bg-[#E8D5F2] rounded-3xl mx-4 sm:mx-6 lg:mx-8 overflow-hidden">
@@ -55,11 +42,10 @@ export function Testimonials() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <AnimatedSection>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              What Our Clients Say
+              {t('title')}
             </h2>
             <p className="text-gray-600 mt-4 max-w-md">
-              Team carefully evaluates your results to provide actionable
-              insights for improving your health & lifespan.
+              {t('description')}
             </p>
           </AnimatedSection>
 
@@ -68,7 +54,6 @@ export function Testimonials() {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              onClick={prevSlide}
               className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
             >
               <ArrowLeft size={20} className="text-gray-900" />
@@ -76,7 +61,6 @@ export function Testimonials() {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              onClick={nextSlide}
               className="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
             >
               <ArrowRight size={20} className="text-white" />

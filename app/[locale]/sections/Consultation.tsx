@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { AnimatedCounter } from '../components/AnimatedCounter'
 import { MagneticButton } from '../components/MagneticButton'
@@ -13,6 +14,8 @@ const images = [
 ]
 
 export function Consultation() {
+  const t = useTranslations('consultation')
+
   return (
     <section className="py-24 md:py-32 bg-[#FDF8F3] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,18 +24,16 @@ export function Consultation() {
           <div>
             <AnimatedSection>
               <span className="text-sm text-gray-500 tracking-wider uppercase mb-4 block">
-                (cost care)
+                {t('label')}
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Doctor Consultations Are <span className="inline-block">🧑‍⚕️</span>{' '}
-                Free & Trusted
+                {t('title')}
               </h2>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Team carefully evaluates your results to provide actionable
-                insights for improving your health & lifespan.
+                {t('description')}
               </p>
             </AnimatedSection>
 
@@ -43,7 +44,7 @@ export function Consultation() {
                 </span>
               </div>
               <p className="text-gray-600 mt-2">
-                Client satisfaction<br />with our service
+                {t('statLabel')}
               </p>
             </AnimatedSection>
           </div>
@@ -69,13 +70,10 @@ export function Consultation() {
             <AnimatedSection delay={0.4}>
               <div className="mt-6 lg:absolute lg:-left-8 lg:top-1/2 lg:transform lg:-translate-y-1/2 bg-white rounded-2xl p-6 shadow-xl max-w-sm">
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Take control of your health with a comprehensive assessment
-                  unlike any other. We use the latest medical innovations,
-                  including next-generation MRI, cardiovascular & neurocognitive
-                  assessments, early cancer detection, and genetic testing.
+                  {t('detailedDescription')}
                 </p>
                 <MagneticButton className="group inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
-                  Book Appointment
+                  {t('cta')}
                   <ArrowRight
                     size={18}
                     className="group-hover:translate-x-1 transition-transform"
