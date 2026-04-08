@@ -13,14 +13,12 @@ export function Location() {
     {
       icon: <MapPin size={24} />,
       title: locale === 'es' ? 'Dirección' : 'Address',
-      content: locale === 'es' 
-        ? 'Av. División del Norte 1234, Col. Del Valle, Ciudad de México' 
-        : 'Av. División del Norte 1234, Col. Del Valle, Mexico City',
+      content: 'C. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jal.',
     },
     {
       icon: <Phone size={24} />,
       title: locale === 'es' ? 'Teléfono' : 'Phone',
-      content: '+52 55 5523 4567',
+      content: '33 1067 8412',
     },
     {
       icon: <Mail size={24} />,
@@ -31,8 +29,8 @@ export function Location() {
       icon: <Clock size={24} />,
       title: locale === 'es' ? 'Horario' : 'Hours',
       content: locale === 'es'
-        ? 'Lun - Vie: 9:00 - 19:00\nSáb: 9:00 - 14:00\nDom: Cerrado'
-        : 'Mon - Fri: 9:00 AM - 7:00 PM\nSat: 9:00 AM - 2:00 PM\nSun: Closed',
+        ? 'Lunes - Viernes: 10:00 AM - 7:00 PM\nSábado: 9:00 AM - 2:00 PM\nDomingo: Cerrado'
+        : 'Monday - Friday: 10:00 AM - 7:00 PM\nSaturday: 9:00 AM - 2:00 PM\nSunday: Closed',
     },
   ]
 
@@ -82,7 +80,7 @@ export function Location() {
               </div>
 
               <motion.a
-                href="https://www.google.com/maps/dir//Dentista+Dra.+Alondra+Robles"
+                href="https://www.google.com/maps/dir//Dr.+Alondra+Robles,+Dentist/@20.6830236,-103.3800708,17z"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
@@ -97,14 +95,14 @@ export function Location() {
             </div>
           </AnimatedSection>
 
-          {/* Google Maps - Sin efecto hover que cause temblor */}
+          {/* Google Maps */}
           <AnimatedSection delay={0.3}>
-            <div className="relative rounded-3xl overflow-hidden shadow-lg h-full min-h-[400px]">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg h-full min-h-[450px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.1234567890123!2d-99.12345678901234!3d19.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x230662a0f28a435f!2sDentista%20Dra.%20Alondra%20Robles!5e0!3m2!1ses!2smx!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.6694316819107!2d-103.3800708!3d20.683023599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af8715e63ed3%3A0x230662a0f28a435f!2sDr.%20Alondra%20Robles%2C%20Dentist!5e0!3m2!1sen!2smx!4v1775612686925!5m2!1sen!2smx"
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: '400px' }}
+                style={{ border: 0, minHeight: '450px' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -119,9 +117,9 @@ export function Location() {
                     DR
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">Dra. Alondra Robles</h4>
+                    <h4 className="font-bold text-gray-900">Dr. Alondra Robles</h4>
                     <p className="text-gray-600 text-sm">
-                      {locale === 'es' ? 'Clínica Dental Privada' : 'Private Dental Clinic'}
+                      {locale === 'es' ? 'Dentista · Guadalajara, Jal.' : 'Dentist · Guadalajara, Jal.'}
                     </p>
                   </div>
                 </div>

@@ -161,9 +161,9 @@ export function Testimonials() {
 
   return (
     <section className="py-24 md:py-32 bg-[#E8D5F2] overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <AnimatedSection>
             <span className="text-sm text-gray-600 tracking-wider uppercase mb-4 block">
               {locale === 'es' ? '(reseñas verificadas de google)' : '(verified google reviews)'}
@@ -192,8 +192,8 @@ export function Testimonials() {
 
         {/* Slider Container */}
         <div className="relative">
-          {/* Main Card */}
-          <div className="relative h-[450px] md:h-[380px]">
+          {/* Main Card - Altura ajustable para reseñas largas */}
+          <div className="relative min-h-[420px] md:min-h-[360px]">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -217,10 +217,10 @@ export function Testimonials() {
                     paginate(-1)
                   }
                 }}
-                className="absolute inset-0 bg-white rounded-3xl p-8 md:p-12 shadow-xl cursor-grab active:cursor-grabbing"
+                className="absolute inset-0 bg-white rounded-3xl p-6 md:p-10 shadow-xl cursor-grab active:cursor-grabbing"
               >
                 {/* Google Logo Badge */}
-                <div className="absolute top-6 right-6 flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full">
+                <div className="absolute top-4 right-4 md:top-6 md:right-6 flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full">
                   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
                     <path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"/>
                   </svg>
@@ -228,57 +228,57 @@ export function Testimonials() {
                 </div>
 
                 {/* Quote Icon */}
-                <div className="w-14 h-14 bg-[#D4E4D1] rounded-2xl flex items-center justify-center mb-6">
-                  <Quote size={28} className="text-gray-700" />
+                <div className="w-12 h-12 md:w-14 md:h-14 bg-[#D4E4D1] rounded-2xl flex items-center justify-center mb-4 md:mb-6">
+                  <Quote size={24} className="text-gray-700 md:w-7 md:h-7" />
                 </div>
 
                 {/* Stars */}
-                <div className="flex gap-1 mb-6">
+                <div className="flex gap-1 mb-4 md:mb-6">
                   {Array.from({ length: currentReview.rating }).map((_, i) => (
-                    <Star key={i} size={24} className="text-amber-400 fill-amber-400" />
+                    <Star key={i} size={20} className="text-amber-400 fill-amber-400 md:w-6 md:h-6" />
                   ))}
                 </div>
 
-                {/* Content */}
-                <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed line-clamp-4">
+                {/* Content - Sin límite de líneas para reseñas largas */}
+                <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed">
                   &ldquo;{currentReview.content}&rdquo;
                 </p>
 
                 {/* Author */}
-                <div className="flex items-center justify-between pt-6 border-t border-gray-100">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-gray-900 rounded-full flex items-center justify-center text-white text-lg font-bold">
+                <div className="flex items-center justify-between pt-4 md:pt-6 border-t border-gray-100">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-gray-900 rounded-full flex items-center justify-center text-white text-base md:text-lg font-bold">
                       {currentReview.avatar}
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 text-lg">{currentReview.name}</h4>
-                      <p className="text-gray-500">{currentReview.date}</p>
+                      <h4 className="font-bold text-gray-900 text-base md:text-lg">{currentReview.name}</h4>
+                      <p className="text-gray-500 text-sm">{currentReview.date}</p>
                     </div>
                   </div>
                   
                   {/* Verified Badge */}
-                  <div className="hidden sm:flex items-center gap-1 text-green-600 text-sm font-medium">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="flex items-center gap-1 text-green-600 text-sm font-medium">
+                    <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    {locale === 'es' ? 'Verificado' : 'Verified'}
+                    <span className="hidden sm:inline">{locale === 'es' ? 'Verificado' : 'Verified'}</span>
                   </div>
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* Navigation Buttons */}
+          {/* Navigation Buttons - Mejor contraste con fondo lila */}
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
               onClick={() => paginate(-1)}
-              className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
+              className="w-12 h-12 rounded-full bg-white border-2 border-gray-300 flex items-center justify-center shadow-lg hover:shadow-xl hover:border-gray-400 transition-all"
               aria-label={locale === 'es' ? 'Anterior' : 'Previous'}
             >
-              <ChevronLeft size={24} className="text-gray-900" />
+              <ChevronLeft size={24} className="text-gray-700" />
             </button>
 
-            {/* Dots */}
+            {/* Dots - Mejor contraste */}
             <div className="flex gap-2">
               {reviews.map((_, index) => (
                 <button
@@ -287,10 +287,10 @@ export function Testimonials() {
                     setDirection(index > currentIndex ? 1 : -1)
                     setCurrentIndex(index)
                   }}
-                  className={`w-3 h-3 rounded-full transition-all ${
+                  className={`h-3 rounded-full transition-all ${
                     index === currentIndex 
-                      ? 'bg-gray-900 w-8' 
-                      : 'bg-gray-300 hover:bg-gray-400'
+                      ? 'bg-gray-800 w-8' 
+                      : 'bg-gray-400 hover:bg-gray-500 w-3'
                   }`}
                   aria-label={`${locale === 'es' ? 'Ir a reseña' : 'Go to review'} ${index + 1}`}
                 />
@@ -299,7 +299,7 @@ export function Testimonials() {
 
             <button
               onClick={() => paginate(1)}
-              className="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
+              className="w-12 h-12 rounded-full bg-gray-800 border-2 border-gray-800 flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-gray-900 transition-all"
               aria-label={locale === 'es' ? 'Siguiente' : 'Next'}
             >
               <ChevronRight size={24} className="text-white" />
@@ -307,7 +307,7 @@ export function Testimonials() {
           </div>
 
           {/* Swipe hint */}
-          <p className="text-center text-gray-500 text-sm mt-4">
+          <p className="text-center text-gray-600 text-sm mt-4">
             {locale === 'es' ? 'Desliza para ver más reseñas' : 'Swipe to see more reviews'}
           </p>
         </div>
