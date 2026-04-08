@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, Menu, X, Globe } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
-import { Link, usePathname } from '@/i18n/routing'
+import { Link, usePathname, useRouter } from '@/i18n/routing'
 import { MagneticButton } from '../components/MagneticButton'
 import { cn } from '../lib/utils'
 
@@ -12,6 +12,7 @@ export function Navbar() {
   const t = useTranslations('nav')
   const locale = useLocale()
   const pathname = usePathname()
+  const router = useRouter()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -24,15 +25,18 @@ export function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: t('home'), href: '#home' },
-    { name: t('about'), href: '#about' },
-    { name: t('product'), href: '#services' },
-    { name: t('services'), href: '#services' },
-    { name: t('appointment'), href: '#contact' },
+    { name: t('home'), href: '#home' as const },
+    { name: t('about'), href: '#about' as const },
+    { name: t('product'), href: '#services' as const },
+    { name: t('services'), href: '#services' as const },
+    { name: t('appointment'), href: '#contact' as const },
   ]
 
   const switchLocale = locale === 'es' ? 'en' : 'es'
-  const newPath = pathname.replace(`/${locale}`, `/${switchLocale}`)
+
+  const handleLanguageSwitch = () => {
+    router.push(pathname, { locale: switchLocale })
+  }
 
   return (
     <>
@@ -99,8 +103,8 @@ export function Navbar() {
             {/* CTA Button & Language Switch */}
             <div className="hidden md:flex items-center gap-3">
               {/* Language Switch */}
-              <Link
-                href={newPath}
+              <button
+                onClick={handleLanguageSwitch}
                 className={cn(
                   'flex items-center gap-1 px-3 py-2 rounded-full text-sm font-medium transition-colors',
                   isScrolled
@@ -110,7 +114,7 @@ export function Navbar() {
               >
                 <Globe size={16} />
                 {locale === 'es' ? 'EN' : 'ES'}
-              </Link>
+              </button>
 
               <MagneticButton
                 className={cn(
@@ -174,14 +178,16 @@ export function Navbar() {
                 ))}
                 
                 {/* Language Switch Mobile */}
-                <Link
-                  href={newPath}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center gap-2 text-lg font-medium text-gray-900 py-3 border-b border-gray-100"
+                <button
+                  onClick={() => {
+                    handleLanguageSwitch()
+                    setIsMobileMenuOpen(false)
+                  }}
+                  className="flex items-center gap-2 text-lg font-medium text-gray-900 py-3 border-b border-gray-100 text-left"
                 >
                   <Globe size={20} />
                   {locale === 'es' ? 'Switch to English' : 'Cambiar a Español'}
-                </Link>
+                </button>
 
                 <motion.button
                   initial={{ opacity: 0, y: 20 }}
