@@ -1,11 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { AnimatedCounter } from '../components/AnimatedCounter'
-import { MagneticButton } from '../components/MagneticButton'
+import { WhatsAppButton } from '../components/WhatsAppButton'
 
 const images = [
   'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&q=80',
@@ -40,7 +39,7 @@ export function Consultation() {
             <AnimatedSection delay={0.3}>
               <div className="flex items-baseline gap-2">
                 <span className="text-5xl md:text-6xl font-bold text-gray-900">
-                  <AnimatedCounter target={98} suffix="%" />
+                  <AnimatedCounter target={15} suffix="+" />
                 </span>
               </div>
               <p className="text-gray-600 mt-2">
@@ -72,13 +71,9 @@ export function Consultation() {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {t('detailedDescription')}
                 </p>
-                <MagneticButton className="group inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
+                <WhatsAppButton variant="primary" className="w-full justify-center">
                   {t('cta')}
-                  <ArrowRight
-                    size={18}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </MagneticButton>
+                </WhatsAppButton>
               </div>
             </AnimatedSection>
 

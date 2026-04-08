@@ -1,9 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { MagneticButton } from '../components/MagneticButton'
+import { WhatsAppButton } from '../components/WhatsAppButton'
 
 export function Hero() {
   const t = useTranslations('hero')
@@ -83,7 +82,7 @@ export function Hero() {
             {t('subtitle')}
           </motion.p>
 
-          {/* CTA Button */}
+          {/* CTA Button - WhatsApp */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -94,16 +93,9 @@ export function Hero() {
               stiffness: 200,
             }}
           >
-            <MagneticButton className="group inline-flex items-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-full font-medium text-lg hover:bg-gray-100 transition-colors shadow-2xl">
+            <WhatsAppButton variant="white">
               {t('cta')}
-              <motion.span
-                className="inline-block"
-                whileHover={{ x: 4 }}
-                transition={{ type: 'spring', stiffness: 400 }}
-              >
-                <ArrowRight size={20} />
-              </motion.span>
-            </MagneticButton>
+            </WhatsAppButton>
           </motion.div>
         </div>
       </div>

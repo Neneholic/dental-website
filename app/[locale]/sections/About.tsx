@@ -2,11 +2,10 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-import { ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { AnimatedCounter } from '../components/AnimatedCounter'
-import { MagneticButton } from '../components/MagneticButton'
+import { WhatsAppButton } from '../components/WhatsAppButton'
 
 const images = [
   'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80',
@@ -124,13 +123,9 @@ export function About() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.4}>
-              <MagneticButton className="group inline-flex items-center gap-3 bg-gray-900 text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-colors">
+              <WhatsAppButton variant="primary">
                 {t('cta')}
-                <ArrowRight
-                  size={18}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
-              </MagneticButton>
+              </WhatsAppButton>
             </AnimatedSection>
           </div>
         </div>
