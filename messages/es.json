@@ -69,27 +69,12 @@
   },
   "testimonials": {
     "title": "Lo que Dicen Nuestros Pacientes",
-    "description": "Descubre por qué miles de pacientes confían en la Dra. Alondra Robles para el cuidado de su sonrisa.",
-    "review1": {
-      "title": "Resultados increíbles",
-      "content": "La Dra. Alondra transformó mi sonrisa completamente. El blanqueamiento y las carillas quedaron perfectas. Su atención es muy profesional y el ambiente es súper acogedor.",
-      "author": "María González"
-    },
-    "review2": {
-      "title": "La mejor experiencia dental",
-      "content": "Tenía mucho miedo al dentista, pero el equipo de la Dra. Robles me hizo sentir cómoda en todo momento. Mi implante quedó perfecto, parece un diente natural.",
-      "author": "Carlos Méndez"
-    },
-    "review3": {
-      "title": "Atención de primera",
-      "content": "Llevé a mis hijos a su primera revisión y quedé encantada. Explican todo con paciencia y los niños se sintieron muy tranquilos. Definitivamente nuestra familia dental de confianza.",
-      "author": "Laura Hernández"
-    }
+    "description": "Descubre por qué miles de pacientes confían en la Dra. Alondra Robles para el cuidado de su sonrisa."
   },
-  "blog": {
-    "title": "Consejos y Noticias",
-    "articleTitle": "Cómo mantener tu sonrisa saludable",
-    "articleExcerpt": "Descubre los hábitos diarios que pueden marcar la diferencia en tu salud bucal. Consejos prácticos de la Dra. Alondra Robles para cuidar tus dientes."
+  "location": {
+    "label": "(encuéntranos)",
+    "title": "Visítanos en Nuestra Clínica",
+    "description": "Estamos ubicados en una zona accesible con estacionamiento disponible. Agenda tu cita y visítanos para conocer el mejor cuidado dental."
   },
   "footer": {
     "newsletter": "Suscríbete para recibir consejos dentales",

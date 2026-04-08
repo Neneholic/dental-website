@@ -69,27 +69,12 @@
   },
   "testimonials": {
     "title": "What Our Patients Say",
-    "description": "Discover why thousands of patients trust Dr. Alondra Robles with the care of their smile.",
-    "review1": {
-      "title": "Incredible results",
-      "content": "Dr. Alondra completely transformed my smile. The whitening and veneers turned out perfect. Her care is very professional and the environment is super welcoming.",
-      "author": "Maria Gonzalez"
-    },
-    "review2": {
-      "title": "The best dental experience",
-      "content": "I was very afraid of the dentist, but Dr. Robles' team made me feel comfortable at all times. My implant turned out perfect, it looks like a natural tooth.",
-      "author": "Carlos Mendez"
-    },
-    "review3": {
-      "title": "First-class care",
-      "content": "I took my children for their first check-up and was delighted. They explain everything with patience and the children felt very calm. Definitely our family's trusted dental practice.",
-      "author": "Laura Hernandez"
-    }
+    "description": "Discover why thousands of patients trust Dr. Alondra Robles with the care of their smile."
   },
-  "blog": {
-    "title": "Tips & News",
-    "articleTitle": "How to keep your smile healthy",
-    "articleExcerpt": "Discover the daily habits that can make a difference in your oral health. Practical tips from Dr. Alondra Robles to care for your teeth."
+  "location": {
+    "label": "(find us)",
+    "title": "Visit Our Clinic",
+    "description": "We are located in an accessible area with parking available. Schedule your appointment and visit us to experience the best dental care."
   },
   "footer": {
     "newsletter": "Subscribe for dental tips",
