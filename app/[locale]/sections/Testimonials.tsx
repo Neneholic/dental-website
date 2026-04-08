@@ -3,115 +3,114 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
-import { useTranslations, useLocale } from 'next-intl'
+import { useLocale } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 
-// RESEÑAS REALES - Reemplaza con tus reseñas de Google My Business
+// RESEÑAS REALES DE GOOGLE MY BUSINESS - DRA. ALONDRA ROBLES
 const realGoogleReviews = {
   es: [
     {
       id: 1,
-      name: 'María Elena Sánchez',
+      name: 'Julia Castillo',
       rating: 5,
-      date: 'Hace 2 semanas',
-      content: 'Excelente atención de la Dra. Alondra. Me hizo un blanqueamiento y carillas y quedé encantada con los resultados. El consultorio está muy limpio y el personal es muy amable. Sin duda la recomiendo al 100%.',
-      avatar: 'M',
+      date: 'Hace 1 mes',
+      content: '¡Me encantó! Es muy profesional y amigable. Transmite una sensación de calma, y lo mejor es que tiene unas manos increíblemente suaves, así que no te duele el cuello. ¡La recomiendo muchísimo!',
+      avatar: 'JC',
     },
     {
       id: 2,
-      name: 'Carlos Mendoza',
+      name: 'Juan Rivera',
       rating: 5,
       date: 'Hace 1 mes',
-      content: 'Tenía mucho miedo al dentista pero la Dra. Robles tiene manos muy suaves y me explicó todo el procedimiento. Me colocó un implante y no sentí nada de dolor. Muy profesional y cálida su atención.',
-      avatar: 'C',
+      content: 'La Dra. Robles tiene una increíble manera de tratar a los pacientes y un excelente manejo de sus instrumentos. Creo que es muy importante que un dentista tenga destreza. Su consultorio está impecablemente limpio, y es muy precisa tanto en su trabajo como en sus consultas. ¡La recomiendo mucho!',
+      avatar: 'JR',
     },
     {
       id: 3,
-      name: 'Ana Lucía Gómez',
+      name: 'Erick Morales',
       rating: 5,
-      date: 'Hace 3 semanas',
-      content: 'Llevé a mis hijos a su primera revisión y quedé muy satisfecha. La Dra. Alondra es muy paciente con los niños y tiene un consultorio muy bien equipado. Los precios son justos y la calidad excelente.',
-      avatar: 'A',
+      date: 'Hace 1 mes',
+      content: 'Excelente servicio y resultados increíbles. Me hice una limpieza y tratamiento de blanqueamiento y quedé encantado con el resultado. Muy profesional y a precios razonables. ¡Definitivamente volveré!',
+      avatar: 'EM',
     },
     {
       id: 4,
-      name: 'Fernando Ruiz',
+      name: 'Erika Bañales',
       rating: 5,
       date: 'Hace 2 meses',
-      content: 'Después de años buscando un buen dentista, finalmente encontré a la Dra. Robles. Me hizo un diseño de sonrisa completo y superó mis expectativas. Es una profesional muy capacitada y actualizada.',
-      avatar: 'F',
+      content: 'La Dra. Alondra es súper paciente y explica todo de manera simple y comprensible.',
+      avatar: 'EB',
     },
     {
       id: 5,
-      name: 'Diana Patricia',
+      name: 'Diego Rivera',
       rating: 5,
       date: 'Hace 1 semana',
-      content: 'La mejor experiencia dental que he tenido. La consulta de valoración fue gratuita y me dieron todas las opciones de tratamiento sin presión. Excelente servicio y trato humano.',
-      avatar: 'D',
+      content: '¡¡Excelente servicio!! La Dra. Alondra es súper profesional, atenta y amable. Las instalaciones están impecables, y siempre ha sido puntual para las citas. Los tratamientos que he solicitado se realizan con gran cuidado y atención al detalle. Altamente recomendada.',
+      avatar: 'DR',
     },
     {
       id: 6,
-      name: 'Roberto Kú',
+      name: 'Saith Castillo',
       rating: 5,
-      date: 'Hace 1 mes',
-      content: 'Me atendieron de urgencia un domingo por la noche. La Dra. Alondra llegó especialmente para ayudarme con un dolor terrible. Eso habla muy bien de su compromiso con los pacientes.',
-      avatar: 'R',
+      date: 'Hace 2 meses',
+      content: 'La mejor de todas, altamente recomendada.',
+      avatar: 'SC',
     },
   ],
   en: [
     {
       id: 1,
-      name: 'María Elena Sánchez',
+      name: 'Julia Castillo',
       rating: 5,
-      date: '2 weeks ago',
-      content: 'Excellent care from Dr. Alondra. She did whitening and veneers for me and I was delighted with the results. The office is very clean and the staff is very friendly. I definitely recommend her 100%.',
-      avatar: 'M',
+      date: '1 month ago',
+      content: 'I loved it! She\'s very professional and friendly. She exudes a sense of calm, and the best part is that she has incredibly gentle hands, so she doesn\'t hurt your neck. I highly recommend her!',
+      avatar: 'JC',
     },
     {
       id: 2,
-      name: 'Carlos Mendoza',
+      name: 'Juan Rivera',
       rating: 5,
       date: '1 month ago',
-      content: 'I was very afraid of the dentist but Dr. Robles has very gentle hands and explained the entire procedure to me. She placed an implant and I felt no pain at all. Very professional and warm attention.',
-      avatar: 'C',
+      content: 'Dr. Robles has an incredible bedside manner and excellent handling of her instruments. I think it\'s very important for a dentist to have dexterity. Her office is impeccably clean, and she\'s very precise in both her work and her consultations. I highly recommend her!',
+      avatar: 'JR',
     },
     {
       id: 3,
-      name: 'Ana Lucía Gómez',
+      name: 'Erick Morales',
       rating: 5,
-      date: '3 weeks ago',
-      content: 'I took my children for their first check-up and was very satisfied. Dr. Alondra is very patient with children and has a very well-equipped office. Prices are fair and quality is excellent.',
-      avatar: 'A',
+      date: '1 month ago',
+      content: 'Great service and amazing results. I had a cleaning and whitening treatment and I was thrilled with the result. Very professional and reasonably priced. I\'ll definitely be back!',
+      avatar: 'EM',
     },
     {
       id: 4,
-      name: 'Fernando Ruiz',
+      name: 'Erika Bañales',
       rating: 5,
       date: '2 months ago',
-      content: 'After years looking for a good dentist, I finally found Dr. Robles. She did a complete smile design for me and exceeded my expectations. She is a highly trained and up-to-date professional.',
-      avatar: 'F',
+      content: 'Dr. Alondra is super patient and explains everything in a simple and understandable way.',
+      avatar: 'EB',
     },
     {
       id: 5,
-      name: 'Diana Patricia',
+      name: 'Diego Rivera',
       rating: 5,
       date: '1 week ago',
-      content: 'The best dental experience I\'ve ever had. The evaluation consultation was free and they gave me all the treatment options without pressure. Excellent service and human treatment.',
-      avatar: 'D',
+      content: 'Excellent service!! Dr. Alondra is super professional, attentive, and kind. The facilities are spotless, and she has always been punctual for appointments. The treatments I\'ve requested are performed with great care and attention to detail. Highly recommended.',
+      avatar: 'DR',
     },
     {
       id: 6,
-      name: 'Roberto Kú',
+      name: 'Saith Castillo',
       rating: 5,
-      date: '1 month ago',
-      content: 'They attended to me urgently on a Sunday night. Dr. Alondra came especially to help me with terrible pain. That speaks very well of her commitment to patients.',
-      avatar: 'R',
+      date: '2 months ago',
+      content: 'The best of all, highly recommended.',
+      avatar: 'SC',
     },
   ],
 }
 
 export function Testimonials() {
-  const t = useTranslations('testimonials')
   const locale = useLocale()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0)
@@ -154,7 +153,7 @@ export function Testimonials() {
   useEffect(() => {
     const timer = setInterval(() => {
       paginate(1)
-    }, 5000)
+    }, 6000)
     return () => clearInterval(timer)
   }, [paginate])
 
@@ -167,7 +166,7 @@ export function Testimonials() {
         <div className="text-center mb-16">
           <AnimatedSection>
             <span className="text-sm text-gray-600 tracking-wider uppercase mb-4 block">
-              {locale === 'es' ? '(reseñas de google)' : '(google reviews)'}
+              {locale === 'es' ? '(reseñas verificadas de google)' : '(verified google reviews)'}
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               {locale === 'es' ? 'Lo que Dicen Nuestros Pacientes' : 'What Our Patients Say'}
@@ -181,12 +180,12 @@ export function Testimonials() {
                   <Star key={star} size={28} className="text-amber-400 fill-amber-400" />
                 ))}
               </div>
-              <span className="text-2xl font-bold text-gray-900">4.9</span>
+              <span className="text-2xl font-bold text-gray-900">5.0</span>
             </div>
             <p className="text-gray-600">
               {locale === 'es' 
-                ? 'Basado en más de 150 reseñas verificadas de Google' 
-                : 'Based on over 150 verified Google reviews'}
+                ? 'Basado en reseñas verificadas de Google My Business' 
+                : 'Based on verified Google My Business reviews'}
             </p>
           </AnimatedSection>
         </div>
@@ -194,7 +193,7 @@ export function Testimonials() {
         {/* Slider Container */}
         <div className="relative">
           {/* Main Card */}
-          <div className="relative h-[400px] md:h-[350px]">
+          <div className="relative h-[450px] md:h-[380px]">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -220,9 +219,17 @@ export function Testimonials() {
                 }}
                 className="absolute inset-0 bg-white rounded-3xl p-8 md:p-12 shadow-xl cursor-grab active:cursor-grabbing"
               >
+                {/* Google Logo Badge */}
+                <div className="absolute top-6 right-6 flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full">
+                  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
+                    <path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"/>
+                  </svg>
+                  <span className="text-sm font-medium text-gray-600">Google</span>
+                </div>
+
                 {/* Quote Icon */}
-                <div className="w-16 h-16 bg-[#D4E4D1] rounded-2xl flex items-center justify-center mb-6">
-                  <Quote size={32} className="text-gray-700" />
+                <div className="w-14 h-14 bg-[#D4E4D1] rounded-2xl flex items-center justify-center mb-6">
+                  <Quote size={28} className="text-gray-700" />
                 </div>
 
                 {/* Stars */}
@@ -233,18 +240,28 @@ export function Testimonials() {
                 </div>
 
                 {/* Content */}
-                <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed line-clamp-4">
+                <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed line-clamp-4">
                   &ldquo;{currentReview.content}&rdquo;
                 </p>
 
                 {/* Author */}
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div className="w-14 h-14 bg-gray-900 rounded-full flex items-center justify-center text-white text-xl font-bold">
-                    {currentReview.avatar}
+                <div className="flex items-center justify-between pt-6 border-t border-gray-100">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-gray-900 rounded-full flex items-center justify-center text-white text-lg font-bold">
+                      {currentReview.avatar}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 text-lg">{currentReview.name}</h4>
+                      <p className="text-gray-500">{currentReview.date}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-lg">{currentReview.name}</h4>
-                    <p className="text-gray-500">{currentReview.date}</p>
+                  
+                  {/* Verified Badge */}
+                  <div className="hidden sm:flex items-center gap-1 text-green-600 text-sm font-medium">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    {locale === 'es' ? 'Verificado' : 'Verified'}
                   </div>
                 </div>
               </motion.div>
