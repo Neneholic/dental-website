@@ -8,12 +8,6 @@ export function Footer() {
   const t = useTranslations('footer')
   const currentYear = new Date().getFullYear()
 
-  const footerLinks = {
-    company: [
-      { name: t('company'), href: '#home' },
-    ],
-  }
-
   return (
     <footer className="bg-gray-950 text-white rounded-t-3xl mx-4 sm:mx-6 lg:mx-8 pt-16 pb-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,8 +20,11 @@ export function Footer() {
               viewport={{ once: true }}
               className="text-2xl md:text-3xl font-bold mb-6"
             >
-              {t('newsletter')}
+              Dra. Alondra Robles
             </motion.h3>
+            <p className="text-gray-400 mb-4">
+              Clínica Dental Privada - Tu sonrisa en las mejores manos
+            </p>
 
             <motion.form
               initial={{ opacity: 0, y: 20 }}
@@ -56,7 +53,7 @@ export function Footer() {
             {/* Company */}
             <div>
               <h4 className="font-medium text-white mb-4">{t('company')}</h4>
-              {['Home', 'About', 'Services', 'Contact'].map((link, index) => (
+              {['Inicio', 'Nosotros', 'Servicios', 'Contacto'].map((link, index) => (
                 <motion.a
                   key={link}
                   href={`#${link.toLowerCase()}`}
@@ -74,7 +71,7 @@ export function Footer() {
             {/* Mission */}
             <div>
               <h4 className="font-medium text-white mb-4">{t('mission')}</h4>
-              {['Our Story', 'Careers', 'Blog', 'Press'].map((link, index) => (
+              {['Nuestra Historia', 'Equipo', 'Blog', 'Prensa'].map((link, index) => (
                 <motion.a
                   key={link}
                   href="#"
@@ -92,7 +89,7 @@ export function Footer() {
             {/* Social */}
             <div>
               <h4 className="font-medium text-white mb-4">{t('social')}</h4>
-              {['Facebook', 'Instagram', 'Twitter', 'LinkedIn'].map((link, index) => (
+              {['Facebook', 'Instagram', 'TikTok', 'WhatsApp'].map((link, index) => (
                 <motion.a
                   key={link}
                   href="#"
@@ -118,19 +115,19 @@ export function Footer() {
           className="relative h-32 md:h-48 overflow-hidden"
         >
           <motion.h2
-            className="text-[80px] md:text-[150px] lg:text-[200px] font-bold text-gray-900 leading-none tracking-tighter select-none"
+            className="text-[60px] md:text-[120px] lg:text-[160px] font-bold text-gray-900 leading-none tracking-tighter select-none"
             style={{
               WebkitTextStroke: '1px rgba(255,255,255,0.1)',
             }}
           >
-            DENTALO
+            Dra. Alondra Robles
           </motion.h2>
         </motion.div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
-            © {currentYear} DENTALO. {t('copyright')}
+            © {currentYear} Dra. Alondra Robles. {t('copyright')}
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">

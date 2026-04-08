@@ -1,102 +1,102 @@
 {
   "metadata": {
-    "title": "DENTALO - Seamless Dental Care",
-    "description": "Professional dental services with experienced professionals. Book your appointment today for a brighter smile."
+    "title": "Dr. Alondra Robles - Private Dental Practice",
+    "description": "Private dental clinic of Dr. Alondra Robles. Cosmetic dentistry, implants, orthodontics and more. Book your appointment today."
   },
   "nav": {
     "home": "Home",
     "about": "About",
-    "product": "Product",
+    "product": "Services",
     "services": "Services",
     "appointment": "Appointment",
     "callNow": "Call Now"
   },
   "hero": {
-    "title1": "Seamless",
-    "title2": "Dental",
-    "title3": "Care",
-    "subtitle": "Whether it's a routine checkup or a major dental emergency, our experienced professionals are just a call away",
+    "title1": "Smiles",
+    "title2": "that",
+    "title3": "Shine",
+    "subtitle": "Dr. Alondra Robles and her team of specialists provide excellence in dental care in a warm and professional environment. Your oral health in the best hands.",
     "cta": "Book Appointment"
   },
   "about": {
     "label": "(about us)",
-    "title": "A Simple Way to Save on Dental Care",
-    "description": "Our team of skilled and experienced dental professionals strives to create comfortable and welcoming environment for each and every patient. We offer a wide range of services.",
+    "title": "Experience and Warmth in Every Visit",
+    "description": "Dr. Alondra Robles has over 15 years of experience in aesthetic and restorative dentistry. Her personalized approach and use of cutting-edge technology guarantee exceptional results and satisfied patients.",
     "cta": "Book Appointment",
     "statNumber": "98%",
-    "statLabel": "Client satisfaction with our service",
-    "happyMembers": "10K+ happy member"
+    "statLabel": "Patients satisfied with our service",
+    "happyMembers": "5,000+ patients served"
   },
   "services": {
-    "title": "Services We Provide Are Listed Below",
-    "description": "The blocks & components you need to build a professional website are based drivers.",
+    "title": "Our Dental Services",
+    "description": "We offer a wide range of dental treatments using state-of-the-art technology to ensure your comfort and the best results.",
     "cta": "Book Appointment",
     "ourServices": "our services",
     "cavityProtection": {
-      "title": "Cavity Protection",
-      "description": "As we move into this new era of technology, we tend to look at the future with confidence and pride, which is why our theme.",
-      "readMore": "Read More"
+      "title": "Cosmetic Dentistry",
+      "description": "Teeth whitening, porcelain veneers, and smile design. Transform your image with personalized treatments tailored to your needs.",
+      "readMore": "Read more"
     },
     "rootCanal": {
-      "title": "Root Canal Treatment",
-      "description": "In the new era of technology we look in the future with certainty and pride, that's why our theme looks so good.",
-      "readMore": "Read More"
+      "title": "Endodontics",
+      "description": "Root canal treatments with advanced technology and minimal invasion. We save your natural teeth with painless procedures.",
+      "readMore": "Read more"
     },
     "oralSurgery": {
-      "title": "Oral Surgery",
-      "description": "In the new era of technology we look in the future with certainty and pride, that's why our theme looks so good.",
-      "readMore": "Read More"
+      "title": "Dental Implants",
+      "description": "Recover your smile with state-of-the-art implants. Implant placement with quality guarantee and lasting results.",
+      "readMore": "Read more"
     }
   },
   "works": {
-    "label": "(our works)",
-    "title": "Services We Provide Are Listed Below",
-    "description": "Our team of skilled and experienced dental professionals strives to create comfortable and welcoming environment for each.",
+    "label": "(our work)",
+    "title": "Real Transformations",
+    "description": "Discover some of Dr. Alondra Robles' successful cases. Every smile is unique and deserves specialized care.",
     "cta": "Book Appointment",
-    "teethStraightening": "Teeth Straightening",
-    "dentalImplant": "Dental Implant",
-    "improveSmile": "Improve your smile with cleaning.",
-    "happyMembers": "10K+ happy member"
+    "teethStraightening": "Invisible Orthodontics",
+    "dentalImplant": "Implants & Crowns",
+    "improveSmile": "Personalized smile design.",
+    "happyMembers": "5,000+ patients served"
   },
   "consultation": {
-    "label": "(cost care)",
-    "title": "Doctor Consultations Are 🧑‍⚕️ Free & Trusted",
-    "description": "Team carefully evaluates your results to provide actionable insights for improving your health & lifespan.",
-    "cta": "Book Appointment",
-    "statNumber": "98%",
-    "statLabel": "Client satisfaction with our service",
-    "detailedDescription": "Take control of your health with a comprehensive assessment unlike any other. We use the latest medical innovations, including next-generation MRI, cardiovascular & neurocognitive assessments, early cancer detection, and genetic testing."
+    "label": "(free consultation)",
+    "title": "First Consultation 🧑‍⚕️ Free & No Obligation",
+    "description": "Dr. Alondra Robles offers you a complete evaluation of your oral health at no cost. Learn about your diagnosis and treatment options.",
+    "cta": "Schedule Consultation",
+    "statNumber": "15+",
+    "statLabel": "Years of experience",
+    "detailedDescription": "On your first visit we perform a complete diagnosis with digital x-rays, periodontal evaluation and a personalized treatment plan. No cost, no commitment. Your dental health is our priority."
   },
   "testimonials": {
-    "title": "What Our Clients Say",
-    "description": "Team carefully evaluates your results to provide actionable insights for improving your health & lifespan.",
+    "title": "What Our Patients Say",
+    "description": "Discover why thousands of patients trust Dr. Alondra Robles with the care of their smile.",
     "review1": {
-      "title": "Schedules that work for you",
-      "content": "Our visual designer lets you quickly an of drag and drop your own way to custom-apps for both keep desktop, mobile & also tab for report.",
-      "author": "Kevin Martin"
+      "title": "Incredible results",
+      "content": "Dr. Alondra completely transformed my smile. The whitening and veneers turned out perfect. Her care is very professional and the environment is super welcoming.",
+      "author": "Maria Gonzalez"
     },
     "review2": {
-      "title": "Health screenings for seniors",
-      "content": "Our visual designer lets you quickly an of drag and drop your own way to custom-apps for both keep desktop, mobile & also tab for report.",
-      "author": "Kevin Martin"
+      "title": "The best dental experience",
+      "content": "I was very afraid of the dentist, but Dr. Robles' team made me feel comfortable at all times. My implant turned out perfect, it looks like a natural tooth.",
+      "author": "Carlos Mendez"
     },
     "review3": {
-      "title": "Seniors stay independent",
-      "content": "Our visual designer lets you quickly an of drag and drop your own way to custom-apps for both keep desktop, mobile & also tab for report.",
-      "author": "Kevin Martin"
+      "title": "First-class care",
+      "content": "I took my children for their first check-up and was delighted. They explain everything with patience and the children felt very calm. Definitely our family's trusted dental practice.",
+      "author": "Laura Hernandez"
     }
   },
   "blog": {
-    "title": "Latest Insights",
-    "articleTitle": "Medicare And Long Term Care",
-    "articleExcerpt": "As seniors age, understanding Medicare and the range of long-term care options becomes. Many families are unsure which services"
+    "title": "Tips & News",
+    "articleTitle": "How to keep your smile healthy",
+    "articleExcerpt": "Discover the daily habits that can make a difference in your oral health. Practical tips from Dr. Alondra Robles to care for your teeth."
   },
   "footer": {
-    "newsletter": "Offerings From Bright News & Social",
-    "placeholder": "Your Email",
-    "company": "Company",
+    "newsletter": "Subscribe for dental tips",
+    "placeholder": "Your email",
+    "company": "Clinic",
     "mission": "Mission",
-    "social": "Social",
+    "social": "Follow us",
     "copyright": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"

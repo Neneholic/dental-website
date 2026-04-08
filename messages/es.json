@@ -1,102 +1,102 @@
 {
   "metadata": {
-    "title": "DENTALO - Cuidado Dental sin Esfuerzo",
-    "description": "Servicios dentales profesionales con expertos calificados. Reserva tu cita hoy para una sonrisa más brillante."
+    "title": "Dra. Alondra Robles - Clínica Dental Privada",
+    "description": "Clínica dental privada de la Dra. Alondra Robles. Servicios de odontología estética, implantes, ortodoncia y más. Reserva tu cita hoy."
   },
   "nav": {
     "home": "Inicio",
     "about": "Nosotros",
-    "product": "Producto",
+    "product": "Servicios",
     "services": "Servicios",
     "appointment": "Cita",
     "callNow": "Llama Ahora"
   },
   "hero": {
-    "title1": "Cuidado",
-    "title2": "Dental",
-    "title3": "Perfecto",
-    "subtitle": "Ya sea un chequeo de rutina o una emergencia dental mayor, nuestros profesionales experimentados están a solo una llamada de distancia",
-    "cta": "Reservar Cita"
+    "title1": "Sonrisas",
+    "title2": " que",
+    "title3": "Iluminan",
+    "subtitle": "La Dra. Alondra Robles y su equipo de especialistas te brindan atención dental de excelencia en un ambiente cálido y profesional. Tu salud bucal en las mejores manos.",
+    "cta": "Agendar Cita"
   },
   "about": {
     "label": "(sobre nosotros)",
-    "title": "Una Forma Sencilla de Ahorrar en Cuidado Dental",
-    "description": "Nuestro equipo de profesionales dentales calificados y experimentados se esfuerza por crear un ambiente cómodo y acogedor para cada paciente. Ofrecemos una amplia gama de servicios.",
-    "cta": "Reservar Cita",
+    "title": "Experiencia y Calidez en cada Consulta",
+    "description": "La Dra. Alondra Robles cuenta con más de 15 años de experiencia en odontología estética y restauradora. Su enfoque personalizado y uso de tecnología de vanguardia garantizan resultados excepcionales y pacientes satisfechos.",
+    "cta": "Agendar Cita",
     "statNumber": "98%",
-    "statLabel": "Satisfacción del cliente con nuestro servicio",
-    "happyMembers": "10K+ miembros felices"
+    "statLabel": "Pacientes satisfechos con nuestro servicio",
+    "happyMembers": "5,000+ pacientes atendidos"
   },
   "services": {
-    "title": "Servicios que Ofrecemos",
-    "description": "Los bloques y componentes que necesitas para construir un sitio web profesional son impulsores clave.",
-    "cta": "Reservar Cita",
+    "title": "Nuestros Servicios Dentales",
+    "description": "Ofrecemos una amplia gama de tratamientos dentales utilizando tecnología de última generación para garantizar tu comodidad y los mejores resultados.",
+    "cta": "Agendar Cita",
     "ourServices": "nuestros servicios",
     "cavityProtection": {
-      "title": "Protección contra Caries",
-      "description": "A medida que avanzamos en esta nueva era de tecnología, tendemos a mirar el futuro con confianza y orgullo, por eso nuestro tema.",
-      "readMore": "Leer Más"
+      "title": "Estética Dental",
+      "description": "Blanqueamiento dental, carillas de porcelana y diseño de sonrisa. Transforma tu imagen con tratamientos personalizados según tus necesidades.",
+      "readMore": "Ver más"
     },
     "rootCanal": {
-      "title": "Tratamiento de Conducto",
-      "description": "En la nueva era de la tecnología miramos el futuro con certeza y orgullo, por eso nuestro tema se ve tan bien.",
-      "readMore": "Leer Más"
+      "title": "Endodoncia",
+      "description": "Tratamientos de conducto con tecnología avanzada y mínima invasión. Salvamos tus dientes naturales con procedimientos indoloros.",
+      "readMore": "Ver más"
     },
     "oralSurgery": {
-      "title": "Cirugía Oral",
-      "description": "En la nueva era de la tecnología miramos el futuro con certeza y orgullo, por eso nuestro tema se ve tan bien.",
-      "readMore": "Leer Más"
+      "title": "Implantes Dentales",
+      "description": "Recupera tu sonrisa con implantes de última generación. Colocación de implantes con garantía de calidad y resultados duraderos.",
+      "readMore": "Ver más"
     }
   },
   "works": {
     "label": "(nuestros trabajos)",
-    "title": "Servicios que Ofrecemos",
-    "description": "Nuestro equipo de profesionales dentales calificados y experimentados se esfuerza por crear un ambiente cómodo y acogedor para cada paciente.",
-    "cta": "Reservar Cita",
-    "teethStraightening": "Alineación Dental",
-    "dentalImplant": "Implante Dental",
-    "improveSmile": "Mejora tu sonrisa con limpieza.",
-    "happyMembers": "10K+ miembros felices"
+    "title": "Transformaciones Reales",
+    "description": "Conoce algunos de los casos de éxito de la Dra. Alondra Robles. Cada sonrisa es única y merece atención especializada.",
+    "cta": "Agendar Cita",
+    "teethStraightening": "Ortodoncia Invisible",
+    "dentalImplant": "Implantes y Coronas",
+    "improveSmile": "Diseño de sonrisa personalizado.",
+    "happyMembers": "5,000+ pacientes atendidos"
   },
   "consultation": {
-    "label": "(cuidado económico)",
-    "title": "Consultas con Doctores son 🧑‍⚕️ Gratis y Confiables",
-    "description": "El equipo evalúa cuidadosamente tus resultados para proporcionar información procesable para mejorar tu salud y longevidad.",
-    "cta": "Reservar Cita",
-    "statNumber": "98%",
-    "statLabel": "Satisfacción del cliente con nuestro servicio",
-    "detailedDescription": "Toma el control de tu salud con una evaluación integral como ninguna otra. Utilizamos las últimas innovaciones médicas, incluyendo MRI de próxima generación, evaluaciones cardiovasculares y neurocognitivas, detección temprana de cáncer y pruebas genéticas."
+    "label": "(consulta gratuita)",
+    "title": "Primera Consulta 🧑‍⚕️ Gratis y sin Compromiso",
+    "description": "La Dra. Alondra Robles te ofrece una evaluación completa de tu salud bucal sin costo. Conoce tu diagnóstico y opciones de tratamiento.",
+    "cta": "Agendar Consulta",
+    "statNumber": "15+",
+    "statLabel": "Años de experiencia",
+    "detailedDescription": "En tu primera visita realizamos un diagnóstico completo con radiografías digitales, evaluación periodontal y un plan de tratamiento personalizado. Sin costo, sin compromiso. Tu salud dental es nuestra prioridad."
   },
   "testimonials": {
-    "title": "Lo que Dicen Nuestros Clientes",
-    "description": "El equipo evalúa cuidadosamente tus resultados para proporcionar información procesable para mejorar tu salud y longevidad.",
+    "title": "Lo que Dicen Nuestros Pacientes",
+    "description": "Descubre por qué miles de pacientes confían en la Dra. Alondra Robles para el cuidado de su sonrisa.",
     "review1": {
-      "title": "Horarios que funcionan para ti",
-      "content": "Nuestro diseñador visual te permite rápidamente arrastrar y soltar tu propia forma de crear aplicaciones personalizadas que mantienen escritorio, móvil y también tabletas para reportes.",
-      "author": "Kevin Martin"
+      "title": "Resultados increíbles",
+      "content": "La Dra. Alondra transformó mi sonrisa completamente. El blanqueamiento y las carillas quedaron perfectas. Su atención es muy profesional y el ambiente es súper acogedor.",
+      "author": "María González"
     },
     "review2": {
-      "title": "Evaluaciones de salud para adultos mayores",
-      "content": "Nuestro diseñador visual te permite rápidamente arrastrar y soltar tu propia forma de crear aplicaciones personalizadas que mantienen escritorio, móvil y también tabletas para reportes.",
-      "author": "Kevin Martin"
+      "title": "La mejor experiencia dental",
+      "content": "Tenía mucho miedo al dentista, pero el equipo de la Dra. Robles me hizo sentir cómoda en todo momento. Mi implante quedó perfecto, parece un diente natural.",
+      "author": "Carlos Méndez"
     },
     "review3": {
-      "title": "Adultos mayores se mantienen independientes",
-      "content": "Nuestro diseñador visual te permite rápidamente arrastrar y soltar tu propia forma de crear aplicaciones personalizadas que mantienen escritorio, móvil y también tabletas para reportes.",
-      "author": "Kevin Martin"
+      "title": "Atención de primera",
+      "content": "Llevé a mis hijos a su primera revisión y quedé encantada. Explican todo con paciencia y los niños se sintieron muy tranquilos. Definitivamente nuestra familia dental de confianza.",
+      "author": "Laura Hernández"
     }
   },
   "blog": {
-    "title": "Últimas Noticias",
-    "articleTitle": "Medicare y Cuidado a Largo Plazo",
-    "articleExcerpt": "A medida que las personas envejecen, comprender Medicare y la gama de opciones de cuidado a largo plazo se vuelve crucial. Muchas familias no están seguras de qué servicios"
+    "title": "Consejos y Noticias",
+    "articleTitle": "Cómo mantener tu sonrisa saludable",
+    "articleExcerpt": "Descubre los hábitos diarios que pueden marcar la diferencia en tu salud bucal. Consejos prácticos de la Dra. Alondra Robles para cuidar tus dientes."
   },
   "footer": {
-    "newsletter": "Ofertas de Noticias y Redes Sociales",
-    "placeholder": "Tu Email",
-    "company": "Empresa",
+    "newsletter": "Suscríbete para recibir consejos dentales",
+    "placeholder": "Tu correo electrónico",
+    "company": "Clínica",
     "mission": "Misión",
-    "social": "Redes",
+    "social": "Síguenos",
     "copyright": "Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio"
