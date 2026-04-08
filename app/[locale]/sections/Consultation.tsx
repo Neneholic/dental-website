@@ -71,9 +71,7 @@ export function Consultation() {
             {/* Main Image */}
             <AnimatedSection delay={0.2}>
               <motion.div
-                className="relative rounded-2xl overflow-hidden shadow-xl"
-                whileHover={{ y: -5 }}
-                transition={{ type: 'spring', stiffness: 300 }}
+                className="relative rounded-2xl overflow-hidden shadow-xl cursor-default"
               >
                 <img
                   src={images[0]}
@@ -101,9 +99,7 @@ export function Consultation() {
             <div className="grid grid-cols-2 gap-4">
               <AnimatedSection delay={0.5}>
                 <motion.div
-                  className="rounded-2xl overflow-hidden shadow-lg"
-                  whileHover={{ y: -5, scale: 1.02 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
+                  className="rounded-2xl overflow-hidden shadow-lg cursor-default"
                 >
                   <img
                     src={images[1]}
@@ -114,9 +110,7 @@ export function Consultation() {
               </AnimatedSection>
               <AnimatedSection delay={0.6}>
                 <motion.div
-                  className="rounded-2xl overflow-hidden shadow-lg"
-                  whileHover={{ y: -5, scale: 1.02 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
+                  className="rounded-2xl overflow-hidden shadow-lg cursor-default"
                 >
                   <img
                     src={images[2]}

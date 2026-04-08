@@ -87,7 +87,6 @@ export function Footer() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.1 }}
                   className={`w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 ${social.color} transition-colors hover:bg-gray-700`}
                   aria-label={social.name}
                 >
@@ -108,13 +107,12 @@ export function Footer() {
                 placeholder={t('placeholder')}
                 className="w-full bg-transparent border-b border-gray-700 py-3 pr-12 text-white placeholder-gray-500 focus:outline-none focus:border-white transition-colors"
               />
-              <motion.button
-                whileHover={{ x: 4 }}
+              <button
                 type="submit"
                 className="absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
               >
                 <ArrowRight size={20} />
-              </motion.button>
+              </button>
             </motion.form>
           </div>
 

@@ -272,7 +272,7 @@ export function Testimonials() {
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
               onClick={() => paginate(-1)}
-              className="w-12 h-12 rounded-full bg-white border-2 border-gray-300 flex items-center justify-center shadow-lg hover:shadow-xl hover:border-gray-400 transition-all"
+              className="w-12 h-12 rounded-full bg-white border-2 border-gray-300 flex items-center justify-center shadow-lg hover:bg-gray-50 transition-colors"
               aria-label={locale === 'es' ? 'Anterior' : 'Previous'}
             >
               <ChevronLeft size={24} className="text-gray-700" />
@@ -299,7 +299,7 @@ export function Testimonials() {
 
             <button
               onClick={() => paginate(1)}
-              className="w-12 h-12 rounded-full bg-gray-800 border-2 border-gray-800 flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-gray-900 transition-all"
+              className="w-12 h-12 rounded-full bg-gray-800 border-2 border-gray-800 flex items-center justify-center shadow-lg hover:bg-gray-900 transition-colors"
               aria-label={locale === 'es' ? 'Siguiente' : 'Next'}
             >
               <ChevronRight size={24} className="text-white" />
