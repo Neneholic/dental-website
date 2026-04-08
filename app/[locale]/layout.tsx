@@ -16,10 +16,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ 
-  params: { locale } 
+  params 
 }: { 
-  params: { locale: string } 
+  params: Promise<{ locale: string }> 
 }): Promise<Metadata> {
+  const { locale } = await params;
   const messages = await getMessages();
   const t = messages.metadata as { title: string; description: string };
   
@@ -37,11 +38,14 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
-  params: { locale }
+  params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  // Resolve the params promise
+  const { locale } = await params;
+  
   // Enable static rendering
   setRequestLocale(locale);
   
