@@ -1,10 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { MapPin, Phone, Clock, Mail } from 'lucide-react'
+import { MapPin, Phone, Clock, Mail, Navigation } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
-import { MagneticButton } from '../components/MagneticButton'
 
 export function Location() {
   const t = useTranslations('location')
@@ -15,25 +14,25 @@ export function Location() {
       icon: <MapPin size={24} />,
       title: locale === 'es' ? 'Dirección' : 'Address',
       content: locale === 'es' 
-        ? 'Av. Principal #123, Ciudad de México' 
-        : 'Main Ave #123, Mexico City',
+        ? 'Av. División del Norte 1234, Col. Del Valle, Ciudad de México' 
+        : 'Av. División del Norte 1234, Col. Del Valle, Mexico City',
     },
     {
       icon: <Phone size={24} />,
       title: locale === 'es' ? 'Teléfono' : 'Phone',
-      content: '+52 55 1234 5678',
+      content: '+52 55 5523 4567',
     },
     {
       icon: <Mail size={24} />,
       title: 'Email',
-      content: 'contacto@dralondrarobles.com',
+      content: 'contacto@dralondrarobles.mx',
     },
     {
       icon: <Clock size={24} />,
       title: locale === 'es' ? 'Horario' : 'Hours',
       content: locale === 'es'
-        ? 'Lun - Vie: 9:00 - 19:00\nSáb: 9:00 - 14:00'
-        : 'Mon - Fri: 9:00 AM - 7:00 PM\nSat: 9:00 AM - 2:00 PM',
+        ? 'Lun - Vie: 9:00 - 19:00\nSáb: 9:00 - 14:00\nDom: Cerrado'
+        : 'Mon - Fri: 9:00 AM - 7:00 PM\nSat: 9:00 AM - 2:00 PM\nSun: Closed',
     },
   ]
 
@@ -82,29 +81,27 @@ export function Location() {
                 ))}
               </div>
 
-              <motion.div
+              <motion.a
+                href="https://www.google.com/maps/dir//Dentista+Dra.+Alondra+Robles"
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="mt-8"
+                className="mt-8 flex items-center justify-center gap-2 w-full bg-gray-900 text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-colors"
               >
-                <MagneticButton className="w-full bg-gray-900 text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-colors">
-                  {locale === 'es' ? 'Cómo llegar' : 'Get Directions'}
-                </MagneticButton>
-              </motion.div>
+                <Navigation size={20} />
+                {locale === 'es' ? 'Cómo llegar con Google Maps' : 'Get directions with Google Maps'}
+              </motion.a>
             </div>
           </AnimatedSection>
 
-          {/* Google Maps */}
+          {/* Google Maps - Sin efecto hover que cause temblor */}
           <AnimatedSection delay={0.3}>
-            <motion.div
-              className="relative rounded-3xl overflow-hidden shadow-lg h-full min-h-[400px]"
-              whileHover={{ scale: 1.01 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
+            <div className="relative rounded-3xl overflow-hidden shadow-lg h-full min-h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.888987654321!2d-99.12345678901234!3d19.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x230662a0f28a435f!2sDentista%20Dra.%20Alondra%20Robles!5e0!3m2!1ses!2smx!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.1234567890123!2d-99.12345678901234!3d19.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x230662a0f28a435f!2sDentista%20Dra.%20Alondra%20Robles!5e0!3m2!1ses!2smx!4v1234567890123"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '400px' }}
@@ -116,13 +113,7 @@ export function Location() {
               />
               
               {/* Overlay Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-                className="absolute bottom-4 left-4 right-4 bg-white rounded-2xl p-4 shadow-xl"
-              >
+              <div className="absolute bottom-4 left-4 right-4 bg-white rounded-2xl p-4 shadow-xl">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center text-white text-lg font-bold">
                     DR
@@ -134,8 +125,8 @@ export function Location() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </AnimatedSection>
         </div>
       </div>
