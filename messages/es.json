@@ -9,20 +9,20 @@
     "product": "Servicios",
     "services": "Servicios",
     "appointment": "Cita",
-    "callNow": "Llama Ahora"
+    "callNow": "WhatsApp"
   },
   "hero": {
     "title1": "Sonrisas",
     "title2": " que",
     "title3": "Iluminan",
     "subtitle": "La Dra. Alondra Robles y su equipo de especialistas te brindan atención dental de excelencia en un ambiente cálido y profesional. Tu salud bucal en las mejores manos.",
-    "cta": "Agendar Cita"
+    "cta": "Agendar por WhatsApp"
   },
   "about": {
     "label": "(sobre nosotros)",
     "title": "Experiencia y Calidez en cada Consulta",
     "description": "La Dra. Alondra Robles cuenta con más de 15 años de experiencia en odontología estética y restauradora. Su enfoque personalizado y uso de tecnología de vanguardia garantizan resultados excepcionales y pacientes satisfechos.",
-    "cta": "Agendar Cita",
+    "cta": "Agendar por WhatsApp",
     "statNumber": "98%",
     "statLabel": "Pacientes satisfechos con nuestro servicio",
     "happyMembers": "5,000+ pacientes atendidos"
@@ -30,42 +30,42 @@
   "services": {
     "title": "Nuestros Servicios Dentales",
     "description": "Ofrecemos una amplia gama de tratamientos dentales utilizando tecnología de última generación para garantizar tu comodidad y los mejores resultados.",
-    "cta": "Agendar Cita",
+    "cta": "Agendar por WhatsApp",
     "ourServices": "nuestros servicios",
     "cavityProtection": {
       "title": "Estética Dental",
       "description": "Blanqueamiento dental, carillas de porcelana y diseño de sonrisa. Transforma tu imagen con tratamientos personalizados según tus necesidades.",
-      "readMore": "Ver más"
+      "readMore": "Más info"
     },
     "rootCanal": {
       "title": "Endodoncia",
       "description": "Tratamientos de conducto con tecnología avanzada y mínima invasión. Salvamos tus dientes naturales con procedimientos indoloros.",
-      "readMore": "Ver más"
+      "readMore": "Más info"
     },
     "oralSurgery": {
       "title": "Implantes Dentales",
       "description": "Recupera tu sonrisa con implantes de última generación. Colocación de implantes con garantía de calidad y resultados duraderos.",
-      "readMore": "Ver más"
+      "readMore": "Más info"
     }
   },
   "works": {
     "label": "(nuestros trabajos)",
     "title": "Transformaciones Reales",
     "description": "Conoce algunos de los casos de éxito de la Dra. Alondra Robles. Cada sonrisa es única y merece atención especializada.",
-    "cta": "Agendar Cita",
+    "cta": "Agendar por WhatsApp",
     "teethStraightening": "Ortodoncia Invisible",
     "dentalImplant": "Implantes y Coronas",
     "improveSmile": "Diseño de sonrisa personalizado.",
     "happyMembers": "5,000+ pacientes atendidos"
   },
   "consultation": {
-    "label": "(consulta gratuita)",
-    "title": "Primera Consulta 🧑‍⚕️ Gratis y sin Compromiso",
-    "description": "La Dra. Alondra Robles te ofrece una evaluación completa de tu salud bucal sin costo. Conoce tu diagnóstico y opciones de tratamiento.",
-    "cta": "Agendar Consulta",
+    "label": "(primera consulta)",
+    "title": "Primera Consulta con Radiografías incluidas",
+    "description": "Inversión en tu salud dental con atención profesional. Incluye radiografías digitales necesarias para tu diagnóstico completo.",
+    "cta": "Agendar por WhatsApp",
     "statNumber": "15+",
     "statLabel": "Años de experiencia",
-    "detailedDescription": "En tu primera visita realizamos un diagnóstico completo con radiografías digitales, evaluación periodontal y un plan de tratamiento personalizado. Sin costo, sin compromiso. Tu salud dental es nuestra prioridad."
+    "detailedDescription": "En tu primera visita realizamos un diagnóstico completo con radiografías digitales, evaluación periodontal y un plan de tratamiento personalizado. Tu salud dental es nuestra prioridad."
   },
   "testimonials": {
     "title": "Lo que Dicen Nuestros Pacientes",
@@ -80,8 +80,7 @@
     "newsletter": "Suscríbete para recibir consejos dentales",
     "placeholder": "Tu correo electrónico",
     "company": "Clínica",
-    "mission": "Misión",
-    "social": "Síguenos",
+    "social": "Redes Sociales",
     "copyright": "Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio"
