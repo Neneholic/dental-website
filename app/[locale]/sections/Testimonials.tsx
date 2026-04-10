@@ -192,7 +192,7 @@ export function Testimonials() {
 
         {/* Slider Container */}
         <div className="relative">
-          {/* Main Card - Altura ajustable para reseñas largas */}
+          {/* Main Card - Con scroll para reseñas largas */}
           <div className="relative min-h-[420px] md:min-h-[360px]">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
