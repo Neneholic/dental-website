@@ -98,12 +98,24 @@ export function About() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.8, duration: 0.5 }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-gray-900">
-                  <AnimatedCounter target={98} suffix="%" />
-                </div>
-                <div className="text-sm text-gray-600">
+                <motion.div 
+                  className="text-3xl md:text-4xl font-bold text-gray-900"
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 1, type: "spring", stiffness: 200 }}
+                >
+                  <AnimatedCounter target={100} suffix="%" />
+                </motion.div>
+                <motion.div 
+                  className="text-sm text-gray-600 font-medium"
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 1.2 }}
+                >
                   {t('statLabel')}
-                </div>
+                </motion.div>
               </motion.div>
             </motion.div>
           </div>
