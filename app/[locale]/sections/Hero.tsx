@@ -51,7 +51,7 @@ export function Hero() {
   const t = useTranslations('hero')
   const [currentIndex, setCurrentIndex] = useState(0)
   
-  const titleWords = [t('title1'), t('title2'), t('title3')]
+  const titleWords = [t('title1'), t('title2'), t('title3'), '✨']
 
   // Auto-advance slider
   useEffect(() => {
