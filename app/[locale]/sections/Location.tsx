@@ -69,7 +69,7 @@ export function Location() {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-start gap-4"
                   >
-                    <div className="w-12 h-12 bg-[#D4E4D1] rounded-xl flex items-center justify-center text-gray-700 flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-md">
                       {item.icon}
                     </div>
                     <div>
