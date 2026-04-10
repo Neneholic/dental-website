@@ -192,8 +192,8 @@ export function Testimonials() {
 
         {/* Slider Container */}
         <div className="relative">
-          {/* Main Card - Con scroll para reseñas largas */}
-          <div className="relative min-h-[420px] md:min-h-[360px]">
+          {/* Main Card - Altura ajustada para reseñas largas */}
+          <div className="relative min-h-[500px] md:min-h-[480px]">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -217,7 +217,7 @@ export function Testimonials() {
                     paginate(-1)
                   }
                 }}
-                className="absolute inset-0 bg-white rounded-3xl p-6 md:p-10 shadow-xl cursor-grab active:cursor-grabbing flex flex-col"
+                className="absolute inset-0 bg-white rounded-3xl p-6 md:p-10 shadow-xl cursor-grab active:cursor-grabbing"
               >
                 {/* Google Logo Badge */}
                 <div className="absolute top-4 right-4 md:top-6 md:right-6 flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full">
@@ -228,26 +228,24 @@ export function Testimonials() {
                 </div>
 
                 {/* Quote Icon */}
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-[#D4E4D1] rounded-2xl flex items-center justify-center mb-4 md:mb-6 flex-shrink-0">
+                <div className="w-12 h-12 md:w-14 md:h-14 bg-[#D4E4D1] rounded-2xl flex items-center justify-center mb-4 md:mb-6">
                   <Quote size={24} className="text-gray-700 md:w-7 md:h-7" />
                 </div>
 
                 {/* Stars */}
-                <div className="flex gap-1 mb-4 md:mb-6 flex-shrink-0">
+                <div className="flex gap-1 mb-4 md:mb-6">
                   {Array.from({ length: currentReview.rating }).map((_, i) => (
                     <Star key={i} size={20} className="text-amber-400 fill-amber-400 md:w-6 md:h-6" />
                   ))}
                 </div>
 
-                {/* Content - Con scroll si es muy largo */}
-                <div className="flex-1 overflow-hidden mb-4">
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed max-h-[120px] md:max-h-[140px] overflow-y-auto pr-2">
-                    &ldquo;{currentReview.content}&rdquo;
-                  </p>
-                </div>
+                {/* Content */}
+                <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed">
+                  &ldquo;{currentReview.content}&rdquo;
+                </p>
 
                 {/* Author */}
-                <div className="flex items-center justify-between pt-4 md:pt-6 border-t border-gray-100 flex-shrink-0">
+                <div className="flex items-center justify-between pt-4 md:pt-6 border-t border-gray-100">
                   <div className="flex items-center gap-3 md:gap-4">
                     <div className="w-12 h-12 md:w-14 md:h-14 bg-gray-900 rounded-full flex items-center justify-center text-white text-base md:text-lg font-bold">
                       {currentReview.avatar}
