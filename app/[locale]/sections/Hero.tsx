@@ -6,17 +6,18 @@ import { useState, useEffect } from 'react'
 
 // Tooth Icon for title
 const ToothIcon = () => (
-  <svg viewBox="0 0 64 64" fill="currentColor" className="inline-block w-12 h-12 md:w-16 md:h-16 text-amber-300">
-    <path d="M32 4c-8 0-14 6-16 14-1 4-1 8 0 12 1 3 2 6 2 10 0 8-2 16-6 20-2 2-2 4 0 4 4 0 8-4 12-12 2-4 4-8 8-8s6 4 8 8c4 8 8 12 12 12 2 0 2-2 0-4-4-4-6-12-6-20 0-4 1-7 2-10 1-4 1-8 0-12-2-8-8-14-16-14z"/>
+  <svg viewBox="0 0 48 48" fill="none" className="inline-block w-12 h-12 md:w-16 md:h-16">
+    <path d="M24 4c-6 0-11 4.5-12 11-.5 3.5-.5 7 0 10.5.8 2.5 1.5 5 1.5 8 0 6.5-1.5 13-4.5 16.5-1.5 1.5-1.5 3 0 3 3 0 6-3 9-9 1.5-3 3-6 6-6s4.5 3 6 6c3 6 6 9 9 9 1.5 0 1.5-1.5 0-3-3-3.5-4.5-10-4.5-16.5 0-3 .7-5.5 1.5-8 .5-3.5.5-7 0-10.5-1-6.5-6-11-12-11z" fill="currentColor" className="text-amber-300"/>
+    <path d="M24 8c-4.5 0-8 3-8.5 8-.3 2.5-.3 5 0 7.5.2 1.5 1 3 2.5 3s2.5-1.5 3-3c.5-2 1-3.5 3-3.5s2.5 1.5 3 3.5c.5 1.5 1.5 3 3 3s2.3-1.5 2.5-3c.3-2.5.3-5 0-7.5-.5-5-4-8-8.5-8z" fill="#FEF3C7"/>
   </svg>
 )
 
-// Slider images
+// Slider images - about-3 al inicio
 const sliderImages = [
+  '/images/about-3.webp',
   '/images/hero.webp',
   '/images/about-1.webp',
   '/images/about-2.webp',
-  '/images/about-3.webp',
 ]
 
 export function Hero() {
@@ -97,6 +98,7 @@ export function Hero() {
                   }}
                 >
                   {word}
+                  {index === 1 && <span>&nbsp;</span>}
                   {index === 1 && (
                     <motion.span
                       className="inline-block mx-2 md:mx-4"
