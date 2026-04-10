@@ -239,8 +239,8 @@ export function Testimonials() {
                   ))}
                 </div>
 
-                {/* Content - Sin límite de líneas para reseñas largas */}
-                <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed">
+                {/* Content - Con scroll si es muy largo */}
+                <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed max-h-[200px] overflow-y-auto pr-2">
                   &ldquo;{currentReview.content}&rdquo;
                 </p>
 
