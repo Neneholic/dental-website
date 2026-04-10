@@ -5,10 +5,10 @@ import { useTranslations } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { WhatsAppButton } from '../components/WhatsAppButton'
 
-// Imágenes de transformaciones dentales reales
+// Imágenes de stock - Diseño de sonrisa
 const images = [
-  '/images/about-4.webp',
-  '/images/about-5.webp',
+  'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80',
+  'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80',
 ]
 
 export function Works() {
