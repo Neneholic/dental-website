@@ -1,42 +1,83 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import { WhatsAppButton } from '../components/WhatsAppButton'
+import { useState, useEffect } from 'react'
 
-// Sparkles/Star Icon for title
-const SparkleIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="inline-block w-12 h-12 md:w-16 md:h-16">
-    <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+// Tooth Icon for title
+const ToothIcon = () => (
+  <svg viewBox="0 0 64 64" fill="currentColor" className="inline-block w-12 h-12 md:w-16 md:h-16 text-amber-300">
+    <path d="M32 4c-8 0-14 6-16 14-1 4-1 8 0 12 1 3 2 6 2 10 0 8-2 16-6 20-2 2-2 4 0 4 4 0 8-4 12-12 2-4 4-8 8-8s6 4 8 8c4 8 8 12 12 12 2 0 2-2 0-4-4-4-6-12-6-20 0-4 1-7 2-10 1-4 1-8 0-12-2-8-8-14-16-14z"/>
   </svg>
 )
 
+// Slider images
+const sliderImages = [
+  '/images/hero.webp',
+  '/images/about-1.webp',
+  '/images/about-2.webp',
+  '/images/about-3.webp',
+]
+
 export function Hero() {
   const t = useTranslations('hero')
+  const [currentIndex, setCurrentIndex] = useState(0)
   
   const titleWords = [t('title1'), t('title2'), t('title3')]
+
+  // Auto-advance slider
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % sliderImages.length)
+    }, 6000)
+    return () => clearInterval(timer)
+  }, [])
 
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image with Ken Burns Effect */}
-      <motion.div
-        className="absolute inset-0 z-0"
-        initial={{ scale: 1 }}
-        animate={{ scale: 1.1 }}
-        transition={{ duration: 20, ease: 'linear', repeat: Infinity, repeatType: 'reverse' }}
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/images/hero.webp')`,
+      {/* Background Image Slider with Ken Burns Effect */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentIndex}
+          className="absolute inset-0 z-0"
+          initial={{ opacity: 0, scale: 1 }}
+          animate={{ opacity: 1, scale: 1.1 }}
+          exit={{ opacity: 0 }}
+          transition={{ 
+            opacity: { duration: 1.5, ease: 'easeInOut' },
+            scale: { duration: 8, ease: 'linear' }
           }}
-        />
-        {/* Gradient Overlay - más sutil */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
-      </motion.div>
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('${sliderImages[currentIndex]}')`,
+            }}
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Gradient Overlay - más sutil */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+
+      {/* Slider Indicators */}
+      <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        {sliderImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`h-1.5 rounded-full transition-all duration-500 ${
+              index === currentIndex 
+                ? 'w-8 bg-white' 
+                : 'w-1.5 bg-white/40 hover:bg-white/60'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
 
       {/* Content - alineado a la izquierda */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 pt-48">
@@ -58,12 +99,12 @@ export function Hero() {
                   {word}
                   {index === 1 && (
                     <motion.span
-                      className="inline-block mx-2 md:mx-4 text-amber-300"
+                      className="inline-block mx-2 md:mx-4"
                       initial={{ scale: 0, rotate: -180 }}
                       animate={{ scale: 1, rotate: 0 }}
                       transition={{ delay: 0.8, duration: 0.5, type: 'spring' }}
                     >
-                      <SparkleIcon />
+                      <ToothIcon />
                     </motion.span>
                   )}
                 </motion.span>
@@ -109,7 +150,7 @@ export function Hero() {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.8 }}
