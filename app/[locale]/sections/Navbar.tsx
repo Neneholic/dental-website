@@ -69,13 +69,21 @@ export function Navbar() {
             {/* Logo */}
             <motion.a
               href="#home"
-              className={cn(
-                'text-2xl font-bold tracking-tight transition-colors',
-                isScrolled ? 'text-gray-900' : 'text-white'
-              )}
+              className="flex flex-col transition-colors"
               whileHover={{ scale: 1.02 }}
             >
-              DENTALO
+              <span className={cn(
+                'text-xl md:text-2xl font-bold tracking-tight',
+                isScrolled ? 'text-gray-900' : 'text-white'
+              )}>
+                Dra. Alondra Robles
+              </span>
+              <span className={cn(
+                'text-xs md:text-sm font-medium tracking-wider uppercase',
+                isScrolled ? 'text-gray-600' : 'text-white/80'
+              )}>
+                Cirujano Dentista
+              </span>
             </motion.a>
 
             {/* Desktop Navigation */}
