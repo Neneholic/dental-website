@@ -7,8 +7,8 @@ import { AnimatedSection } from '../components/AnimatedSection'
 import { WhatsAppButton } from '../components/WhatsAppButton'
 
 const images = [
-  'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=500&q=80',
-  'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=500&q=80',
+  '/images/about-4.webp',
+  '/images/about-5.webp',
 ]
 
 export function Works() {
@@ -51,7 +51,7 @@ export function Works() {
                     className="w-12 h-12 rounded-full border-2 border-white overflow-hidden"
                   >
                     <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+                      src="/images/about-6.webp"
                       alt="Happy patient"
                       className="w-full h-full object-cover"
                     />
@@ -68,7 +68,7 @@ export function Works() {
                     className="w-12 h-12 rounded-full border-2 border-white overflow-hidden"
                   >
                     <img
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
+                      src="/images/about-7.webp"
                       alt="Happy patient"
                       className="w-full h-full object-cover"
                     />

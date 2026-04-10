@@ -124,7 +124,7 @@ export function Services() {
             className="lg:col-span-1 relative rounded-3xl overflow-hidden group"
           >
             <img
-              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&q=80"
+              src="/images/about-8.webp"
               alt="Patient smiling"
               className="w-full h-full min-h-[300px] object-cover transition-transform duration-700 group-hover:scale-105"
             />

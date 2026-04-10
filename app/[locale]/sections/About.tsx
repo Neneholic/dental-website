@@ -8,9 +8,9 @@ import { AnimatedCounter } from '../components/AnimatedCounter'
 import { WhatsAppButton } from '../components/WhatsAppButton'
 
 const images = [
-  'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80',
-  'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80',
-  'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400&q=80',
+  '/images/about-1.webp',
+  '/images/about-2.webp',
+  '/images/about-3.webp',
 ]
 
 export function About() {
