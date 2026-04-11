@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, Shield, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 export function ServiceHero() {
   return (
@@ -107,18 +108,17 @@ export function ServiceHero() {
             transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative bg-white rounded-3xl shadow-xl p-8 md:p-12">
-              {/* Visual representation */}
-              <div className="relative aspect-[4/3] bg-gradient-to-br from-[#E8D5F2]/20 to-[#B8D4E8]/20 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#E8D5F2] to-[#B8D4E8] flex items-center justify-center">
-                      <Sparkles className="w-16 h-16 text-gray-800" />
-                    </div>
-                    <p className="text-gray-800 font-semibold">Resultados garantizados</p>
-                  </div>
-                </div>
-
+            <div className="relative bg-white rounded-3xl shadow-xl p-4 md:p-6">
+              {/* Image from carousel #1 */}
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/about-3.webp"
+                alt="Blanqueamiento dental"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                
                 {/* Floating stats */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}

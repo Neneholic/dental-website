@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
+import { Link } from '@/i18n/routing'
 
 // Social Icons
 const InstagramIcon = () => (
@@ -47,6 +48,14 @@ export function Footer() {
       url: 'https://wa.me/5213310678412',
       color: 'hover:text-green-500',
     },
+  ]
+
+  const companyLinks = [
+    { name: locale === 'es' ? 'Inicio' : 'Home', href: '/' },
+    { name: locale === 'es' ? 'Nosotros' : 'About', href: '/#about' },
+    { name: locale === 'es' ? 'Servicios' : 'Services', href: '/#services' },
+    { name: locale === 'es' ? 'Blanqueamiento' : 'Whitening', href: '/servicios/blanqueamiento-dental' },
+    { name: locale === 'es' ? 'Contacto' : 'Contact', href: '/#contact' },
   ]
 
   return (
@@ -121,18 +130,21 @@ export function Footer() {
             {/* Company */}
             <div>
               <h4 className="font-medium text-white mb-4">{t('company')}</h4>
-              {['Inicio', 'Nosotros', 'Servicios', 'Contacto'].map((link, index) => (
-                <motion.a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
+              {companyLinks.map((link, index) => (
+                <motion.div
+                  key={link.name}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="block text-gray-400 hover:text-white text-sm py-1.5 transition-colors"
                 >
-                  {link}
-                </motion.a>
+                  <Link
+                    href={link.href}
+                    className="block text-gray-400 hover:text-white text-sm py-1.5 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
             </div>
 

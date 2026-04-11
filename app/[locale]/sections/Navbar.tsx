@@ -73,10 +73,9 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <motion.a
-              href="#home"
+            <Link
+              href="/"
               className="flex flex-col transition-colors"
-              whileHover={{ scale: 1.02 }}
             >
               <span className={cn(
                 'text-xl md:text-2xl font-bold tracking-tight',
@@ -90,7 +89,7 @@ export function Navbar() {
               )}>
                 Cirujano Dentista
               </span>
-            </motion.a>
+            </Link>
 
             {/* Desktop Navigation */}
             <div
