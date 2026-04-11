@@ -9,7 +9,8 @@
     "product": "Servicios",
     "services": "Servicios",
     "appointment": "Cita",
-    "callNow": "WhatsApp"
+    "callNow": "WhatsApp",
+    "whitening": "Blanqueamiento Dental"
   },
   "hero": {
     "title1": "Sonrisas",
@@ -63,7 +64,7 @@
     "title": "Primera Consulta con Radiografías incluidas",
     "description": "Inversión en tu salud dental con atención profesional. Incluye radiografías digitales necesarias para tu diagnóstico completo.",
     "cta": "Agendar por WhatsApp",
-    "statNumber": "15+",
+    "statNumber": "6",
     "statLabel": "Años de experiencia",
     "detailedDescription": "En tu primera visita realizamos un diagnóstico completo con radiografías digitales, evaluación periodontal y un plan de tratamiento personalizado. Tu salud dental es nuestra prioridad."
   },

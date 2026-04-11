@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phone, Menu, X, Globe } from 'lucide-react'
+import { Phone, Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link, usePathname, useRouter } from '@/i18n/routing'
 import { MagneticButton } from '../components/MagneticButton'
@@ -22,6 +22,7 @@ export function Navbar() {
   const router = useRouter()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +35,13 @@ export function Navbar() {
   const navLinks = [
     { name: t('home'), href: '#home' as const },
     { name: t('about'), href: '#about' as const },
-    { name: t('services'), href: '#services' as const },
+    { 
+      name: t('services'), 
+      href: '#services' as const,
+      submenu: [
+        { name: t('whitening'), href: '/servicios/blanqueamiento-dental' },
+      ]
+    },
     { name: t('appointment'), href: '#contact' as const },
   ]
 
@@ -93,30 +100,90 @@ export function Navbar() {
               )}
             >
               {navLinks.map((link, index) => (
-                <motion.a
-                  key={link.name}
-                  href={link.href}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className={cn(
-                    'relative px-4 py-2 text-sm font-medium transition-colors',
-                    isScrolled
-                      ? 'text-gray-700 hover:text-gray-900'
-                      : 'text-white/90 hover:text-white'
+                <div key={link.name} className="relative">
+                  {link.submenu ? (
+                    <div 
+                      className="relative"
+                      onMouseEnter={() => setIsServicesOpen(true)}
+                      onMouseLeave={() => setIsServicesOpen(false)}
+                    >
+                      <motion.a
+                        href={link.href}
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className={cn(
+                          'relative px-4 py-2 text-sm font-medium transition-colors flex items-center gap-1',
+                          isScrolled
+                            ? 'text-gray-700 hover:text-gray-900'
+                            : 'text-white/90 hover:text-white'
+                        )}
+                      >
+                        {link.name}
+                        <ChevronDown className="w-4 h-4" />
+                        <motion.span
+                          className={cn(
+                            'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-current rounded-full',
+                            isScrolled ? 'bg-gray-900' : 'bg-white'
+                          )}
+                          initial={{ width: 0 }}
+                          whileHover={{ width: '60%' }}
+                          transition={{ duration: 0.3 }}
+                        />
+                      </motion.a>
+                      
+                      {/* Submenu */}
+                      <AnimatePresence>
+                        {isServicesOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            transition={{ duration: 0.2 }}
+                            className={cn(
+                              'absolute top-full left-0 mt-2 py-2 px-1 rounded-xl shadow-lg min-w-[200px]',
+                              isScrolled ? 'bg-white' : 'bg-white/95 backdrop-blur-sm'
+                            )}
+                          >
+                            {link.submenu.map((item) => (
+                              <Link
+                                key={item.name}
+                                href={item.href}
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <motion.a
+                      href={link.href}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className={cn(
+                        'relative px-4 py-2 text-sm font-medium transition-colors',
+                        isScrolled
+                          ? 'text-gray-700 hover:text-gray-900'
+                          : 'text-white/90 hover:text-white'
+                      )}
+                    >
+                      {link.name}
+                      <motion.span
+                        className={cn(
+                          'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-current rounded-full',
+                          isScrolled ? 'bg-gray-900' : 'bg-white'
+                        )}
+                        initial={{ width: 0 }}
+                        whileHover={{ width: '60%' }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </motion.a>
                   )}
-                >
-                  {link.name}
-                  <motion.span
-                    className={cn(
-                      'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-current rounded-full',
-                      isScrolled ? 'bg-gray-900' : 'bg-white'
-                    )}
-                    initial={{ width: 0 }}
-                    whileHover={{ width: '60%' }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </motion.a>
+                </div>
               ))}
             </div>
 
@@ -188,17 +255,32 @@ export function Navbar() {
             >
               <div className="flex flex-col gap-4">
                 {navLinks.map((link, index) => (
-                  <motion.a
-                    key={link.name}
-                    href={link.href}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-lg font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-gray-600 transition-colors"
-                  >
-                    {link.name}
-                  </motion.a>
+                  <div key={link.name}>
+                    <motion.a
+                      href={link.href}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      onClick={() => !link.submenu && setIsMobileMenuOpen(false)}
+                      className="text-lg font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-gray-600 transition-colors block"
+                    >
+                      {link.name}
+                    </motion.a>
+                    {link.submenu && (
+                      <div className="pl-4 mt-2 space-y-2">
+                        {link.submenu.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="block text-sm text-gray-600 py-2 hover:text-gray-900"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
                 
                 {/* Language Switch Mobile */}

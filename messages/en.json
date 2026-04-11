@@ -9,7 +9,8 @@
     "product": "Services",
     "services": "Services",
     "appointment": "Appointment",
-    "callNow": "WhatsApp"
+    "callNow": "WhatsApp",
+    "whitening": "Teeth Whitening"
   },
   "hero": {
     "title1": "Smiles",
@@ -63,7 +64,7 @@
     "title": "First Consultation with X-rays included",
     "description": "Investment in your dental health with professional care. Includes digital x-rays needed for your complete diagnosis.",
     "cta": "Schedule via WhatsApp",
-    "statNumber": "15+",
+    "statNumber": "6",
     "statLabel": "Years of experience",
     "detailedDescription": "On your first visit we perform a complete diagnosis with digital x-rays, periodontal evaluation and a personalized treatment plan. Your dental health is our priority."
   },

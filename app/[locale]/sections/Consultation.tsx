@@ -57,7 +57,7 @@ export function Consultation() {
             <AnimatedSection delay={0.4}>
               <div className="flex items-baseline gap-2">
                 <span className="text-5xl md:text-6xl font-bold text-gray-900">
-                  <AnimatedCounter target={15} suffix="+" />
+                  <AnimatedCounter target={6} suffix="" />
                 </span>
               </div>
               <p className="text-gray-600 mt-2">

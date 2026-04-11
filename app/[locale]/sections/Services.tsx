@@ -2,7 +2,8 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import { AnimatedSection } from '../components/AnimatedSection'
 
 // Dental Icons
@@ -31,6 +32,7 @@ const ImplantIcon = () => (
 
 export function Services() {
   const t = useTranslations('services')
+  const locale = useLocale()
   const imageRef = useRef<HTMLDivElement>(null)
   
   const { scrollYProgress } = useScroll({
@@ -48,6 +50,8 @@ export function Services() {
       description: t('cavityProtection.description'),
       color: 'bg-[#F5D5A8]',
       icon: <WhiteningIcon />,
+      href: '/servicios/blanqueamiento-dental',
+      isLink: true,
     },
     {
       id: 2,
@@ -55,6 +59,7 @@ export function Services() {
       description: t('rootCanal.description'),
       color: 'bg-[#E8D5F2]',
       icon: <EndodonticsIcon />,
+      isLink: false,
     },
     {
       id: 3,
@@ -62,8 +67,58 @@ export function Services() {
       description: t('oralSurgery.description'),
       color: 'bg-[#B8D4E8]',
       icon: <ImplantIcon />,
+      isLink: false,
     },
   ]
+
+  const ServiceCard = ({ service, index }: { service: typeof services[0], index: number }) => {
+    const cardContent = (
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.6,
+          delay: index * 0.15,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        whileHover={{ y: -8 }}
+        className={`${service.color} rounded-3xl p-8 relative cursor-pointer h-full`}
+      >
+        {/* Icon */}
+        <div className="w-16 h-16 bg-white/50 rounded-2xl flex items-center justify-center mb-6 text-gray-800">
+          {service.icon}
+        </div>
+
+        {/* Content */}
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          {service.title}
+        </h3>
+        <p className="text-gray-700 leading-relaxed">
+          {service.description}
+        </p>
+        
+        {service.isLink && (
+          <div className="mt-4 flex items-center text-sm font-medium text-gray-800">
+            {locale === 'es' ? 'Ver más' : 'Learn more'}
+            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        )}
+      </motion.div>
+    )
+
+    if (service.isLink && service.href) {
+      return (
+        <Link href={service.href} className="block h-full">
+          {cardContent}
+        </Link>
+      )
+    }
+
+    return cardContent
+  }
 
   return (
     <section id="services" className="py-24 md:py-32 bg-white overflow-hidden">
@@ -97,32 +152,7 @@ export function Services() {
         {/* Services Grid */}
         <div className="grid lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.15,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              whileHover={{ y: -8 }}
-              className={`${service.color} rounded-3xl p-8 relative cursor-pointer`}
-            >
-              {/* Icon */}
-              <div className="w-16 h-16 bg-white/50 rounded-2xl flex items-center justify-center mb-6 text-gray-800">
-                {service.icon}
-              </div>
-
-              {/* Content */}
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                {service.description}
-              </p>
-            </motion.div>
+            <ServiceCard key={service.id} service={service} index={index} />
           ))}
 
           {/* Full Width Image Card with Parallax */}
