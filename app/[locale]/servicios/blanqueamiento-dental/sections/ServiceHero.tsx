@@ -6,11 +6,12 @@ import Image from 'next/image';
 
 export function ServiceHero() {
   return (
-    <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-[#E8D5F2]/30 via-white to-[#B8D4E8]/30">
+    <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-[#B8D4E8]/40 via-white to-[#E8D5F2]/40">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-[#E8D5F2]/40 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-[#B8D4E8]/40 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#B8D4E8]/60 to-transparent" />
+        <div className="absolute top-20 right-20 w-72 h-72 bg-[#B8D4E8]/50 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-72 h-72 bg-[#E8D5F2]/50 rounded-full blur-3xl" />
       </div>
 
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
