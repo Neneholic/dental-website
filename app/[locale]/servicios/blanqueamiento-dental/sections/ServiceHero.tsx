@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, Shield, Clock } from 'lucide-react';
+import { Sparkles, ArrowRight, Shield, Clock, Zap, Timer } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 
@@ -128,25 +128,71 @@ export function ServiceHero() {
                   priority
                 />
                 
-                {/* Floating stats */}
+                {/* Floating stats - Pastilla 1: +4 tonos */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 }}
-                  className="absolute top-4 left-4 bg-white rounded-xl shadow-lg px-4 py-3"
+                  initial={{ opacity: 0, scale: 0.5, y: 20 }}
+                  animate={{ 
+                    opacity: 1, 
+                    scale: 1, 
+                    y: [0, -8, 0],
+                  }}
+                  transition={{ 
+                    opacity: { delay: 0.8, duration: 0.5 },
+                    scale: { delay: 0.8, duration: 0.5 },
+                    y: { delay: 1.5, duration: 2.5, repeat: Infinity, ease: "easeInOut" }
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  className="absolute top-6 left-6 bg-gradient-to-br from-[#B8D4E8] to-[#E8D5F2] rounded-2xl shadow-xl px-6 py-4 cursor-pointer"
                 >
-                  <p className="text-2xl font-bold text-[#5BA3C0]">+4</p>
-                  <p className="text-xs text-gray-500">{t('stat1')}</p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                      <Zap className="w-6 h-6 text-[#5BA3C0]" />
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-gray-900">+4</p>
+                      <p className="text-sm font-medium text-gray-700">{t('stat1')}</p>
+                    </div>
+                  </div>
                 </motion.div>
 
+                {/* Floating stats - Pastilla 2: 45min */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1 }}
-                  className="absolute bottom-4 right-4 bg-white rounded-xl shadow-lg px-4 py-3"
+                  initial={{ opacity: 0, scale: 0.5, y: 20 }}
+                  animate={{ 
+                    opacity: 1, 
+                    scale: 1, 
+                    y: [0, -6, 0],
+                  }}
+                  transition={{ 
+                    opacity: { delay: 1, duration: 0.5 },
+                    scale: { delay: 1, duration: 0.5 },
+                    y: { delay: 2, duration: 3, repeat: Infinity, ease: "easeInOut" }
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  className="absolute bottom-6 right-6 bg-white rounded-2xl shadow-xl px-6 py-4 border-2 border-[#E8D5F2] cursor-pointer"
                 >
-                  <p className="text-2xl font-bold text-gray-800">45min</p>
-                  <p className="text-xs text-gray-500">{t('stat2')}</p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-[#E8D5F2] rounded-xl flex items-center justify-center">
+                      <Timer className="w-6 h-6 text-gray-800" />
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-gray-900">45<span className="text-xl">min</span></p>
+                      <p className="text-sm font-medium text-gray-700">{t('stat2')}</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Badge extra - Resultados inmediatos */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 1.2, duration: 0.5 }}
+                  className="absolute top-6 right-6 bg-green-500 text-white rounded-full px-4 py-2 shadow-lg"
+                >
+                  <span className="text-sm font-bold flex items-center gap-1">
+                    <Sparkles className="w-4 h-4" />
+                    {locale === 'es' ? 'Resultados inmediatos' : 'Immediate results'}
+                  </span>
                 </motion.div>
               </div>
             </div>
