@@ -6,6 +6,7 @@ import { ServiceHero } from './sections/ServiceHero';
 import { ServiceStats } from './sections/ServiceStats';
 import { ServiceBenefits } from './sections/ServiceBenefits';
 import { ServiceProcess } from './sections/ServiceProcess';
+import { ParallaxSection } from './sections/ParallaxSection';
 import { BeforeAfterGallery } from './sections/BeforeAfterGallery';
 import { PricingCards } from './sections/PricingCards';
 import { ServiceFaq } from './sections/ServiceFaq';
@@ -50,6 +51,7 @@ export default function BlanqueamientoDentalPage() {
         <ServiceHero />
         <ServiceStats />
         <ServiceBenefits />
+        <ParallaxSection />
         <ServiceProcess />
         <BeforeAfterGallery />
         <PricingCards />
