@@ -74,8 +74,8 @@ export function Footer() {
             </motion.h3>
             <p className="text-gray-400 mb-4">
               {locale === 'es' 
-                ? 'Clínica Dental Privada - Tu sonrisa en las mejores manos' 
-                : 'Private Dental Clinic - Your smile in the best hands'}
+                ? 'Consulta Dental Privada - Atención personalizada para tu sonrisa' 
+                : 'Private Dental Practice - Personalized care for your smile'}
             </p>
 
             {/* Social Links */}

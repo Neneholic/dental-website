@@ -121,7 +121,7 @@ export function Location() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title={locale === 'es' ? 'Ubicación de la clínica' : 'Clinic location'}
+                title={locale === 'es' ? 'Ubicación del consultorio' : 'Office location'}
                 className="absolute inset-0"
               />
             </div>

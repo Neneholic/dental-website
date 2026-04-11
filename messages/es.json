@@ -16,7 +16,7 @@
     "title1": "Sonrisas",
     "title2": " que",
     "title3": "Iluminan",
-    "subtitle": "La Dra. Alondra Robles y su equipo de especialistas te brindan atención dental de excelencia en un ambiente cálido y profesional. Tu salud bucal en las mejores manos.",
+    "subtitle": "La Dra. Alondra Robles te brinda atención dental personalizada de excelencia en un ambiente cálido y profesional. Tu salud bucal en las mejores manos.",
     "cta": "Agendar por WhatsApp"
   },
   "about": {
@@ -30,7 +30,7 @@
   },
   "services": {
     "title": "Nuestros Servicios Dentales",
-    "description": "Ofrecemos una amplia gama de tratamientos dentales utilizando tecnología de última generación para garantizar tu comodidad y los mejores resultados.",
+    "description": "La Dra. Alondra Robles ofrece una amplia gama de tratamientos dentales utilizando tecnología de última generación para garantizar tu comodidad y los mejores resultados.",
     "cta": "Agendar por WhatsApp",
     "ourServices": "nuestros servicios",
     "cavityProtection": {
@@ -62,11 +62,11 @@
   "consultation": {
     "label": "(primera consulta)",
     "title": "Primera Consulta con Radiografías incluidas",
-    "description": "Inversión en tu salud dental con atención profesional. Incluye radiografías digitales necesarias para tu diagnóstico completo.",
+    "description": "Inversión en tu salud dental con atención personalizada. Incluye radiografías digitales necesarias para tu diagnóstico completo.",
     "cta": "Agendar por WhatsApp",
     "statNumber": "6",
     "statLabel": "Años de experiencia",
-    "detailedDescription": "En tu primera visita realizamos un diagnóstico completo con radiografías digitales, evaluación periodontal y un plan de tratamiento personalizado. Tu salud dental es nuestra prioridad."
+    "detailedDescription": "En tu primera visita la Dra. Alondra Robles realiza un diagnóstico completo con radiografías digitales, evaluación periodontal y un plan de tratamiento personalizado. Tu salud dental es mi prioridad."
   },
   "testimonials": {
     "title": "Lo que Dicen Nuestros Pacientes",
@@ -75,7 +75,7 @@
   "location": {
     "label": "(encuéntranos)",
     "title": "Visítanos en Nuestra Clínica",
-    "description": "Estamos ubicados en una zona accesible con estacionamiento disponible. Agenda tu cita y visítanos para conocer el mejor cuidado dental."
+    "description": "Consulta privada ubicada en una zona accesible con estacionamiento disponible. Agenda tu cita y visita el consultorio para recibir el mejor cuidado dental personalizado."
   },
   "footer": {
     "newsletter": "Suscríbete para recibir consejos dentales",
@@ -113,7 +113,7 @@
     "benefits": {
       "label": "Beneficios",
       "title": "¿Por qué elegir nuestro blanqueamiento?",
-      "subtitle": "Tecnología de punta combinada con la experiencia de nuestros especialistas para darte los mejores resultados.",
+      "subtitle": "Tecnología de punta combinada con la experiencia de la Dra. Alondra Robles para darte los mejores resultados.",
       "fast": "Rápido",
       "fastDesc": "Solo 45 minutos y verás resultados inmediatos. Perfecto para ocupados.",
       "safe": "Seguro",
@@ -203,7 +203,7 @@
     "finalCta": {
       "badge": "Consulta gratuita sin compromiso",
       "title": "¿Lista para tu nueva sonrisa?",
-      "subtitle": "Agenda tu consulta de evaluación gratuita hoy mismo. Nuestros especialistas evaluarán tu caso y te recomendarán el mejor tratamiento.",
+      "subtitle": "Agenda tu consulta de evaluación gratuita hoy mismo. La Dra. Alondra Robles evaluará tu caso y te recomendará el mejor tratamiento.",
       "ctaWhatsApp": "Agendar consulta gratis",
       "ctaCall": "Llamar ahora",
       "trust1": "Sin compromiso",

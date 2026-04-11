@@ -86,8 +86,8 @@ export function Consultation() {
               <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {locale === 'es'
-                    ? 'Tu salud dental es nuestra prioridad. Agenda tu cita y conoce el mejor cuidado dental en Guadalajara.'
-                    : 'Your dental health is our priority. Schedule your appointment and experience the best dental care in Guadalajara.'}
+                    ? 'Tu salud dental es mi prioridad. Agenda tu cita y conoce el mejor cuidado dental personalizado en Guadalajara.'
+                    : 'Your dental health is my priority. Schedule your appointment and experience the best personalized dental care in Guadalajara.'}
                 </p>
                 <WhatsAppButton variant="primary" className="w-full justify-center">
                   {locale === 'es' ? 'Agendar Consulta' : 'Schedule Consultation'}

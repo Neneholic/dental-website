@@ -16,7 +16,7 @@
     "title1": "Smiles",
     "title2": "that",
     "title3": "Shine",
-    "subtitle": "Dr. Alondra Robles and her team of specialists provide excellence in dental care in a warm and professional environment. Your oral health in the best hands.",
+    "subtitle": "Dr. Alondra Robles provides personalized excellence in dental care in a warm and professional environment. Your oral health in the best hands.",
     "cta": "Schedule via WhatsApp"
   },
   "about": {
@@ -30,7 +30,7 @@
   },
   "services": {
     "title": "Our Dental Services",
-    "description": "We offer a wide range of dental treatments using state-of-the-art technology to ensure your comfort and the best results.",
+    "description": "Dr. Alondra Robles offers a wide range of dental treatments using state-of-the-art technology to ensure your comfort and the best results.",
     "cta": "Schedule via WhatsApp",
     "ourServices": "our services",
     "cavityProtection": {
@@ -62,11 +62,11 @@
   "consultation": {
     "label": "(first consultation)",
     "title": "First Consultation with X-rays included",
-    "description": "Investment in your dental health with professional care. Includes digital x-rays needed for your complete diagnosis.",
+    "description": "Investment in your dental health with personalized care. Includes digital x-rays needed for your complete diagnosis.",
     "cta": "Schedule via WhatsApp",
     "statNumber": "6",
     "statLabel": "Years of experience",
-    "detailedDescription": "On your first visit we perform a complete diagnosis with digital x-rays, periodontal evaluation and a personalized treatment plan. Your dental health is our priority."
+    "detailedDescription": "On your first visit Dr. Alondra Robles performs a complete diagnosis with digital x-rays, periodontal evaluation and a personalized treatment plan. Your dental health is my priority."
   },
   "testimonials": {
     "title": "What Our Patients Say",
@@ -75,7 +75,7 @@
   "location": {
     "label": "(find us)",
     "title": "Visit Our Clinic",
-    "description": "We are located in an accessible area with parking available. Schedule your appointment and visit us to experience the best dental care."
+    "description": "Private practice located in an accessible area with parking available. Schedule your appointment and visit to experience the best personalized dental care."
   },
   "footer": {
     "newsletter": "Subscribe for dental tips",
@@ -113,7 +113,7 @@
     "benefits": {
       "label": "Benefits",
       "title": "Why choose our whitening?",
-      "subtitle": "Cutting-edge technology combined with our specialists' experience to give you the best results.",
+      "subtitle": "Cutting-edge technology combined with Dr. Alondra Robles' experience to give you the best results.",
       "fast": "Fast",
       "fastDesc": "Just 45 minutes and you'll see immediate results. Perfect for busy people.",
       "safe": "Safe",
@@ -203,7 +203,7 @@
     "finalCta": {
       "badge": "Free consultation with no obligation",
       "title": "Ready for your new smile?",
-      "subtitle": "Book your free evaluation consultation today. Our specialists will evaluate your case and recommend the best treatment.",
+      "subtitle": "Book your free evaluation consultation today. Dr. Alondra Robles will evaluate your case and recommend the best treatment.",
       "ctaWhatsApp": "Book free consultation",
       "ctaCall": "Call now",
       "trust1": "No obligation",
