@@ -3,42 +3,20 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-
-const faqs = [
-  {
-    question: '¿El blanqueamiento dental duele?',
-    answer:
-      'No, el procedimiento es completamente indoloro. Algunos pacientes pueden experimentar una ligera sensibilidad después del tratamiento, pero esto desaparece en 24-48 horas.',
-  },
-  {
-    question: '¿Cuánto duran los resultados?',
-    answer:
-      'Los resultados pueden durar entre 1 y 2 años, dependiendo de tus hábitos. Evitar café, té, vino tinto y tabaco ayuda a mantener tu sonrisa blanca.',
-  },
-  {
-    question: '¿Es seguro para el esmalte dental?',
-    answer:
-      'Sí, nuestro blanqueamiento es 100% seguro para el esmalte cuando se realiza por profesionales. Usamos productos aprobados y técnicas que protegen tu esmalte.',
-  },
-  {
-    question: '¿Puedo blanquear si tengo brackets?',
-    answer:
-      'Los brackets deben retirarse antes del blanqueamiento. Los implantes no se blanquean, por lo que recomendamos coordinar el color con el tratamiento previo.',
-  },
-  {
-    question: '¿Cuántas sesiones necesito?',
-    answer:
-      'La mayoría de pacientes logra excelentes resultados con una sola sesión de 45 minutos. En casos de manchas profundas, podríamos recomendar una segunda sesión.',
-  },
-  {
-    question: '¿Hay restricciones después del tratamiento?',
-    answer:
-      'Durante las primeras 48 horas es recomendable evitar alimentos y bebidas que tiñan (café, té, vino). Te proporcionaremos un kit de cuidado específico.',
-  },
-];
+import { useTranslations } from 'next-intl';
 
 export function ServiceFaq() {
+  const t = useTranslations('whitening');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const faqs = [
+    { q: t('faq.questions.0.q'), a: t('faq.questions.0.a') },
+    { q: t('faq.questions.1.q'), a: t('faq.questions.1.a') },
+    { q: t('faq.questions.2.q'), a: t('faq.questions.2.a') },
+    { q: t('faq.questions.3.q'), a: t('faq.questions.3.a') },
+    { q: t('faq.questions.4.q'), a: t('faq.questions.4.a') },
+    { q: t('faq.questions.5.q'), a: t('faq.questions.5.a') },
+  ];
 
   return (
     <section className="py-24 md:py-32 bg-[#B8D4E8]/10">
@@ -52,13 +30,13 @@ export function ServiceFaq() {
           className="text-center mb-12"
         >
           <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">
-            FAQ
+            {t('faq.label')}
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Preguntas frecuentes
+            {t('faq.title')}
           </h2>
           <p className="text-lg text-gray-600">
-            Resolvemos tus dudas sobre el blanqueamiento dental
+            {t('faq.subtitle')}
           </p>
         </motion.div>
 
@@ -80,7 +58,7 @@ export function ServiceFaq() {
                 className="w-full flex items-center justify-between p-6 text-left"
               >
                 <span className="font-semibold text-gray-900 pr-4">
-                  {faq.question}
+                  {faq.q}
                 </span>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
@@ -101,7 +79,7 @@ export function ServiceFaq() {
                   >
                     <div className="px-6 pb-6">
                       <p className="text-gray-600 leading-relaxed">
-                        {faq.answer}
+                        {faq.a}
                       </p>
                     </div>
                   </motion.div>

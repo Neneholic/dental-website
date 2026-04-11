@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 import { Navbar } from '../../sections/Navbar';
 import { Footer } from '../../sections/Footer';
 import { ServiceHero } from './sections/ServiceHero';
@@ -10,24 +11,35 @@ import { PricingCards } from './sections/PricingCards';
 import { ServiceFaq } from './sections/ServiceFaq';
 import { FinalCta } from './sections/FinalCta';
 
-export const metadata: Metadata = {
-  title: 'Blanqueamiento Dental Profesional | Dental Smile Clinic',
-  description:
-    'Transforma tu sonrisa con nuestro blanqueamiento dental profesional. Hasta 4 tonos más claros en una sola sesión. Agenda tu consulta gratuita.',
-  keywords: [
-    'blanqueamiento dental',
-    'blanquear dientes',
-    'sonrisa blanca',
-    'estética dental',
-    'clínica dental',
-  ],
-  openGraph: {
-    title: 'Blanqueamiento Dental Profesional | Dental Smile Clinic',
-    description:
-      'Transforma tu sonrisa hasta 4 tonos más claros en solo 45 minutos. Tecnología LED de última generación.',
-    type: 'website',
-  },
+type Props = {
+  params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'whitening.metadata' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: [
+      'blanqueamiento dental',
+      'blanquear dientes',
+      'sonrisa blanca',
+      'estética dental',
+      'clínica dental',
+      'teeth whitening',
+      'white smile',
+      'cosmetic dentistry',
+      'dental clinic',
+    ],
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      type: 'website',
+    },
+  };
+}
 
 export default function BlanqueamientoDentalPage() {
   return (

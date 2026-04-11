@@ -85,5 +85,130 @@
     "copyright": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "whitening": {
+    "metadata": {
+      "title": "Professional Teeth Whitening | Dr. Alondra Robles",
+      "description": "Transform your smile with our professional teeth whitening. Up to 4 shades lighter in a single session. Book your free consultation."
+    },
+    "hero": {
+      "badge": "Latest LED Technology",
+      "title1": "Smile up to",
+      "titleHighlight": "4 shades",
+      "title2": "lighter",
+      "subtitle": "Transform your smile in just 45 minutes with our professional teeth whitening. Visible results from the first session.",
+      "safe": "100% safe",
+      "duration": "45 minutes",
+      "ctaPrimary": "Book your consultation",
+      "ctaSecondary": "See how it works",
+      "stat1": "shades lighter",
+      "stat2": "per session"
+    },
+    "stats": {
+      "smiles": "Smiles transformed",
+      "satisfaction": "Satisfaction guaranteed",
+      "duration": "Per session",
+      "experience": "Years of experience"
+    },
+    "benefits": {
+      "label": "Benefits",
+      "title": "Why choose our whitening?",
+      "subtitle": "Cutting-edge technology combined with our specialists' experience to give you the best results.",
+      "fast": "Fast",
+      "fastDesc": "Just 45 minutes and you'll see immediate results. Perfect for busy people.",
+      "safe": "Safe",
+      "safeDesc": "Approved procedure that does not damage tooth enamel or gums.",
+      "longLasting": "Long-lasting",
+      "longLastingDesc": "Results that last up to 2 years with proper care.",
+      "personalized": "Personalized",
+      "personalizedDesc": "We adjust the intensity according to your needs and sensitivity.",
+      "painless": "Painless",
+      "painlessDesc": "Completely painless and comfortable procedure.",
+      "guaranteed": "Guaranteed",
+      "guaranteedDesc": "Satisfaction guaranteed or your money back."
+    },
+    "process": {
+      "label": "Process",
+      "title": "How does it work?",
+      "subtitle": "A simple, safe and effective process in just 4 steps",
+      "step1": "Consultation",
+      "step1Desc": "Free initial evaluation of your smile and discussion of your goals.",
+      "step2": "Preparation",
+      "step2Desc": "We protect your gums and lips before applying the whitening gel.",
+      "step3": "LED Application",
+      "step3Desc": "We apply the gel and activate it with state-of-the-art LED light.",
+      "step4": "Result",
+      "step4Desc": "We reveal your new smile up to 4 shades lighter."
+    },
+    "gallery": {
+      "label": "Results",
+      "title": "Real transformations",
+      "subtitle": "Slide to see the difference",
+      "before": "Before",
+      "after": "After",
+      "sessions": "1 session"
+    },
+    "pricing": {
+      "label": "Pricing",
+      "title": "Investment in your smile",
+      "subtitle": "An affordable price for a complete smile transformation",
+      "badge": "Complete package",
+      "price": "1,750",
+      "currency": "MXN",
+      "note": "One-time payment - No hidden fees",
+      "features": [
+        "1 LED whitening session",
+        "Up to 4 shades lighter",
+        "Premium post-treatment care kit",
+        "Follow-up consultation included",
+        "1-year satisfaction guarantee",
+        "Immediate results",
+        "State-of-the-art technology",
+        "No pain or sensitivity"
+      ],
+      "cta": "Book my appointment",
+      "consultation": "Free evaluation consultation included"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "We answer your questions about teeth whitening",
+      "questions": [
+        {
+          "q": "Does teeth whitening hurt?",
+          "a": "No, the procedure is completely painless. Some patients may experience slight sensitivity after treatment, but this disappears within 24-48 hours."
+        },
+        {
+          "q": "How long do results last?",
+          "a": "Results can last between 1 and 2 years, depending on your habits. Avoiding coffee, tea, red wine and tobacco helps keep your smile white."
+        },
+        {
+          "q": "Is it safe for tooth enamel?",
+          "a": "Yes, our whitening is 100% safe for enamel when performed by professionals. We use approved products and techniques that protect your enamel."
+        },
+        {
+          "q": "Can I whiten if I have braces?",
+          "a": "Braces must be removed before whitening. Implants do not whiten, so we recommend coordinating the color with previous treatment."
+        },
+        {
+          "q": "How many sessions do I need?",
+          "a": "Most patients achieve excellent results with just one 45-minute session. For deep stains, we might recommend a second session."
+        },
+        {
+          "q": "Are there restrictions after treatment?",
+          "a": "During the first 48 hours it's advisable to avoid foods and drinks that stain (coffee, tea, wine). We will provide you with a specific care kit."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Free consultation with no obligation",
+      "title": "Ready for your new smile?",
+      "subtitle": "Book your free evaluation consultation today. Our specialists will evaluate your case and recommend the best treatment.",
+      "ctaWhatsApp": "Book free consultation",
+      "ctaCall": "Call now",
+      "trust1": "No obligation",
+      "trust2": "100% confidential",
+      "trust3": "Flexible hours"
+    }
   }
 }

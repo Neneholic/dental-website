@@ -85,5 +85,130 @@
     "copyright": "Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio"
+  },
+  "whitening": {
+    "metadata": {
+      "title": "Blanqueamiento Dental Profesional | Dra. Alondra Robles",
+      "description": "Transforma tu sonrisa con nuestro blanqueamiento dental profesional. Hasta 4 tonos más claros en una sola sesión. Agenda tu consulta gratuita."
+    },
+    "hero": {
+      "badge": "Tecnología LED de última generación",
+      "title1": "Sonrisa hasta",
+      "titleHighlight": "4 tonos",
+      "title2": "más clara",
+      "subtitle": "Transforma tu sonrisa en solo 45 minutos con nuestro blanqueamiento dental profesional. Resultados visibles desde la primera sesión.",
+      "safe": "100% seguro",
+      "duration": "45 minutos",
+      "ctaPrimary": "Agenda tu consulta",
+      "ctaSecondary": "Ver cómo funciona",
+      "stat1": "tonos más claros",
+      "stat2": "por sesión"
+    },
+    "stats": {
+      "smiles": "Sonrisas transformadas",
+      "satisfaction": "Satisfacción garantizada",
+      "duration": "Por sesión",
+      "experience": "Años de experiencia"
+    },
+    "benefits": {
+      "label": "Beneficios",
+      "title": "¿Por qué elegir nuestro blanqueamiento?",
+      "subtitle": "Tecnología de punta combinada con la experiencia de nuestros especialistas para darte los mejores resultados.",
+      "fast": "Rápido",
+      "fastDesc": "Solo 45 minutos y verás resultados inmediatos. Perfecto para ocupados.",
+      "safe": "Seguro",
+      "safeDesc": "Procedimiento aprobado que no daña el esmalte dental ni las encías.",
+      "longLasting": "Duradero",
+      "longLastingDesc": "Resultados que duran hasta 2 años con el cuidado adecuado.",
+      "personalized": "Personalizado",
+      "personalizedDesc": "Ajustamos la intensidad según tus necesidades y sensibilidad.",
+      "painless": "Sin dolor",
+      "painlessDesc": "Procedimiento completamente indoloro y confortable.",
+      "guaranteed": "Garantizado",
+      "guaranteedDesc": "Satisfacción garantizada o tu dinero de vuelta."
+    },
+    "process": {
+      "label": "Proceso",
+      "title": "¿Cómo funciona?",
+      "subtitle": "Un proceso simple, seguro y efectivo en solo 4 pasos",
+      "step1": "Consulta",
+      "step1Desc": "Evaluación inicial gratuita de tu sonrisa y discusión de tus objetivos.",
+      "step2": "Preparación",
+      "step2Desc": "Protegemos tus encías y labios antes de aplicar el gel blanqueador.",
+      "step3": "Aplicación LED",
+      "step3Desc": "Aplicamos el gel y activamos con luz LED de última generación.",
+      "step4": "Resultado",
+      "step4Desc": "Revelamos tu nueva sonrisa hasta 4 tonos más clara."
+    },
+    "gallery": {
+      "label": "Resultados",
+      "title": "Transformaciones reales",
+      "subtitle": "Desliza para ver la diferencia",
+      "before": "Antes",
+      "after": "Después",
+      "sessions": "1 sesión"
+    },
+    "pricing": {
+      "label": "Precio",
+      "title": "Inversión en tu sonrisa",
+      "subtitle": "Un precio accesible para una transformación completa de tu sonrisa",
+      "badge": "Paquete completo",
+      "price": "1,750",
+      "currency": "MXN",
+      "note": "Pago único - Sin cargos ocultos",
+      "features": [
+        "1 sesión de blanqueamiento LED",
+        "Hasta 4 tonos más claros",
+        "Kit premium de cuidado post-tratamiento",
+        "Consulta de seguimiento incluida",
+        "Garantía de satisfacción 1 año",
+        "Resultados inmediatos",
+        "Tecnología de última generación",
+        "Sin dolor ni sensibilidad"
+      ],
+      "cta": "Reservar mi cita",
+      "consultation": "Consulta de evaluación gratuita incluida"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Resolvemos tus dudas sobre el blanqueamiento dental",
+      "questions": [
+        {
+          "q": "¿El blanqueamiento dental duele?",
+          "a": "No, el procedimiento es completamente indoloro. Algunos pacientes pueden experimentar una ligera sensibilidad después del tratamiento, pero esto desaparece en 24-48 horas."
+        },
+        {
+          "q": "¿Cuánto duran los resultados?",
+          "a": "Los resultados pueden durar entre 1 y 2 años, dependiendo de tus hábitos. Evitar café, té, vino tinto y tabaco ayuda a mantener tu sonrisa blanca."
+        },
+        {
+          "q": "¿Es seguro para el esmalte dental?",
+          "a": "Sí, nuestro blanqueamiento es 100% seguro para el esmalte cuando se realiza por profesionales. Usamos productos aprobados y técnicas que protegen tu esmalte."
+        },
+        {
+          "q": "¿Puedo blanquear si tengo brackets?",
+          "a": "Los brackets deben retirarse antes del blanqueamiento. Los implantes no se blanquean, por lo que recomendamos coordinar el color con el tratamiento previo."
+        },
+        {
+          "q": "¿Cuántas sesiones necesito?",
+          "a": "La mayoría de pacientes logra excelentes resultados con una sola sesión de 45 minutos. En casos de manchas profundas, podríamos recomendar una segunda sesión."
+        },
+        {
+          "q": "¿Hay restricciones después del tratamiento?",
+          "a": "Durante las primeras 48 horas es recomendable evitar alimentos y bebidas que tiñan (café, té, vino). Te proporcionaremos un kit de cuidado específico."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Consulta gratuita sin compromiso",
+      "title": "¿Lista para tu nueva sonrisa?",
+      "subtitle": "Agenda tu consulta de evaluación gratuita hoy mismo. Nuestros especialistas evaluarán tu caso y te recomendarán el mejor tratamiento.",
+      "ctaWhatsApp": "Agendar consulta gratis",
+      "ctaCall": "Llamar ahora",
+      "trust1": "Sin compromiso",
+      "trust2": "100% confidencial",
+      "trust3": "Horarios flexibles"
+    }
   }
 }

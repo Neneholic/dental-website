@@ -66,7 +66,7 @@ export function Navbar() {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
           isScrolled
-            ? 'bg-white/80 backdrop-blur-lg shadow-lg py-3'
+            ? 'bg-white/95 backdrop-blur-lg shadow-lg py-3'
             : 'bg-transparent py-5'
         )}
       >
@@ -95,7 +95,7 @@ export function Navbar() {
             <div
               className={cn(
                 'hidden md:flex items-center gap-1 px-2 py-1.5 rounded-full',
-                isScrolled ? 'bg-gray-100' : 'bg-white/20 backdrop-blur-sm'
+                isScrolled ? 'bg-gray-100' : 'bg-white/30 backdrop-blur-md'
               )}
             >
               {navLinks.map((link, index) => (

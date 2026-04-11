@@ -3,32 +3,16 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const cases = [
-  {
-    id: 1,
-    before: 'Antes',
-    after: 'Después',
-    shades: '+6 tonos',
-    sessions: '1 sesión',
-  },
-  {
-    id: 2,
-    before: 'Antes',
-    after: 'Después',
-    shades: '+4 tonos',
-    sessions: '1 sesión',
-  },
-  {
-    id: 3,
-    before: 'Antes',
-    after: 'Después',
-    shades: '+5 tonos',
-    sessions: '1 sesión',
-  },
+  { id: 1, shades: '+6 tonos' },
+  { id: 2, shades: '+4 tonos' },
+  { id: 3, shades: '+5 tonos' },
 ];
 
 export function BeforeAfterGallery() {
+  const t = useTranslations('whitening.gallery');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sliderPosition, setSliderPosition] = useState(50);
 
@@ -54,13 +38,13 @@ export function BeforeAfterGallery() {
           className="text-center mb-12"
         >
           <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">
-            Resultados
+            {t('label')}
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Transformaciones reales
+            {t('title')}
           </h2>
           <p className="text-lg text-gray-600">
-            Desliza para ver la diferencia
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -88,7 +72,7 @@ export function BeforeAfterGallery() {
                   <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#B8D4E8]/30 to-[#E8D5F2]/30">
                     <div className="text-center">
                       <div className="text-6xl mb-4">😁</div>
-                      <p className="text-green-600 font-semibold">Después</p>
+                      <p className="text-green-600 font-semibold">{t('after')}</p>
                       <p className="text-2xl font-bold text-gray-900">{cases[currentIndex].shades}</p>
                     </div>
                   </div>
@@ -100,7 +84,7 @@ export function BeforeAfterGallery() {
                   >
                     <div className="text-center">
                       <div className="text-6xl mb-4">😐</div>
-                      <p className="text-gray-600 font-semibold">Antes</p>
+                      <p className="text-gray-600 font-semibold">{t('before')}</p>
                     </div>
                   </div>
 

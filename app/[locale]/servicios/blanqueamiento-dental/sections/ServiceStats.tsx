@@ -3,35 +3,19 @@
 import { motion } from 'framer-motion';
 import { CountUp } from '@/app/components/animations/CountUp';
 import { Users, ThumbsUp, Clock, Award } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const stats = [
-  {
-    icon: Users,
-    value: 500,
-    suffix: '',
-    label: 'Sonrisas transformadas',
-  },
-  {
-    icon: ThumbsUp,
-    value: 98,
-    suffix: '%',
-    label: 'Satisfacción garantizada',
-  },
-  {
-    icon: Clock,
-    value: 45,
-    suffix: 'min',
-    label: 'Por sesión',
-  },
-  {
-    icon: Award,
-    value: 6,
-    suffix: '+',
-    label: 'Años de experiencia',
-  },
+  { icon: Users, value: 500, suffix: '' },
+  { icon: ThumbsUp, value: 98, suffix: '%' },
+  { icon: Clock, value: 45, suffix: 'min' },
+  { icon: Award, value: 6, suffix: '+' },
 ];
 
 export function ServiceStats() {
+  const t = useTranslations('whitening.stats');
+  const labels = [t('smiles'), t('satisfaction'), t('duration'), t('experience')];
+
   return (
     <section className="bg-[#E8D5F2]/30 py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +28,7 @@ export function ServiceStats() {
         >
           {stats.map((stat, index) => (
             <motion.div
-              key={stat.label}
+              key={labels[index]}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -57,7 +41,7 @@ export function ServiceStats() {
               <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">
                 <CountUp end={stat.value} suffix={stat.suffix} />
               </div>
-              <p className="text-sm text-gray-600">{stat.label}</p>
+              <p className="text-sm text-gray-600">{labels[index]}</p>
             </motion.div>
           ))}
         </motion.div>
