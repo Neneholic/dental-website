@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
-import { Link, usePathname, useRouter } from '@/i18n/routing'
+import { Link, usePathname, useRouter, useParams } from '@/i18n/routing'
 import { MagneticButton } from '../components/MagneticButton'
 import { cn } from '../lib/utils'
 
@@ -20,6 +20,7 @@ export function Navbar() {
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
+  const params = useParams()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
@@ -32,17 +33,31 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Detect if we're on the home page (handle both with and without locale prefix)
+  const currentLocale = (params?.locale as string) || locale
+  const isHomePage = pathname === '/' || pathname === '' || pathname === `/${currentLocale}` || pathname === `/${currentLocale}/`
+
+  // Helper to generate correct href for nav links
+  const getNavHref = (hash: string) => {
+    if (isHomePage) {
+      return hash
+    }
+    // If not on home page, link to home with hash
+    return `/${hash}`
+  }
+
   const navLinks = [
-    { name: t('home'), href: '#home' as const },
-    { name: t('about'), href: '#about' as const },
+    { name: t('home'), href: getNavHref('#home'), hash: '#home' },
+    { name: t('about'), href: getNavHref('#about'), hash: '#about' },
     { 
       name: t('services'), 
-      href: '#services' as const,
+      href: getNavHref('#services'),
+      hash: '#services',
       submenu: [
         { name: t('whitening'), href: '/servicios/blanqueamiento-dental' },
       ]
     },
-    { name: t('appointment'), href: '#contact' as const },
+    { name: t('appointment'), href: getNavHref('#contact'), hash: '#contact' },
   ]
 
   const switchLocale = locale === 'es' ? 'en' : 'es'
@@ -106,30 +121,34 @@ export function Navbar() {
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                      <motion.a
-                        href={link.href}
+                      <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className={cn(
-                          'relative px-4 py-2 text-sm font-medium transition-colors flex items-center gap-1',
-                          isScrolled
-                            ? 'text-gray-700 hover:text-gray-900'
-                            : 'text-white/90 hover:text-white'
-                        )}
+                        className="relative"
                       >
-                        {link.name}
-                        <ChevronDown className="w-4 h-4" />
-                        <motion.span
+                        <Link
+                          href={link.href as any}
                           className={cn(
-                            'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-current rounded-full',
-                            isScrolled ? 'bg-gray-900' : 'bg-white'
+                            'relative px-4 py-2 text-sm font-medium transition-colors flex items-center gap-1',
+                            isScrolled
+                              ? 'text-gray-700 hover:text-gray-900'
+                              : 'text-white/90 hover:text-white'
                           )}
-                          initial={{ width: 0 }}
-                          whileHover={{ width: '60%' }}
-                          transition={{ duration: 0.3 }}
-                        />
-                      </motion.a>
+                        >
+                          {link.name}
+                          <ChevronDown className="w-4 h-4" />
+                          <motion.span
+                            className={cn(
+                              'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-current rounded-full',
+                              isScrolled ? 'bg-gray-900' : 'bg-white'
+                            )}
+                            initial={{ width: 0 }}
+                            whileHover={{ width: '60%' }}
+                            transition={{ duration: 0.3 }}
+                          />
+                        </Link>
+                      </motion.div>
                       
                       {/* Submenu */}
                       <AnimatePresence>
@@ -158,29 +177,33 @@ export function Navbar() {
                       </AnimatePresence>
                     </div>
                   ) : (
-                    <motion.a
-                      href={link.href}
+                    <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className={cn(
-                        'relative px-4 py-2 text-sm font-medium transition-colors',
-                        isScrolled
-                          ? 'text-gray-700 hover:text-gray-900'
-                          : 'text-white/90 hover:text-white'
-                      )}
+                      className="relative"
                     >
-                      {link.name}
-                      <motion.span
+                      <Link
+                        href={link.href as any}
                         className={cn(
-                          'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-current rounded-full',
-                          isScrolled ? 'bg-gray-900' : 'bg-white'
+                          'relative px-4 py-2 text-sm font-medium transition-colors block',
+                          isScrolled
+                            ? 'text-gray-700 hover:text-gray-900'
+                            : 'text-white/90 hover:text-white'
                         )}
-                        initial={{ width: 0 }}
-                        whileHover={{ width: '60%' }}
-                        transition={{ duration: 0.3 }}
-                      />
-                    </motion.a>
+                      >
+                        {link.name}
+                        <motion.span
+                          className={cn(
+                            'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-current rounded-full',
+                            isScrolled ? 'bg-gray-900' : 'bg-white'
+                          )}
+                          initial={{ width: 0 }}
+                          whileHover={{ width: '60%' }}
+                          transition={{ duration: 0.3 }}
+                        />
+                      </Link>
+                    </motion.div>
                   )}
                 </div>
               ))}
@@ -255,16 +278,13 @@ export function Navbar() {
               <div className="flex flex-col gap-4">
                 {navLinks.map((link, index) => (
                   <div key={link.name}>
-                    <motion.a
-                      href={link.href}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
+                    <Link
+                      href={link.href as any}
                       onClick={() => !link.submenu && setIsMobileMenuOpen(false)}
                       className="text-lg font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-gray-600 transition-colors block"
                     >
                       {link.name}
-                    </motion.a>
+                    </Link>
                     {link.submenu && (
                       <div className="pl-4 mt-2 space-y-2">
                         {link.submenu.map((item) => (
