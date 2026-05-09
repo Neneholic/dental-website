@@ -82,7 +82,7 @@ const esContent: Section[] = [
     title: '1. Identidad y domicilio del responsable',
     body: [
       'En cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP), la Dra. Alondra Robles, en su carácter de profesional de la odontología y responsable del tratamiento de tus datos personales, pone a tu disposición el presente Aviso de Privacidad.',
-      'Domicilio: C. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, México.\nCorreo electrónico: contacto@dralondrarobles.mx\nTeléfono: 33 1067 8412',
+      'Domicilio: C. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, México.\nCorreo electrónico: alondra.rrobles@gmail.com\nTeléfono: 33 1067 8412',
     ],
   },
   {
@@ -136,7 +136,7 @@ const esContent: Section[] = [
     title: '6. Derechos ARCO y revocación del consentimiento',
     body: [
       'Tienes derecho a conocer qué datos personales tenemos de ti, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es tu derecho solicitar la corrección de tu información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando consideres que la misma no está siendo utilizada conforme a los principios, deberes y obligaciones previstas en la normativa (Cancelación); así como oponerte al uso de tus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO.',
-      'Para ejercer cualquiera de estos derechos o revocar el consentimiento que has otorgado para el tratamiento de tus datos, puedes enviar una solicitud por escrito al correo contacto@dralondrarobles.mx incluyendo tu nombre completo, una identificación oficial y la descripción clara y precisa de los datos respecto de los cuales buscas ejercer alguno de los derechos ARCO. Daremos respuesta en un plazo máximo de 20 días hábiles.',
+      'Para ejercer cualquiera de estos derechos o revocar el consentimiento que has otorgado para el tratamiento de tus datos, puedes enviar una solicitud por escrito al correo alondra.rrobles@gmail.com incluyendo tu nombre completo, una identificación oficial y la descripción clara y precisa de los datos respecto de los cuales buscas ejercer alguno de los derechos ARCO. Daremos respuesta en un plazo máximo de 20 días hábiles.',
     ],
   },
   {
@@ -162,7 +162,7 @@ const esContent: Section[] = [
     title: '10. Contacto',
     body: [
       'Si tienes alguna pregunta, comentario o queja relacionada con el tratamiento de tus datos personales o con este Aviso de Privacidad, puedes contactarnos en:',
-      'Dra. Alondra Robles\nC. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco\nCorreo: contacto@dralondrarobles.mx\nTeléfono: 33 1067 8412',
+      'Dra. Alondra Robles\nC. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco\nCorreo: alondra.rrobles@gmail.com\nTeléfono: 33 1067 8412',
     ],
   },
 ]
@@ -172,7 +172,7 @@ const enContent: Section[] = [
     title: '1. Data controller identity and address',
     body: [
       'In compliance with the Mexican Federal Law on Protection of Personal Data Held by Private Parties (LFPDPPP), Dr. Alondra Robles, in her capacity as a dental professional and controller responsible for the processing of your personal data, makes this Privacy Notice available to you.',
-      'Address: C. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, Mexico.\nEmail: contacto@dralondrarobles.mx\nPhone: +52 33 1067 8412',
+      'Address: C. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, Mexico.\nEmail: alondra.rrobles@gmail.com\nPhone: +52 33 1067 8412',
     ],
   },
   {
@@ -224,7 +224,7 @@ const enContent: Section[] = [
     title: '6. ARCO rights and consent withdrawal',
     body: [
       'You have the right to know what personal data we have about you, what we use it for and the conditions of use (Access). You also have the right to request the correction of your personal information if it is outdated, inaccurate or incomplete (Rectification); to request its deletion from our records or databases when you consider it is not being used in accordance with the principles, duties and obligations established by law (Cancellation); and to oppose the use of your personal data for specific purposes (Opposition). These are known as ARCO rights.',
-      'To exercise any of these rights or withdraw the consent you have given for the processing of your data, you may send a written request to contacto@dralondrarobles.mx including your full name, an official ID and a clear and precise description of the data on which you wish to exercise any ARCO right. We will respond within a maximum of 20 business days.',
+      'To exercise any of these rights or withdraw the consent you have given for the processing of your data, you may send a written request to alondra.rrobles@gmail.com including your full name, an official ID and a clear and precise description of the data on which you wish to exercise any ARCO right. We will respond within a maximum of 20 business days.',
     ],
   },
   {
@@ -250,7 +250,7 @@ const enContent: Section[] = [
     title: '10. Contact',
     body: [
       'If you have any question, comment or complaint regarding the processing of your personal data or this Privacy Notice, you may contact us at:',
-      'Dr. Alondra Robles\nC. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, Mexico\nEmail: contacto@dralondrarobles.mx\nPhone: +52 33 1067 8412',
+      'Dr. Alondra Robles\nC. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, Mexico\nEmail: alondra.rrobles@gmail.com\nPhone: +52 33 1067 8412',
     ],
   },
 ]

@@ -16,7 +16,12 @@ const WhatsAppIcon = () => (
   </svg>
 )
 
-export function Navbar() {
+type NavbarProps = {
+  /** Forces the white/solid style regardless of scroll position. Use on pages with light backgrounds (e.g. legal pages). */
+  solid?: boolean
+}
+
+export function Navbar({ solid = false }: NavbarProps = {}) {
   const t = useTranslations('nav')
   const locale = useLocale()
   const pathname = usePathname()
@@ -33,6 +38,8 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const useLightStyle = solid || isScrolled
 
   // Detect if we're on the home page (handle both with and without locale prefix)
   const currentLocale = (params?.locale as string) || locale
@@ -81,7 +88,7 @@ export function Navbar() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-          isScrolled
+          useLightStyle
             ? 'bg-white/95 backdrop-blur-lg shadow-lg py-3'
             : 'bg-transparent py-5'
         )}
@@ -95,13 +102,13 @@ export function Navbar() {
             >
               <span className={cn(
                 'text-xl md:text-2xl font-bold tracking-tight',
-                isScrolled ? 'text-gray-900' : 'text-white'
+                useLightStyle ? 'text-gray-900' : 'text-white'
               )}>
                 Dra. Alondra Robles
               </span>
               <span className={cn(
                 'text-xs md:text-sm font-medium tracking-wider uppercase',
-                isScrolled ? 'text-gray-600' : 'text-white/80'
+                useLightStyle ? 'text-gray-600' : 'text-white/80'
               )}>
                 Cirujano Dentista
               </span>
@@ -111,7 +118,7 @@ export function Navbar() {
             <div
               className={cn(
                 'hidden md:flex items-center gap-1 px-2 py-1.5 rounded-full',
-                isScrolled ? 'bg-gray-100' : 'bg-white/30 backdrop-blur-md'
+                useLightStyle ? 'bg-gray-100' : 'bg-white/30 backdrop-blur-md'
               )}
             >
               {navLinks.map((link, index) => (
@@ -132,7 +139,7 @@ export function Navbar() {
                           href={link.href as any}
                           className={cn(
                             'relative px-4 py-2 text-sm font-medium transition-colors flex items-center gap-1',
-                            isScrolled
+                            useLightStyle
                               ? 'text-gray-700 hover:text-gray-900'
                               : 'text-white/90 hover:text-white'
                           )}
@@ -142,7 +149,7 @@ export function Navbar() {
                           <motion.span
                             className={cn(
                               'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-current rounded-full',
-                              isScrolled ? 'bg-gray-900' : 'bg-white'
+                              useLightStyle ? 'bg-gray-900' : 'bg-white'
                             )}
                             initial={{ width: 0 }}
                             whileHover={{ width: '60%' }}
@@ -161,7 +168,7 @@ export function Navbar() {
                             transition={{ duration: 0.2 }}
                             className={cn(
                               'absolute top-full left-0 mt-2 py-2 px-1 rounded-xl shadow-lg min-w-[200px]',
-                              isScrolled ? 'bg-white' : 'bg-white/95 backdrop-blur-sm'
+                              useLightStyle ? 'bg-white' : 'bg-white/95 backdrop-blur-sm'
                             )}
                           >
                             {link.submenu.map((item) => (
@@ -188,7 +195,7 @@ export function Navbar() {
                         href={link.href as any}
                         className={cn(
                           'relative px-4 py-2 text-sm font-medium transition-colors block',
-                          isScrolled
+                          useLightStyle
                             ? 'text-gray-700 hover:text-gray-900'
                             : 'text-white/90 hover:text-white'
                         )}
@@ -197,7 +204,7 @@ export function Navbar() {
                         <motion.span
                           className={cn(
                             'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-current rounded-full',
-                            isScrolled ? 'bg-gray-900' : 'bg-white'
+                            useLightStyle ? 'bg-gray-900' : 'bg-white'
                           )}
                           initial={{ width: 0 }}
                           whileHover={{ width: '60%' }}
@@ -217,7 +224,7 @@ export function Navbar() {
                 onClick={handleLanguageSwitch}
                 className={cn(
                   'flex items-center gap-1 px-3 py-2 rounded-full text-sm font-medium transition-colors',
-                  isScrolled
+                  useLightStyle
                     ? 'text-gray-700 hover:bg-gray-100'
                     : 'text-white hover:bg-white/20'
                 )}
@@ -233,7 +240,7 @@ export function Navbar() {
                 rel="noopener noreferrer"
                 className={cn(
                   'flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all',
-                  isScrolled
+                  useLightStyle
                     ? 'bg-green-600 text-white hover:bg-green-700'
                     : 'bg-white text-green-600 hover:bg-gray-100'
                 )}
@@ -248,7 +255,7 @@ export function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={cn(
                 'md:hidden p-2 rounded-lg transition-colors',
-                isScrolled
+                useLightStyle
                   ? 'text-gray-900 hover:bg-gray-100'
                   : 'text-white hover:bg-white/20'
               )}
