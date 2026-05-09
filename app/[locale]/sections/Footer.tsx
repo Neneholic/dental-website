@@ -198,12 +198,12 @@ export function Footer() {
             © {currentYear} Dra. Alondra Robles. {t('copyright')}
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">
+            <Link
+              href="/aviso-de-privacidad"
+              className="text-gray-500 hover:text-white text-sm transition-colors"
+            >
               {t('privacy')}
-            </a>
-            <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">
-              {t('terms')}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
