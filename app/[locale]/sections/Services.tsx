@@ -40,8 +40,8 @@ export function Services() {
     offset: ['start end', 'end start']
   })
   
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1.1, 1])
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100])
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.15, 1.25, 1.15])
+  const y = useTransform(scrollYProgress, [0, 1], ['-7%', '7%'])
 
   const services = [
     {
