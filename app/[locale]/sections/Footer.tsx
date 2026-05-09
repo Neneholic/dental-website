@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/routing'
+import { trackWhatsAppClick } from '../lib/analytics'
 
 // Social Icons
 const InstagramIcon = () => (
@@ -92,6 +93,9 @@ export function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    if (social.name === 'WhatsApp') trackWhatsAppClick('footer_social')
+                  }}
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -161,6 +165,9 @@ export function Footer() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    if (link.name === 'WhatsApp') trackWhatsAppClick('footer_social_link')
+                  }}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

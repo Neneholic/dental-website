@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Calendar, Phone, Check } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
+import { trackWhatsAppClick } from '../../../lib/analytics';
 
 export function FinalCta() {
   const t = useTranslations('whitening.finalCta');
@@ -44,6 +45,7 @@ export function FinalCta() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('final_cta_whitening')}
               className="inline-flex items-center justify-center gap-3 bg-green-600 text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-green-700 transition-colors shadow-lg"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">

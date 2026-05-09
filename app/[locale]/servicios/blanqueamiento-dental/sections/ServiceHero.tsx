@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, Shield, Clock, Zap, Timer } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
+import { trackWhatsAppClick } from '../../../lib/analytics';
 
 export function ServiceHero() {
   const t = useTranslations('whitening.hero');
@@ -92,6 +93,7 @@ export function ServiceHero() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick('service_hero_whitening')}
                 className="inline-flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-green-700 transition-colors shadow-lg"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">

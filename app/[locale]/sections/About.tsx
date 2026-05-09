@@ -135,7 +135,7 @@ export function About() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.4}>
-              <WhatsAppButton variant="primary">
+              <WhatsAppButton variant="primary" location="about">
                 {t('cta')}
               </WhatsAppButton>
             </AnimatedSection>

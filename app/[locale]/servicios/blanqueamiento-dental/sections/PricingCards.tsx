@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Check, Sparkles } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
+import { trackWhatsAppClick } from '../../../lib/analytics';
 
 export function PricingCards() {
   const t = useTranslations('whitening.pricing');
@@ -87,6 +88,7 @@ export function PricingCards() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('pricing_whitening')}
             className="inline-flex items-center justify-center gap-3 bg-green-600 text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-green-700 transition-colors shadow-lg w-full md:w-auto"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">

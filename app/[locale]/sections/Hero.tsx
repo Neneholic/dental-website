@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { useState, useEffect } from 'react'
+import { trackWhatsAppClick } from '../lib/analytics'
 
 // Tooth Icon for title with motion effects
 const ToothIcon = () => (
@@ -166,6 +167,7 @@ export function Hero() {
               href="https://wa.me/5213310678412?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20con%20la%20Dra.%20Alondra%20Robles"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('hero')}
               className="inline-flex items-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-full font-medium text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-green-600">

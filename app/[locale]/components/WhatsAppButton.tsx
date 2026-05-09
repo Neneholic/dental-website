@@ -3,6 +3,7 @@
 import { useLocale } from 'next-intl'
 import { MagneticButton } from './MagneticButton'
 import { cn } from '../lib/utils'
+import { trackWhatsAppClick, type WhatsAppClickLocation } from '../lib/analytics'
 
 // WhatsApp Icon Component
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -16,24 +17,27 @@ interface WhatsAppButtonProps {
   className?: string
   variant?: 'primary' | 'white' | 'outline'
   showIcon?: boolean
+  /** Location identifier for GA4 conversion tracking */
+  location: WhatsAppClickLocation
 }
 
-export function WhatsAppButton({ 
-  children, 
+export function WhatsAppButton({
+  children,
   className,
   variant = 'primary',
-  showIcon = true 
+  showIcon = true,
+  location,
 }: WhatsAppButtonProps) {
   const locale = useLocale()
 
   const whatsappLink = 'https://wa.me/5213310678412'
-  const whatsappText = locale === 'es' 
+  const whatsappText = locale === 'es'
     ? 'Hola, me gustaría agendar una cita con la Dra. Alondra Robles'
     : 'Hello, I would like to schedule an appointment with Dr. Alondra Robles'
   const fullWhatsAppLink = `${whatsappLink}?text=${encodeURIComponent(whatsappText)}`
 
   const baseStyles = "group inline-flex items-center gap-2 px-8 py-4 rounded-full font-medium text-lg transition-all"
-  
+
   const variantStyles = {
     primary: "bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl",
     white: "bg-white text-green-600 hover:bg-gray-100 shadow-lg",
@@ -46,6 +50,7 @@ export function WhatsAppButton({
         href={fullWhatsAppLink}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackWhatsAppClick(location)}
         className="flex items-center gap-2"
       >
         {showIcon && <WhatsAppIcon />}
@@ -56,15 +61,16 @@ export function WhatsAppButton({
 }
 
 // Simple link version for non-magnetic buttons
-export function WhatsAppLink({ 
-  children, 
+export function WhatsAppLink({
+  children,
   className,
-  showIcon = true 
+  showIcon = true,
+  location,
 }: Omit<WhatsAppButtonProps, 'variant'>) {
   const locale = useLocale()
 
   const whatsappLink = 'https://wa.me/5213310678412'
-  const whatsappText = locale === 'es' 
+  const whatsappText = locale === 'es'
     ? 'Hola, me gustaría agendar una cita con la Dra. Alondra Robles'
     : 'Hello, I would like to schedule an appointment with Dr. Alondra Robles'
   const fullWhatsAppLink = `${whatsappLink}?text=${encodeURIComponent(whatsappText)}`
@@ -74,6 +80,7 @@ export function WhatsAppLink({
       href={fullWhatsAppLink}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsAppClick(location)}
       className={cn("inline-flex items-center gap-2", className)}
     >
       {showIcon && <WhatsAppIcon className="w-5 h-5" />}

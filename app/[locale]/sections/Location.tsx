@@ -88,7 +88,7 @@ export function Location() {
                 transition={{ delay: 0.4 }}
                 className="mt-8"
               >
-                <WhatsAppButton variant="primary" className="w-full justify-center">
+                <WhatsAppButton variant="primary" location="location" className="w-full justify-center">
                   {locale === 'es' ? 'Agendar por WhatsApp' : 'Schedule via WhatsApp'}
                 </WhatsAppButton>
               </motion.div>

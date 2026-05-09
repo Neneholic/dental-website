@@ -30,7 +30,7 @@ export function Works() {
               <p className="text-gray-700 mb-8 max-w-md">
                 {t('description')}
               </p>
-              <WhatsAppButton variant="primary">
+              <WhatsAppButton variant="primary" location="works">
                 {t('cta')}
               </WhatsAppButton>
             </AnimatedSection>

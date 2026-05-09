@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/routing'
 import { AnimatedSection } from '../components/AnimatedSection'
+import { trackWhatsAppClick } from '../lib/analytics'
 
 // Dental Icons
 const WhiteningIcon = () => (
@@ -139,6 +140,7 @@ export function Services() {
               href="https://wa.me/5213310678412?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('services')}
               className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition-colors"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
