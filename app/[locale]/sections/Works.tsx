@@ -52,7 +52,7 @@ export function Works() {
                   >
                     <img
                       src="/images/about-6.webp"
-                      alt="Happy patient"
+                      alt="Paciente feliz tras tratamiento dental"
                       className="w-full h-full object-cover"
                     />
                   </motion.div>
@@ -69,7 +69,7 @@ export function Works() {
                   >
                     <img
                       src="/images/about-7.webp"
-                      alt="Happy patient"
+                      alt="Paciente feliz tras tratamiento dental"
                       className="w-full h-full object-cover"
                     />
                   </motion.div>

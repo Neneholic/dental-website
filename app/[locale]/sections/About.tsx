@@ -46,7 +46,7 @@ export function About() {
             >
               <img
                 src={images[0]}
-                alt="Dental procedure"
+                alt="Dra. Alondra Robles realizando un procedimiento dental"
                 className="w-full h-64 md:h-80 object-cover"
               />
             </motion.div>
@@ -69,7 +69,7 @@ export function About() {
               >
                 <img
                   src={images[1]}
-                  alt="Dental care"
+                  alt="Atención odontológica personalizada en clínica dental privada en Guadalajara"
                   className="w-full h-48 md:h-56 object-cover"
                 />
               </motion.div>
@@ -86,7 +86,7 @@ export function About() {
             >
               <img
                 src={images[2]}
-                alt="Patient smiling"
+                alt="Paciente sonriendo después de tratamiento dental con la Dra. Alondra Robles"
                 className="w-full h-48 md:h-64 object-cover"
               />
 

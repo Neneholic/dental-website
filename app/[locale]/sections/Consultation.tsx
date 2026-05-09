@@ -62,7 +62,9 @@ export function Consultation() {
               >
                 <img
                   src={images[0]}
-                  alt="Dental consultation"
+                  alt={locale === 'es'
+                    ? 'Primera consulta dental con la Dra. Alondra Robles en Guadalajara'
+                    : 'First dental consultation with Dr. Alondra Robles in Guadalajara'}
                   className="w-full h-64 md:h-72 object-cover"
                 />
               </motion.div>
@@ -90,7 +92,9 @@ export function Consultation() {
                 >
                   <img
                     src={images[1]}
-                    alt="Dental procedure"
+                    alt={locale === 'es'
+                      ? 'Procedimiento dental profesional en consultorio'
+                      : 'Professional dental procedure in office'}
                     className="w-full h-48 object-cover"
                   />
                 </motion.div>
@@ -101,7 +105,9 @@ export function Consultation() {
                 >
                   <img
                     src={images[2]}
-                    alt="Dental care"
+                    alt={locale === 'es'
+                      ? 'Cuidado dental personalizado en clínica de la Dra. Alondra Robles'
+                      : 'Personalized dental care at Dr. Alondra Robles clinic'}
                     className="w-full h-48 object-cover"
                   />
                 </motion.div>

@@ -170,7 +170,7 @@ export function Services() {
             >
               <img
                 src="/images/about-8.webp"
-                alt="Patient smiling"
+                alt="Paciente sonriendo tras tratamiento de estética dental con la Dra. Alondra Robles en Guadalajara"
                 className="w-full h-full object-cover"
               />
             </motion.div>

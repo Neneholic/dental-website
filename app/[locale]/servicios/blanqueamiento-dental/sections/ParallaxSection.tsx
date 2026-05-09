@@ -25,8 +25,10 @@ export function ParallaxSection() {
         style={{ y }}
       >
         <Image
-          src="/images/dentista-alondra.webp"
-          alt={locale === 'es' ? 'Dra. Alondra Robles' : 'Dr. Alondra Robles'}
+          src="/images/dra-alondra-robles-dentista-guadalajara.webp"
+          alt={locale === 'es'
+            ? 'Dra. Alondra Robles - Cirujano Dentista en Guadalajara'
+            : 'Dr. Alondra Robles - Dentist in Guadalajara'}
           fill
           className="object-cover object-center"
           priority
