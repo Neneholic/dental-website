@@ -22,7 +22,7 @@
   "about": {
     "label": "(Acerca de mi)",
     "title": "Experiencia y Calidez en cada Consulta",
-    "description": "La Dra. Alondra Robles cuenta con más de 15 años de experiencia en odontología estética y restauradora. Su enfoque personalizado y uso de tecnología de vanguardia garantizan resultados excepcionales y pacientes satisfechos.",
+    "description": "La Dra. Alondra Robles se especializa en odontología estética y restauradora. Su enfoque personalizado y uso de tecnología de vanguardia garantizan resultados excepcionales y pacientes satisfechos.",
     "cta": "Agendar por WhatsApp",
     "statNumber": "100%",
     "statLabel": "Trato humano",
@@ -30,7 +30,7 @@
   },
   "services": {
     "title": "Nuestros Servicios Dentales",
-    "description": "La Dra. Alondra Robles ofrece una amplia gama de tratamientos dentales utilizando tecnología de última generación para garantizar tu comodidad y los mejores resultados.",
+    "description": "La Dra. Alondra Robles ofrece una amplia gama de tratamientos dentales personalizados para garantizar tu comodidad y los mejores resultados.",
     "cta": "Agendar por WhatsApp",
     "ourServices": "nuestros servicios",
     "cavityProtection": {
@@ -61,12 +61,12 @@
   },
   "consultation": {
     "label": "(primera consulta)",
-    "title": "Primera Consulta con Radiografías incluidas",
-    "description": "Inversión en tu salud dental con atención personalizada. Incluye radiografías digitales necesarias para tu diagnóstico completo.",
+    "title": "Primera Consulta Profesional",
+    "description": "Inversión en tu salud dental con atención personalizada y un plan de tratamiento adaptado a ti.",
     "cta": "Agendar por WhatsApp",
     "statNumber": "6",
     "statLabel": "Años de experiencia",
-    "detailedDescription": "En tu primera visita la Dra. Alondra Robles realiza un diagnóstico completo con radiografías digitales, evaluación periodontal y un plan de tratamiento personalizado. Tu salud dental es mi prioridad."
+    "detailedDescription": "En tu primera visita la Dra. Alondra Robles realiza un diagnóstico completo, evaluación periodontal y un plan de tratamiento personalizado. Tu salud dental es mi prioridad."
   },
   "testimonials": {
     "title": "Lo que Dicen Nuestros Pacientes",
@@ -74,7 +74,7 @@
   },
   "location": {
     "label": "(encuéntranos)",
-    "title": "Visítanos en Nuestra Clínica",
+    "title": "VISITA NUESTRO CONSULTORIO",
     "description": "Consulta privada ubicada en una zona accesible con estacionamiento disponible. Agenda tu cita y visita el consultorio para recibir el mejor cuidado dental personalizado."
   },
   "footer": {
@@ -132,7 +132,7 @@
       "title": "¿Cómo funciona?",
       "subtitle": "Un proceso simple, seguro y efectivo en solo 4 pasos",
       "step1": "Consulta",
-      "step1Desc": "Evaluación inicial gratuita de tu sonrisa y discusión de tus objetivos.",
+      "step1Desc": "Evaluación inicial de tu sonrisa y discusión de tus objetivos.",
       "step2": "Preparación",
       "step2Desc": "Protegemos tus encías y labios antes de aplicar el gel blanqueador.",
       "step3": "Aplicación LED",
@@ -153,13 +153,13 @@
       "title": "Inversión en tu sonrisa",
       "subtitle": "Un precio accesible para una transformación completa de tu sonrisa",
       "badge": "Paquete completo",
-      "price": "1,750",
+      "price": "2,200",
       "currency": "MXN",
       "note": "Pago único - Sin cargos ocultos",
       "features": [
         "1 sesión de blanqueamiento LED",
         "Hasta 4 tonos más claros",
-        "Kit premium de cuidado post-tratamiento",
+        "Limpieza dental incluida",
         "Consulta de seguimiento incluida",
         "Garantía de satisfacción 1 año",
         "Resultados inmediatos",

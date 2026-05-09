@@ -27,30 +27,17 @@ export function Consultation() {
                 {locale === 'es' ? '(primera consulta)' : '(first consultation)'}
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                {locale === 'es' 
-                  ? 'Primera Consulta con Radiografías incluidas' 
-                  : 'First Consultation with X-rays included'}
+                {locale === 'es'
+                  ? 'Primera Consulta Profesional'
+                  : 'Professional First Consultation'}
               </h2>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg mb-6">
-                <p className="text-green-800 font-semibold text-lg">
-                  {locale === 'es' ? '$500 MXN' : '$500 MXN'}
-                </p>
-                <p className="text-green-700 text-sm">
-                  {locale === 'es' 
-                    ? 'Incluye todas las radiografías necesarias para tu diagnóstico' 
-                    : 'Includes all necessary x-rays for your diagnosis'}
-                </p>
-              </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
               <p className="text-gray-600 leading-relaxed mb-8">
                 {locale === 'es'
-                  ? 'En tu primera visita realizamos un diagnóstico completo con radiografías digitales, evaluación periodontal y un plan de tratamiento personalizado. Inversión en tu salud dental con atención profesional.'
-                  : 'On your first visit we perform a complete diagnosis with digital x-rays, periodontal evaluation and a personalized treatment plan. Investment in your dental health with professional care.'}
+                  ? 'En tu primera visita realizamos un diagnóstico completo, evaluación periodontal y un plan de tratamiento personalizado. Inversión en tu salud dental con atención profesional.'
+                  : 'On your first visit we perform a complete diagnosis, periodontal evaluation and a personalized treatment plan. Investment in your dental health with professional care.'}
               </p>
             </AnimatedSection>
 

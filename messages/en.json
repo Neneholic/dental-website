@@ -22,7 +22,7 @@
   "about": {
     "label": "(About me)",
     "title": "Experience and Warmth in Every Visit",
-    "description": "Dr. Alondra Robles has over 15 years of experience in aesthetic and restorative dentistry. Her personalized approach and use of cutting-edge technology guarantee exceptional results and satisfied patients.",
+    "description": "Dr. Alondra Robles specializes in aesthetic and restorative dentistry. Her personalized approach and use of cutting-edge technology guarantee exceptional results and satisfied patients.",
     "cta": "Schedule via WhatsApp",
     "statNumber": "100%",
     "statLabel": "Human touch",
@@ -30,7 +30,7 @@
   },
   "services": {
     "title": "Our Dental Services",
-    "description": "Dr. Alondra Robles offers a wide range of dental treatments using state-of-the-art technology to ensure your comfort and the best results.",
+    "description": "Dr. Alondra Robles offers a wide range of personalized dental treatments to ensure your comfort and the best results.",
     "cta": "Schedule via WhatsApp",
     "ourServices": "our services",
     "cavityProtection": {
@@ -61,12 +61,12 @@
   },
   "consultation": {
     "label": "(first consultation)",
-    "title": "First Consultation with X-rays included",
-    "description": "Investment in your dental health with personalized care. Includes digital x-rays needed for your complete diagnosis.",
+    "title": "Professional First Consultation",
+    "description": "Investment in your dental health with personalized care and a treatment plan tailored to you.",
     "cta": "Schedule via WhatsApp",
     "statNumber": "6",
     "statLabel": "Years of experience",
-    "detailedDescription": "On your first visit Dr. Alondra Robles performs a complete diagnosis with digital x-rays, periodontal evaluation and a personalized treatment plan. Your dental health is my priority."
+    "detailedDescription": "On your first visit Dr. Alondra Robles performs a complete diagnosis, periodontal evaluation and a personalized treatment plan. Your dental health is my priority."
   },
   "testimonials": {
     "title": "What Our Patients Say",
@@ -74,7 +74,7 @@
   },
   "location": {
     "label": "(find us)",
-    "title": "Visit Our Clinic",
+    "title": "VISIT OUR OFFICE",
     "description": "Private practice located in an accessible area with parking available. Schedule your appointment and visit to experience the best personalized dental care."
   },
   "footer": {
@@ -132,7 +132,7 @@
       "title": "How does it work?",
       "subtitle": "A simple, safe and effective process in just 4 steps",
       "step1": "Consultation",
-      "step1Desc": "Free initial evaluation of your smile and discussion of your goals.",
+      "step1Desc": "Initial evaluation of your smile and discussion of your goals.",
       "step2": "Preparation",
       "step2Desc": "We protect your gums and lips before applying the whitening gel.",
       "step3": "LED Application",
@@ -153,13 +153,13 @@
       "title": "Investment in your smile",
       "subtitle": "An affordable price for a complete smile transformation",
       "badge": "Complete package",
-      "price": "1,750",
+      "price": "2,200",
       "currency": "MXN",
       "note": "One-time payment - No hidden fees",
       "features": [
         "1 LED whitening session",
         "Up to 4 shades lighter",
-        "Premium post-treatment care kit",
+        "Dental cleaning included",
         "Follow-up consultation included",
         "1-year satisfaction guarantee",
         "Immediate results",
