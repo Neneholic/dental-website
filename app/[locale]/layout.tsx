@@ -106,9 +106,6 @@ export async function generateMetadata({
         'max-snippet': -1,
       },
     },
-    icons: {
-      icon: '/favicon.ico',
-    },
     formatDetection: {
       telephone: true,
       email: true,
