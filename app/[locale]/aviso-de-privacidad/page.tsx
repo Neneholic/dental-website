@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { setRequestLocale } from 'next-intl/server'
-import { routing } from '@/i18n/routing'
+import { routing, localePath } from '@/i18n/routing'
 import { Navbar } from '../sections/Navbar'
 import { Footer } from '../sections/Footer'
 import { PrivacyContent } from './PrivacyContent'
@@ -22,20 +22,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : 'Privacy Notice of Dr. Alondra Robles in compliance with Mexican data protection law (LFPDPPP).'
 
   const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, `${SITE_URL}/${l}${PATH}`]),
+    routing.locales.map((l) => [l, `${SITE_URL}${localePath(l, PATH)}`]),
   )
 
   return {
     title,
     description,
     alternates: {
-      canonical: `/${locale}${PATH}`,
+      canonical: localePath(locale, PATH),
       languages,
     },
     openGraph: {
       type: 'website',
       locale: isEs ? 'es_MX' : 'en_US',
-      url: `${SITE_URL}/${locale}${PATH}`,
+      url: `${SITE_URL}${localePath(locale, PATH)}`,
       title,
       description,
       siteName: 'Dra. Alondra Robles',

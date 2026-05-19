@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import { routing } from '@/i18n/routing'
+import { routing, localePath } from '@/i18n/routing'
 import { Navbar } from '../../sections/Navbar'
 import { Footer } from '../../sections/Footer'
 import { ServiceHero } from './sections/ServiceHero'
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ]
 
   const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, `${SITE_URL}/${l}${PATH}`]),
+    routing.locales.map((l) => [l, `${SITE_URL}${localePath(l, PATH)}`]),
   )
 
   return {
@@ -54,14 +54,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('description'),
     keywords,
     alternates: {
-      canonical: `/${locale}${PATH}`,
+      canonical: localePath(locale, PATH),
       languages,
     },
     openGraph: {
       type: 'website',
       locale: locale === 'es' ? 'es_MX' : 'en_US',
       alternateLocale: locale === 'es' ? 'en_US' : 'es_MX',
-      url: `${SITE_URL}/${locale}${PATH}`,
+      url: `${SITE_URL}${localePath(locale, PATH)}`,
       title: t('title'),
       description: t('description'),
       siteName: 'Dra. Alondra Robles',
@@ -98,7 +98,7 @@ function ServiceJsonLd({ locale }: { locale: string }) {
       : 'Professional LED teeth whitening. Up to 4 shades lighter in a single 45-minute session.',
     procedureType: 'https://schema.org/TherapeuticProcedure',
     bodyLocation: 'Teeth',
-    url: `${SITE_URL}/${locale}/servicios/blanqueamiento-dental`,
+    url: `${SITE_URL}${localePath(locale, PATH)}`,
     image: `${SITE_URL}/images/dra-alondra-robles-dentista-guadalajara.webp`,
     provider: { '@id': `${SITE_URL}/#dentist` },
     offers: {
@@ -106,7 +106,7 @@ function ServiceJsonLd({ locale }: { locale: string }) {
       price: '2200',
       priceCurrency: 'MXN',
       availability: 'https://schema.org/InStock',
-      url: `${SITE_URL}/${locale}/servicios/blanqueamiento-dental`,
+      url: `${SITE_URL}${localePath(locale, PATH)}`,
     },
   }
 

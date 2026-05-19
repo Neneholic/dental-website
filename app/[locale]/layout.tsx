@@ -3,7 +3,7 @@ import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
-import { routing } from '@/i18n/routing'
+import { routing, localePath } from '@/i18n/routing'
 import '../globals.css'
 
 const SITE_URL = 'https://draalondrarobles.com'
@@ -52,7 +52,7 @@ export async function generateMetadata({
         ]
 
   const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, `${SITE_URL}/${l}`]),
+    routing.locales.map((l) => [l, `${SITE_URL}${localePath(l)}`]),
   )
 
   return {
@@ -67,14 +67,14 @@ export async function generateMetadata({
     creator: 'Dra. Alondra Robles',
     publisher: 'Dra. Alondra Robles',
     alternates: {
-      canonical: `/${locale}`,
+      canonical: localePath(locale),
       languages,
     },
     openGraph: {
       type: 'website',
       locale: locale === 'es' ? 'es_MX' : 'en_US',
       alternateLocale: locale === 'es' ? 'en_US' : 'es_MX',
-      url: `${SITE_URL}/${locale}`,
+      url: `${SITE_URL}${localePath(locale)}`,
       title: t('title'),
       description: t('description'),
       siteName: 'Dra. Alondra Robles',
@@ -126,7 +126,7 @@ function DentistJsonLd({ locale }: { locale: string }) {
     description: isEs
       ? 'Clínica dental privada de la Dra. Alondra Robles en Guadalajara. Odontología estética, blanqueamiento dental, implantes y ortodoncia.'
       : 'Private dental clinic of Dr. Alondra Robles in Guadalajara. Cosmetic dentistry, teeth whitening, implants and orthodontics.',
-    url: `${SITE_URL}/${locale}`,
+    url: `${SITE_URL}${localePath(locale)}`,
     image: `${SITE_URL}/images/dra-alondra-robles-dentista-guadalajara.webp`,
     logo: `${SITE_URL}/images/dra-alondra-robles-dentista-guadalajara.webp`,
     telephone: '+523310678412',
@@ -168,7 +168,7 @@ function DentistJsonLd({ locale }: { locale: string }) {
       {
         '@type': 'MedicalProcedure',
         name: isEs ? 'Blanqueamiento dental profesional' : 'Professional teeth whitening',
-        url: `${SITE_URL}/${locale}/servicios/blanqueamiento-dental`,
+        url: `${SITE_URL}${localePath(locale, '/servicios/blanqueamiento-dental')}`,
       },
       { '@type': 'MedicalProcedure', name: isEs ? 'Estética dental' : 'Cosmetic dentistry' },
       { '@type': 'MedicalProcedure', name: isEs ? 'Endodoncia' : 'Endodontics' },
@@ -194,7 +194,7 @@ function WebsiteJsonLd({ locale }: { locale: string }) {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${SITE_URL}/#website`,
-    url: `${SITE_URL}/${locale}`,
+    url: `${SITE_URL}${localePath(locale)}`,
     name: 'Dra. Alondra Robles',
     inLanguage: locale === 'es' ? 'es-MX' : 'en-US',
     publisher: { '@id': `${SITE_URL}/#dentist` },

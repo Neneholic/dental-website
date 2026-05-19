@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { routing } from '@/i18n/routing'
+import { routing, localePath } from '@/i18n/routing'
 
 const SITE_URL = 'https://draalondrarobles.com'
 
@@ -14,13 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.flatMap(({ path, priority, changeFrequency }) =>
     routing.locales.map((locale) => ({
-      url: `${SITE_URL}/${locale}${path}`,
+      url: `${SITE_URL}${localePath(locale, path)}`,
       lastModified,
       changeFrequency,
       priority: locale === routing.defaultLocale ? priority : priority - 0.1,
       alternates: {
         languages: Object.fromEntries(
-          routing.locales.map((l) => [l, `${SITE_URL}/${l}${path}`]),
+          routing.locales.map((l) => [l, `${SITE_URL}${localePath(l, path)}`]),
         ),
       },
     })),
