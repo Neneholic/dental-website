@@ -7,9 +7,9 @@ import { AnimatedCounter } from '../components/AnimatedCounter'
 import { WhatsAppButton } from '../components/WhatsAppButton'
 
 const images = [
-  'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&q=80',
-  'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80',
-  'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400&q=80',
+  '/images/dra-alondra-robles-sonrisa.webp',
+  '/images/dra-alondra-robles-consulta-dental.webp',
+  '/images/dra-alondra-robles-procedimiento-dental.webp',
 ]
 
 export function Consultation() {
@@ -63,8 +63,8 @@ export function Consultation() {
                 <img
                   src={images[0]}
                   alt={locale === 'es'
-                    ? 'Primera consulta dental con la Dra. Alondra Robles en Guadalajara'
-                    : 'First dental consultation with Dr. Alondra Robles in Guadalajara'}
+                    ? 'Dra. Alondra Robles mostrando una sonrisa saludable tras tratamiento dental en Guadalajara'
+                    : 'Dr. Alondra Robles showing a healthy smile after dental treatment in Guadalajara'}
                   className="w-full h-64 md:h-72 object-cover"
                 />
               </motion.div>
@@ -93,8 +93,8 @@ export function Consultation() {
                   <img
                     src={images[1]}
                     alt={locale === 'es'
-                      ? 'Procedimiento dental profesional en consultorio'
-                      : 'Professional dental procedure in office'}
+                      ? 'Consulta dental personalizada con la Dra. Alondra Robles'
+                      : 'Personalized dental consultation with Dr. Alondra Robles'}
                     className="w-full h-48 object-cover"
                   />
                 </motion.div>
@@ -106,8 +106,8 @@ export function Consultation() {
                   <img
                     src={images[2]}
                     alt={locale === 'es'
-                      ? 'Cuidado dental personalizado en clínica de la Dra. Alondra Robles'
-                      : 'Personalized dental care at Dr. Alondra Robles clinic'}
+                      ? 'Procedimiento dental profesional realizado por la Dra. Alondra Robles'
+                      : 'Professional dental procedure performed by Dr. Alondra Robles'}
                     className="w-full h-48 object-cover"
                   />
                 </motion.div>
