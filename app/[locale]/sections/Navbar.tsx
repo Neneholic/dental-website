@@ -58,15 +58,14 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
   const navLinks = [
     { name: t('home'), href: getNavHref('#home'), hash: '#home' },
     { name: t('about'), href: getNavHref('#about'), hash: '#about' },
-    { 
-      name: t('services'), 
+    {
+      name: t('services'),
       href: getNavHref('#services'),
       hash: '#services',
       submenu: [
         { name: t('whitening'), href: '/servicios/blanqueamiento-dental' },
       ]
     },
-    { name: t('appointment'), href: getNavHref('#contact'), hash: '#contact' },
   ]
 
   const switchLocale = locale === 'es' ? 'en' : 'es'
