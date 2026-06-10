@@ -222,18 +222,17 @@ export default async function LocaleLayout({
   return (
     <html lang={locale === 'es' ? 'es-MX' : 'en-US'} className={inter.variable}>
       <body className={`${inter.className} antialiased`}>
+        {/* gtag init: inline so dataLayer + page_view fire during HTML parse,
+            BEFORE the library finishes loading. Captures bounces under 1s. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}',{transport_type:'beacon'});`,
+          }}
+        />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
         />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_ID}');
-          `}
-        </Script>
         <DentistJsonLd locale={locale} />
         <WebsiteJsonLd locale={locale} />
         <NextIntlClientProvider messages={messages}>
