@@ -13,16 +13,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
 
   return routes.flatMap(({ path, priority, changeFrequency }) =>
-    routing.locales.map((locale) => ({
-      url: `${SITE_URL}${localePath(locale, path)}`,
-      lastModified,
-      changeFrequency,
-      priority: locale === routing.defaultLocale ? priority : priority - 0.1,
-      alternates: {
-        languages: Object.fromEntries(
-          routing.locales.map((l) => [l, `${SITE_URL}${localePath(l, path)}`]),
-        ),
-      },
-    })),
+    routing.locales.map((locale) => {
+      const languages: Record<string, string> = Object.fromEntries(
+        routing.locales.map((l) => [l, `${SITE_URL}${localePath(l, path)}`]),
+      )
+      languages['x-default'] = `${SITE_URL}${localePath(routing.defaultLocale, path)}`
+
+      return {
+        url: `${SITE_URL}${localePath(locale, path)}`,
+        lastModified,
+        changeFrequency,
+        priority: locale === routing.defaultLocale ? priority : priority - 0.1,
+        alternates: { languages },
+      }
+    }),
   )
 }

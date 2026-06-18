@@ -45,9 +45,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           'dr alondra robles',
         ]
 
-  const languages = Object.fromEntries(
+  const languages: Record<string, string> = Object.fromEntries(
     routing.locales.map((l) => [l, `${SITE_URL}${localePath(l, PATH)}`]),
   )
+  languages['x-default'] = `${SITE_URL}${localePath(routing.defaultLocale, PATH)}`
 
   return {
     title: t('title'),
@@ -118,11 +119,35 @@ function ServiceJsonLd({ locale }: { locale: string }) {
   )
 }
 
+async function FaqJsonLd({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: 'whitening.faq.questions' })
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [0, 1, 2, 3, 4, 5].map((i) => ({
+      '@type': 'Question',
+      name: t(`${i}.q`),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t(`${i}.a`),
+      },
+    })),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
 export default async function BlanqueamientoDentalPage({ params }: Props) {
   const { locale } = await params
   return (
     <>
       <ServiceJsonLd locale={locale} />
+      <FaqJsonLd locale={locale} />
       <Navbar />
       <main className="min-h-screen">
         <ServiceHero />

@@ -21,9 +21,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? 'Aviso de Privacidad de la Dra. Alondra Robles conforme a la LFPDPPP. Información sobre el tratamiento de datos personales y derechos ARCO.'
     : 'Privacy Notice of Dr. Alondra Robles in compliance with Mexican data protection law (LFPDPPP).'
 
-  const languages = Object.fromEntries(
+  const languages: Record<string, string> = Object.fromEntries(
     routing.locales.map((l) => [l, `${SITE_URL}${localePath(l, PATH)}`]),
   )
+  languages['x-default'] = `${SITE_URL}${localePath(routing.defaultLocale, PATH)}`
 
   return {
     title,

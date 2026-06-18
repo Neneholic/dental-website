@@ -51,9 +51,10 @@ export async function generateMetadata({
           'dr alondra robles',
         ]
 
-  const languages = Object.fromEntries(
+  const languages: Record<string, string> = Object.fromEntries(
     routing.locales.map((l) => [l, `${SITE_URL}${localePath(l)}`]),
   )
+  languages['x-default'] = `${SITE_URL}${localePath(routing.defaultLocale)}`
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -175,10 +176,27 @@ function DentistJsonLd({ locale }: { locale: string }) {
       { '@type': 'MedicalProcedure', name: isEs ? 'Implantes dentales' : 'Dental implants' },
       { '@type': 'MedicalProcedure', name: isEs ? 'Ortodoncia' : 'Orthodontics' },
     ],
-    areaServed: {
-      '@type': 'City',
-      name: 'Guadalajara',
-    },
+    areaServed: [
+      { '@type': 'City', name: 'Guadalajara' },
+      { '@type': 'City', name: 'Zapopan' },
+      { '@type': 'City', name: 'Tlaquepaque' },
+    ],
+    knowsAbout: [
+      isEs ? 'Blanqueamiento dental con luz LED' : 'LED teeth whitening',
+      isEs ? 'Estética dental' : 'Cosmetic dentistry',
+      isEs ? 'Carillas de porcelana' : 'Porcelain veneers',
+      isEs ? 'Diseño de sonrisa' : 'Smile design',
+      isEs ? 'Implantes dentales' : 'Dental implants',
+      isEs ? 'Endodoncia' : 'Endodontics',
+      isEs ? 'Ortodoncia' : 'Orthodontics',
+      isEs ? 'Odontología restauradora' : 'Restorative dentistry',
+    ],
+    sameAs: [
+      'https://www.instagram.com/od.alondrarobles/',
+      'https://www.tiktok.com/@od.alondra.robles',
+      'https://wa.me/5213310678412',
+      'https://www.google.com/maps/place/Dr.+Alondra+Robles,+Dentist/@20.6830236,-103.3800708,17z',
+    ],
   }
 
   return (
