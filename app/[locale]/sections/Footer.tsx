@@ -187,10 +187,10 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative h-32 md:h-48 overflow-hidden"
+          className="relative overflow-hidden flex items-center justify-center py-4"
         >
           <motion.h2
-            className="text-[60px] md:text-[120px] lg:text-[160px] font-bold text-gray-900 leading-none tracking-tighter select-none"
+            className="text-[clamp(1.75rem,9vw,7rem)] font-bold text-gray-900 leading-none tracking-tighter select-none whitespace-nowrap text-center"
             style={{
               WebkitTextStroke: '1px rgba(255,255,255,0.1)',
             }}
