@@ -18,7 +18,14 @@ type WhiteningCase = {
 
 const cases: WhiteningCase[] = [
   {
-    // Placeholder: imagenes de limpieza dental hasta tener fotos reales de blanqueamiento
+    // Caso real de blanqueamiento dental con la Dra. Alondra Robles
+    beforeSrc: '/images/blanqueamiento-dental-guadalajara-antes.png',
+    afterSrc: '/images/blanqueamiento-dental-guadalajara-despues.png',
+    shades: '+4 tonos',
+    isRealWhitening: true,
+  },
+  {
+    // Placeholder: imagenes de limpieza dental (eliminar cuando haya mas casos reales)
     beforeSrc: '/images/limpieza-dental-antes.webp',
     afterSrc: '/images/limpieza-dental-despues.webp',
     shades: '+6 tonos',
