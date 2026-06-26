@@ -1,30 +1,43 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useTranslations, useLocale } from 'next-intl'
+import { BeforeAfterSlider } from '../../../components/BeforeAfterSlider'
 
-const cases = [
-  { id: 1, shades: '+6 tonos' },
-  { id: 2, shades: '+4 tonos' },
-  { id: 3, shades: '+5 tonos' },
-];
+// TODO: cuando haya fotos reales de blanqueamiento dental antes/despues,
+// reemplazar las imagenes placeholder y agregar mas casos.
+type WhiteningCase = {
+  beforeSrc: string
+  afterSrc: string
+  shades: string
+  /** Si las fotos son reales del tratamiento, marcar true para mostrar el badge de tonos. */
+  isRealWhitening?: boolean
+}
+
+const cases: WhiteningCase[] = [
+  {
+    // Placeholder: imagenes de limpieza dental hasta tener fotos reales de blanqueamiento
+    beforeSrc: '/images/limpieza-dental-antes.webp',
+    afterSrc: '/images/limpieza-dental-despues.webp',
+    shades: '+6 tonos',
+    isRealWhitening: false,
+  },
+]
 
 export function BeforeAfterGallery() {
-  const t = useTranslations('whitening.gallery');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [sliderPosition, setSliderPosition] = useState(50);
+  const t = useTranslations('whitening.gallery')
+  const locale = useLocale()
+  const isEs = locale === 'es'
+  const [currentIndex, setCurrentIndex] = useState(0)
 
-  const nextCase = () => {
-    setCurrentIndex((prev) => (prev + 1) % cases.length);
-    setSliderPosition(50);
-  };
+  const showNav = cases.length > 1
+  const currentCase = cases[currentIndex]
 
-  const prevCase = () => {
-    setCurrentIndex((prev) => (prev - 1 + cases.length) % cases.length);
-    setSliderPosition(50);
-  };
+  const nextCase = () => setCurrentIndex((prev) => (prev + 1) % cases.length)
+  const prevCase = () =>
+    setCurrentIndex((prev) => (prev - 1 + cases.length) % cases.length)
 
   return (
     <section className="py-24 md:py-32 bg-white">
@@ -43,9 +56,7 @@ export function BeforeAfterGallery() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {t('title')}
           </h2>
-          <p className="text-lg text-gray-600">
-            {t('subtitle')}
-          </p>
+          <p className="text-lg text-gray-600">{t('subtitle')}</p>
         </motion.div>
 
         {/* Gallery */}
@@ -56,88 +67,80 @@ export function BeforeAfterGallery() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto"
         >
-          <div className="bg-[#E8D5F2]/30 rounded-3xl p-8 md:p-12">
-            {/* Before/After Slider */}
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-white shadow-lg">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentIndex}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="absolute inset-0"
-                >
-                  {/* After (Background) */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#B8D4E8]/30 to-[#E8D5F2]/30">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">😁</div>
-                      <p className="text-green-600 font-semibold">{t('after')}</p>
-                      <p className="text-2xl font-bold text-gray-900">{cases[currentIndex].shades}</p>
-                    </div>
-                  </div>
-
-                  {/* Before (Clipped) */}
-                  <div
-                    className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden"
-                    style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
-                  >
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">😐</div>
-                      <p className="text-gray-600 font-semibold">{t('before')}</p>
-                    </div>
-                  </div>
-
-                  {/* Slider Handle */}
-                  <div
-                    className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize shadow-lg"
-                    style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
-                  >
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center">
-                      <div className="flex gap-0.5">
-                        <ChevronLeft className="w-4 h-4 text-gray-600" />
-                        <ChevronRight className="w-4 h-4 text-gray-600" />
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            {/* Controls */}
-            <div className="flex items-center justify-between mt-6">
-              <button
-                onClick={prevCase}
-                className="p-3 rounded-full bg-white text-gray-800 hover:bg-gray-100 transition-colors shadow-sm"
+          <div className="bg-[#E8D5F2]/30 rounded-3xl p-6 md:p-10">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
               >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
+                <BeforeAfterSlider
+                  beforeSrc={currentCase.beforeSrc}
+                  afterSrc={currentCase.afterSrc}
+                  beforeAlt={
+                    isEs
+                      ? 'Sonrisa antes del tratamiento dental'
+                      : 'Smile before dental treatment'
+                  }
+                  afterAlt={
+                    isEs
+                      ? 'Sonrisa después del tratamiento dental con la Dra. Alondra Robles'
+                      : 'Smile after dental treatment with Dr. Alondra Robles'
+                  }
+                  beforeLabel={t('before')}
+                  afterLabel={t('after')}
+                />
+              </motion.div>
+            </AnimatePresence>
 
-              <div className="flex gap-2">
-                {cases.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => {
-                      setCurrentIndex(index);
-                      setSliderPosition(50);
-                    }}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentIndex ? 'bg-[#B8D4E8]' : 'bg-gray-300'
-                    }`}
-                  />
-                ))}
+            {/* Badge de tonos: solo se muestra si la imagen es realmente de blanqueamiento */}
+            {currentCase.isRealWhitening && (
+              <div className="mt-6 flex justify-center">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm font-semibold text-gray-900 shadow-sm">
+                  <span className="text-[#5BA3C0]">✨</span>
+                  {currentCase.shades}
+                </span>
               </div>
+            )}
 
-              <button
-                onClick={nextCase}
-                className="p-3 rounded-full bg-white text-gray-800 hover:bg-gray-100 transition-colors shadow-sm"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
+            {/* Controles (solo si hay mas de un caso) */}
+            {showNav && (
+              <div className="flex items-center justify-between mt-6">
+                <button
+                  onClick={prevCase}
+                  className="p-3 rounded-full bg-white text-gray-800 hover:bg-gray-100 transition-colors shadow-sm"
+                  aria-label={isEs ? 'Caso anterior' : 'Previous case'}
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+
+                <div className="flex gap-2">
+                  {cases.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentIndex(index)}
+                      className={`w-3 h-3 rounded-full transition-colors ${
+                        index === currentIndex ? 'bg-[#B8D4E8]' : 'bg-gray-300'
+                      }`}
+                      aria-label={`${isEs ? 'Caso' : 'Case'} ${index + 1}`}
+                    />
+                  ))}
+                </div>
+
+                <button
+                  onClick={nextCase}
+                  className="p-3 rounded-full bg-white text-gray-800 hover:bg-gray-100 transition-colors shadow-sm"
+                  aria-label={isEs ? 'Caso siguiente' : 'Next case'}
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </div>
+            )}
           </div>
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
