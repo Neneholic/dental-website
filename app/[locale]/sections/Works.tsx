@@ -1,18 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { WhatsAppButton } from '../components/WhatsAppButton'
-
-// Imágenes de stock - Diseño de sonrisa
-const images = [
-  'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80',
-  'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80',
-]
+import { BeforeAfterSlider } from '../components/BeforeAfterSlider'
 
 export function Works() {
   const t = useTranslations('works')
+  const locale = useLocale()
+  const isEs = locale === 'es'
 
   return (
     <section className="py-24 md:py-32 bg-[#D4E4D1] rounded-3xl mx-4 sm:mx-6 lg:mx-8 overflow-hidden">
@@ -82,44 +79,37 @@ export function Works() {
             </AnimatedSection>
           </div>
 
-          {/* Right - Work Cards */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {[
-              { title: t('teethStraightening'), desc: t('improveSmile'), img: images[0] },
-              { title: t('dentalImplant'), desc: t('improveSmile'), img: images[1] },
-            ].map((work, index) => (
-              <motion.div
-                key={work.title}
-                initial={{ opacity: 0, y: 50, clipPath: 'inset(100% 0 0 0)' }}
-                whileInView={{ opacity: 1, y: 0, clipPath: 'inset(0% 0 0 0)' }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.8,
-                  delay: index * 0.2,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="group cursor-pointer"
-              >
-                <div className="block relative rounded-2xl overflow-hidden mb-4">
-                  <motion.img
-                    src={work.img}
-                    alt={work.title}
-                    className="w-full h-64 object-cover"
-                    whileHover={{ scale: 1.08 }}
-                    transition={{ duration: 0.6 }}
-                  />
-                  {/* Hover Overlay - sin WhatsApp */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end justify-start p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white font-medium">Ver transformación</span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">
-                  {work.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{work.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+          {/* Right - Before/After Slider */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <BeforeAfterSlider
+              beforeSrc="/images/limpieza-dental-antes.webp"
+              afterSrc="/images/limpieza-dental-despues.webp"
+              beforeAlt={
+                isEs
+                  ? 'Antes de la limpieza dental profesional con la Dra. Alondra Robles en Guadalajara'
+                  : 'Before professional dental cleaning by Dr. Alondra Robles in Guadalajara'
+              }
+              afterAlt={
+                isEs
+                  ? 'Resultado tras la limpieza dental profesional con la Dra. Alondra Robles en Guadalajara'
+                  : 'Result after professional dental cleaning by Dr. Alondra Robles in Guadalajara'
+              }
+              beforeLabel={isEs ? 'Antes' : 'Before'}
+              afterLabel={isEs ? 'Después' : 'After'}
+            />
+            <div className="mt-4 text-center">
+              <p className="text-sm text-gray-600">
+                {isEs
+                  ? 'Limpieza dental profesional · Desliza para ver el resultado'
+                  : 'Professional dental cleaning · Slide to see the result'}
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
