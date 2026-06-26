@@ -25,6 +25,13 @@ const cases: WhiteningCase[] = [
     isRealWhitening: true,
   },
   {
+    // Caso real: paciente de zona Providencia
+    beforeSrc: '/images/blanqueamiento-dental-providencia-antes.webp',
+    afterSrc: '/images/blanqueamiento-dental-providencia-despues.webp',
+    shades: '+4 tonos',
+    isRealWhitening: true,
+  },
+  {
     // Placeholder: imagenes de limpieza dental (eliminar cuando haya mas casos reales)
     beforeSrc: '/images/limpieza-dental-antes.webp',
     afterSrc: '/images/limpieza-dental-despues.webp',
