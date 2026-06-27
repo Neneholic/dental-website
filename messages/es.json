@@ -210,5 +210,127 @@
       "trust2": "100% confidencial",
       "trust3": "Horarios flexibles"
     }
+  },
+  "crowns": {
+    "metadata": {
+      "title": "Coronas dentales en Guadalajara | Dra. Alondra Robles",
+      "description": "Recupera la forma, función y estética de tus dientes con coronas dentales de porcelana y zirconio. Tecnología digital, resultados naturales y duraderos."
+    },
+    "hero": {
+      "badge": "Porcelana y zirconio de alta calidad",
+      "title1": "Recupera tu",
+      "titleHighlight": "sonrisa natural",
+      "title2": "con coronas dentales",
+      "subtitle": "Coronas dentales hechas a medida con tecnología digital. Devuelven la forma, función y estética de tus dientes dañados con resultados indistinguibles de un diente natural.",
+      "safe": "Resistente",
+      "duration": "2 visitas",
+      "ctaPrimary": "Agenda tu consulta",
+      "ctaSecondary": "Ver cómo funciona"
+    },
+    "stats": {
+      "smiles": "Coronas colocadas",
+      "satisfaction": "Satisfacción garantizada",
+      "duration": "Visitas promedio",
+      "experience": "Años de experiencia"
+    },
+    "benefits": {
+      "label": "Beneficios",
+      "title": "¿Por qué elegir nuestras coronas dentales?",
+      "subtitle": "Devolvemos la fuerza, función y estética de tus dientes con materiales de alta calidad y tecnología digital.",
+      "fast": "Diseño digital",
+      "fastDesc": "Diseñamos cada corona con escaneo 3D para un ajuste preciso desde la primera prueba.",
+      "safe": "Biocompatible",
+      "safeDesc": "Materiales como zirconio y porcelana totalmente compatibles con tus encías.",
+      "longLasting": "Duradero",
+      "longLastingDesc": "Coronas que duran 10-15 años o más con el cuidado adecuado.",
+      "personalized": "Estética natural",
+      "personalizedDesc": "Color y forma personalizados para que se integren perfectamente con tu sonrisa.",
+      "painless": "Sin dolor",
+      "painlessDesc": "Procedimiento bajo anestesia local, completamente cómodo y controlado.",
+      "guaranteed": "Garantía",
+      "guaranteedDesc": "Garantía sobre el trabajo y los materiales utilizados en cada corona."
+    },
+    "process": {
+      "label": "Proceso",
+      "title": "¿Cómo funciona?",
+      "subtitle": "Un proceso digital, preciso y cómodo en 4 pasos",
+      "step1": "Diagnóstico",
+      "step1Desc": "Evaluamos el diente afectado y planeamos el tratamiento ideal.",
+      "step2": "Preparación",
+      "step2Desc": "Tallado mínimo del diente y toma de impresión digital con escáner 3D.",
+      "step3": "Fabricación",
+      "step3Desc": "Diseñamos y fabricamos tu corona en laboratorio dental especializado.",
+      "step4": "Cementado",
+      "step4Desc": "Colocamos tu corona definitiva con ajuste perfecto y revisión final."
+    },
+    "gallery": {
+      "label": "Resultados",
+      "title": "Casos transformados",
+      "subtitle": "Desliza para ver la diferencia",
+      "before": "Antes",
+      "after": "Después"
+    },
+    "pricing": {
+      "label": "Precio",
+      "title": "Inversión en tu sonrisa",
+      "subtitle": "Coronas dentales de alta calidad con tecnología digital y materiales premium",
+      "badge": "Por unidad",
+      "price": "5,500",
+      "currency": "MXN",
+      "note": "Desde - El precio varía según material",
+      "features": [
+        "Diseño digital con escáner 3D",
+        "Materiales premium (zirconio/porcelana)",
+        "Color personalizado a tu sonrisa",
+        "Anestesia local incluida",
+        "Pruebas y ajustes incluidos",
+        "Garantía sobre materiales",
+        "Fabricación en 7-10 días",
+        "Cuidados posteriores incluidos"
+      ],
+      "cta": "Reservar mi cita",
+      "consultation": "Consulta de evaluación gratuita incluida"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Resolvemos tus dudas sobre coronas dentales",
+      "questions": [
+        {
+          "q": "¿Cuánto duran las coronas dentales?",
+          "a": "Las coronas modernas de zirconio o porcelana pueden durar entre 10 y 15 años, e incluso más con buena higiene y revisiones periódicas. Algunos casos superan los 20 años de vida útil."
+        },
+        {
+          "q": "¿Qué material es mejor para mi corona?",
+          "a": "Depende del diente y del resultado estético buscado. Las coronas de zirconio son ideales por su resistencia y estética; las de porcelana destacan en dientes frontales por su translucidez natural. En la consulta evaluamos tu caso y te recomendamos el material más adecuado."
+        },
+        {
+          "q": "¿El procedimiento es doloroso?",
+          "a": "No. Aplicamos anestesia local antes del tallado del diente y todo el proceso es cómodo. Puedes sentir una leve sensibilidad los primeros días, pero desaparece pronto."
+        },
+        {
+          "q": "¿Cuántas visitas necesito?",
+          "a": "Generalmente 2 visitas: la primera para preparar el diente y tomar la impresión digital, la segunda para cementar la corona definitiva. Entre visitas usarás una corona provisional."
+        },
+        {
+          "q": "¿Cuánto tarda en fabricarse?",
+          "a": "Entre 7 y 10 días hábiles. Trabajamos con un laboratorio dental que utiliza tecnología CAD/CAM para garantizar precisión y rapidez en cada corona."
+        },
+        {
+          "q": "¿Puedo comer normal con una corona?",
+          "a": "Sí, una vez cementada la corona definitiva puedes comer con normalidad. Recomendamos evitar morder objetos muy duros (hielo, plumas, uñas) para extender su vida útil."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Consulta gratuita sin compromiso",
+      "title": "¿Listo para recuperar tu sonrisa?",
+      "subtitle": "Agenda tu consulta de evaluación gratuita hoy mismo. La Dra. Alondra Robles evaluará tu caso y te recomendará el mejor material para tu corona.",
+      "ctaWhatsApp": "Agendar consulta gratis",
+      "ctaCall": "Llamar ahora",
+      "trust1": "Sin compromiso",
+      "trust2": "100% confidencial",
+      "trust3": "Horarios flexibles"
+    }
   }
 }

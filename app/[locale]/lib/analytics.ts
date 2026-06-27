@@ -19,6 +19,9 @@ export type WhatsAppClickLocation =
   | 'pricing_whitening'
   | 'final_cta_whitening'
   | 'service_hero_whitening'
+  | 'pricing_crowns'
+  | 'final_cta_crowns'
+  | 'service_hero_crowns'
 
 export function trackWhatsAppClick(location: WhatsAppClickLocation) {
   if (typeof window === 'undefined' || typeof window.gtag !== 'function') return

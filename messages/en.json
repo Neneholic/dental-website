@@ -210,5 +210,127 @@
       "trust2": "100% confidential",
       "trust3": "Flexible hours"
     }
+  },
+  "crowns": {
+    "metadata": {
+      "title": "Dental Crowns in Guadalajara | Dr. Alondra Robles",
+      "description": "Restore the shape, function and aesthetics of your teeth with porcelain and zirconium dental crowns. Digital technology, natural and lasting results."
+    },
+    "hero": {
+      "badge": "High quality porcelain and zirconium",
+      "title1": "Restore your",
+      "titleHighlight": "natural smile",
+      "title2": "with dental crowns",
+      "subtitle": "Custom-made dental crowns with digital technology. They restore the shape, function and aesthetics of damaged teeth with results indistinguishable from a natural tooth.",
+      "safe": "Resistant",
+      "duration": "2 visits",
+      "ctaPrimary": "Book your consultation",
+      "ctaSecondary": "See how it works"
+    },
+    "stats": {
+      "smiles": "Crowns placed",
+      "satisfaction": "Satisfaction guaranteed",
+      "duration": "Average visits",
+      "experience": "Years of experience"
+    },
+    "benefits": {
+      "label": "Benefits",
+      "title": "Why choose our dental crowns?",
+      "subtitle": "We restore the strength, function and aesthetics of your teeth with high-quality materials and digital technology.",
+      "fast": "Digital design",
+      "fastDesc": "We design each crown with 3D scanning for a precise fit from the first try.",
+      "safe": "Biocompatible",
+      "safeDesc": "Materials such as zirconium and porcelain fully compatible with your gums.",
+      "longLasting": "Long-lasting",
+      "longLastingDesc": "Crowns that last 10-15 years or more with proper care.",
+      "personalized": "Natural aesthetics",
+      "personalizedDesc": "Personalized color and shape to integrate perfectly with your smile.",
+      "painless": "Painless",
+      "painlessDesc": "Procedure under local anesthesia, completely comfortable and controlled.",
+      "guaranteed": "Warranty",
+      "guaranteedDesc": "Warranty on the work and materials used in each crown."
+    },
+    "process": {
+      "label": "Process",
+      "title": "How does it work?",
+      "subtitle": "A digital, precise and comfortable process in 4 steps",
+      "step1": "Diagnosis",
+      "step1Desc": "We evaluate the affected tooth and plan the ideal treatment.",
+      "step2": "Preparation",
+      "step2Desc": "Minimal tooth shaping and digital impression with a 3D scanner.",
+      "step3": "Manufacturing",
+      "step3Desc": "We design and manufacture your crown in a specialized dental laboratory.",
+      "step4": "Cementing",
+      "step4Desc": "We place your definitive crown with a perfect fit and final review."
+    },
+    "gallery": {
+      "label": "Results",
+      "title": "Transformed cases",
+      "subtitle": "Slide to see the difference",
+      "before": "Before",
+      "after": "After"
+    },
+    "pricing": {
+      "label": "Pricing",
+      "title": "Investment in your smile",
+      "subtitle": "High-quality dental crowns with digital technology and premium materials",
+      "badge": "Per unit",
+      "price": "5,500",
+      "currency": "MXN",
+      "note": "Starting from - Price varies by material",
+      "features": [
+        "Digital design with 3D scanner",
+        "Premium materials (zirconium/porcelain)",
+        "Color personalized to your smile",
+        "Local anesthesia included",
+        "Tests and adjustments included",
+        "Materials warranty",
+        "7-10 day manufacturing time",
+        "Aftercare included"
+      ],
+      "cta": "Book my appointment",
+      "consultation": "Free evaluation consultation included"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "We answer your questions about dental crowns",
+      "questions": [
+        {
+          "q": "How long do dental crowns last?",
+          "a": "Modern zirconium or porcelain crowns can last between 10 and 15 years, and even longer with good hygiene and periodic check-ups. Some cases exceed 20 years of service life."
+        },
+        {
+          "q": "Which material is best for my crown?",
+          "a": "It depends on the tooth and the aesthetic result sought. Zirconium crowns are ideal for their strength and aesthetics; porcelain crowns stand out on front teeth for their natural translucency. During the consultation we evaluate your case and recommend the most suitable material."
+        },
+        {
+          "q": "Is the procedure painful?",
+          "a": "No. We apply local anesthesia before shaping the tooth and the entire process is comfortable. You may feel mild sensitivity in the first days, but it goes away soon."
+        },
+        {
+          "q": "How many visits do I need?",
+          "a": "Generally 2 visits: the first to prepare the tooth and take the digital impression, the second to cement the definitive crown. Between visits you will wear a temporary crown."
+        },
+        {
+          "q": "How long does manufacturing take?",
+          "a": "Between 7 and 10 business days. We work with a dental laboratory that uses CAD/CAM technology to ensure precision and speed in every crown."
+        },
+        {
+          "q": "Can I eat normally with a crown?",
+          "a": "Yes, once the definitive crown is cemented you can eat normally. We recommend avoiding biting very hard objects (ice, pens, nails) to extend its lifespan."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Free consultation with no obligation",
+      "title": "Ready to restore your smile?",
+      "subtitle": "Book your free evaluation consultation today. Dr. Alondra Robles will evaluate your case and recommend the best material for your crown.",
+      "ctaWhatsApp": "Book free consultation",
+      "ctaCall": "Call now",
+      "trust1": "No obligation",
+      "trust2": "100% confidential",
+      "trust3": "Flexible hours"
+    }
   }
 }
