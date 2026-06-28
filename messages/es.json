@@ -214,14 +214,14 @@
   "crowns": {
     "metadata": {
       "title": "Coronas dentales en Guadalajara | Dra. Alondra Robles",
-      "description": "Recupera la forma, función y estética de tus dientes con coronas dentales de porcelana y zirconio. Tecnología digital, resultados naturales y duraderos."
+      "description": "Recupera la forma, función y estética de tus dientes con coronas dentales de porcelana y zirconio. Resultados naturales y duraderos hechos a medida."
     },
     "hero": {
       "badge": "Porcelana y zirconio de alta calidad",
       "title1": "Recupera tu",
       "titleHighlight": "sonrisa natural",
       "title2": "con coronas dentales",
-      "subtitle": "Coronas dentales hechas a medida con tecnología digital. Devuelven la forma, función y estética de tus dientes dañados con resultados indistinguibles de un diente natural.",
+      "subtitle": "Coronas dentales hechas a medida por la Dra. Alondra Robles. Devuelven la forma, función y estética de tus dientes dañados con resultados indistinguibles de un diente natural.",
       "safe": "Resistente",
       "duration": "2 visitas",
       "ctaPrimary": "Agenda tu consulta",
@@ -236,9 +236,9 @@
     "benefits": {
       "label": "Beneficios",
       "title": "¿Por qué elegir nuestras coronas dentales?",
-      "subtitle": "Devolvemos la fuerza, función y estética de tus dientes con materiales de alta calidad y tecnología digital.",
-      "fast": "Diseño digital",
-      "fastDesc": "Diseñamos cada corona con escaneo 3D para un ajuste preciso desde la primera prueba.",
+      "subtitle": "Devolvemos la fuerza, función y estética de tus dientes con materiales de alta calidad y un acabado totalmente personalizado.",
+      "fast": "A medida",
+      "fastDesc": "Cada corona se diseña de forma personalizada para lograr un ajuste preciso desde la primera prueba.",
       "safe": "Biocompatible",
       "safeDesc": "Materiales como zirconio y porcelana totalmente compatibles con tus encías.",
       "longLasting": "Duradero",
@@ -253,11 +253,11 @@
     "process": {
       "label": "Proceso",
       "title": "¿Cómo funciona?",
-      "subtitle": "Un proceso digital, preciso y cómodo en 4 pasos",
+      "subtitle": "Un proceso preciso y cómodo en 4 pasos",
       "step1": "Diagnóstico",
       "step1Desc": "Evaluamos el diente afectado y planeamos el tratamiento ideal.",
       "step2": "Preparación",
-      "step2Desc": "Tallado mínimo del diente y toma de impresión digital con escáner 3D.",
+      "step2Desc": "Tallado mínimo del diente y toma de impresión de alta precisión.",
       "step3": "Fabricación",
       "step3Desc": "Diseñamos y fabricamos tu corona en laboratorio dental especializado.",
       "step4": "Cementado",
@@ -273,15 +273,15 @@
     "pricing": {
       "label": "Precio",
       "title": "Inversión en tu sonrisa",
-      "subtitle": "Coronas dentales de alta calidad con tecnología digital y materiales premium",
+      "subtitle": "Coronas dentales de alta calidad con materiales premium y acabado a medida",
       "badge": "Por unidad",
       "price": "5,500",
       "currency": "MXN",
       "note": "Desde - El precio varía según material",
       "features": [
-        "Diseño digital con escáner 3D",
+        "Diseño personalizado para tu sonrisa",
         "Materiales premium (zirconio/porcelana)",
-        "Color personalizado a tu sonrisa",
+        "Color seleccionado a tu medida",
         "Anestesia local incluida",
         "Pruebas y ajustes incluidos",
         "Garantía sobre materiales",
@@ -310,11 +310,11 @@
         },
         {
           "q": "¿Cuántas visitas necesito?",
-          "a": "Generalmente 2 visitas: la primera para preparar el diente y tomar la impresión digital, la segunda para cementar la corona definitiva. Entre visitas usarás una corona provisional."
+          "a": "Generalmente 2 visitas: la primera para preparar el diente y tomar la impresión de tu boca, la segunda para cementar la corona definitiva. Entre visitas usarás una corona provisional."
         },
         {
           "q": "¿Cuánto tarda en fabricarse?",
-          "a": "Entre 7 y 10 días hábiles. Trabajamos con un laboratorio dental que utiliza tecnología CAD/CAM para garantizar precisión y rapidez en cada corona."
+          "a": "Entre 7 y 10 días hábiles. Trabajamos con un laboratorio dental de confianza que garantiza precisión y calidad en cada corona."
         },
         {
           "q": "¿Puedo comer normal con una corona?",

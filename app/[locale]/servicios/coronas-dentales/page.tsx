@@ -30,7 +30,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           'coronas dentales guadalajara',
           'corona de zirconio guadalajara',
           'corona de porcelana',
-          'corona cad cam',
           'restauración dental',
           'rehabilitación dental guadalajara',
           'precio corona dental',
@@ -40,7 +39,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           'dental crowns guadalajara',
           'zirconium crowns',
           'porcelain crowns',
-          'cad cam dental crown',
           'dental restoration guadalajara',
           'dr alondra robles',
         ]
@@ -95,8 +93,8 @@ function ServiceJsonLd({ locale }: { locale: string }) {
       ? 'Coronas dentales de porcelana y zirconio'
       : 'Porcelain and zirconium dental crowns',
     description: isEs
-      ? 'Coronas dentales hechas a medida con tecnología digital. Restauran la forma, función y estética de dientes dañados con materiales premium.'
-      : 'Custom-made dental crowns with digital technology. They restore the shape, function and aesthetics of damaged teeth with premium materials.',
+      ? 'Coronas dentales hechas a medida que restauran la forma, función y estética de dientes dañados con materiales premium.'
+      : 'Custom-made dental crowns that restore the shape, function and aesthetics of damaged teeth with premium materials.',
     procedureType: 'https://schema.org/TherapeuticProcedure',
     bodyLocation: 'Teeth',
     url: `${SITE_URL}${localePath(locale, PATH)}`,
