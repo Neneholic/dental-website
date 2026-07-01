@@ -1,43 +1,16 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
-import { BeforeAfterSlider } from '../../../components/BeforeAfterSlider'
 
-// TODO: cuando haya fotos reales de coronas dentales antes/despues,
-// reemplazar las imagenes placeholder y agregar casos reales.
-type CrownCase = {
-  beforeSrc: string
-  afterSrc: string
-  shades: string
-  /** Si las fotos son reales del tratamiento, marcar true para mostrar el badge. */
-  isRealCase?: boolean
-}
-
-const cases: CrownCase[] = [
-  {
-    // Placeholder: imagenes de limpieza dental (reemplazar cuando haya casos reales de coronas)
-    beforeSrc: '/images/limpieza-dental-antes.webp',
-    afterSrc: '/images/limpieza-dental-despues.webp',
-    shades: '',
-    isRealCase: false,
-  },
-]
+// TODO: cuando haya fotos reales antes/despues de coronas dentales,
+// migrar esta seccion al patron BeforeAfterSlider (ver blanqueamiento).
 
 export function BeforeAfterGallery() {
   const t = useTranslations('crowns.gallery')
   const locale = useLocale()
   const isEs = locale === 'es'
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  const showNav = cases.length > 1
-  const currentCase = cases[currentIndex]
-
-  const nextCase = () => setCurrentIndex((prev) => (prev + 1) % cases.length)
-  const prevCase = () =>
-    setCurrentIndex((prev) => (prev - 1 + cases.length) % cases.length)
 
   return (
     <section className="py-24 md:py-32 bg-white">
@@ -59,7 +32,7 @@ export function BeforeAfterGallery() {
           <p className="text-lg text-gray-600">{t('subtitle')}</p>
         </motion.div>
 
-        {/* Gallery */}
+        {/* Showcase estatico: corona de zirconio (mientras no haya pares antes/despues) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,76 +41,19 @@ export function BeforeAfterGallery() {
           className="max-w-3xl mx-auto"
         >
           <div className="bg-[#E8D5F2]/30 rounded-3xl p-6 md:p-10">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <BeforeAfterSlider
-                  beforeSrc={currentCase.beforeSrc}
-                  afterSrc={currentCase.afterSrc}
-                  beforeAlt={
-                    isEs
-                      ? 'Sonrisa antes del tratamiento dental'
-                      : 'Smile before dental treatment'
-                  }
-                  afterAlt={
-                    isEs
-                      ? 'Sonrisa después del tratamiento dental con la Dra. Alondra Robles'
-                      : 'Smile after dental treatment with Dr. Alondra Robles'
-                  }
-                  beforeLabel={t('before')}
-                  afterLabel={t('after')}
-                />
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Badge: solo se muestra si la imagen es realmente un caso de coronas */}
-            {currentCase.isRealCase && currentCase.shades && (
-              <div className="mt-6 flex justify-center">
-                <span className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm font-semibold text-gray-900 shadow-sm">
-                  <span className="text-[#5BA3C0]">✨</span>
-                  {currentCase.shades}
-                </span>
-              </div>
-            )}
-
-            {/* Controles (solo si hay mas de un caso) */}
-            {showNav && (
-              <div className="flex items-center justify-between mt-6">
-                <button
-                  onClick={prevCase}
-                  className="p-3 rounded-full bg-white text-gray-800 hover:bg-gray-100 transition-colors shadow-sm"
-                  aria-label={isEs ? 'Caso anterior' : 'Previous case'}
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
-
-                <div className="flex gap-2">
-                  {cases.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentIndex(index)}
-                      className={`w-3 h-3 rounded-full transition-colors ${
-                        index === currentIndex ? 'bg-[#B8D4E8]' : 'bg-gray-300'
-                      }`}
-                      aria-label={`${isEs ? 'Caso' : 'Case'} ${index + 1}`}
-                    />
-                  ))}
-                </div>
-
-                <button
-                  onClick={nextCase}
-                  className="p-3 rounded-full bg-white text-gray-800 hover:bg-gray-100 transition-colors shadow-sm"
-                  aria-label={isEs ? 'Caso siguiente' : 'Next case'}
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </button>
-              </div>
-            )}
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/corona-zirconio-guadalajara.webp"
+                alt={
+                  isEs
+                    ? 'Corona dental de zirconio realizada por la Dra. Alondra Robles en Guadalajara'
+                    : 'Zirconium dental crown made by Dr. Alondra Robles in Guadalajara'
+                }
+                fill
+                sizes="(max-width: 768px) 100vw, 720px"
+                className="object-cover"
+              />
+            </div>
           </div>
         </motion.div>
       </div>

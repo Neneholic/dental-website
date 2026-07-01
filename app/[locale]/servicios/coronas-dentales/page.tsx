@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'Dra. Alondra Robles',
       images: [
         {
-          url: '/images/dra-alondra-robles-dentista-guadalajara.webp',
+          url: '/images/corona-zirconio-guadalajara.webp',
           width: 1200,
           height: 630,
           alt: locale === 'es'
@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-      images: ['/images/dra-alondra-robles-dentista-guadalajara.webp'],
+      images: ['/images/corona-zirconio-guadalajara.webp'],
     },
   }
 }
@@ -98,7 +98,7 @@ function ServiceJsonLd({ locale }: { locale: string }) {
     procedureType: 'https://schema.org/TherapeuticProcedure',
     bodyLocation: 'Teeth',
     url: `${SITE_URL}${localePath(locale, PATH)}`,
-    image: `${SITE_URL}/images/dra-alondra-robles-dentista-guadalajara.webp`,
+    image: `${SITE_URL}/images/corona-zirconio-guadalajara.webp`,
     provider: { '@id': `${SITE_URL}/#dentist` },
     offers: {
       '@type': 'Offer',

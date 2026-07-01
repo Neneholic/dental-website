@@ -19,11 +19,11 @@ export function ServiceHero() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background image fullscreen */}
       <Image
-        src="/images/dra-alondra-robles-dentista-guadalajara.webp"
+        src="/images/corona-dental-colocacion-guadalajara.webp"
         alt={
           locale === 'es'
-            ? 'Coronas dentales de porcelana y zirconio en Guadalajara con la Dra. Alondra Robles'
-            : 'Porcelain and zirconium dental crowns in Guadalajara with Dr. Alondra Robles'
+            ? 'Colocación de corona dental de porcelana con la Dra. Alondra Robles en Guadalajara'
+            : 'Placement of a porcelain dental crown by Dr. Alondra Robles in Guadalajara'
         }
         fill
         priority
