@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { routing, localePath } from '@/i18n/routing'
 import { Navbar } from '../../sections/Navbar'
 import { Footer } from '../../sections/Footer'
+import { Location } from '../../sections/Location'
 import { ServiceHero } from './sections/ServiceHero'
 import { ServiceStats } from './sections/ServiceStats'
 import { ServiceBenefits } from './sections/ServiceBenefits'
@@ -10,7 +11,6 @@ import { ServiceProcess } from './sections/ServiceProcess'
 import { ParallaxSection } from './sections/ParallaxSection'
 import { PricingCards } from './sections/PricingCards'
 import { ServiceFaq } from './sections/ServiceFaq'
-import { FinalCta } from './sections/FinalCta'
 
 const SITE_URL = 'https://draalondrarobles.com'
 const PATH = '/servicios/coronas-dentales'
@@ -154,7 +154,7 @@ export default async function CoronasDentalesPage({ params }: Props) {
         <ServiceProcess />
         <PricingCards />
         <ServiceFaq />
-        <FinalCta />
+        <Location />
       </main>
       <Footer />
     </>
