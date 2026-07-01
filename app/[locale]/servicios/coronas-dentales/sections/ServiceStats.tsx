@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 
 const stats = [
   { icon: Users, value: 300, suffix: '+' },
-  { icon: ThumbsUp, value: 98, suffix: '%' },
+  { icon: ThumbsUp, value: 100, suffix: '%' },
   { icon: Clock, value: 2, suffix: '' },
   { icon: Award, value: 6, suffix: '+' },
 ];
