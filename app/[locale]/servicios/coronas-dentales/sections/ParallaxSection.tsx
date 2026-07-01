@@ -25,10 +25,10 @@ export function ParallaxSection() {
         style={{ y }}
       >
         <Image
-          src="/images/corona-dental-procedimiento-guadalajara.webp"
+          src="/images/corona-dental-detalle-guadalajara.webp"
           alt={locale === 'es'
-            ? 'Procedimiento de colocación de corona dental con la Dra. Alondra Robles en Guadalajara'
-            : 'Dental crown placement procedure by Dr. Alondra Robles in Guadalajara'}
+            ? 'Detalle de corona dental de porcelana realizada por la Dra. Alondra Robles en Guadalajara'
+            : 'Close-up of a porcelain dental crown made by Dr. Alondra Robles in Guadalajara'}
           fill
           className="object-cover object-center"
           priority
