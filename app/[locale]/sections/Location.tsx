@@ -6,7 +6,12 @@ import { useTranslations, useLocale } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { WhatsAppButton } from '../components/WhatsAppButton'
 
-export function Location() {
+interface LocationProps {
+  /** Override background className. Defaults to the cream tone used on the home. */
+  bgClassName?: string
+}
+
+export function Location({ bgClassName = 'bg-[#FDF8F3]' }: LocationProps = {}) {
   const t = useTranslations('location')
   const locale = useLocale()
 
@@ -36,7 +41,7 @@ export function Location() {
   ]
 
   return (
-    <section id="location" className="py-24 md:py-32 bg-[#FDF8F3] overflow-hidden">
+    <section id="location" className={`py-24 md:py-32 ${bgClassName} overflow-hidden`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimatedSection className="text-center mb-16">

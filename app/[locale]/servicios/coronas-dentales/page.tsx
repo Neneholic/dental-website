@@ -154,7 +154,7 @@ export default async function CoronasDentalesPage({ params }: Props) {
         <ServiceProcess />
         <PricingCards />
         <ServiceFaq />
-        <Location />
+        <Location bgClassName="bg-gradient-to-br from-[#E8D5F2]/40 via-white to-[#B8D4E8]/40" />
       </main>
       <Footer />
     </>

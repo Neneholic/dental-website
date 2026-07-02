@@ -64,6 +64,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
       hash: '#services',
       submenu: [
         { name: t('whitening'), href: '/servicios/blanqueamiento-dental' },
+        { name: t('crowns'), href: '/servicios/coronas-dentales' },
       ]
     },
   ]
