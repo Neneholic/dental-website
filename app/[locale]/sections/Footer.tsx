@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/routing'
 import { trackWhatsAppClick } from '../lib/analytics'
@@ -107,26 +106,6 @@ export function Footer() {
                 </motion.a>
               ))}
             </motion.div>
-
-            <motion.form
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="relative max-w-md"
-            >
-              <input
-                type="email"
-                placeholder={t('placeholder')}
-                className="w-full bg-transparent border-b border-gray-700 py-3 pr-12 text-white placeholder-gray-500 focus:outline-none focus:border-white transition-colors"
-              />
-              <button
-                type="submit"
-                className="absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-              >
-                <ArrowRight size={20} />
-              </button>
-            </motion.form>
           </div>
 
           {/* Links */}
