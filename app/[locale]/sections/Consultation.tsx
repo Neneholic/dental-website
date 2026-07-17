@@ -13,7 +13,7 @@ export function Consultation() {
   const includes = t.raw('includes') as string[]
 
   return (
-    <section className="py-24 md:py-32 bg-[#FDF8F3] overflow-hidden">
+    <section id="valoracion" className="py-24 md:py-32 bg-[#FDF8F3] overflow-hidden scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl overflow-hidden bg-[#B8D4E8]/30">
           <div className="grid lg:grid-cols-2 items-stretch">

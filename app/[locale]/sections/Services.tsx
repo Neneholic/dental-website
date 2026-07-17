@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
-import { Check, Calendar } from 'lucide-react'
+import { Check, Calendar, ArrowRight } from 'lucide-react'
 import { Link } from '@/i18n/routing'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { trackWhatsAppClick } from '../lib/analytics'
@@ -142,6 +142,15 @@ export function Services() {
               </svg>
               {t('cta')}
             </a>
+            <div className="mt-4">
+              <a
+                href="#valoracion"
+                className="inline-flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                {t('valuationLink')}
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
           </AnimatedSection>
         </div>
 
