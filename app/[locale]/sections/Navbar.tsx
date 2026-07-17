@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phone, Menu, X, Globe, ChevronDown } from 'lucide-react'
+import { Phone, Menu, X, Globe, ChevronDown, Sparkles } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link, usePathname, useRouter } from '@/i18n/routing'
 import { useParams } from 'next/navigation'
@@ -62,6 +62,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
       name: t('services'),
       href: getNavHref('#services'),
       hash: '#services',
+      icon: <Sparkles className="w-4 h-4" />,
       submenu: [
         { name: t('valuation'), href: getNavHref('#valoracion') },
         { name: t('whitening'), href: '/servicios/blanqueamiento-dental' },
@@ -147,6 +148,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
                               : 'text-white/90 hover:text-white'
                           )}
                         >
+                          {link.icon}
                           {link.name}
                           <ChevronDown className="w-4 h-4" />
                           <motion.span
@@ -295,7 +297,10 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
                       onClick={() => !link.submenu && setIsMobileMenuOpen(false)}
                       className="text-lg font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-gray-600 transition-colors block"
                     >
-                      {link.name}
+                      <span className="inline-flex items-center gap-2">
+                        {link.icon}
+                        {link.name}
+                      </span>
                     </Link>
                     {link.submenu && (
                       <div className="pl-4 mt-2 space-y-2">
