@@ -148,7 +148,7 @@ Reemplaza el texto "DENTALO" en:
 
 ### Cambiar Colores
 Edita los colores en Tailwind:
-- Fondos pastel: `#FDF8F3`, `#D4E4D1`, `#E8D5F2`
+- Fondos pastel: `#EAF2F8`, `#D4E4D1`, `#E8D5F2`
 - Tarjetas: `#F5D5A8`, `#E8D5F2`, `#B8D4E8`
 
 ### Agregar Imágenes Reales

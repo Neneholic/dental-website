@@ -29,7 +29,7 @@ export function About() {
     <section
       id="about"
       ref={containerRef}
-      className="py-24 md:py-32 bg-[#FDF8F3] overflow-hidden"
+      className="py-24 md:py-32 bg-[#EAF2F8] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">

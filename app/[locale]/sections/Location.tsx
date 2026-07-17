@@ -11,7 +11,7 @@ interface LocationProps {
   bgClassName?: string
 }
 
-export function Location({ bgClassName = 'bg-[#FDF8F3]' }: LocationProps = {}) {
+export function Location({ bgClassName = 'bg-[#EAF2F8]' }: LocationProps = {}) {
   const t = useTranslations('location')
   const locale = useLocale()
 

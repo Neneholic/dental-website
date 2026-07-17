@@ -25,7 +25,7 @@ export function Blog() {
   ]
 
   return (
-    <section className="py-24 md:py-32 bg-[#FDF8F3] overflow-hidden">
+    <section className="py-24 md:py-32 bg-[#EAF2F8] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">

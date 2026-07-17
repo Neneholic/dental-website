@@ -55,7 +55,7 @@ export default async function AvisoDePrivacidadPage({ params }: Props) {
   return (
     <>
       <Navbar solid />
-      <main className="min-h-screen bg-[#FDF8F3] pt-32 pb-24">
+      <main className="min-h-screen bg-[#EAF2F8] pt-32 pb-24">
         <PrivacyContent locale={locale} />
       </main>
       <Footer />
