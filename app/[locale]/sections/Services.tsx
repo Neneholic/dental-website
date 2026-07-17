@@ -121,7 +121,7 @@ export function Services() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16">
           <AnimatedSection>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight max-w-md">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight max-w-2xl">
               {t('title')}
             </h2>
           </AnimatedSection>
