@@ -127,9 +127,6 @@ export function Services() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.2} className="mt-6 lg:mt-0 lg:text-right">
-            <p className="text-gray-600 max-w-sm mb-6">
-              {t('description')}
-            </p>
             <a
               href="#valoracion"
               className="inline-flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"

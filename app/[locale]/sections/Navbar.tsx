@@ -63,6 +63,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
       href: getNavHref('#services'),
       hash: '#services',
       submenu: [
+        { name: t('valuation'), href: getNavHref('#valoracion') },
         { name: t('whitening'), href: '/servicios/blanqueamiento-dental' },
         { name: t('crowns'), href: '/servicios/coronas-dentales' },
       ]
