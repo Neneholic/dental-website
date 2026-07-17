@@ -2,13 +2,28 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phone, Menu, X, Globe, ChevronDown, Sparkles } from 'lucide-react'
+import { Phone, Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link, usePathname, useRouter } from '@/i18n/routing'
 import { useParams } from 'next/navigation'
 import { MagneticButton } from '../components/MagneticButton'
 import { cn } from '../lib/utils'
 import { trackWhatsAppClick } from '../lib/analytics'
+
+// Tooth Icon (lucide-react has no tooth icon; matches Lucide's stroke style)
+const ToothIcon = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="w-4 h-4"
+  >
+    <path d="M12 5.5c-1.074 -.998 -2.583 -1.5 -4 -1.5c-2.5 0 -4 1.5 -4 4.5c0 2 .5 3.5 1 5.5c.5 2 .5 4 1 5.5c.5 1.5 1.5 2 2 2c1 0 1.5 -1 2 -3c.5 -2 .5 -3 2 -3s1.5 1 2 3c.5 2 1 3 2 3c.5 0 1.5 -.5 2 -2c.5 -1.5 .5 -3.5 1 -5.5c.5 -2 1 -3.5 1 -5.5c0 -3 -1.5 -4.5 -4 -4.5c-1.417 0 -2.926 .502 -4 1.5z" />
+  </svg>
+)
 
 // WhatsApp Icon Component
 const WhatsAppIcon = () => (
@@ -62,7 +77,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
       name: t('services'),
       href: getNavHref('#services'),
       hash: '#services',
-      icon: <Sparkles className="w-4 h-4" />,
+      icon: <ToothIcon />,
       submenu: [
         { name: t('valuation'), href: getNavHref('#valoracion') },
         { name: t('whitening'), href: '/servicios/blanqueamiento-dental' },
