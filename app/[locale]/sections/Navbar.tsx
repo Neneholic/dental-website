@@ -117,20 +117,27 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
             {/* Logo */}
             <Link
               href="/"
-              className="flex flex-col transition-colors"
+              className="flex items-center gap-3 transition-colors"
             >
-              <span className={cn(
-                'text-xl md:text-2xl font-bold tracking-tight',
-                useLightStyle ? 'text-gray-900' : 'text-white'
-              )}>
-                Dra. Alondra Robles
-              </span>
-              <span className={cn(
-                'text-xs md:text-sm font-medium tracking-wider uppercase',
-                useLightStyle ? 'text-gray-600' : 'text-white/80'
-              )}>
-                Cirujano Dentista
-              </span>
+              <img
+                src="/images/logo-dra-alondra-robles.png"
+                alt="Logo Dra. Alondra Robles - Cirujano Dentista en Guadalajara"
+                className="h-11 w-auto md:h-12"
+              />
+              <div className="flex flex-col">
+                <span className={cn(
+                  'text-xl md:text-2xl font-bold tracking-tight',
+                  useLightStyle ? 'text-gray-900' : 'text-white'
+                )}>
+                  Dra. Alondra Robles
+                </span>
+                <span className={cn(
+                  'text-xs md:text-sm font-medium tracking-wider uppercase',
+                  useLightStyle ? 'text-gray-600' : 'text-white/80'
+                )}>
+                  Cirujano Dentista
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
