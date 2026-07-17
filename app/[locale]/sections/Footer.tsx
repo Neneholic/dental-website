@@ -55,7 +55,7 @@ export function Footer() {
     { name: locale === 'es' ? 'Nosotros' : 'About', href: '/#about' },
     { name: locale === 'es' ? 'Servicios' : 'Services', href: '/#services' },
     { name: locale === 'es' ? 'Blanqueamiento' : 'Whitening', href: '/servicios/blanqueamiento-dental' },
-    { name: locale === 'es' ? 'Contacto' : 'Contact', href: '/#contact' },
+    { name: locale === 'es' ? 'Contacto' : 'Contact', href: '/#location' },
   ]
 
   return (
