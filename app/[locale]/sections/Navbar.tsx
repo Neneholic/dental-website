@@ -67,6 +67,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
         { name: t('crowns'), href: '/servicios/coronas-dentales' },
       ]
     },
+    { name: t('contact'), href: getNavHref('#location'), hash: '#location' },
   ]
 
   const switchLocale = locale === 'es' ? 'en' : 'es'
