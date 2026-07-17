@@ -77,13 +77,21 @@
     "happyMembers": "5,000+ pacientes atendidos"
   },
   "consultation": {
-    "label": "(primera consulta)",
-    "title": "Primera Consulta Profesional",
-    "description": "Inversión en tu salud dental con atención personalizada y un plan de tratamiento adaptado a ti.",
-    "cta": "Agendar por WhatsApp",
+    "label": "(cita de valoración)",
+    "title": "Cita de Valoración",
+    "description": "Cada sonrisa es diferente y cada caso requiere una cita de valoración para ofrecerte el tratamiento específico que necesitas. Si no estás seguro de cuál de nuestros servicios es para ti, este es el mejor punto de partida.",
+    "includesTitle": "¿Qué incluye?",
+    "includes": [
+      "Entrevista sobre tu historial médico y dental",
+      "Revisión clínica completa de dientes, encías y tejidos",
+      "Evaluación de tu mordida y función dental",
+      "Diagnóstico inicial y explicación de los hallazgos",
+      "Plan de tratamiento adaptado a tus necesidades",
+      "Resolución de todas tus dudas"
+    ],
+    "cta": "Agendar Cita",
     "statNumber": "6",
-    "statLabel": "Años de experiencia",
-    "detailedDescription": "En tu primera visita la Dra. Alondra Robles realiza un diagnóstico completo, evaluación periodontal y un plan de tratamiento personalizado. Tu salud dental es mi prioridad."
+    "statLabel": "Años de experiencia"
   },
   "testimonials": {
     "title": "Lo que Dicen Nuestros Pacientes",
@@ -91,7 +99,7 @@
   },
   "location": {
     "label": "(encuéntranos)",
-    "title": "VISITA NUESTRO CONSULTORIO",
+    "title": "Visita Nuestro Consultorio",
     "description": "Consulta privada ubicada en una zona accesible con estacionamiento disponible. Agenda tu cita y visita el consultorio para recibir el mejor cuidado dental personalizado."
   },
   "footer": {

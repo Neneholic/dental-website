@@ -77,13 +77,21 @@
     "happyMembers": "5,000+ patients served"
   },
   "consultation": {
-    "label": "(first consultation)",
-    "title": "Professional First Consultation",
-    "description": "Investment in your dental health with personalized care and a treatment plan tailored to you.",
-    "cta": "Schedule via WhatsApp",
+    "label": "(valuation appointment)",
+    "title": "Valuation Appointment",
+    "description": "Every smile is different and each case requires a valuation appointment so we can offer you the specific treatment you need. If you're not sure which of our services is right for you, this is the best starting point.",
+    "includesTitle": "What's included?",
+    "includes": [
+      "Interview about your medical and dental history",
+      "Complete clinical review of teeth, gums and tissues",
+      "Evaluation of your bite and dental function",
+      "Initial diagnosis and explanation of the findings",
+      "Treatment plan tailored to your needs",
+      "Answers to all your questions"
+    ],
+    "cta": "Book Appointment",
     "statNumber": "6",
-    "statLabel": "Years of experience",
-    "detailedDescription": "On your first visit Dr. Alondra Robles performs a complete diagnosis, periodontal evaluation and a personalized treatment plan. Your dental health is my priority."
+    "statLabel": "Years of experience"
   },
   "testimonials": {
     "title": "What Our Patients Say",
@@ -91,7 +99,7 @@
   },
   "location": {
     "label": "(find us)",
-    "title": "VISIT OUR OFFICE",
+    "title": "Visit Our Office",
     "description": "Private practice located in an accessible area with parking available. Schedule your appointment and visit to experience the best personalized dental care."
   },
   "footer": {
