@@ -1,8 +1,8 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
+import { Check, Calendar } from 'lucide-react'
 import { Link } from '@/i18n/routing'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { trackWhatsAppClick } from '../lib/analytics'
@@ -34,15 +34,9 @@ const ImplantIcon = () => (
 export function Services() {
   const t = useTranslations('services')
   const locale = useLocale()
-  const imageRef = useRef<HTMLDivElement>(null)
-  
-  const { scrollYProgress } = useScroll({
-    target: imageRef,
-    offset: ['start end', 'end start']
-  })
-  
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.15, 1.25, 1.15])
-  const y = useTransform(scrollYProgress, [0, 1], ['-7%', '7%'])
+
+  const whiteningTags = t.raw('whiteningFeature.tags') as string[]
+  const whiteningChecklist = t.raw('whiteningFeature.checklist') as string[]
 
   const services = [
     {
@@ -157,45 +151,85 @@ export function Services() {
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
 
-          {/* Full Width Image Card with Parallax */}
-          <motion.div
-            ref={imageRef}
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="lg:col-span-3 relative rounded-3xl overflow-hidden group h-[400px] md:h-[500px]"
-          >
-            <motion.div 
-              className="absolute inset-0"
-              style={{ scale, y }}
-            >
-              <img
-                src="/images/about-8.webp"
-                alt="Paciente sonriendo tras tratamiento de estética dental con la Dra. Alondra Robles en Guadalajara"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-            
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            
-            {/* Caption */}
-            <motion.div 
-              className="absolute bottom-8 left-8 right-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-            >
-              <p className="text-white text-2xl md:text-3xl font-bold">
-                Sonrisas que transforman vidas
-              </p>
-              <p className="text-white/80 mt-2">
-                Descubre el poder de una sonrisa saludable
-              </p>
-            </motion.div>
-          </motion.div>
+          {/* Featured Service: Teeth Whitening */}
+          <div className="lg:col-span-3 rounded-3xl overflow-hidden bg-[#B8D4E8]/30">
+            <div className="grid lg:grid-cols-2 items-stretch">
+              {/* Left: Content (enters from the left edge) */}
+              <motion.div
+                initial={{ opacity: 0, x: -120 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                className="p-8 md:p-12"
+              >
+                <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
+                  {t('whiteningFeature.number')}
+                </p>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  {t('whiteningFeature.title')}{' '}
+                  <span className="italic">{t('whiteningFeature.titleAccent')}</span>
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  {t('whiteningFeature.description')}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {whiteningTags.map((tag, i) => (
+                    <span
+                      key={tag}
+                      className={`px-4 py-2 rounded-full text-sm font-medium ${
+                        i === 1
+                          ? 'bg-[#B8D4E8] text-gray-900'
+                          : 'bg-white text-gray-700 border border-gray-200'
+                      }`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Checklist */}
+                <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-8">
+                  {whiteningChecklist.map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-[#B8D4E8] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-gray-800" />
+                      </div>
+                      <span className="text-gray-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <a
+                  href="https://wa.me/5213310678412?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20de%20blanqueamiento%20dental"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick('services')}
+                  className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition-colors"
+                >
+                  {t('whiteningFeature.cta')}
+                  <Calendar className="w-5 h-5" />
+                </a>
+              </motion.div>
+
+              {/* Right: Image (enters from the right edge) */}
+              <motion.div
+                initial={{ opacity: 0, x: 120 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                className="relative h-64 lg:h-auto min-h-[400px]"
+              >
+                <img
+                  src="/images/about-8.webp"
+                  alt="Paciente sonriendo tras tratamiento de estética dental con la Dra. Alondra Robles en Guadalajara"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

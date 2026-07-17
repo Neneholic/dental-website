@@ -48,6 +48,22 @@
       "title": "Implantes Dentales",
       "description": "Recupera tu sonrisa con implantes de última generación. Colocación de implantes con garantía de calidad y resultados duraderos.",
       "readMore": "Más info"
+    },
+    "whiteningFeature": {
+      "number": "/02",
+      "title": "Blanqueamiento",
+      "titleAccent": "Dental",
+      "description": "Los tratamientos de blanqueamiento profesional ayudan a eliminar la decoloración causada por alimentos, bebidas y cambios naturales del esmalte con el tiempo. El procedimiento se realiza en un entorno clínico controlado, con atención a la comodidad y seguridad del esmalte.",
+      "tags": ["Sistema de Blanqueamiento", "Activación LED", "Control de Sensibilidad", "Solución Protectora"],
+      "checklist": [
+        "Evaluación del tono dental actual",
+        "Evaluación de esmalte y sensibilidad",
+        "Sesión de blanqueamiento en clínica",
+        "Protección de encías y tejidos blandos",
+        "Instrucciones de cuidado post-tratamiento",
+        "Recomendaciones"
+      ],
+      "cta": "Agendar Cita"
     }
   },
   "works": {

@@ -48,6 +48,22 @@
       "title": "Dental Implants",
       "description": "Recover your smile with state-of-the-art implants. Implant placement with quality guarantee and lasting results.",
       "readMore": "More info"
+    },
+    "whiteningFeature": {
+      "number": "/02",
+      "title": "Teeth",
+      "titleAccent": "Whitening",
+      "description": "Professional whitening treatments help remove discoloration caused by food, drinks, and the natural changes of enamel over time. The procedure is performed in a controlled clinical environment, with attention to comfort and enamel safety.",
+      "tags": ["Whitening System", "LED Activation", "Sensitivity Control", "Protective Solution"],
+      "checklist": [
+        "Current tooth shade evaluation",
+        "Enamel and sensitivity assessment",
+        "In-office whitening session",
+        "Gum and soft tissue protection",
+        "Post-treatment care instructions",
+        "Recommendations"
+      ],
+      "cta": "Book Appointment"
     }
   },
   "works": {
