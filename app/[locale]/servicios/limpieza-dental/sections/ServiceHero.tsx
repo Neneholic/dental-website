@@ -19,7 +19,7 @@ export function ServiceHero() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background image fullscreen */}
       <Image
-        src="/images/dra-alondra-robles-procedimiento-dental.webp"
+        src="/images/limpieza-dental-guadalajara-hero.webp"
         alt={
           locale === 'es'
             ? 'Limpieza dental profesional con la Dra. Alondra Robles en Guadalajara'

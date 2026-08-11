@@ -25,7 +25,7 @@ export function ParallaxSection() {
         style={{ y }}
       >
         <Image
-          src="/images/limpieza-dental-despues.webp"
+          src="/images/limpieza-dental-instrumentos-guadalajara.webp"
           alt={locale === 'es'
             ? 'Sonrisa saludable tras una limpieza dental profesional con la Dra. Alondra Robles en Guadalajara'
             : 'Healthy smile after a professional dental cleaning by Dr. Alondra Robles in Guadalajara'}

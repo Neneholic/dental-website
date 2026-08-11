@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'Dra. Alondra Robles',
       images: [
         {
-          url: '/images/dra-alondra-robles-procedimiento-dental.webp',
+          url: '/images/limpieza-dental-guadalajara-hero.webp',
           width: 1200,
           height: 630,
           alt: locale === 'es'
@@ -78,7 +78,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-      images: ['/images/dra-alondra-robles-procedimiento-dental.webp'],
+      images: ['/images/limpieza-dental-guadalajara-hero.webp'],
     },
   }
 }
@@ -97,7 +97,7 @@ function ServiceJsonLd({ locale }: { locale: string }) {
     procedureType: 'https://schema.org/TherapeuticProcedure',
     bodyLocation: 'Teeth',
     url: `${SITE_URL}${localePath(locale, PATH)}`,
-    image: `${SITE_URL}/images/dra-alondra-robles-procedimiento-dental.webp`,
+    image: `${SITE_URL}/images/limpieza-dental-guadalajara-hero.webp`,
     provider: { '@id': `${SITE_URL}/#dentist` },
     offers: {
       '@type': 'Offer',
