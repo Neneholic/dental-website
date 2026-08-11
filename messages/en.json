@@ -12,6 +12,7 @@
     "callNow": "WhatsApp",
     "whitening": "Teeth Whitening",
     "crowns": "Dental Crowns",
+    "cleaning": "Dental Cleaning",
     "valuation": "Valuation Appointment",
     "contact": "Contact"
   },
@@ -338,6 +339,105 @@
         {
           "q": "Can I eat normally with a crown?",
           "a": "Yes, once the definitive crown is cemented you can eat normally. We recommend avoiding biting very hard objects (ice, pens, nails) to extend its lifespan."
+        }
+      ]
+    }
+  },
+  "cleaning": {
+    "metadata": {
+      "title": "Dental Cleaning in Guadalajara | Dr. Alondra Robles",
+      "description": "Professional dental cleaning to remove tartar, stains and plaque. Take care of your oral health with ultrasound technology and personalized care."
+    },
+    "hero": {
+      "badge": "Latest-generation ultrasound technology",
+      "title1": "Restore the health and freshness",
+      "titleHighlight": "of your smile",
+      "title2": "",
+      "subtitle": "Professional dental cleaning that removes tartar, plaque and surface stains, leaving your teeth healthier and your smile brighter.",
+      "safe": "Painless",
+      "duration": "45-60 min",
+      "ctaPrimary": "Book your appointment",
+      "ctaSecondary": "See how it works"
+    },
+    "stats": {
+      "cleanings": "Cleanings performed",
+      "satisfaction": "Satisfaction guaranteed",
+      "visits": "Average visits",
+      "experience": "Years of experience"
+    },
+    "benefits": {
+      "label": "Benefits",
+      "title": "Why choose our dental cleaning?",
+      "subtitle": "We care for your oral health with cutting-edge technology and a comfortable, safe and thorough process.",
+      "precision": "Precision ultrasound",
+      "precisionDesc": "We remove tartar and plaque with ultrasound technology, without damaging the natural enamel.",
+      "prevention": "Prevents disease",
+      "preventionDesc": "Reduces the long-term risk of gingivitis, cavities and periodontal disease.",
+      "freshBreath": "Fresh breath",
+      "freshBreathDesc": "Eliminates the bacteria that cause bad breath at the root of the problem.",
+      "brighter": "Brighter smile",
+      "brighterDesc": "Removes surface stains caused by coffee, tea, tobacco and other foods.",
+      "painless": "Painless",
+      "painlessDesc": "A comfortable procedure, with no anesthesia needed in most cases.",
+      "recommended": "Recommended every 6 months",
+      "recommendedDesc": "Preventive maintenance to keep your oral health in good shape over time."
+    },
+    "process": {
+      "label": "Process",
+      "title": "How does it work?",
+      "subtitle": "A simple and comfortable process in 4 steps",
+      "step1": "Diagnosis",
+      "step1Desc": "We review the state of your teeth and gums to identify the level of tartar and plaque.",
+      "step2": "Scaling",
+      "step2Desc": "We remove tartar with ultrasound, on visible areas and below the gum line.",
+      "step3": "Polishing",
+      "step3Desc": "We polish the tooth surface to remove stains and leave a smooth finish.",
+      "step4": "Fluoride application",
+      "step4Desc": "We apply fluoride to strengthen the enamel and protect your teeth."
+    },
+    "pricing": {
+      "label": "Pricing",
+      "title": "Investment in your smile",
+      "subtitle": "Professional dental cleaning with ultrasound technology and personalized care",
+      "badge": "Per session",
+      "price": "800",
+      "currency": "MXN",
+      "note": "Starting from — the price may vary depending on the level of tartar or plaque buildup",
+      "features": [
+        "Oral evaluation included",
+        "Ultrasound scaling",
+        "Dental polishing",
+        "Fluoride application",
+        "Personalized hygiene recommendations",
+        "Approximate duration: 45-60 minutes"
+      ],
+      "cta": "Book my appointment",
+      "consultation": "Free evaluation consultation included"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "We answer your questions about dental cleaning",
+      "questions": [
+        {
+          "q": "How often should I get a dental cleaning?",
+          "a": "A cleaning every 6 months is recommended to maintain good oral health and prevent periodontal disease."
+        },
+        {
+          "q": "Does a dental cleaning hurt?",
+          "a": "No. It's a non-invasive procedure; in cases of sensitivity we can apply a local anesthetic gel."
+        },
+        {
+          "q": "Does dental cleaning whiten teeth?",
+          "a": "It helps remove surface stains, but it doesn't change the natural shade of the tooth. For whitening, we offer a dedicated treatment."
+        },
+        {
+          "q": "Can I eat after the cleaning?",
+          "a": "Yes, although it's recommended to wait at least 30 minutes and avoid heavily pigmented foods for the first few hours."
+        },
+        {
+          "q": "Do I need a deep cleaning or a regular one?",
+          "a": "It depends on the tartar buildup and the health of your gums; we assess this during your appointment before proceeding."
         }
       ]
     }

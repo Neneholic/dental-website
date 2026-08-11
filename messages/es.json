@@ -12,6 +12,7 @@
     "callNow": "WhatsApp",
     "whitening": "Blanqueamiento Dental",
     "crowns": "Coronas Dentales",
+    "cleaning": "Limpieza Dental",
     "valuation": "Cita de Valoración",
     "contact": "Contacto"
   },
@@ -338,6 +339,105 @@
         {
           "q": "¿Puedo comer normal con una corona?",
           "a": "Sí, una vez cementada la corona definitiva puedes comer con normalidad. Recomendamos evitar morder objetos muy duros (hielo, plumas, uñas) para extender su vida útil."
+        }
+      ]
+    }
+  },
+  "cleaning": {
+    "metadata": {
+      "title": "Limpieza Dental en Guadalajara | Dra. Alondra Robles",
+      "description": "Limpieza dental profesional para eliminar sarro, manchas y placa bacteriana. Cuida tu salud bucal con tecnología de ultrasonido y atención personalizada."
+    },
+    "hero": {
+      "badge": "Tecnología de ultrasonido de última generación",
+      "title1": "Recupera la salud y frescura",
+      "titleHighlight": "de tu sonrisa",
+      "title2": "",
+      "subtitle": "Limpieza dental profesional que elimina sarro, placa bacteriana y manchas superficiales, dejando tus dientes más sanos y tu sonrisa más luminosa.",
+      "safe": "Sin dolor",
+      "duration": "45-60 min",
+      "ctaPrimary": "Agenda tu cita",
+      "ctaSecondary": "Ver cómo funciona"
+    },
+    "stats": {
+      "cleanings": "Limpiezas realizadas",
+      "satisfaction": "Satisfacción garantizada",
+      "visits": "Visitas promedio",
+      "experience": "Años de experiencia"
+    },
+    "benefits": {
+      "label": "Beneficios",
+      "title": "¿Por qué elegir nuestra limpieza dental?",
+      "subtitle": "Cuidamos tu salud bucal con tecnología de punta y un proceso cómodo, seguro y a fondo.",
+      "precision": "Ultrasonido de precisión",
+      "precisionDesc": "Removemos sarro y placa con tecnología de ultrasonido, sin dañar el esmalte natural.",
+      "prevention": "Previene enfermedades",
+      "preventionDesc": "Reduce el riesgo de gingivitis, caries y enfermedad periodontal a largo plazo.",
+      "freshBreath": "Aliento fresco",
+      "freshBreathDesc": "Elimina bacterias causantes del mal aliento desde la raíz del problema.",
+      "brighter": "Sonrisa más luminosa",
+      "brighterDesc": "Retira manchas superficiales causadas por café, té, tabaco y otros alimentos.",
+      "painless": "Sin dolor",
+      "painlessDesc": "Procedimiento cómodo, sin anestesia necesaria en la mayoría de los casos.",
+      "recommended": "Recomendada cada 6 meses",
+      "recommendedDesc": "Mantenimiento preventivo para conservar tu salud bucal en el tiempo."
+    },
+    "process": {
+      "label": "Proceso",
+      "title": "¿Cómo funciona?",
+      "subtitle": "Un proceso simple y cómodo en 4 pasos",
+      "step1": "Diagnóstico",
+      "step1Desc": "Revisamos el estado de tus dientes y encías para identificar el nivel de sarro y placa.",
+      "step2": "Destartraje",
+      "step2Desc": "Eliminamos el sarro con ultrasonido, en zonas visibles y bajo la línea de la encía.",
+      "step3": "Pulido dental",
+      "step3Desc": "Pulimos la superficie del diente para remover manchas y dejar un acabado liso.",
+      "step4": "Fluorización",
+      "step4Desc": "Aplicamos flúor para fortalecer el esmalte y proteger tus dientes."
+    },
+    "pricing": {
+      "label": "Precio",
+      "title": "Inversión en tu sonrisa",
+      "subtitle": "Limpieza dental profesional con tecnología de ultrasonido y atención personalizada",
+      "badge": "Por sesión",
+      "price": "800",
+      "currency": "MXN",
+      "note": "Desde — el precio puede variar según el nivel de sarro o placa acumulada",
+      "features": [
+        "Evaluación bucal incluida",
+        "Destartraje con ultrasonido",
+        "Pulido dental",
+        "Aplicación de flúor",
+        "Recomendaciones de higiene personalizadas",
+        "Duración aproximada: 45-60 minutos"
+      ],
+      "cta": "Reservar mi cita",
+      "consultation": "Consulta de evaluación gratuita incluida"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Resolvemos tus dudas sobre limpieza dental",
+      "questions": [
+        {
+          "q": "¿Cada cuánto debo hacerme una limpieza dental?",
+          "a": "Se recomienda una limpieza cada 6 meses para mantener una buena salud bucal y prevenir enfermedades periodontales."
+        },
+        {
+          "q": "¿La limpieza dental duele?",
+          "a": "No. Es un procedimiento no invasivo; en casos de sensibilidad podemos aplicar gel anestésico local."
+        },
+        {
+          "q": "¿La limpieza dental blanquea los dientes?",
+          "a": "Ayuda a remover manchas superficiales, pero no cambia el tono natural del diente. Para blanqueamiento, contamos con un tratamiento específico."
+        },
+        {
+          "q": "¿Puedo comer después de la limpieza?",
+          "a": "Sí, aunque se recomienda esperar al menos 30 minutos y evitar alimentos muy pigmentados las primeras horas."
+        },
+        {
+          "q": "¿Necesito una limpieza profunda o una simple?",
+          "a": "Depende de la acumulación de sarro y salud de tus encías; lo evaluamos en tu cita antes de proceder."
         }
       ]
     }

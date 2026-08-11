@@ -80,6 +80,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
       icon: <ToothIcon />,
       submenu: [
         { name: t('valuation'), href: getNavHref('#valoracion') },
+        { name: t('cleaning'), href: '/servicios/limpieza-dental' },
         { name: t('whitening'), href: '/servicios/blanqueamiento-dental' },
         { name: t('crowns'), href: '/servicios/coronas-dentales' },
       ]
