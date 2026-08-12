@@ -101,7 +101,7 @@ function ServiceJsonLd({ locale }: { locale: string }) {
     provider: { '@id': `${SITE_URL}/#dentist` },
     offers: {
       '@type': 'Offer',
-      price: '800',
+      price: '700',
       priceCurrency: 'MXN',
       availability: 'https://schema.org/InStock',
       url: `${SITE_URL}${localePath(locale, PATH)}`,
