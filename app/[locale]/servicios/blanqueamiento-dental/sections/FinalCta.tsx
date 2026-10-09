@@ -12,7 +12,7 @@ export function FinalCta() {
   const whatsappText = locale === 'es'
     ? 'Hola, me gustaría agendar una consulta de blanqueamiento dental'
     : 'Hello, I would like to schedule a teeth whitening consultation';
-  const whatsappLink = `https://wa.me/5213310678412?text=${encodeURIComponent(whatsappText)}`;
+  const whatsappLink = `https://wa.me/5215651437300?text=${encodeURIComponent(whatsappText)}`;
 
   return (
     <section id="consulta" className="py-24 md:py-32 bg-gradient-to-br from-[#E8D5F2]/40 via-white to-[#B8D4E8]/40">
@@ -54,7 +54,7 @@ export function FinalCta() {
               {t('ctaWhatsApp')}
             </a>
             <a
-              href="tel:+5213310678412"
+              href="tel:+525651437300"
               className="inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-gray-800 transition-colors"
             >
               <Phone className="w-5 h-5" />

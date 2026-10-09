@@ -12,7 +12,7 @@ export function PricingCards() {
   const whatsappText = locale === 'es'
     ? 'Hola, me interesa el blanqueamiento dental por $2,200 MXN'
     : 'Hello, I am interested in teeth whitening for $2,200 MXN';
-  const whatsappLink = `https://wa.me/5213310678412?text=${encodeURIComponent(whatsappText)}`;
+  const whatsappLink = `https://wa.me/5215651437300?text=${encodeURIComponent(whatsappText)}`;
 
   const features = [
     t('features.0'),

@@ -24,7 +24,7 @@ export function Location({ bgClassName = 'bg-[#EAF2F8]' }: LocationProps = {}) {
     {
       icon: <Phone size={24} />,
       title: locale === 'es' ? 'Teléfono' : 'Phone',
-      content: '33 1067 8412',
+      content: '56 5143 7300',
     },
     {
       icon: <Mail size={24} />,

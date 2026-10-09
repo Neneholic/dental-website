@@ -45,7 +45,7 @@ export function Footer() {
     {
       name: 'WhatsApp',
       icon: <WhatsAppIcon />,
-      url: 'https://wa.me/5213310678412',
+      url: 'https://wa.me/5215651437300',
       color: 'hover:text-green-500',
     },
   ]
@@ -138,7 +138,7 @@ export function Footer() {
               {[
                 { name: 'Instagram', url: 'https://www.instagram.com/od.alondrarobles/' },
                 { name: 'TikTok', url: 'https://www.tiktok.com/@od.alondra.robles' },
-                { name: 'WhatsApp', url: 'https://wa.me/5213310678412' },
+                { name: 'WhatsApp', url: 'https://wa.me/5215651437300' },
               ].map((link, index) => (
                 <motion.a
                   key={link.name}

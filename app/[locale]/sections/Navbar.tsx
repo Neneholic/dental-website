@@ -94,7 +94,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
     router.push(pathname, { locale: switchLocale })
   }
 
-  const whatsappLink = 'https://wa.me/5213310678412'
+  const whatsappLink = 'https://wa.me/5215651437300'
   const whatsappText = locale === 'es' 
     ? 'Hola, me gustaría agendar una cita con la Dra. Alondra Robles'
     : 'Hello, I would like to schedule an appointment with Dr. Alondra Robles'

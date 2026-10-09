@@ -195,7 +195,7 @@ export function Services() {
 
                 {/* CTA */}
                 <a
-                  href="https://wa.me/5213310678412?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20de%20blanqueamiento%20dental"
+                  href="https://wa.me/5215651437300?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20de%20blanqueamiento%20dental"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackWhatsAppClick('services')}

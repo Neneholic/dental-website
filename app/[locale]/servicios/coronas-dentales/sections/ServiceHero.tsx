@@ -13,7 +13,7 @@ export function ServiceHero() {
   const whatsappText = locale === 'es'
     ? 'Hola, me gustaría agendar una cita para evaluación de corona dental'
     : 'Hello, I would like to schedule an appointment for a dental crown evaluation'
-  const whatsappLink = `https://wa.me/5213310678412?text=${encodeURIComponent(whatsappText)}`
+  const whatsappLink = `https://wa.me/5215651437300?text=${encodeURIComponent(whatsappText)}`
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">

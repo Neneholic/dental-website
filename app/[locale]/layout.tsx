@@ -131,7 +131,7 @@ function DentistJsonLd({ locale }: { locale: string }) {
     url: `${SITE_URL}${localePath(locale)}`,
     image: `${SITE_URL}/images/dra-alondra-robles-dentista-guadalajara.webp`,
     logo: `${SITE_URL}/images/dra-alondra-robles-dentista-guadalajara.webp`,
-    telephone: '+523310678412',
+    telephone: '+525651437300',
     email: 'contacto@dralondrarobles.mx',
     priceRange: '$$',
     currenciesAccepted: 'MXN',
@@ -200,7 +200,7 @@ function DentistJsonLd({ locale }: { locale: string }) {
     sameAs: [
       'https://www.instagram.com/od.alondrarobles/',
       'https://www.tiktok.com/@od.alondra.robles',
-      'https://wa.me/5213310678412',
+      'https://wa.me/5215651437300',
       'https://www.google.com/maps/place/Dr.+Alondra+Robles,+Dentist/@20.6830236,-103.3800708,17z',
     ],
   }
