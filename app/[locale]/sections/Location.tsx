@@ -29,7 +29,7 @@ export function Location({ bgClassName = 'bg-[#EAF2F8]' }: LocationProps = {}) {
     {
       icon: <Mail size={24} />,
       title: 'Email',
-      content: 'contacto@dralondrarobles.mx',
+      content: 'alondra.rrobles@gmail.com',
     },
     {
       icon: <Clock size={24} />,

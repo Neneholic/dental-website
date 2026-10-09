@@ -132,7 +132,7 @@ function DentistJsonLd({ locale }: { locale: string }) {
     image: `${SITE_URL}/images/dra-alondra-robles-dentista-guadalajara.webp`,
     logo: `${SITE_URL}/images/dra-alondra-robles-dentista-guadalajara.webp`,
     telephone: '+525651437300',
-    email: 'contacto@dralondrarobles.mx',
+    email: 'alondra.rrobles@gmail.com',
     priceRange: '$$',
     currenciesAccepted: 'MXN',
     paymentAccepted: ['Cash', 'Credit Card', 'Debit Card'],
