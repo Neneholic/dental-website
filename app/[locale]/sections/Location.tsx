@@ -100,7 +100,11 @@ export function Location({ bgClassName = 'bg-[#EAF2F8]' }: LocationProps = {}) {
 
               {/* Directions Link */}
               <motion.a
-                href="https://www.google.com/maps/dir//Dr.+Alondra+Robles,+Dentist/@20.6830236,-103.3800708,17z"
+                href={
+                  locale === 'es'
+                    ? 'https://www.google.com/maps/dir//Dentista+Dra.+Alondra+Robles/@20.6830236,-103.3800708,17z'
+                    : 'https://www.google.com/maps/dir//Dr.+Alondra+Robles,+Dentist/@20.6830236,-103.3800708,17z'
+                }
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
@@ -119,7 +123,11 @@ export function Location({ bgClassName = 'bg-[#EAF2F8]' }: LocationProps = {}) {
           <AnimatedSection delay={0.3}>
             <div className="relative rounded-3xl overflow-hidden shadow-lg h-full min-h-[450px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.6694316819107!2d-103.3800708!3d20.683023599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af8715e63ed3%3A0x230662a0f28a435f!2sDr.%20Alondra%20Robles%2C%20Dentist!5e0!3m2!1sen!2smx!4v1775612686925!5m2!1sen!2smx"
+                src={
+                  locale === 'es'
+                    ? 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.6694316819107!2d-103.3800708!3d20.683023599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af8715e63ed3%3A0x230662a0f28a435f!2sDentista%20Dra.%20Alondra%20Robles!5e0!3m2!1ses!2smx!4v1775612686925!5m2!1ses!2smx'
+                    : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.6694316819107!2d-103.3800708!3d20.683023599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af8715e63ed3%3A0x230662a0f28a435f!2sDr.%20Alondra%20Robles%2C%20Dentist!5e0!3m2!1sen!2smx!4v1775612686925!5m2!1sen!2smx'
+                }
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '450px' }}

@@ -123,7 +123,7 @@ function DentistJsonLd({ locale }: { locale: string }) {
     '@type': 'Dentist',
     '@id': `${SITE_URL}/#dentist`,
     name: isEs
-      ? 'Dra. Alondra Robles - Clínica Dental'
+      ? 'Dentista Dra. Alondra Robles'
       : 'Dr. Alondra Robles - Dental Clinic',
     description: isEs
       ? 'Clínica dental privada de la Dra. Alondra Robles en Guadalajara. Odontología estética, blanqueamiento dental, implantes y ortodoncia.'
@@ -149,8 +149,9 @@ function DentistJsonLd({ locale }: { locale: string }) {
       latitude: 20.6830236,
       longitude: -103.3800708,
     },
-    hasMap:
-      'https://www.google.com/maps/dir//Dr.+Alondra+Robles,+Dentist/@20.6830236,-103.3800708,17z',
+    hasMap: isEs
+      ? 'https://www.google.com/maps/dir//Dentista+Dra.+Alondra+Robles/@20.6830236,-103.3800708,17z'
+      : 'https://www.google.com/maps/dir//Dr.+Alondra+Robles,+Dentist/@20.6830236,-103.3800708,17z',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -201,7 +202,9 @@ function DentistJsonLd({ locale }: { locale: string }) {
       'https://www.instagram.com/od.alondrarobles/',
       'https://www.tiktok.com/@od.alondra.robles',
       'https://wa.me/523322259513',
-      'https://www.google.com/maps/place/Dr.+Alondra+Robles,+Dentist/@20.6830236,-103.3800708,17z',
+      isEs
+        ? 'https://www.google.com/maps/place/Dentista+Dra.+Alondra+Robles/@20.6830236,-103.3800708,17z'
+        : 'https://www.google.com/maps/place/Dr.+Alondra+Robles,+Dentist/@20.6830236,-103.3800708,17z',
     ],
   }
 
