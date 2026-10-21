@@ -82,7 +82,7 @@ const esContent: Section[] = [
     title: '1. Identidad y domicilio del responsable',
     body: [
       'En cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP), la Dra. Alondra Robles, en su carácter de profesional de la odontología y responsable del tratamiento de tus datos personales, pone a tu disposición el presente Aviso de Privacidad.',
-      'Domicilio: C. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, México.\nCorreo electrónico: alondra.rrobles@gmail.com\nTeléfono: 56 5143 7300',
+      'Domicilio: C. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, México.\nCorreo electrónico: alondra.rrobles@gmail.com\nTeléfono: 33 2225 9513',
     ],
   },
   {
@@ -162,7 +162,7 @@ const esContent: Section[] = [
     title: '10. Contacto',
     body: [
       'Si tienes alguna pregunta, comentario o queja relacionada con el tratamiento de tus datos personales o con este Aviso de Privacidad, puedes contactarnos en:',
-      'Dra. Alondra Robles\nC. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco\nCorreo: alondra.rrobles@gmail.com\nTeléfono: 56 5143 7300',
+      'Dra. Alondra Robles\nC. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco\nCorreo: alondra.rrobles@gmail.com\nTeléfono: 33 2225 9513',
     ],
   },
 ]
@@ -172,7 +172,7 @@ const enContent: Section[] = [
     title: '1. Data controller identity and address',
     body: [
       'In compliance with the Mexican Federal Law on Protection of Personal Data Held by Private Parties (LFPDPPP), Dr. Alondra Robles, in her capacity as a dental professional and controller responsible for the processing of your personal data, makes this Privacy Notice available to you.',
-      'Address: C. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, Mexico.\nEmail: alondra.rrobles@gmail.com\nPhone: +52 56 5143 7300',
+      'Address: C. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, Mexico.\nEmail: alondra.rrobles@gmail.com\nPhone: +52 33 2225 9513',
     ],
   },
   {
@@ -250,7 +250,7 @@ const enContent: Section[] = [
     title: '10. Contact',
     body: [
       'If you have any question, comment or complaint regarding the processing of your personal data or this Privacy Notice, you may contact us at:',
-      'Dr. Alondra Robles\nC. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, Mexico\nEmail: alondra.rrobles@gmail.com\nPhone: +52 56 5143 7300',
+      'Dr. Alondra Robles\nC. Pablo Villaseñor 377, Ladrón de Guevara, 44600 Guadalajara, Jalisco, Mexico\nEmail: alondra.rrobles@gmail.com\nPhone: +52 33 2225 9513',
     ],
   },
 ]

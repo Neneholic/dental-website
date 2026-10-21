@@ -30,7 +30,7 @@ export function WhatsAppButton({
 }: WhatsAppButtonProps) {
   const locale = useLocale()
 
-  const whatsappLink = 'https://wa.me/5215651437300'
+  const whatsappLink = 'https://wa.me/523322259513'
   const whatsappText = locale === 'es'
     ? 'Hola, me gustaría agendar una cita con la Dra. Alondra Robles'
     : 'Hello, I would like to schedule an appointment with Dr. Alondra Robles'
@@ -69,7 +69,7 @@ export function WhatsAppLink({
 }: Omit<WhatsAppButtonProps, 'variant'>) {
   const locale = useLocale()
 
-  const whatsappLink = 'https://wa.me/5215651437300'
+  const whatsappLink = 'https://wa.me/523322259513'
   const whatsappText = locale === 'es'
     ? 'Hola, me gustaría agendar una cita con la Dra. Alondra Robles'
     : 'Hello, I would like to schedule an appointment with Dr. Alondra Robles'
