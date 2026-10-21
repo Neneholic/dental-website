@@ -164,7 +164,7 @@ export function Hero() {
             }}
           >
             <a
-              href="https://wa.me/5215651437300?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20con%20la%20Dra.%20Alondra%20Robles"
+              href="https://wa.me/523322259513?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20con%20la%20Dra.%20Alondra%20Robles"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackWhatsAppClick('hero')}

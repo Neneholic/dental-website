@@ -12,7 +12,7 @@ export function PricingCards() {
   const whatsappText = locale === 'es'
     ? 'Hola, me interesa información sobre coronas dentales'
     : 'Hello, I am interested in information about dental crowns';
-  const whatsappLink = `https://wa.me/5215651437300?text=${encodeURIComponent(whatsappText)}`;
+  const whatsappLink = `https://wa.me/523322259513?text=${encodeURIComponent(whatsappText)}`;
 
   const features = [
     t('features.0'),
