@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import { useState, useEffect } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { CalendarCheck, ShieldCheck, Sparkles, Crown, ArrowRight } from 'lucide-react'
 import { Link } from '@/i18n/routing'
 import { trackWhatsAppClick } from '../lib/analytics'
@@ -12,7 +12,7 @@ const ToothIcon = () => (
   <motion.svg 
     viewBox="0 0 512.001 512.001" 
     fill="white" 
-    className="inline-block w-14 h-14 md:w-20 md:h-20"
+    className="inline-block w-[1.15em] h-[1.15em] md:w-20 md:h-20"
     animate={{
       y: [0, -6, 0],
       rotate: [0, 5, -5, 0],
@@ -106,10 +106,11 @@ export function Hero() {
       {/* Content - alineado a la izquierda */}
       <div className="relative z-10 flex-1 flex items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-36 pb-8 [@media(max-height:820px)]:md:pt-28">
         <div className="max-w-2xl">
-          {/* Title with Split Text Animation */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl [@media(max-height:820px)]:lg:text-7xl font-bold text-white leading-[0.9] tracking-tight mb-6">
+          {/* Title with Split Text Animation - siempre en 2 líneas */}
+          <h1 className="text-[clamp(2.25rem,11vw,3rem)] md:text-7xl lg:text-8xl [@media(max-height:820px)]:lg:text-7xl font-bold text-white leading-[0.9] tracking-tight whitespace-nowrap mb-6">
             {titleWords.map((word, index) => (
-              <span key={word} className={`overflow-hidden inline-block ${index === 0 ? 'mr-[0.25em]' : ''}`}>
+              <Fragment key={word}>
+              <span className={`overflow-hidden inline-block ${index === 0 ? 'mr-[0.25em]' : ''}`}>
                 <motion.span
                   className="inline-flex items-center"
                   initial={{ y: 100, opacity: 0 }}
@@ -134,6 +135,8 @@ export function Hero() {
                   )}
                 </motion.span>
               </span>
+              {index === 1 && <br />}
+              </Fragment>
             ))}
           </h1>
 
