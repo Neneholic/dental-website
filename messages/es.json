@@ -21,7 +21,27 @@
     "title2": " que",
     "title3": "Iluminan",
     "subtitle": "La Dra. Alondra Robles te brinda atención dental personalizada de excelencia en un ambiente cálido y profesional. Tu salud bucal en las mejores manos.",
-    "cta": "Agendar por WhatsApp"
+    "cta": "Agendar por WhatsApp",
+    "servicesLabel": "Servicios más solicitados",
+    "servicesMore": "Ver más",
+    "services": {
+      "valuation": {
+        "title": "Cita de Valoración",
+        "desc": "Diagnóstico completo y un plan a tu medida"
+      },
+      "cleaning": {
+        "title": "Limpieza Dental",
+        "desc": "Elimina el sarro y previene caries"
+      },
+      "whitening": {
+        "title": "Blanqueamiento Dental",
+        "desc": "Una sonrisa varios tonos más blanca"
+      },
+      "crowns": {
+        "title": "Coronas Dentales",
+        "desc": "Restaura la forma y función de tus dientes"
+      }
+    }
   },
   "about": {
     "label": "(Acerca de mi)",
@@ -58,7 +78,12 @@
       "title": "Blanqueamiento",
       "titleAccent": "Dental",
       "description": "Los tratamientos de blanqueamiento profesional ayudan a eliminar la decoloración causada por alimentos, bebidas y cambios naturales del esmalte con el tiempo. El procedimiento se realiza en un entorno clínico controlado, con atención a la comodidad y seguridad del esmalte.",
-      "tags": ["Sistema de Blanqueamiento", "Activación LED", "Control de Sensibilidad", "Solución Protectora"],
+      "tags": [
+        "Sistema de Blanqueamiento",
+        "Activación LED",
+        "Control de Sensibilidad",
+        "Solución Protectora"
+      ],
       "checklist": [
         "Evaluación del tono dental actual",
         "Evaluación de esmalte y sensibilidad",

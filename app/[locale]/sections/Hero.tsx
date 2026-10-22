@@ -3,6 +3,8 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { useState, useEffect } from 'react'
+import { CalendarCheck, ShieldCheck, Sparkles, Crown, ArrowRight } from 'lucide-react'
+import { Link } from '@/i18n/routing'
 import { trackWhatsAppClick } from '../lib/analytics'
 
 // Tooth Icon for title with motion effects
@@ -48,6 +50,14 @@ const sliderImages = [
   '/images/about-2.webp',
 ]
 
+// Servicios más comunes, mismos destinos que el submenú del navbar
+const heroServices = [
+  { key: 'valuation', href: '#valoracion', icon: CalendarCheck },
+  { key: 'cleaning', href: '/servicios/limpieza-dental', icon: ShieldCheck },
+  { key: 'whitening', href: '/servicios/blanqueamiento-dental', icon: Sparkles },
+  { key: 'crowns', href: '/servicios/coronas-dentales', icon: Crown },
+] as const
+
 export function Hero() {
   const t = useTranslations('hero')
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -65,7 +75,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col overflow-hidden"
     >
       {/* Background Image Slider with Ken Burns Effect */}
       <AnimatePresence mode="wait">
@@ -91,30 +101,15 @@ export function Hero() {
 
       {/* Gradient Overlay - más sutil */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
-
-      {/* Slider Indicators */}
-      <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-        {sliderImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`h-1.5 rounded-full transition-all duration-500 ${
-              index === currentIndex 
-                ? 'w-8 bg-white' 
-                : 'w-1.5 bg-white/40 hover:bg-white/60'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+      <div className="absolute inset-x-0 bottom-0 h-64 z-[1] bg-gradient-to-t from-black/50 to-transparent" />
 
       {/* Content - alineado a la izquierda */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 pt-48">
+      <div className="relative z-10 flex-1 flex items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-36 pb-8 [@media(max-height:820px)]:md:pt-28">
         <div className="max-w-2xl">
           {/* Title with Split Text Animation */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tight mb-6">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl [@media(max-height:820px)]:lg:text-7xl font-bold text-white leading-[0.9] tracking-tight mb-6">
             {titleWords.map((word, index) => (
-              <span key={word} className="overflow-hidden inline-block">
+              <span key={word} className={`overflow-hidden inline-block ${index === 0 ? 'mr-[0.25em]' : ''}`}>
                 <motion.span
                   className="inline-flex items-center"
                   initial={{ y: 100, opacity: 0 }}
@@ -179,21 +174,61 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
-        initial={{ opacity: 0, y: -20 }}
+      {/* Barra de servicios - al pie para no quedar bajo el submenú del navbar */}
+      <motion.nav
+        aria-label={t('servicesLabel')}
+        className="relative z-10 w-full max-w-7xl mx-auto pb-6 md:pb-8"
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
+        transition={{ delay: 1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
-        <motion.div
-          className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <motion.div className="w-1.5 h-3 bg-white/80 rounded-full mt-2" />
-        </motion.div>
-      </motion.div>
+        <div className="flex items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 mb-3">
+          <p className="text-xs md:text-sm font-medium uppercase tracking-wider text-white/80">
+            {t('servicesLabel')}
+          </p>
+
+          {/* Slider Indicators */}
+          <div className="flex gap-3">
+            {sliderImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-1.5 rounded-full transition-all duration-500 ${
+                  index === currentIndex
+                    ? 'w-8 bg-white'
+                    : 'w-1.5 bg-white/40 hover:bg-white/60'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        <ul className="flex lg:grid lg:grid-cols-4 gap-3 lg:gap-4 overflow-x-auto lg:overflow-visible snap-x snap-mandatory scroll-px-4 px-4 sm:px-6 lg:px-8 pb-2 lg:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {heroServices.map(({ key, href, icon: Icon }) => (
+            <li key={key} className="snap-start shrink-0 w-[80%] sm:w-[45%] lg:w-auto">
+              <Link
+                href={href}
+                className="group flex h-full items-center gap-3 rounded-2xl border border-white/25 bg-white/15 p-4 text-white backdrop-blur-md transition-colors hover:bg-white/25"
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#0891B2]">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-semibold leading-tight">
+                    {t(`services.${key}.title`)}
+                  </span>
+                  <span className="mt-0.5 block text-sm leading-snug text-white/75">
+                    {t(`services.${key}.desc`)}
+                  </span>
+                </span>
+                <ArrowRight className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                <span className="sr-only">{t('servicesMore')}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </motion.nav>
     </section>
   )
 }

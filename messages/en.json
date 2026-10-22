@@ -21,7 +21,27 @@
     "title2": "that",
     "title3": "Shine",
     "subtitle": "Dr. Alondra Robles provides personalized excellence in dental care in a warm and professional environment. Your oral health in the best hands.",
-    "cta": "Schedule via WhatsApp"
+    "cta": "Schedule via WhatsApp",
+    "servicesLabel": "Most requested services",
+    "servicesMore": "Learn more",
+    "services": {
+      "valuation": {
+        "title": "Valuation Appointment",
+        "desc": "A full diagnosis and a plan made for you"
+      },
+      "cleaning": {
+        "title": "Dental Cleaning",
+        "desc": "Removes tartar and prevents cavities"
+      },
+      "whitening": {
+        "title": "Teeth Whitening",
+        "desc": "A smile several shades brighter"
+      },
+      "crowns": {
+        "title": "Dental Crowns",
+        "desc": "Restore the shape and function of your teeth"
+      }
+    }
   },
   "about": {
     "label": "(About me)",
@@ -58,7 +78,12 @@
       "title": "Teeth",
       "titleAccent": "Whitening",
       "description": "Professional whitening treatments help remove discoloration caused by food, drinks, and the natural changes of enamel over time. The procedure is performed in a controlled clinical environment, with attention to comfort and enamel safety.",
-      "tags": ["Whitening System", "LED Activation", "Sensitivity Control", "Protective Solution"],
+      "tags": [
+        "Whitening System",
+        "LED Activation",
+        "Sensitivity Control",
+        "Protective Solution"
+      ],
       "checklist": [
         "Current tooth shade evaluation",
         "Enamel and sensitivity assessment",
