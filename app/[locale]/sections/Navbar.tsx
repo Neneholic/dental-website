@@ -8,6 +8,7 @@ import { Link, usePathname, useRouter } from '@/i18n/routing'
 import { useParams } from 'next/navigation'
 import { MagneticButton } from '../components/MagneticButton'
 import { cn } from '../lib/utils'
+import { LordIcon } from '@lordicon/react'
 import { trackWhatsAppClick } from '../lib/analytics'
 
 // Tooth Icon (lucide-react has no tooth icon; matches Lucide's stroke style)
@@ -23,6 +24,20 @@ const ToothIcon = () => (
   >
     <path d="M12 5.5c-1.074 -.998 -2.583 -1.5 -4 -1.5c-2.5 0 -4 1.5 -4 4.5c0 2 .5 3.5 1 5.5c.5 2 .5 4 1 5.5c.5 1.5 1.5 2 2 2c1 0 1.5 -1 2 -3c.5 -2 .5 -3 2 -3s1.5 1 2 3c.5 2 1 3 2 3c.5 0 1.5 -.5 2 -2c.5 -1.5 .5 -3.5 1 -5.5c.5 -2 1 -3.5 1 -5.5c0 -3 -1.5 -4.5 -4 -4.5c-1.417 0 -2.926 .502 -4 1.5z" />
   </svg>
+)
+
+// Icono animado de Lordicon para el submenú de servicios (mismos que las tarjetas del hero)
+const SubmenuIcon = ({ src, size }: { src: string; size: number }) => (
+  <LordIcon
+    src={src}
+    trigger="hover"
+    target="a"
+    colors="primary:#164e63,secondary:#0891b2"
+    loading="lazy"
+    aria-hidden="true"
+    className="shrink-0"
+    style={{ width: size, height: size }}
+  />
 )
 
 // WhatsApp Icon Component
@@ -79,10 +94,10 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
       hash: '#services',
       icon: <ToothIcon />,
       submenu: [
-        { name: t('valuation'), href: getNavHref('#valoracion') },
-        { name: t('cleaning'), href: '/servicios/limpieza-dental' },
-        { name: t('whitening'), href: '/servicios/blanqueamiento-dental' },
-        { name: t('crowns'), href: '/servicios/coronas-dentales' },
+        { name: t('valuation'), href: getNavHref('#valoracion'), lordicon: '/icons/lordicon/valuation.json' },
+        { name: t('cleaning'), href: '/servicios/limpieza-dental', lordicon: '/icons/lordicon/cleaning.json' },
+        { name: t('whitening'), href: '/servicios/blanqueamiento-dental', lordicon: '/icons/lordicon/whitening.json' },
+        { name: t('crowns'), href: '/servicios/coronas-dentales', lordicon: '/icons/lordicon/crowns.json' },
       ]
     },
     { name: t('contact'), href: getNavHref('#location'), hash: '#location' },
@@ -203,8 +218,9 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
                               <Link
                                 key={item.name}
                                 href={item.href}
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors whitespace-nowrap"
                               >
+                                <SubmenuIcon src={item.lordicon} size={28} />
                                 {item.name}
                               </Link>
                             ))}
@@ -332,8 +348,9 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
                             key={item.name}
                             href={item.href}
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="block text-sm text-gray-600 py-2 hover:text-gray-900"
+                            className="flex items-center gap-3 text-sm text-gray-600 py-2 hover:text-gray-900"
                           >
+                            <SubmenuIcon src={item.lordicon} size={28} />
                             {item.name}
                           </Link>
                         ))}
