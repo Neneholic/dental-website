@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Fragment, useState, useEffect } from 'react'
 import { CalendarCheck, ShieldCheck, Sparkles, Crown, ArrowRight } from 'lucide-react'
+import { LordIcon } from '@lordicon/react'
 import { Link } from '@/i18n/routing'
 import { trackWhatsAppClick } from '../lib/analytics'
 
@@ -50,12 +51,13 @@ const sliderImages = [
   '/images/about-2.webp',
 ]
 
-// Servicios más comunes, mismos destinos que el submenú del navbar
+// Servicios más comunes, mismos destinos que el submenú del navbar.
+// lordicon: animación PRO de Lordicon (public/icons/lordicon); icon: placeholder mientras carga
 const heroServices = [
-  { key: 'valuation', href: '#valoracion', icon: CalendarCheck },
-  { key: 'cleaning', href: '/servicios/limpieza-dental', icon: ShieldCheck },
-  { key: 'whitening', href: '/servicios/blanqueamiento-dental', icon: Sparkles },
-  { key: 'crowns', href: '/servicios/coronas-dentales', icon: Crown },
+  { key: 'valuation', lordicon: '/icons/lordicon/valuation.json', href: '#valoracion', icon: CalendarCheck },
+  { key: 'cleaning', lordicon: '/icons/lordicon/cleaning.json', href: '/servicios/limpieza-dental', icon: ShieldCheck },
+  { key: 'whitening', lordicon: '/icons/lordicon/whitening.json', href: '/servicios/blanqueamiento-dental', icon: Sparkles },
+  { key: 'crowns', lordicon: '/icons/lordicon/crowns.json', href: '/servicios/coronas-dentales', icon: Crown },
 ] as const
 
 export function Hero() {
@@ -208,14 +210,23 @@ export function Hero() {
         </div>
 
         <ul className="flex lg:grid lg:grid-cols-4 gap-3 lg:gap-4 overflow-x-auto lg:overflow-visible snap-x snap-mandatory scroll-px-4 px-4 sm:px-6 lg:px-8 pb-2 lg:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {heroServices.map(({ key, href, icon: Icon }) => (
+          {heroServices.map(({ key, href, lordicon, icon: Icon }) => (
             <li key={key} className="snap-start shrink-0 w-[80%] sm:w-[45%] lg:w-auto">
               <Link
                 href={href}
                 className="group flex h-full items-center gap-3 rounded-2xl border border-white/25 bg-white/15 p-4 text-white backdrop-blur-md transition-colors hover:bg-white/25"
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#0891B2]">
-                  <Icon className="h-5 w-5" aria-hidden="true" />
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#0891B2]" aria-hidden="true">
+                  <LordIcon
+                    src={lordicon}
+                    trigger="hover"
+                    target="a"
+                    intro="hover-pinch"
+                    colors="primary:#164e63,secondary:#0891b2"
+                    style={{ width: 36, height: 36 }}
+                  >
+                    <Icon className="h-6 w-6" />
+                  </LordIcon>
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block font-semibold leading-tight">
