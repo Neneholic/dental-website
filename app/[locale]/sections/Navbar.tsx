@@ -103,6 +103,17 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
     { name: t('contact'), href: getNavHref('#location'), hash: '#location' },
   ]
 
+  // En el inicio, Link a la misma URL no hace nada: subir al tope a mano
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!isHomePage) return
+    e.preventDefault()
+    setIsMobileMenuOpen(false)
+    if (window.location.hash) {
+      window.history.replaceState(window.history.state, '', window.location.pathname)
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const switchLocale = locale === 'es' ? 'en' : 'es'
 
   const handleLanguageSwitch = () => {
@@ -133,6 +144,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
             {/* Logo */}
             <Link
               href="/"
+              onClick={handleLogoClick}
               className="flex items-center gap-3 transition-colors"
             >
               <img
