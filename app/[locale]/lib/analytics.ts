@@ -23,6 +23,7 @@ export type WhatsAppClickLocation =
   | 'service_hero_crowns'
   | 'pricing_cleaning'
   | 'service_hero_cleaning'
+  | 'floating_bubble'
 
 export function trackWhatsAppClick(location: WhatsAppClickLocation) {
   if (typeof window === 'undefined' || typeof window.gtag !== 'function') return

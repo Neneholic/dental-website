@@ -55,3 +55,9 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Entrada de la burbuja flotante de WhatsApp */
+@keyframes floating-wa-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.8); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}

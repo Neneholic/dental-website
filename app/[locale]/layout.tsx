@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
 import { routing, localePath } from '@/i18n/routing'
+import { FloatingWhatsApp } from './components/FloatingWhatsApp'
 import '../globals.css'
 
 const SITE_URL = 'https://draalondrarobles.com'
@@ -264,6 +265,7 @@ export default async function LocaleLayout({
         <WebsiteJsonLd locale={locale} />
         <NextIntlClientProvider messages={messages}>
           {children}
+          <FloatingWhatsApp />
         </NextIntlClientProvider>
       </body>
     </html>
