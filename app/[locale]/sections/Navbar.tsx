@@ -86,7 +86,6 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
   }
 
   const navLinks = [
-    { name: t('home'), href: getNavHref('#home'), hash: '#home' },
     { name: t('about'), href: getNavHref('#about'), hash: '#about' },
     {
       name: t('services'),
