@@ -38,12 +38,8 @@ export function ServiceHero() {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-36 pb-24 md:pb-32">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-2xl"
-        >
+        {/* Título y subtítulo sin animación de entrada: se pintan de inmediato (mejor LCP en celular) */}
+        <div className="max-w-2xl">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -56,26 +52,16 @@ export function ServiceHero() {
           </motion.div>
 
           {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg"
-          >
+          <h1 className="text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
             {t('title1')}{' '}
             <span className="text-[#E8D5F2]">{t('titleHighlight')}</span>{' '}
             {t('title2')}
-          </motion.h1>
+          </h1>
 
           {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-white/90 mb-8 max-w-xl drop-shadow"
-          >
+          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl drop-shadow">
             {t('subtitle')}
-          </motion.p>
+          </p>
 
           {/* Trust pills integrados (Shield + Clock) */}
           <motion.div
@@ -124,7 +110,7 @@ export function ServiceHero() {
               <ArrowRight className="w-5 h-5" />
             </a>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator (matches home Hero) */}

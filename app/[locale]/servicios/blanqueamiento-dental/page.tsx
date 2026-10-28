@@ -30,6 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           'blanqueamiento dental guadalajara',
           'blanqueamiento dental profesional',
           'blanquear dientes guadalajara',
+          'blanqueamiento de dientes',
+          'dentista blanqueamiento',
           'sonrisa blanca',
           'blanqueamiento led',
           'estética dental guadalajara',
@@ -124,7 +126,7 @@ async function FaqJsonLd({ locale }: { locale: string }) {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [0, 1, 2, 3, 4, 5].map((i) => ({
+    mainEntity: [0, 1, 2, 3, 4, 5, 6].map((i) => ({
       '@type': 'Question',
       name: t(`${i}.q`),
       acceptedAnswer: {

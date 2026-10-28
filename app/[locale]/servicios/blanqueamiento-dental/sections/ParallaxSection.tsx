@@ -30,8 +30,8 @@ export function ParallaxSection() {
             ? 'Dra. Alondra Robles - Cirujano Dentista en Guadalajara'
             : 'Dr. Alondra Robles - Dentist in Guadalajara'}
           fill
+          sizes="100vw"
           className="object-cover object-center"
-          priority
         />
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/20" />

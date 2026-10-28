@@ -6,8 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { BeforeAfterSlider } from '../../../components/BeforeAfterSlider'
 
-// TODO: cuando haya fotos reales de blanqueamiento dental antes/despues,
-// reemplazar las imagenes placeholder y agregar mas casos.
+// Solo casos reales de blanqueamiento: no mezclar fotos de otros tratamientos.
 type WhiteningCase = {
   beforeSrc: string
   afterSrc: string
@@ -19,8 +18,8 @@ type WhiteningCase = {
 const cases: WhiteningCase[] = [
   {
     // Caso real de blanqueamiento dental con la Dra. Alondra Robles
-    beforeSrc: '/images/blanqueamiento-dental-guadalajara-antes.png',
-    afterSrc: '/images/blanqueamiento-dental-guadalajara-despues.png',
+    beforeSrc: '/images/blanqueamiento-dental-guadalajara-antes.webp',
+    afterSrc: '/images/blanqueamiento-dental-guadalajara-despues.webp',
     shades: '+4 tonos',
     isRealWhitening: true,
   },
@@ -30,13 +29,6 @@ const cases: WhiteningCase[] = [
     afterSrc: '/images/blanqueamiento-dental-providencia-despues.webp',
     shades: '+4 tonos',
     isRealWhitening: true,
-  },
-  {
-    // Placeholder: imagenes de limpieza dental (eliminar cuando haya mas casos reales)
-    beforeSrc: '/images/limpieza-dental-antes.webp',
-    afterSrc: '/images/limpieza-dental-despues.webp',
-    shades: '+6 tonos',
-    isRealWhitening: false,
   },
 ]
 
@@ -95,13 +87,13 @@ export function BeforeAfterGallery() {
                   afterSrc={currentCase.afterSrc}
                   beforeAlt={
                     isEs
-                      ? 'Sonrisa antes del tratamiento dental'
-                      : 'Smile before dental treatment'
+                      ? 'Dientes antes del blanqueamiento dental'
+                      : 'Teeth before whitening'
                   }
                   afterAlt={
                     isEs
-                      ? 'Sonrisa después del tratamiento dental con la Dra. Alondra Robles'
-                      : 'Smile after dental treatment with Dr. Alondra Robles'
+                      ? 'Dientes después del blanqueamiento dental con la Dra. Alondra Robles'
+                      : 'Teeth after whitening with Dr. Alondra Robles'
                   }
                   beforeLabel={t('before')}
                   afterLabel={t('after')}

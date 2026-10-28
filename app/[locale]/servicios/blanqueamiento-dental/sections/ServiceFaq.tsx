@@ -16,6 +16,7 @@ export function ServiceFaq() {
     { q: t('faq.questions.3.q'), a: t('faq.questions.3.a') },
     { q: t('faq.questions.4.q'), a: t('faq.questions.4.a') },
     { q: t('faq.questions.5.q'), a: t('faq.questions.5.a') },
+    { q: t('faq.questions.6.q'), a: t('faq.questions.6.a') },
   ];
 
   return (

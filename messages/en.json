@@ -141,50 +141,50 @@
   "whitening": {
     "metadata": {
       "title": "Teeth Whitening in Guadalajara | Dr. Alondra Robles",
-      "description": "Transform your smile with our professional teeth whitening. Up to 4 shades lighter in a single session. Book your free consultation."
+      "description": "Professional teeth whitening in Guadalajara with dentist Dr. Alondra Robles. Up to 4 shades whiter in one 45-min session. $2,200 MXN with dental cleaning included."
     },
     "hero": {
       "badge": "Latest LED Technology",
-      "title1": "Smile up to",
-      "titleHighlight": "4 shades",
-      "title2": "lighter",
-      "subtitle": "Transform your smile in just 45 minutes with our professional teeth whitening. Visible results from the first session.",
-      "safe": "100% safe",
+      "title1": "Teeth whitening in Guadalajara:",
+      "titleHighlight": "up to 4 shades",
+      "title2": "whiter",
+      "subtitle": "Professional LED teeth whitening by your dentist, Dr. Alondra Robles. One 45-minute session, with dental cleaning included.",
+      "safe": "Enamel-safe",
       "duration": "45 minutes",
-      "ctaPrimary": "Book your consultation",
+      "ctaPrimary": "Book your whitening",
       "ctaSecondary": "See how it works",
       "stat1": "shades lighter",
       "stat2": "per session"
     },
     "stats": {
       "smiles": "Smiles transformed",
-      "satisfaction": "Satisfaction guaranteed",
+      "satisfaction": "Satisfied patients",
       "duration": "Per session",
       "experience": "Years of experience"
     },
     "benefits": {
       "label": "Benefits",
-      "title": "Why choose our whitening?",
-      "subtitle": "Cutting-edge technology combined with Dr. Alondra Robles' experience to give you the best results.",
+      "title": "Why get your teeth whitening with us?",
+      "subtitle": "LED teeth whitening performed by dentist Dr. Alondra Robles in Guadalajara.",
       "fast": "Fast",
       "fastDesc": "Just 45 minutes and you'll see immediate results. Perfect for busy people.",
       "safe": "Safe",
-      "safeDesc": "Approved procedure that does not damage tooth enamel or gums.",
+      "safeDesc": "We protect your gums and lips and use professional products that care for your enamel.",
       "longLasting": "Long-lasting",
       "longLastingDesc": "Results that last up to 2 years with proper care.",
       "personalized": "Personalized",
       "personalizedDesc": "We adjust the intensity according to your needs and sensitivity.",
       "painless": "Painless",
-      "painlessDesc": "Completely painless and comfortable procedure.",
-      "guaranteed": "Guaranteed",
-      "guaranteedDesc": "Satisfaction guaranteed or your money back."
+      "painlessDesc": "A comfortable, painless procedure. If mild sensitivity appears, it goes away within 24 to 48 hours.",
+      "cleaning": "Cleaning included",
+      "cleaningDesc": "Before whitening we do a dental cleaning, included in the price, for a more even result."
     },
     "process": {
       "label": "Process",
-      "title": "How does it work?",
+      "title": "What is teeth whitening like?",
       "subtitle": "A simple, safe and effective process in just 4 steps",
       "step1": "Consultation",
-      "step1Desc": "Initial evaluation of your smile and discussion of your goals.",
+      "step1Desc": "Your dentist checks your teeth and gums and talks with you about the shade you want.",
       "step2": "Preparation",
       "step2Desc": "We protect your gums and lips before applying the whitening gel.",
       "step3": "LED Application",
@@ -194,16 +194,16 @@
     },
     "gallery": {
       "label": "Results",
-      "title": "Real transformations",
-      "subtitle": "Slide to see the difference",
+      "title": "Teeth whitening before and after",
+      "subtitle": "Real patients of Dr. Alondra Robles. Slide to see the difference.",
       "before": "Before",
       "after": "After",
       "sessions": "1 session"
     },
     "pricing": {
       "label": "Pricing",
-      "title": "Investment in your smile",
-      "subtitle": "An affordable price for a complete smile transformation",
+      "title": "Teeth whitening price",
+      "subtitle": "One price that includes dental cleaning, LED whitening and follow-up.",
       "badge": "Complete package",
       "price": "2,200",
       "currency": "MXN",
@@ -213,19 +213,23 @@
         "Up to 4 shades lighter",
         "Dental cleaning included",
         "Follow-up consultation included",
-        "1-year satisfaction guarantee",
-        "Immediate results",
-        "State-of-the-art technology",
-        "No pain or sensitivity"
+        "Performed by Dr. Alondra Robles",
+        "Results from the first session",
+        "Gum and lip protection",
+        "No pain during the procedure"
       ],
       "cta": "Book my appointment",
-      "consultation": "Free evaluation consultation included"
+      "consultation": "Includes evaluation, dental cleaning and whitening"
     },
     "faq": {
       "label": "FAQ",
       "title": "Frequently Asked Questions",
       "subtitle": "We answer your questions about teeth whitening",
       "questions": [
+        {
+          "q": "How much does teeth whitening cost in Guadalajara?",
+          "a": "Teeth whitening with Dr. Alondra Robles costs $2,200 MXN and includes a dental cleaning, one 45-minute LED whitening session and a follow-up consultation."
+        },
         {
           "q": "Does teeth whitening hurt?",
           "a": "No, the procedure is completely painless. Some patients may experience slight sensitivity after treatment, but this disappears within 24-48 hours."
@@ -236,7 +240,7 @@
         },
         {
           "q": "Is it safe for tooth enamel?",
-          "a": "Yes, our whitening is 100% safe for enamel when performed by professionals. We use approved products and techniques that protect your enamel."
+          "a": "Yes, when performed by a dentist. We protect your gums and lips and use professional products that care for your enamel."
         },
         {
           "q": "Can I whiten if I have braces?",
@@ -253,10 +257,10 @@
       ]
     },
     "finalCta": {
-      "badge": "Free consultation with no obligation",
-      "title": "Ready for your new smile?",
-      "subtitle": "Book your free evaluation consultation today. Dr. Alondra Robles will evaluate your case and recommend the best treatment.",
-      "ctaWhatsApp": "Book free consultation",
+      "badge": "Book via WhatsApp",
+      "title": "Ready for your teeth whitening?",
+      "subtitle": "Message us and book your teeth whitening with Dr. Alondra Robles in Guadalajara. $2,200 MXN with dental cleaning included.",
+      "ctaWhatsApp": "Book via WhatsApp",
       "ctaCall": "Call now",
       "trust1": "No obligation",
       "trust2": "100% confidential",

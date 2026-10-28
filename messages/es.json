@@ -141,50 +141,50 @@
   "whitening": {
     "metadata": {
       "title": "Blanqueamiento dental en Guadalajara | Dra. Alondra Robles",
-      "description": "Transforma tu sonrisa con nuestro blanqueamiento dental profesional. Hasta 4 tonos más claros en una sola sesión. Agenda tu consulta gratuita."
+      "description": "Blanqueamiento dental profesional en Guadalajara con la dentista Dra. Alondra Robles. Hasta 4 tonos más blanco en una sesión de 45 min. $2,200 MXN con limpieza dental incluida."
     },
     "hero": {
       "badge": "Tecnología LED de última generación",
-      "title1": "Sonrisa hasta",
-      "titleHighlight": "4 tonos",
-      "title2": "más clara",
-      "subtitle": "Transforma tu sonrisa en solo 45 minutos con nuestro blanqueamiento dental profesional. Resultados visibles desde la primera sesión.",
-      "safe": "100% seguro",
+      "title1": "Blanqueamiento dental en Guadalajara:",
+      "titleHighlight": "hasta 4 tonos",
+      "title2": "más blanco",
+      "subtitle": "Blanqueamiento de dientes profesional con luz LED, hecho por tu dentista, la Dra. Alondra Robles. Una sola sesión de 45 minutos, con limpieza dental incluida.",
+      "safe": "Cuida tu esmalte",
       "duration": "45 minutos",
-      "ctaPrimary": "Agenda tu consulta",
+      "ctaPrimary": "Agenda tu blanqueamiento",
       "ctaSecondary": "Ver cómo funciona",
       "stat1": "tonos más claros",
       "stat2": "por sesión"
     },
     "stats": {
       "smiles": "Sonrisas transformadas",
-      "satisfaction": "Satisfacción garantizada",
+      "satisfaction": "Pacientes satisfechos",
       "duration": "Por sesión",
       "experience": "Años de experiencia"
     },
     "benefits": {
       "label": "Beneficios",
-      "title": "¿Por qué elegir nuestro blanqueamiento?",
-      "subtitle": "Tecnología de punta combinada con la experiencia de la Dra. Alondra Robles para darte los mejores resultados.",
+      "title": "¿Por qué hacer tu blanqueamiento dental con nosotros?",
+      "subtitle": "Blanqueamiento de dientes con tecnología LED, realizado por la dentista Dra. Alondra Robles en Guadalajara.",
       "fast": "Rápido",
       "fastDesc": "Solo 45 minutos y verás resultados inmediatos. Perfecto para ocupados.",
       "safe": "Seguro",
-      "safeDesc": "Procedimiento aprobado que no daña el esmalte dental ni las encías.",
+      "safeDesc": "Protegemos tus encías y labios, y usamos productos profesionales que cuidan tu esmalte.",
       "longLasting": "Duradero",
       "longLastingDesc": "Resultados que duran hasta 2 años con el cuidado adecuado.",
       "personalized": "Personalizado",
       "personalizedDesc": "Ajustamos la intensidad según tus necesidades y sensibilidad.",
       "painless": "Sin dolor",
-      "painlessDesc": "Procedimiento completamente indoloro y confortable.",
-      "guaranteed": "Garantizado",
-      "guaranteedDesc": "Satisfacción garantizada o tu dinero de vuelta."
+      "painlessDesc": "Procedimiento cómodo y sin dolor. Si aparece sensibilidad leve, desaparece en 24 a 48 horas.",
+      "cleaning": "Limpieza incluida",
+      "cleaningDesc": "Antes de blanquear hacemos una limpieza dental, incluida en el precio, para un resultado más parejo."
     },
     "process": {
       "label": "Proceso",
-      "title": "¿Cómo funciona?",
+      "title": "¿Cómo es el blanqueamiento de dientes?",
       "subtitle": "Un proceso simple, seguro y efectivo en solo 4 pasos",
       "step1": "Consulta",
-      "step1Desc": "Evaluación inicial de tu sonrisa y discusión de tus objetivos.",
+      "step1Desc": "Tu dentista revisa tus dientes y encías, y platica contigo el tono que buscas.",
       "step2": "Preparación",
       "step2Desc": "Protegemos tus encías y labios antes de aplicar el gel blanqueador.",
       "step3": "Aplicación LED",
@@ -194,16 +194,16 @@
     },
     "gallery": {
       "label": "Resultados",
-      "title": "Transformaciones reales",
-      "subtitle": "Desliza para ver la diferencia",
+      "title": "Antes y después del blanqueamiento dental",
+      "subtitle": "Pacientes reales de la Dra. Alondra Robles. Desliza para ver la diferencia.",
       "before": "Antes",
       "after": "Después",
       "sessions": "1 sesión"
     },
     "pricing": {
       "label": "Precio",
-      "title": "Inversión en tu sonrisa",
-      "subtitle": "Un precio accesible para una transformación completa de tu sonrisa",
+      "title": "Precio del blanqueamiento dental",
+      "subtitle": "Un solo precio que incluye limpieza dental, blanqueamiento LED y seguimiento.",
       "badge": "Paquete completo",
       "price": "2,200",
       "currency": "MXN",
@@ -213,19 +213,23 @@
         "Hasta 4 tonos más claros",
         "Limpieza dental incluida",
         "Consulta de seguimiento incluida",
-        "Garantía de satisfacción 1 año",
-        "Resultados inmediatos",
-        "Tecnología de última generación",
-        "Sin dolor ni sensibilidad"
+        "Realizado por la Dra. Alondra Robles",
+        "Resultados desde la primera sesión",
+        "Protección de encías y labios",
+        "Sin dolor durante el procedimiento"
       ],
       "cta": "Reservar mi cita",
-      "consultation": "Consulta de evaluación gratuita incluida"
+      "consultation": "Incluye valoración, limpieza dental y blanqueamiento"
     },
     "faq": {
       "label": "FAQ",
       "title": "Preguntas frecuentes",
-      "subtitle": "Resolvemos tus dudas sobre el blanqueamiento dental",
+      "subtitle": "Resolvemos tus dudas sobre el blanqueamiento de dientes",
       "questions": [
+        {
+          "q": "¿Cuánto cuesta el blanqueamiento dental en Guadalajara?",
+          "a": "El blanqueamiento dental con la Dra. Alondra Robles cuesta $2,200 MXN e incluye limpieza dental, una sesión de blanqueamiento LED de 45 minutos y consulta de seguimiento."
+        },
         {
           "q": "¿El blanqueamiento dental duele?",
           "a": "No, el procedimiento es completamente indoloro. Algunos pacientes pueden experimentar una ligera sensibilidad después del tratamiento, pero esto desaparece en 24-48 horas."
@@ -236,7 +240,7 @@
         },
         {
           "q": "¿Es seguro para el esmalte dental?",
-          "a": "Sí, nuestro blanqueamiento es 100% seguro para el esmalte cuando se realiza por profesionales. Usamos productos aprobados y técnicas que protegen tu esmalte."
+          "a": "Sí, cuando lo realiza un dentista. Protegemos encías y labios y usamos productos profesionales que cuidan tu esmalte."
         },
         {
           "q": "¿Puedo blanquear si tengo brackets?",
@@ -253,10 +257,10 @@
       ]
     },
     "finalCta": {
-      "badge": "Consulta gratuita sin compromiso",
-      "title": "¿Lista para tu nueva sonrisa?",
-      "subtitle": "Agenda tu consulta de evaluación gratuita hoy mismo. La Dra. Alondra Robles evaluará tu caso y te recomendará el mejor tratamiento.",
-      "ctaWhatsApp": "Agendar consulta gratis",
+      "badge": "Agenda por WhatsApp",
+      "title": "¿Lista para tu blanqueamiento dental?",
+      "subtitle": "Escríbenos y agenda tu blanqueamiento dental con la Dra. Alondra Robles en Guadalajara. $2,200 MXN con limpieza dental incluida.",
+      "ctaWhatsApp": "Agendar por WhatsApp",
       "ctaCall": "Llamar ahora",
       "trust1": "Sin compromiso",
       "trust2": "100% confidencial",

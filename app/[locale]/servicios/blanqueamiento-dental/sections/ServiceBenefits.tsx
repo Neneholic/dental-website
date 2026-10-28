@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Zap, Shield, Clock, UserCheck, Smile, CheckCircle } from 'lucide-react';
+import { Zap, Shield, Clock, UserCheck, Smile, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 const benefitKeys = [
@@ -10,7 +10,7 @@ const benefitKeys = [
   { key: 'longLasting', icon: Clock },
   { key: 'personalized', icon: UserCheck },
   { key: 'painless', icon: Smile },
-  { key: 'guaranteed', icon: CheckCircle },
+  { key: 'cleaning', icon: Sparkles },
 ];
 
 export function ServiceBenefits() {
