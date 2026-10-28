@@ -39,7 +39,7 @@ export function ServiceHero() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-36 pb-24 md:pb-32">
         {/* Título y subtítulo sin animación de entrada: se pintan de inmediato (mejor LCP en celular) */}
-        <div className="max-w-2xl">
+        <div className="max-w-2xl lg:max-w-4xl">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export function ServiceHero() {
           </motion.div>
 
           {/* Headline */}
-          <h1 className="text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
+          <h1 className="text-[2rem] sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
             {t('title1')}{' '}
             <span className="text-[#E8D5F2]">{t('titleHighlight')}</span>{' '}
             {t('title2')}

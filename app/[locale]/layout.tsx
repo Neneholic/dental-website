@@ -248,7 +248,7 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale === 'es' ? 'es-MX' : 'en-US'} className={inter.variable}>
+    <html lang={locale === 'es' ? 'es-MX' : 'en-US'} className={inter.variable} data-scroll-behavior="smooth">
       <body className={`${inter.className} antialiased`}>
         {/* gtag init: inline so dataLayer + page_view fire during HTML parse,
             BEFORE the library finishes loading. Captures bounces under 1s. */}
