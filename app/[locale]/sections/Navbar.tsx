@@ -26,27 +26,8 @@ const ToothIcon = () => (
   </svg>
 )
 
-// Diente con conductos (endodoncia). Icono fijo mientras no haya un Lordicon para este servicio.
-const RootCanalIcon = ({ size }: { size: number }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="#164e63"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-    className="shrink-0"
-    style={{ width: size, height: size }}
-  >
-    <path d="M12 5.5c-1.074 -.998 -2.583 -1.5 -4 -1.5c-2.5 0 -4 1.5 -4 4.5c0 2 .5 3.5 1 5.5c.5 2 .5 4 1 5.5c.5 1.5 1.5 2 2 2c1 0 1.5 -1 2 -3c.5 -2 .5 -3 2 -3s1.5 1 2 3c.5 2 1 3 2 3c.5 0 1.5 -.5 2 -2c.5 -1.5 .5 -3.5 1 -5.5c.5 -2 1 -3.5 1 -5.5c0 -3 -1.5 -4.5 -4 -4.5c-1.417 0 -2.926 .502 -4 1.5z" />
-    <path d="M9.5 9.5l-1 8M14.5 9.5l1 8" stroke="#0891b2" />
-  </svg>
-)
-
 // Icono animado de Lordicon para el submenú de servicios (mismos que las tarjetas del hero)
-const SubmenuIcon = ({ src, size }: { src?: string; size: number }) =>
-  !src ? <RootCanalIcon size={size} /> : (
+const SubmenuIcon = ({ src, size }: { src: string; size: number }) => (
   <LordIcon
     src={src}
     trigger="hover"
@@ -116,7 +97,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
         { name: t('cleaning'), href: '/servicios/limpieza-dental', lordicon: '/icons/lordicon/cleaning.json' },
         { name: t('whitening'), href: '/servicios/blanqueamiento-dental', lordicon: '/icons/lordicon/whitening.json' },
         { name: t('crowns'), href: '/servicios/coronas-dentales', lordicon: '/icons/lordicon/crowns.json' },
-        { name: t('endodontics'), href: '/servicios/endodoncia' },
+        { name: t('endodontics'), href: '/servicios/endodoncia', lordicon: '/icons/lordicon/endodontics.json' },
       ]
     },
     { name: t('contact'), href: getNavHref('#location'), hash: '#location' },
