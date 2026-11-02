@@ -44,7 +44,7 @@ export function ParallaxSection() {
       >
         <div className="bg-white/90 backdrop-blur-sm rounded-3xl px-8 py-6 md:px-12 md:py-8 shadow-2xl text-center">
           <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2">
-            {locale === 'es' ? 'Confía tu sonrisa a' : 'Trust your smile to'}
+            {locale === 'es' ? 'Tu endodoncia con la' : 'Your root canal with'}
           </h3>
           <p className="text-3xl md:text-5xl font-bold text-[#5BA3C0]">
             Dra. Alondra Robles
