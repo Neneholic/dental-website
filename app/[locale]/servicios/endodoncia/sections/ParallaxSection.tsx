@@ -25,10 +25,10 @@ export function ParallaxSection() {
         style={{ y }}
       >
         <Image
-          src="/images/dra-alondra-robles-dentista-guadalajara.webp"
+          src="/images/endodoncia-radiografia-consulta-guadalajara.webp"
           alt={locale === 'es'
-            ? 'Dra. Alondra Robles - Cirujano Dentista en Guadalajara'
-            : 'Dr. Alondra Robles - Dentist in Guadalajara'}
+            ? 'La Dra. Alondra Robles explica la radiografía antes de una endodoncia en Guadalajara'
+            : 'Dr. Alondra Robles explains the X-ray before a root canal in Guadalajara'}
           fill
           sizes="100vw"
           className="object-cover object-center"
