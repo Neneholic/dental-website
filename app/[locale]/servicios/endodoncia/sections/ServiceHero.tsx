@@ -28,7 +28,7 @@ export function ServiceHero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-center"
+        className="object-cover object-[80%_center] md:object-center"
       />
 
       {/* Gradient overlay: oscuro a la izquierda para legibilidad del texto, transparente a la derecha */}
