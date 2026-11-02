@@ -23,6 +23,9 @@ export type WhatsAppClickLocation =
   | 'service_hero_crowns'
   | 'pricing_cleaning'
   | 'service_hero_cleaning'
+  | 'pricing_endodontics'
+  | 'final_cta_endodontics'
+  | 'service_hero_endodontics'
   | 'floating_bubble'
 
 export function trackWhatsAppClick(location: WhatsAppClickLocation) {

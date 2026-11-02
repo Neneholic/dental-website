@@ -8,6 +8,7 @@ const routes: { path: string; priority: number; changeFrequency: 'weekly' | 'mon
   { path: '/servicios/blanqueamiento-dental', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/servicios/coronas-dentales', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/servicios/limpieza-dental', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/servicios/endodoncia', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/aviso-de-privacidad', priority: 0.3, changeFrequency: 'yearly' },
 ]
 

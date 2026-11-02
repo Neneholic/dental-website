@@ -54,7 +54,8 @@ export function Services() {
       description: t('rootCanal.description'),
       color: 'bg-[#E8D5F2]',
       icon: <EndodonticsIcon />,
-      isLink: false,
+      href: '/servicios/endodoncia',
+      isLink: true,
     },
     {
       id: 3,

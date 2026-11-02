@@ -180,7 +180,11 @@ function DentistJsonLd({ locale }: { locale: string }) {
         url: `${SITE_URL}${localePath(locale, '/servicios/limpieza-dental')}`,
       },
       { '@type': 'MedicalProcedure', name: isEs ? 'Estética dental' : 'Cosmetic dentistry' },
-      { '@type': 'MedicalProcedure', name: isEs ? 'Endodoncia' : 'Endodontics' },
+      {
+        '@type': 'MedicalProcedure',
+        name: isEs ? 'Endodoncia (tratamiento de conducto)' : 'Root canal treatment',
+        url: `${SITE_URL}${localePath(locale, '/servicios/endodoncia')}`,
+      },
       { '@type': 'MedicalProcedure', name: isEs ? 'Implantes dentales' : 'Dental implants' },
       { '@type': 'MedicalProcedure', name: isEs ? 'Ortodoncia' : 'Orthodontics' },
     ],

@@ -14,7 +14,8 @@
     "crowns": "Dental Crowns",
     "cleaning": "Dental Cleaning",
     "valuation": "Valuation Appointment",
-    "contact": "Contact"
+    "contact": "Contact",
+    "endodontics": "Root Canal"
   },
   "hero": {
     "title1": "Smiles",
@@ -40,6 +41,10 @@
       "crowns": {
         "title": "Dental Crowns",
         "desc": "Restore the shape and function of your teeth"
+      },
+      "endodontics": {
+        "title": "Root Canal",
+        "desc": "Stop the pain and save your tooth"
       }
     }
   },
@@ -469,6 +474,145 @@
           "a": "It depends on the tartar buildup and the health of your gums; we assess this during your appointment before proceeding."
         }
       ]
+    }
+  },
+  "endodontics": {
+    "metadata": {
+      "title": "Root Canal in Guadalajara | Dr. Alondra Robles",
+      "description": "Root canal treatment in Guadalajara with Dr. Alondra Robles. Stop the toothache and keep your natural tooth, under local anesthesia. Book via WhatsApp."
+    },
+    "hero": {
+      "badge": "Save your natural tooth",
+      "title1": "Root canal in Guadalajara:",
+      "titleHighlight": "stop the pain",
+      "title2": "and save your tooth",
+      "subtitle": "Root canal treatment under local anesthesia by your dentist, Dr. Alondra Robles. We remove the infected nerve so you don't have to lose your tooth.",
+      "safe": "Local anesthesia",
+      "duration": "1 to 2 visits",
+      "ctaPrimary": "Book your consultation",
+      "ctaSecondary": "See how it works"
+    },
+    "stats": {
+      "experience": "Years of experience",
+      "rating": "Google rating",
+      "visits": "Visits in most cases",
+      "duration": "Per visit, approx."
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "title": "When do you need a root canal?",
+      "subtitle": "If you have any of these symptoms, your tooth's nerve may be inflamed or infected. The sooner it's checked, the easier it is to save.",
+      "pain": "Strong toothache",
+      "painDesc": "Sharp or throbbing pain when biting or chewing that painkillers don't fix.",
+      "sensitivity": "Lingering sensitivity",
+      "sensitivityDesc": "Pain with hot or cold that lasts seconds or minutes after eating or drinking.",
+      "night": "Pain that wakes you up",
+      "nightDesc": "Spontaneous pain, especially at night or when lying down.",
+      "swelling": "Swollen gum or a bump",
+      "swellingDesc": "Swelling, a pimple or pus on the gum near the tooth: it may be an abscess.",
+      "darkening": "Darkened tooth",
+      "darkeningDesc": "A tooth that turned gray or dark after a blow or a cavity.",
+      "deepCavity": "Deep cavity or broken tooth",
+      "deepCavityDesc": "When decay or a fracture reaches the nerve, a filling is not enough."
+    },
+    "benefits": {
+      "label": "Benefits",
+      "title": "Why get your root canal with us?",
+      "subtitle": "Root canal treatment in Guadalajara with Dr. Alondra Robles, designed so you feel at ease from start to finish.",
+      "saveTooth": "Keep your tooth",
+      "saveToothDesc": "Instead of pulling the tooth, we save it. Nothing works as well as your natural tooth.",
+      "painRelief": "Goodbye pain",
+      "painReliefDesc": "Removing the infected nerve makes the toothache go away.",
+      "anesthesia": "Local anesthesia",
+      "anesthesiaDesc": "It feels like getting a filling: the tooth is numb and you feel no pain.",
+      "precise": "X-ray diagnosis",
+      "preciseDesc": "We check the tooth with an X-ray before starting to treat every canal precisely.",
+      "fewVisits": "In 1 or 2 visits",
+      "fewVisitsDesc": "Most root canals are finished in one or two visits.",
+      "restoration": "Clear next steps",
+      "restorationDesc": "We tell you whether your tooth needs a filling or a crown to protect it for years."
+    },
+    "process": {
+      "label": "Process",
+      "title": "What is a root canal like?",
+      "subtitle": "A safe, painless treatment in 4 steps",
+      "step1": "Consultation",
+      "step1Desc": "We examine the tooth and take an X-ray to confirm whether you need a root canal.",
+      "step2": "Anesthesia",
+      "step2Desc": "We numb the area so the treatment is comfortable and painless.",
+      "step3": "Canal cleaning",
+      "step3Desc": "We remove the damaged nerve, then clean and disinfect the tooth's canals.",
+      "step4": "Sealing",
+      "step4Desc": "We seal the canals and close the tooth. It is then protected with a filling or crown."
+    },
+    "pricing": {
+      "label": "Price",
+      "title": "Root canal price",
+      "subtitle": "The price depends on the tooth: a front tooth has one canal and a molar can have three or more.",
+      "badge": "Consultation with X-ray",
+      "priceTitle": "Price depends on the tooth",
+      "note": "We give you the exact price at your consultation, before we start. No surprises.",
+      "features": [
+        "Consultation and X-ray of the tooth",
+        "Local anesthesia",
+        "Canal cleaning and disinfection",
+        "Canal sealing",
+        "Performed by Dr. Alondra Robles",
+        "Aftercare instructions",
+        "Plan to protect your tooth (filling or crown)",
+        "Clear price before we start"
+      ],
+      "cta": "Ask for a price on WhatsApp",
+      "consultation": "Send us a photo or tell us your symptoms and we'll guide you"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Frequently asked questions",
+      "subtitle": "Answers to your questions about root canals",
+      "questions": [
+        {
+          "q": "How much does a root canal cost in Guadalajara?",
+          "a": "It depends on the tooth: a front tooth has one canal and a molar can have three or more. At your consultation with Dr. Alondra Robles we check the tooth with an X-ray and give you the exact price before we start."
+        },
+        {
+          "q": "Does a root canal hurt?",
+          "a": "No. The tooth is numbed and it feels like getting a filling. Afterwards you may feel mild discomfort for a few days, which common painkillers control."
+        },
+        {
+          "q": "What is a root canal?",
+          "a": "It's the treatment that removes the inflamed or infected nerve inside the tooth, cleans and disinfects the canals and seals them. It stops the pain and keeps the tooth instead of pulling it."
+        },
+        {
+          "q": "How many visits do I need?",
+          "a": "Most root canals are finished in one or two visits. With a strong infection, an extra visit is sometimes needed."
+        },
+        {
+          "q": "Is it better to pull the tooth than to get a root canal?",
+          "a": "Keeping your natural tooth is almost always better. If it's pulled, it then needs to be replaced with an implant or bridge so the other teeth don't shift, which usually costs more."
+        },
+        {
+          "q": "Do I need a crown after a root canal?",
+          "a": "Molars almost always need a crown because the tooth becomes more fragile. Front teeth sometimes only need a filling. We tell you what your tooth needs at the consultation."
+        },
+        {
+          "q": "What happens if I don't get the root canal?",
+          "a": "The infection can spread, form an abscess, damage the bone and make you lose the tooth. The pain may go away for a while, but the infection remains."
+        },
+        {
+          "q": "How do I care for my tooth afterwards?",
+          "a": "Avoid biting hard with that tooth until the final restoration is placed, take any medication we prescribe and keep your normal hygiene. We give you written instructions."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Book via WhatsApp",
+      "title": "Have a toothache?",
+      "subtitle": "Don't wait for it to get worse. Message us and book your root canal consultation with Dr. Alondra Robles in Guadalajara.",
+      "ctaWhatsApp": "Book via WhatsApp",
+      "ctaCall": "Call now",
+      "trust1": "Clear price before we start",
+      "trust2": "Local anesthesia",
+      "trust3": "Flexible hours"
     }
   }
 }

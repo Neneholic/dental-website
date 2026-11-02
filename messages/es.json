@@ -14,7 +14,8 @@
     "crowns": "Coronas Dentales",
     "cleaning": "Limpieza Dental",
     "valuation": "Cita de Valoración",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "endodontics": "Endodoncia"
   },
   "hero": {
     "title1": "Sonrisas",
@@ -40,6 +41,10 @@
       "crowns": {
         "title": "Coronas Dentales",
         "desc": "Restaura la forma y función de tus dientes"
+      },
+      "endodontics": {
+        "title": "Endodoncia",
+        "desc": "Quita el dolor y salva tu diente"
       }
     }
   },
@@ -469,6 +474,145 @@
           "a": "Depende de la acumulación de sarro y salud de tus encías; lo evaluamos en tu cita antes de proceder."
         }
       ]
+    }
+  },
+  "endodontics": {
+    "metadata": {
+      "title": "Endodoncia en Guadalajara | Dra. Alondra Robles",
+      "description": "Endodoncia (tratamiento de conducto) en Guadalajara con la Dra. Alondra Robles. Quita el dolor de muela y conserva tu diente natural, con anestesia local. Agenda por WhatsApp."
+    },
+    "hero": {
+      "badge": "Salva tu diente natural",
+      "title1": "Endodoncia en Guadalajara:",
+      "titleHighlight": "quita el dolor",
+      "title2": "y salva tu diente",
+      "subtitle": "Tratamiento de conducto con anestesia local, hecho por tu dentista, la Dra. Alondra Robles. Eliminamos la infección del nervio para que no tengas que perder tu diente.",
+      "safe": "Con anestesia local",
+      "duration": "1 a 2 citas",
+      "ctaPrimary": "Agenda tu valoración",
+      "ctaSecondary": "Ver cómo funciona"
+    },
+    "stats": {
+      "experience": "Años de experiencia",
+      "rating": "Calificación en Google",
+      "visits": "Citas en la mayoría de casos",
+      "duration": "Por cita, aprox."
+    },
+    "symptoms": {
+      "label": "Síntomas",
+      "title": "¿Cuándo necesitas una endodoncia?",
+      "subtitle": "Si tienes alguno de estos síntomas, el nervio de tu diente puede estar inflamado o infectado. Entre más pronto lo revises, más fácil es salvarlo.",
+      "pain": "Dolor de muela fuerte",
+      "painDesc": "Dolor intenso o punzante al morder o masticar, que no se quita con analgésicos.",
+      "sensitivity": "Sensibilidad que no se va",
+      "sensitivityDesc": "Dolor con frío o caliente que sigue varios segundos o minutos después de comer o beber.",
+      "night": "Dolor que te despierta",
+      "nightDesc": "Dolor espontáneo, sobre todo de noche o al acostarte, sin que algo lo provoque.",
+      "swelling": "Encía inflamada o con bolita",
+      "swellingDesc": "Hinchazón, granito o pus en la encía cerca del diente: puede ser un absceso.",
+      "darkening": "Diente oscurecido",
+      "darkeningDesc": "Un diente que cambió a gris u oscuro después de un golpe o una caries.",
+      "deepCavity": "Caries profunda o diente roto",
+      "deepCavityDesc": "Cuando la caries o la fractura ya llegó al nervio, una resina no es suficiente."
+    },
+    "benefits": {
+      "label": "Beneficios",
+      "title": "¿Por qué hacer tu endodoncia con nosotros?",
+      "subtitle": "Tratamiento de conducto en Guadalajara con la Dra. Alondra Robles, pensado para que estés tranquilo de principio a fin.",
+      "saveTooth": "Conservas tu diente",
+      "saveToothDesc": "En lugar de sacar el diente, lo salvamos. Nada funciona tan bien como tu diente natural.",
+      "painRelief": "Adiós al dolor",
+      "painReliefDesc": "Al retirar el nervio infectado, el dolor de muela desaparece.",
+      "anesthesia": "Con anestesia local",
+      "anesthesiaDesc": "El tratamiento se siente como una resina: el diente está anestesiado y no sientes dolor.",
+      "precise": "Diagnóstico con radiografía",
+      "preciseDesc": "Revisamos el diente con radiografía antes de empezar para tratar cada conducto con precisión.",
+      "fewVisits": "En 1 o 2 citas",
+      "fewVisitsDesc": "La mayoría de las endodoncias se terminan en una o dos citas.",
+      "restoration": "Te decimos el siguiente paso",
+      "restorationDesc": "Te explicamos si tu diente necesita resina o corona para protegerlo y que dure muchos años."
+    },
+    "process": {
+      "label": "Proceso",
+      "title": "¿Cómo es una endodoncia?",
+      "subtitle": "Un tratamiento seguro y sin dolor en 4 pasos",
+      "step1": "Valoración",
+      "step1Desc": "Revisamos el diente y tomamos una radiografía para confirmar si necesitas endodoncia.",
+      "step2": "Anestesia",
+      "step2Desc": "Anestesiamos la zona para que el tratamiento sea cómodo y sin dolor.",
+      "step3": "Limpieza de conductos",
+      "step3Desc": "Retiramos el nervio dañado, limpiamos y desinfectamos los conductos del diente.",
+      "step4": "Sellado",
+      "step4Desc": "Sellamos los conductos y cerramos el diente. Después se protege con resina o corona."
+    },
+    "pricing": {
+      "label": "Precio",
+      "title": "Precio de la endodoncia",
+      "subtitle": "El precio depende del diente: un diente de enfrente tiene un conducto y una muela puede tener tres o más.",
+      "badge": "Valoración con radiografía",
+      "priceTitle": "Precio según el diente",
+      "note": "Te damos el precio exacto en tu valoración, antes de empezar. Sin sorpresas.",
+      "features": [
+        "Valoración y radiografía del diente",
+        "Anestesia local",
+        "Limpieza y desinfección de conductos",
+        "Sellado de conductos",
+        "Realizado por la Dra. Alondra Robles",
+        "Indicaciones para después del tratamiento",
+        "Plan para proteger tu diente (resina o corona)",
+        "Precio claro antes de empezar"
+      ],
+      "cta": "Pregunta el precio por WhatsApp",
+      "consultation": "Mándanos foto o cuéntanos tus síntomas y te orientamos"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Resolvemos tus dudas sobre la endodoncia",
+      "questions": [
+        {
+          "q": "¿Cuánto cuesta una endodoncia en Guadalajara?",
+          "a": "Depende del diente: un diente de enfrente tiene un conducto y una muela puede tener tres o más. En tu valoración con la Dra. Alondra Robles revisamos el diente con radiografía y te damos el precio exacto antes de empezar."
+        },
+        {
+          "q": "¿La endodoncia duele?",
+          "a": "No. El diente se anestesia y el tratamiento se siente como una resina. Después puedes tener una molestia leve por unos días, que se controla con analgésicos comunes."
+        },
+        {
+          "q": "¿Qué es una endodoncia o tratamiento de conducto?",
+          "a": "Es el tratamiento que retira el nervio inflamado o infectado de adentro del diente, limpia y desinfecta los conductos y los sella. Así se quita el dolor y se conserva el diente en lugar de extraerlo."
+        },
+        {
+          "q": "¿Cuántas citas necesito?",
+          "a": "La mayoría de las endodoncias se terminan en una o dos citas. Si hay una infección fuerte, a veces se necesita una cita más."
+        },
+        {
+          "q": "¿Es mejor sacar la muela que hacer una endodoncia?",
+          "a": "Casi siempre es mejor conservar tu diente natural. Si se extrae, después hay que reponerlo con un implante o un puente para que los demás dientes no se muevan, lo cual suele costar más."
+        },
+        {
+          "q": "¿Necesito una corona después de la endodoncia?",
+          "a": "En muelas casi siempre se recomienda una corona, porque el diente queda más frágil. En dientes de enfrente a veces basta con una resina. Te decimos qué necesita tu diente en la valoración."
+        },
+        {
+          "q": "¿Qué pasa si no me hago la endodoncia?",
+          "a": "La infección puede avanzar, formar un absceso, dañar el hueso y hacer que pierdas el diente. El dolor puede irse por un tiempo, pero la infección sigue."
+        },
+        {
+          "q": "¿Qué cuidados tengo después del tratamiento?",
+          "a": "Evita morder fuerte con ese diente hasta que se coloque la restauración final, toma los medicamentos que te indiquemos y mantén tu higiene normal. Te damos las indicaciones por escrito."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Agenda por WhatsApp",
+      "title": "¿Te duele una muela?",
+      "subtitle": "No esperes a que empeore. Escríbenos y agenda tu valoración para endodoncia con la Dra. Alondra Robles en Guadalajara.",
+      "ctaWhatsApp": "Agendar por WhatsApp",
+      "ctaCall": "Llamar ahora",
+      "trust1": "Precio claro antes de empezar",
+      "trust2": "Con anestesia local",
+      "trust3": "Horarios flexibles"
     }
   }
 }
