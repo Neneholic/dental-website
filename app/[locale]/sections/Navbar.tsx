@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phone, Menu, X, Globe, ChevronDown } from 'lucide-react'
+import { Menu, X, Globe, ChevronDown, ArrowRight } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link, usePathname, useRouter } from '@/i18n/routing'
 import { useParams } from 'next/navigation'
@@ -27,12 +27,12 @@ const ToothIcon = () => (
 )
 
 // Icono animado de Lordicon para el submenú de servicios (mismos que las tarjetas del hero)
-const SubmenuIcon = ({ src, size }: { src: string; size: number }) => (
+const SubmenuIcon = ({ src, size, colors = 'primary:#164e63,secondary:#0891b2' }: { src: string; size: number; colors?: string }) => (
   <LordIcon
     src={src}
     trigger="hover"
     target="a"
-    colors="primary:#164e63,secondary:#0891b2"
+    colors={colors}
     loading="lazy"
     aria-hidden="true"
     className="shrink-0"
@@ -54,6 +54,7 @@ type NavbarProps = {
 
 export function Navbar({ solid = false }: NavbarProps = {}) {
   const t = useTranslations('nav')
+  const th = useTranslations('hero')
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
@@ -61,6 +62,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,16 +94,29 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
       href: getNavHref('#services'),
       hash: '#services',
       icon: <ToothIcon />,
-      submenu: [
-        { name: t('valuation'), href: getNavHref('#valoracion'), lordicon: '/icons/lordicon/valuation.json' },
-        { name: t('cleaning'), href: '/servicios/limpieza-dental', lordicon: '/icons/lordicon/cleaning.json' },
-        { name: t('whitening'), href: '/servicios/blanqueamiento-dental', lordicon: '/icons/lordicon/whitening.json' },
-        { name: t('crowns'), href: '/servicios/coronas-dentales', lordicon: '/icons/lordicon/crowns.json' },
-        { name: t('endodontics'), href: '/servicios/endodoncia', lordicon: '/icons/lordicon/endodontics.json' },
-      ]
+      submenu: true,
     },
     { name: t('contact'), href: getNavHref('#location'), hash: '#location' },
   ]
+
+  // Megamenú de Servicios: la valoración va destacada y los tratamientos en lista
+  const featuredService = {
+    name: t('valuation'),
+    desc: th('services.valuation.desc'),
+    href: getNavHref('#valoracion'),
+    lordicon: '/icons/lordicon/valuation.json',
+  }
+  const treatments = [
+    { key: 'cleaning', href: '/servicios/limpieza-dental' },
+    { key: 'whitening', href: '/servicios/blanqueamiento-dental' },
+    { key: 'crowns', href: '/servicios/coronas-dentales' },
+    { key: 'endodontics', href: '/servicios/endodoncia' },
+  ].map(({ key, href }) => ({
+    name: t(key),
+    desc: th(`services.${key}.desc`),
+    href,
+    lordicon: `/icons/lordicon/${key}.json`,
+  }))
 
   // En el inicio, Link a la misma URL no hace nada: subir al tope a mano
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -171,15 +186,14 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
             {/* Desktop Navigation */}
             <div
               className={cn(
-                'hidden md:flex items-center gap-1 px-2 py-1.5 rounded-full',
+                'relative hidden md:flex items-center gap-1 px-2 py-1.5 rounded-full',
                 useLightStyle ? 'bg-gray-100' : 'bg-white/30 backdrop-blur-md'
               )}
             >
               {navLinks.map((link, index) => (
-                <div key={link.name} className="relative">
+                <div key={link.name} className={link.submenu ? undefined : 'relative'}>
                   {link.submenu ? (
-                    <div 
-                      className="relative"
+                    <div
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
@@ -213,30 +227,83 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
                         </Link>
                       </motion.div>
                       
-                      {/* Submenu */}
+                      {/* Megamenú (centrado bajo la barra; el pt-3 mantiene el hover al bajar el cursor) */}
                       <AnimatePresence>
                         {isServicesOpen && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 10 }}
-                            transition={{ duration: 0.2 }}
-                            className={cn(
-                              'absolute top-full left-0 mt-2 py-2 px-1 rounded-xl shadow-lg min-w-[200px]',
-                              useLightStyle ? 'bg-white' : 'bg-white/95 backdrop-blur-sm'
-                            )}
-                          >
-                            {link.submenu.map((item) => (
-                              <Link
-                                key={item.name}
-                                href={item.href}
-                                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors whitespace-nowrap"
-                              >
-                                <SubmenuIcon src={item.lordicon} size={28} />
-                                {item.name}
-                              </Link>
-                            ))}
-                          </motion.div>
+                          <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
+                            <motion.div
+                              initial={{ opacity: 0, y: 10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: 10 }}
+                              transition={{ duration: 0.2 }}
+                              className="grid w-[min(720px,calc(100vw-2rem))] grid-cols-[230px_1fr] gap-3 rounded-2xl bg-white p-3 shadow-2xl ring-1 ring-black/5"
+                            >
+                              {/* Destacado: Cita de Valoración */}
+                              <div className="flex flex-col rounded-xl bg-gradient-to-br from-[#164e63] to-[#0e7490] p-5 text-white">
+                                <span className="text-[11px] font-semibold uppercase tracking-wider text-cyan-100/80">
+                                  {t('megaStart')}
+                                </span>
+                                <Link
+                                  href={featuredService.href}
+                                  onClick={() => setIsServicesOpen(false)}
+                                  className="group mt-3 block"
+                                >
+                                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
+                                    <SubmenuIcon src={featuredService.lordicon} size={40} />
+                                  </span>
+                                  <span className="mt-3 block text-lg font-semibold leading-tight group-hover:underline underline-offset-4">
+                                    {featuredService.name}
+                                  </span>
+                                  <span className="mt-1 block text-sm leading-snug text-cyan-50/80">
+                                    {featuredService.desc}
+                                  </span>
+                                </Link>
+                                <a
+                                  href={fullWhatsAppLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={() => trackWhatsAppClick('navbar_megamenu')}
+                                  className="mt-5 flex items-center justify-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-green-600 transition-colors hover:bg-gray-100"
+                                >
+                                  <WhatsAppIcon />
+                                  {t('megaCta')}
+                                </a>
+                              </div>
+
+                              {/* Tratamientos */}
+                              <div className="flex flex-col py-2 pr-1">
+                                <span className="px-3 text-[11px] font-semibold uppercase tracking-wider text-gray-400">
+                                  {t('megaTreatments')}
+                                </span>
+                                <div className="mt-2 grid grid-cols-2 gap-1">
+                                  {treatments.map((item) => (
+                                    <Link
+                                      key={item.href}
+                                      href={item.href}
+                                      onClick={() => setIsServicesOpen(false)}
+                                      className="group flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-[#EAF2F8]"
+                                    >
+                                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#EAF2F8] transition-colors group-hover:bg-white">
+                                        <SubmenuIcon src={item.lordicon} size={32} />
+                                      </span>
+                                      <span className="min-w-0">
+                                        <span className="block text-sm font-semibold text-gray-900">{item.name}</span>
+                                        <span className="mt-0.5 block text-xs leading-snug text-gray-500">{item.desc}</span>
+                                      </span>
+                                    </Link>
+                                  ))}
+                                </div>
+                                <Link
+                                  href={link.href}
+                                  onClick={() => setIsServicesOpen(false)}
+                                  className="mt-auto ml-3 inline-flex items-center gap-1 self-start pt-3 text-sm font-medium text-[#0e7490] hover:text-[#164e63]"
+                                >
+                                  {t('megaAll')}
+                                  <ArrowRight className="h-4 w-4" />
+                                </Link>
+                              </div>
+                            </motion.div>
+                          </div>
                         )}
                       </AnimatePresence>
                     </div>
@@ -338,39 +405,92 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.div
-              className="absolute right-0 top-0 h-full w-3/4 max-w-sm bg-white shadow-2xl p-6 pt-20"
+              className="absolute right-0 top-0 h-full w-[85%] max-w-sm overflow-y-auto bg-white shadow-2xl p-6 pt-20"
             >
               <div className="flex flex-col gap-4">
-                {navLinks.map((link, index) => (
+                {navLinks.map((link) => (
                   <div key={link.name}>
-                    <Link
-                      href={link.href as any}
-                      onClick={() => !link.submenu && setIsMobileMenuOpen(false)}
-                      className="text-lg font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-gray-600 transition-colors block"
-                    >
-                      <span className="inline-flex items-center gap-2">
-                        {link.icon}
+                    {link.submenu ? (
+                      <>
+                        <button
+                          type="button"
+                          onClick={() => setIsMobileServicesOpen((open) => !open)}
+                          aria-expanded={isMobileServicesOpen}
+                          className="flex w-full items-center justify-between text-lg font-medium text-gray-900 py-3 border-b border-gray-100 text-left"
+                        >
+                          <span className="inline-flex items-center gap-2">
+                            {link.icon}
+                            {link.name}
+                          </span>
+                          <ChevronDown className={cn('w-5 h-5 transition-transform', isMobileServicesOpen && 'rotate-180')} />
+                        </button>
+                        <AnimatePresence initial={false}>
+                          {isMobileServicesOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.25 }}
+                              className="overflow-hidden"
+                            >
+                              <div className="pt-3 space-y-2">
+                                {/* Destacado: Cita de Valoración */}
+                                <Link
+                                  href={featuredService.href}
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                  className="flex items-center gap-3 rounded-xl bg-gradient-to-br from-[#164e63] to-[#0e7490] p-3 text-white"
+                                >
+                                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white">
+                                    <SubmenuIcon src={featuredService.lordicon} size={34} />
+                                  </span>
+                                  <span className="min-w-0">
+                                    <span className="block text-[11px] font-semibold uppercase tracking-wider text-cyan-100/80">{t('megaStart')}</span>
+                                    <span className="block font-semibold leading-tight">{featuredService.name}</span>
+                                    <span className="mt-0.5 block text-xs leading-snug text-cyan-50/80">{featuredService.desc}</span>
+                                  </span>
+                                </Link>
+                                {/* Tratamientos */}
+                                {treatments.map((item) => (
+                                  <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="flex items-center gap-3 rounded-xl p-2 hover:bg-[#EAF2F8]"
+                                  >
+                                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#EAF2F8]">
+                                      <SubmenuIcon src={item.lordicon} size={30} />
+                                    </span>
+                                    <span className="min-w-0">
+                                      <span className="block text-sm font-semibold text-gray-900">{item.name}</span>
+                                      <span className="block text-xs leading-snug text-gray-500">{item.desc}</span>
+                                    </span>
+                                  </Link>
+                                ))}
+                                <Link
+                                  href={link.href}
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                  className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-[#0e7490]"
+                                >
+                                  {t('megaAll')}
+                                  <ArrowRight className="h-4 w-4" />
+                                </Link>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </>
+                    ) : (
+                      <Link
+                        href={link.href as any}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-lg font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-gray-600 transition-colors block"
+                      >
                         {link.name}
-                      </span>
-                    </Link>
-                    {link.submenu && (
-                      <div className="pl-4 mt-2 space-y-2">
-                        {link.submenu.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="flex items-center gap-3 text-sm text-gray-600 py-2 hover:text-gray-900"
-                          >
-                            <SubmenuIcon src={item.lordicon} size={28} />
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
+                      </Link>
                     )}
                   </div>
                 ))}
-                
+
                 {/* Language Switch Mobile */}
                 <button
                   onClick={() => {

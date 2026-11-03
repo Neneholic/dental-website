@@ -15,7 +15,11 @@
     "cleaning": "Dental Cleaning",
     "valuation": "Valuation Appointment",
     "contact": "Contact",
-    "endodontics": "Root Canal"
+    "endodontics": "Root Canal",
+    "megaStart": "Start here",
+    "megaCta": "Book on WhatsApp",
+    "megaTreatments": "Treatments",
+    "megaAll": "See all services"
   },
   "hero": {
     "title1": "Smiles",

@@ -9,6 +9,7 @@ export type WhatsAppClickLocation =
   | 'hero'
   | 'navbar_desktop'
   | 'navbar_mobile'
+  | 'navbar_megamenu'
   | 'about'
   | 'services'
   | 'consultation'
