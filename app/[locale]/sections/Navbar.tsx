@@ -241,11 +241,11 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
                               {/* Destacado: Cita de Valoración */}
                               <div className="relative isolate flex min-h-[400px] flex-col overflow-hidden rounded-xl p-6 text-white">
                                 <img
-                                  src="/images/endodoncia-guadalajara-hero.webp"
+                                  src="/images/endodoncia-radiografia-consulta-guadalajara.webp"
                                   alt=""
                                   aria-hidden="true"
                                   loading="lazy"
-                                  className="absolute inset-0 -z-10 h-full w-full object-cover object-[72%_20%]"
+                                  className="absolute inset-0 -z-10 h-full w-full object-cover object-[36%_20%]"
                                 />
                                 <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#164e63] via-[#164e63]/75 to-[#164e63]/10" aria-hidden="true" />
                                 <span className="self-start rounded-full bg-white/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
