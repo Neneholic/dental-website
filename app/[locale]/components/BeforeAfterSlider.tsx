@@ -13,6 +13,8 @@ interface BeforeAfterSliderProps {
   beforeLabel?: string
   afterLabel?: string
   className?: string
+  /** Estilo de la etiqueta "Después" (por defecto, verde) */
+  afterLabelClassName?: string
 }
 
 export function BeforeAfterSlider({
@@ -23,6 +25,7 @@ export function BeforeAfterSlider({
   beforeLabel = 'Antes',
   afterLabel = 'Después',
   className,
+  afterLabelClassName,
 }: BeforeAfterSliderProps) {
   const [position, setPosition] = useState(50)
   const [isHinting, setIsHinting] = useState(true)
@@ -112,7 +115,7 @@ export function BeforeAfterSlider({
       <div className="absolute top-4 left-4 px-3 py-1.5 bg-black/60 backdrop-blur-sm text-white text-xs md:text-sm rounded-full font-medium pointer-events-none">
         {beforeLabel}
       </div>
-      <div className="absolute top-4 right-4 px-3 py-1.5 bg-green-600 text-white text-xs md:text-sm rounded-full font-medium pointer-events-none">
+      <div className={cn('absolute top-4 right-4 px-3 py-1.5 bg-green-600 text-white text-xs md:text-sm rounded-full font-medium pointer-events-none', afterLabelClassName)}>
         {afterLabel}
       </div>
 

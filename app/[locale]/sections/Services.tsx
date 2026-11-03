@@ -11,7 +11,7 @@ import { trackWhatsAppClick } from '../lib/analytics'
 import { cn } from '../lib/utils'
 
 // Servicios del carrusel: textos tomados de cada página de servicio (messages/*.json)
-const SERVICE_SLIDES = [
+export const SERVICE_SLIDES = [
   {
     key: 'cleaning',
     href: '/servicios/limpieza-dental',
