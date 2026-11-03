@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Globe, ChevronDown, ArrowRight } from 'lucide-react'
+import { Menu, X, Globe, ChevronDown, ArrowRight, Phone } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link, usePathname, useRouter } from '@/i18n/routing'
 import { useParams } from 'next/navigation'
@@ -236,25 +236,33 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: 10 }}
                               transition={{ duration: 0.2 }}
-                              className="grid w-[min(720px,calc(100vw-2rem))] grid-cols-[230px_1fr] gap-3 rounded-2xl bg-white p-3 shadow-2xl ring-1 ring-black/5"
+                              className="grid w-[min(900px,calc(100vw-2rem))] grid-cols-[300px_1fr] gap-4 rounded-2xl bg-white p-4 shadow-2xl ring-1 ring-black/5"
                             >
                               {/* Destacado: Cita de Valoración */}
-                              <div className="flex flex-col rounded-xl bg-gradient-to-br from-[#164e63] to-[#0e7490] p-5 text-white">
-                                <span className="text-[11px] font-semibold uppercase tracking-wider text-cyan-100/80">
+                              <div className="relative isolate flex min-h-[400px] flex-col overflow-hidden rounded-xl p-6 text-white">
+                                <img
+                                  src="/images/endodoncia-guadalajara-hero.webp"
+                                  alt=""
+                                  aria-hidden="true"
+                                  loading="lazy"
+                                  className="absolute inset-0 -z-10 h-full w-full object-cover object-[72%_20%]"
+                                />
+                                <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#164e63] via-[#164e63]/75 to-[#164e63]/10" aria-hidden="true" />
+                                <span className="self-start rounded-full bg-white/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
                                   {t('megaStart')}
                                 </span>
                                 <Link
                                   href={featuredService.href}
                                   onClick={() => setIsServicesOpen(false)}
-                                  className="group mt-3 block"
+                                  className="group mt-auto block pt-10"
                                 >
                                   <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
                                     <SubmenuIcon src={featuredService.lordicon} size={40} />
                                   </span>
-                                  <span className="mt-3 block text-lg font-semibold leading-tight group-hover:underline underline-offset-4">
+                                  <span className="mt-3 block text-xl font-semibold leading-tight group-hover:underline underline-offset-4">
                                     {featuredService.name}
                                   </span>
-                                  <span className="mt-1 block text-sm leading-snug text-cyan-50/80">
+                                  <span className="mt-1 block text-sm leading-snug text-white/85">
                                     {featuredService.desc}
                                   </span>
                                 </Link>
@@ -263,32 +271,40 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   onClick={() => trackWhatsAppClick('navbar_megamenu')}
-                                  className="mt-5 flex items-center justify-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-green-600 transition-colors hover:bg-gray-100"
+                                  className="mt-5 flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-white px-4 py-3 text-sm font-semibold text-green-600 transition-colors hover:bg-gray-100"
                                 >
                                   <WhatsAppIcon />
                                   {t('megaCta')}
+                                </a>
+                                <a
+                                  href="tel:+523322259513"
+                                  className="mt-2 flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white/60 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/15"
+                                >
+                                  <Phone className="h-5 w-5" aria-hidden="true" />
+                                  <span className="sr-only">{t('megaCall')} </span>
+                                  33 2225 9513
                                 </a>
                               </div>
 
                               {/* Tratamientos */}
                               <div className="flex flex-col py-2 pr-1">
-                                <span className="px-3 text-[11px] font-semibold uppercase tracking-wider text-gray-400">
+                                <span className="px-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
                                   {t('megaTreatments')}
                                 </span>
-                                <div className="mt-2 grid grid-cols-2 gap-1">
+                                <div className="mt-3 grid grid-cols-2 gap-2">
                                   {treatments.map((item) => (
                                     <Link
                                       key={item.href}
                                       href={item.href}
                                       onClick={() => setIsServicesOpen(false)}
-                                      className="group flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-[#EAF2F8]"
+                                      className="group flex items-start gap-4 rounded-xl p-4 transition-colors hover:bg-[#EAF2F8]"
                                     >
-                                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#EAF2F8] transition-colors group-hover:bg-white">
-                                        <SubmenuIcon src={item.lordicon} size={32} />
+                                      <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#EAF2F8] transition-colors group-hover:bg-white">
+                                        <SubmenuIcon src={item.lordicon} size={40} />
                                       </span>
                                       <span className="min-w-0">
-                                        <span className="block text-sm font-semibold text-gray-900">{item.name}</span>
-                                        <span className="mt-0.5 block text-xs leading-snug text-gray-500">{item.desc}</span>
+                                        <span className="block text-base font-semibold text-gray-900">{item.name}</span>
+                                        <span className="mt-1 block text-sm leading-snug text-gray-500">{item.desc}</span>
                                       </span>
                                     </Link>
                                   ))}
@@ -296,7 +312,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
                                 <Link
                                   href={link.href}
                                   onClick={() => setIsServicesOpen(false)}
-                                  className="mt-auto ml-3 inline-flex items-center gap-1 self-start pt-3 text-sm font-medium text-[#0e7490] hover:text-[#164e63]"
+                                  className="mt-auto ml-4 inline-flex items-center gap-1 self-start pt-4 text-base font-medium text-[#0e7490] hover:text-[#164e63]"
                                 >
                                   {t('megaAll')}
                                   <ArrowRight className="h-4 w-4" />
