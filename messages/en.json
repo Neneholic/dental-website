@@ -68,32 +68,8 @@
     "cta": "Schedule via WhatsApp",
     "ourServices": "our services",
     "valuationLink": "Not sure which one to choose? Book a valuation appointment",
-    "cavityProtection": {
-      "title": "Cosmetic Dentistry",
-      "description": "Teeth whitening, porcelain veneers, and smile design. Transform your image with personalized treatments tailored to your needs.",
-      "readMore": "More info"
-    },
-    "rootCanal": {
-      "title": "Endodontics",
-      "description": "Root canal treatments with advanced technology and minimal invasion. We save your natural teeth with painless procedures.",
-      "readMore": "More info"
-    },
-    "oralSurgery": {
-      "title": "Dental Implants",
-      "description": "Recover your smile with state-of-the-art implants. Implant placement with quality guarantee and lasting results.",
-      "readMore": "More info"
-    },
     "whiteningFeature": {
-      "number": "/02",
-      "title": "Teeth",
-      "titleAccent": "Whitening",
       "description": "Professional whitening treatments help remove discoloration caused by food, drinks, and the natural changes of enamel over time. The procedure is performed in a controlled clinical environment, with attention to comfort and enamel safety.",
-      "tags": [
-        "Whitening System",
-        "LED Activation",
-        "Sensitivity Control",
-        "Protective Solution"
-      ],
       "checklist": [
         "Current tooth shade evaluation",
         "Enamel and sensitivity assessment",
@@ -101,8 +77,7 @@
         "Gum and soft tissue protection",
         "Post-treatment care instructions",
         "Recommendations"
-      ],
-      "cta": "Book Appointment"
+      ]
     }
   },
   "works": {

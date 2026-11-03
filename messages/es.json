@@ -68,32 +68,8 @@
     "cta": "Agendar por WhatsApp",
     "ourServices": "nuestros servicios",
     "valuationLink": "¿No sabes cuál elegir? Agenda una cita de valoración",
-    "cavityProtection": {
-      "title": "Estética Dental",
-      "description": "Blanqueamiento dental, carillas de porcelana y diseño de sonrisa. Transforma tu imagen con tratamientos personalizados según tus necesidades.",
-      "readMore": "Más info"
-    },
-    "rootCanal": {
-      "title": "Endodoncia",
-      "description": "Tratamientos de conducto con tecnología avanzada y mínima invasión. Salvamos tus dientes naturales con procedimientos indoloros.",
-      "readMore": "Más info"
-    },
-    "oralSurgery": {
-      "title": "Implantes Dentales",
-      "description": "Recupera tu sonrisa con implantes de última generación. Colocación de implantes con garantía de calidad y resultados duraderos.",
-      "readMore": "Más info"
-    },
     "whiteningFeature": {
-      "number": "/02",
-      "title": "Blanqueamiento",
-      "titleAccent": "Dental",
       "description": "Los tratamientos de blanqueamiento profesional ayudan a eliminar la decoloración causada por alimentos, bebidas y cambios naturales del esmalte con el tiempo. El procedimiento se realiza en un entorno clínico controlado, con atención a la comodidad y seguridad del esmalte.",
-      "tags": [
-        "Sistema de Blanqueamiento",
-        "Activación LED",
-        "Control de Sensibilidad",
-        "Solución Protectora"
-      ],
       "checklist": [
         "Evaluación del tono dental actual",
         "Evaluación de esmalte y sensibilidad",
@@ -101,8 +77,7 @@
         "Protección de encías y tejidos blandos",
         "Instrucciones de cuidado post-tratamiento",
         "Recomendaciones"
-      ],
-      "cta": "Agendar Cita"
+      ]
     }
   },
   "works": {
