@@ -17,7 +17,7 @@ const SERVICE_SLIDES = [
     href: '/servicios/limpieza-dental',
     lordicon: '/icons/lordicon/cleaning.json',
     image: '/images/limpieza-dental-guadalajara-hero.webp',
-    imagePosition: 'object-[40%_center]',
+    imagePosition: 'object-[52%_center]',
     alt: {
       es: 'Limpieza dental profesional con la Dra. Alondra Robles en Guadalajara',
       en: 'Professional dental cleaning with Dr. Alondra Robles in Guadalajara',
@@ -35,7 +35,7 @@ const SERVICE_SLIDES = [
     href: '/servicios/blanqueamiento-dental',
     lordicon: '/icons/lordicon/whitening.json',
     image: '/images/about-8.webp',
-    imagePosition: 'object-center',
+    imagePosition: 'object-[26%_center]',
     alt: {
       es: 'Paciente sonriendo tras tratamiento de estética dental con la Dra. Alondra Robles en Guadalajara',
       en: 'Patient smiling after a cosmetic dental treatment with Dr. Alondra Robles in Guadalajara',
@@ -71,7 +71,7 @@ const SERVICE_SLIDES = [
     href: '/servicios/endodoncia',
     lordicon: '/icons/lordicon/endodontics.json',
     image: '/images/endodoncia-guadalajara-hero.webp',
-    imagePosition: 'object-[62%_center]',
+    imagePosition: 'object-[95%_center]',
     alt: {
       es: 'La Dra. Alondra Robles, dentista que realiza endodoncias en Guadalajara',
       en: 'Dr. Alondra Robles, dentist who performs root canals in Guadalajara',
@@ -257,7 +257,8 @@ export function Services() {
         {/* Carrusel centrado: la tarjeta activa al centro y las vecinas asomando a los lados.
             Todas comparten la misma celda de la cuadrícula, así miden lo mismo de alto. */}
         <div className="relative mt-6">
-          <div className="-mx-4 overflow-hidden sm:-mx-6 lg:-mx-8">
+          {/* En escritorio el carrusel ocupa todo el ancho de la pantalla */}
+          <div className="relative -mx-4 overflow-hidden sm:-mx-6 lg:mx-[calc(50%-50vw)]">
             <div
               id="service-panel"
               role="tabpanel"
@@ -276,7 +277,7 @@ export function Services() {
                     initial={false}
                     animate={{
                       x: `${offset * 100}%`,
-                      opacity: isActive ? 1 : isVisible ? 0.45 : 0,
+                      opacity: isActive ? 1 : isVisible ? 0.7 : 0,
                     }}
                     transition={jumps[i] ? { duration: 0 } : { duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                     drag={isActive ? 'x' : false}
@@ -285,7 +286,7 @@ export function Services() {
                     onDragEnd={handleDragEnd}
                     onClick={!isActive && isVisible ? () => goTo(i) : undefined}
                     className={cn(
-                      'col-start-1 row-start-1 w-[86%] justify-self-center px-1.5 sm:px-2 lg:w-[78%]',
+                      'col-start-1 row-start-1 w-[86%] justify-self-center px-1.5 sm:px-2 lg:w-[min(1180px,74vw)] lg:px-3',
                       isActive ? 'z-10' : 'z-0',
                       !isActive && isVisible && 'cursor-pointer'
                     )}
@@ -295,6 +296,16 @@ export function Services() {
                 )
               })}
             </div>
+
+            {/* Degradado al color del fondo para que las tarjetas de los lados se desvanezcan */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 left-0 z-20 w-[7%] bg-gradient-to-r from-white via-white/80 to-transparent lg:w-[calc((100vw-min(1180px,74vw))/2)]"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[7%] bg-gradient-to-l from-white via-white/80 to-transparent lg:w-[calc((100vw-min(1180px,74vw))/2)]"
+            />
           </div>
 
           {/* Flechas y puntos */}
