@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
+import { motion, type PanInfo } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
 import { Check, Calendar, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import { LordIcon } from '@lordicon/react'
@@ -88,38 +88,102 @@ const SERVICE_SLIDES = [
 
 const SWIPE_THRESHOLD = 60
 
+type Slide = (typeof SERVICE_SLIDES)[number]
+
 export function Services() {
   const t = useTranslations('services')
   const tAll = useTranslations()
   const locale = useLocale() as 'es' | 'en'
 
-  const [[active, direction], setSlide] = useState<[number, number]>([0, 0])
+  // [activa, anterior]: la anterior sirve para saber qué tarjeta dio la vuelta
+  const [[active, previous], setSlide] = useState<[number, number]>([0, 0])
   const total = SERVICE_SLIDES.length
 
+  // Posición de cada tarjeta respecto a la activa en un carrusel circular:
+  // -1 = asoma a la izquierda, 0 = centro, 1 = asoma a la derecha, 2 = oculta.
+  const offsetOf = (i: number, current: number) => ((i - current + total + 1) % total) - 1
+  // Las tarjetas que pasan de un extremo al otro saltan sin animarse (van ocultas)
+  const jumps = SERVICE_SLIDES.map((_, i) => Math.abs(offsetOf(i, active) - offsetOf(i, previous)) > 1)
+
   const goTo = (index: number) => {
-    const next = (index + total) % total
-    if (next === active) return
-    setSlide([next, index > active ? 1 : -1])
+    const target = (index + total) % total
+    if (target !== active) setSlide([target, active])
   }
-  const prev = () => setSlide([(active - 1 + total) % total, -1])
-  const next = () => setSlide([(active + 1) % total, 1])
+  const prev = () => goTo(active - 1)
+  const next = () => goTo(active + 1)
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
     if (info.offset.x < -SWIPE_THRESHOLD) next()
     else if (info.offset.x > SWIPE_THRESHOLD) prev()
   }
 
-  const slide = SERVICE_SLIDES[active]
-  const title = tAll(`nav.${slide.key}`)
-  const description =
-    slide.key === 'whitening'
-      ? t('whiteningFeature.description')
-      : tAll(`${slide.key}.hero.subtitle`)
-  const checklist: string[] =
-    slide.checklist === null
-      ? (t.raw('whiteningFeature.checklist') as string[])
-      : slide.checklist.map((k) => tAll(`${slide.key}.benefits.${k}`))
-  const whatsappHref = `https://wa.me/523322259513?text=${encodeURIComponent(slide.whatsapp[locale])}`
+  const slideContent = (slide: Slide, index: number) => {
+    const description =
+      slide.key === 'whitening'
+        ? t('whiteningFeature.description')
+        : tAll(`${slide.key}.hero.subtitle`)
+    const checklist: string[] =
+      slide.checklist === null
+        ? (t.raw('whiteningFeature.checklist') as string[])
+        : slide.checklist.map((k) => tAll(`${slide.key}.benefits.${k}`))
+    const whatsappHref = `https://wa.me/523322259513?text=${encodeURIComponent(slide.whatsapp[locale])}`
+
+    return (
+      // Info y foto en dos columnas que se estiran a la misma altura
+      <div className={cn('grid h-full lg:grid-cols-2 items-stretch rounded-3xl overflow-hidden', slide.tint)}>
+        {/* Imagen (arriba en móvil, a la derecha en escritorio) */}
+        <div className="relative h-56 sm:h-72 lg:order-2 lg:h-full lg:min-h-[480px]">
+          <img
+            src={slide.image}
+            alt={slide.alt[locale]}
+            draggable={false}
+            loading={index === 0 ? undefined : 'lazy'}
+            className={cn('absolute inset-0 h-full w-full object-cover', slide.imagePosition)}
+          />
+        </div>
+
+        {/* Contenido */}
+        <div className="flex flex-col p-6 md:p-10 lg:order-1">
+          <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
+            {`/0${index + 1}`}
+          </p>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{tAll(`nav.${slide.key}`)}</h3>
+          <p className="text-gray-600 leading-relaxed mb-8">{description}</p>
+
+          <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-8">
+            {checklist.map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <div className={cn('w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5', slide.accent)}>
+                  <Check className="w-3 h-3 text-gray-800" />
+                </div>
+                <span className="text-gray-700">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-auto flex flex-wrap items-center gap-4">
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('services')}
+              className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition-colors"
+            >
+              {t('cta')}
+              <Calendar className="w-5 h-5" />
+            </a>
+            <Link
+              href={slide.href}
+              className="inline-flex items-center gap-1 font-medium text-gray-800 hover:text-gray-950"
+            >
+              {locale === 'es' ? 'Conoce más' : 'Learn more'}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <section id="services" className="py-24 md:py-32 bg-white overflow-hidden">
@@ -190,84 +254,47 @@ export function Services() {
           })}
         </div>
 
-        {/* Carrusel */}
+        {/* Carrusel centrado: la tarjeta activa al centro y las vecinas asomando a los lados.
+            Todas comparten la misma celda de la cuadrícula, así miden lo mismo de alto. */}
         <div className="relative mt-6">
-          <div
-            id="service-panel"
-            role="tabpanel"
-            aria-labelledby={`service-tab-${slide.key}`}
-            className="relative overflow-hidden rounded-3xl"
-          >
-            <AnimatePresence mode="wait" initial={false} custom={direction}>
-              <motion.div
-                key={slide.key}
-                custom={direction}
-                variants={{
-                  enter: (d: number) => ({ opacity: 0, x: d >= 0 ? 80 : -80 }),
-                  center: { opacity: 1, x: 0 },
-                  exit: (d: number) => ({ opacity: 0, x: d >= 0 ? -80 : 80 }),
-                }}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.15}
-                onDragEnd={handleDragEnd}
-                className={cn('grid lg:grid-cols-2 items-stretch rounded-3xl overflow-hidden', slide.tint)}
-              >
-                {/* Imagen (arriba en móvil, a la derecha en escritorio) */}
-                <div className="relative h-64 sm:h-80 lg:order-2 lg:h-auto lg:min-h-[480px]">
-                  <img
-                    src={slide.image}
-                    alt={slide.alt[locale]}
-                    draggable={false}
-                    className={cn('absolute inset-0 h-full w-full object-cover', slide.imagePosition)}
-                  />
-                </div>
-
-                {/* Contenido */}
-                <div className="p-8 md:p-12 lg:order-1">
-                  <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
-                    {`/0${active + 1}`}
-                  </p>
-                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h3>
-                  <p className="text-gray-600 leading-relaxed mb-8">{description}</p>
-
-                  <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-8">
-                    {checklist.map((item) => (
-                      <div key={item} className="flex items-start gap-3">
-                        <div className={cn('w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5', slide.accent)}>
-                          <Check className="w-3 h-3 text-gray-800" />
-                        </div>
-                        <span className="text-gray-700">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex flex-wrap items-center gap-4">
-                    <a
-                      href={whatsappHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => trackWhatsAppClick('services')}
-                      className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition-colors"
-                    >
-                      {t('cta')}
-                      <Calendar className="w-5 h-5" />
-                    </a>
-                    <Link
-                      href={slide.href}
-                      className="inline-flex items-center gap-1 font-medium text-gray-800 hover:text-gray-950"
-                    >
-                      {locale === 'es' ? 'Conoce más' : 'Learn more'}
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+          <div className="-mx-4 overflow-hidden sm:-mx-6 lg:-mx-8">
+            <div
+              id="service-panel"
+              role="tabpanel"
+              aria-labelledby={`service-tab-${SERVICE_SLIDES[active].key}`}
+              className="grid"
+            >
+              {SERVICE_SLIDES.map((s, i) => {
+                const offset = offsetOf(i, active)
+                const isActive = offset === 0
+                const isVisible = Math.abs(offset) <= 1
+                return (
+                  <motion.div
+                    key={s.key}
+                    aria-hidden={!isActive}
+                    inert={!isActive}
+                    initial={false}
+                    animate={{
+                      x: `${offset * 100}%`,
+                      opacity: isActive ? 1 : isVisible ? 0.45 : 0,
+                    }}
+                    transition={jumps[i] ? { duration: 0 } : { duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                    drag={isActive ? 'x' : false}
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={0.15}
+                    onDragEnd={handleDragEnd}
+                    onClick={!isActive && isVisible ? () => goTo(i) : undefined}
+                    className={cn(
+                      'col-start-1 row-start-1 w-[86%] justify-self-center px-1.5 sm:px-2 lg:w-[78%]',
+                      isActive ? 'z-10' : 'z-0',
+                      !isActive && isVisible && 'cursor-pointer'
+                    )}
+                  >
+                    {slideContent(s, i)}
+                  </motion.div>
+                )
+              })}
+            </div>
           </div>
 
           {/* Flechas y puntos */}
