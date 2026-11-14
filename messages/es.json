@@ -20,7 +20,8 @@
     "megaCta": "Agendar por WhatsApp",
     "megaTreatments": "Tratamientos",
     "megaAll": "Ver todos los servicios",
-    "megaCall": "Llamar al"
+    "megaCall": "Llamar al",
+    "veneers": "Carillas Dentales"
   },
   "hero": {
     "title1": "Sonrisas",
@@ -50,6 +51,10 @@
       "endodontics": {
         "title": "Endodoncia",
         "desc": "Quita el dolor y salva tu diente"
+      },
+      "veneers": {
+        "title": "Carillas Dentales",
+        "desc": "Una sonrisa natural, a tu medida"
       }
     }
   },
@@ -592,6 +597,156 @@
       "ctaCall": "Llamar ahora",
       "trust1": "Precio claro antes de empezar",
       "trust2": "Con anestesia local",
+      "trust3": "Horarios flexibles"
+    }
+  },
+  "veneers": {
+    "metadata": {
+      "title": "Carillas dentales en Guadalajara | Dra. Alondra Robles",
+      "description": "Carillas dentales en Guadalajara con la Dra. Alondra Robles: carillas de resina inyectada desde $2,900 y de cerámica desde $6,000 por diente. Agenda tu valoración por WhatsApp."
+    },
+    "hero": {
+      "badge": "Diseña tu nueva sonrisa",
+      "title1": "Carillas dentales en Guadalajara:",
+      "titleHighlight": "una sonrisa natural",
+      "title2": "y a tu medida",
+      "subtitle": "Mejora el color, la forma y el tamaño de tus dientes con carillas de resina inyectada o de cerámica, hechas por tu dentista, la Dra. Alondra Robles.",
+      "safe": "Resultado natural",
+      "duration": "Resina desde $2,900",
+      "ctaPrimary": "Agenda tu valoración",
+      "ctaSecondary": "Ver cómo funciona"
+    },
+    "stats": {
+      "experience": "Años de experiencia",
+      "rating": "Calificación en Google",
+      "types": "Tipos de carilla: resina y cerámica",
+      "visits": "Citas con resina inyectada, aprox."
+    },
+    "candidates": {
+      "label": "¿Son para ti?",
+      "title": "¿Qué pueden mejorar las carillas?",
+      "subtitle": "Las carillas cubren la cara visible del diente. Son ideales si quieres cambiar cómo se ve tu sonrisa.",
+      "color": "Dientes manchados u oscuros",
+      "colorDesc": "Manchas que no se quitan con blanqueamiento o dientes con un tono más oscuro que los demás.",
+      "shape": "Forma irregular",
+      "shapeDesc": "Dientes desparejos, puntiagudos o con bordes desgastados que quieres emparejar.",
+      "gaps": "Espacios entre dientes",
+      "gapsDesc": "Pequeños espacios o separaciones que se pueden cerrar sin ortodoncia.",
+      "chipped": "Dientes despostillados",
+      "chippedDesc": "Bordes rotos o desgastados que hacen que tu sonrisa se vea dispareja.",
+      "size": "Dientes pequeños",
+      "sizeDesc": "Dientes que se ven cortos o pequeños y que quieres que se vean proporcionados.",
+      "makeover": "Diseño de sonrisa",
+      "makeoverDesc": "Cambiar varios dientes a la vez para lograr una sonrisa uniforme y armónica."
+    },
+    "benefits": {
+      "label": "Beneficios",
+      "title": "¿Por qué hacer tus carillas con nosotros?",
+      "subtitle": "Carillas dentales en Guadalajara con la Dra. Alondra Robles, pensadas para que se vean como tus propios dientes.",
+      "natural": "Se ven naturales",
+      "naturalDesc": "Elegimos el color y la forma de cada carilla para que combine con tu cara y tu sonrisa.",
+      "twoOptions": "Dos opciones claras",
+      "twoOptionsDesc": "Resina inyectada desde $2,900 o cerámica desde $6,000 por diente. Te ayudamos a elegir la que te conviene.",
+      "design": "Planeamos tu sonrisa",
+      "designDesc": "Antes de empezar revisamos contigo el color, la forma y cuántos dientes conviene tratar.",
+      "conservative": "Cuidamos tus dientes",
+      "conservativeDesc": "Revisamos que tus dientes y encías estén sanos antes de colocar las carillas.",
+      "fast": "Resultado en pocas citas",
+      "fastDesc": "Las de resina inyectada suelen quedar en 1 o 2 citas. Las de cerámica se hacen en laboratorio y llevan unas citas más.",
+      "doctor": "Atención de la doctora",
+      "doctorDesc": "La Dra. Alondra Robles te atiende de principio a fin y te explica cada paso."
+    },
+    "process": {
+      "label": "Proceso",
+      "title": "¿Cómo se colocan las carillas?",
+      "subtitle": "Un proceso sencillo en 4 pasos",
+      "step1": "Valoración",
+      "step1Desc": "Revisamos tus dientes y encías, platicamos qué quieres cambiar y te decimos qué tipo de carilla te conviene.",
+      "step2": "Diseño de tu sonrisa",
+      "step2Desc": "Elegimos contigo el color, la forma y el tamaño de cada carilla.",
+      "step3": "Preparación",
+      "step3Desc": "Preparamos tus dientes y, en el caso de cerámica, tomamos las medidas para el laboratorio.",
+      "step4": "Colocación",
+      "step4Desc": "Colocamos tus carillas, ajustamos la mordida y te damos las indicaciones para cuidarlas."
+    },
+    "pricing": {
+      "label": "Precios",
+      "title": "Precio de las carillas dentales",
+      "subtitle": "Dos tipos de carilla, con precio por diente.",
+      "from": "Desde",
+      "perTooth": "por diente",
+      "resin": {
+        "name": "Carillas de resina inyectada",
+        "desc": "Una opción accesible para mejorar el color y la forma de tus dientes en poco tiempo.",
+        "features": [
+          "Resina de alta estética",
+          "Color elegido contigo",
+          "Pocas citas",
+          "Se pueden reparar si se despostillan"
+        ]
+      },
+      "ceramic": {
+        "name": "Carillas de cerámica",
+        "desc": "La opción de mayor estética y duración, hecha a la medida en laboratorio.",
+        "features": [
+          "Cerámica hecha en laboratorio",
+          "Color estable que no se mancha",
+          "Brillo y translucidez como un diente natural",
+          "Mayor duración"
+        ]
+      },
+      "badge": "Incluye valoración",
+      "note": "El precio final depende de cuántos dientes quieras tratar. Te damos el presupuesto exacto en tu valoración, antes de empezar.",
+      "cta": "Pregunta por tus carillas por WhatsApp",
+      "consultation": "Mándanos una foto de tu sonrisa y te orientamos"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Resolvemos tus dudas sobre las carillas dentales",
+      "questions": [
+        {
+          "q": "¿Cuánto cuestan las carillas dentales en Guadalajara?",
+          "a": "Con la Dra. Alondra Robles, las carillas de resina inyectada cuestan desde $2,900 por diente y las de cerámica desde $6,000 por diente. En tu valoración te damos el presupuesto exacto según cuántos dientes quieras tratar."
+        },
+        {
+          "q": "¿Qué diferencia hay entre carillas de resina y de cerámica?",
+          "a": "Las de resina inyectada son más accesibles y se hacen en menos citas. Las de cerámica se hacen en laboratorio, mantienen mejor el color, tienen más brillo natural y duran más. Te ayudamos a elegir según lo que buscas y tu presupuesto."
+        },
+        {
+          "q": "¿Qué es la resina inyectada?",
+          "a": "Es una técnica en la que la resina se coloca con una guía hecha a la medida de tu sonrisa. Así las carillas quedan con una forma uniforme y pareja."
+        },
+        {
+          "q": "¿Las carillas duelen?",
+          "a": "No. La colocación es cómoda y, si hace falta preparar el diente, usamos anestesia local."
+        },
+        {
+          "q": "¿Cuántos dientes necesito?",
+          "a": "Depende de tu sonrisa. Hay quien solo necesita uno o dos dientes y quien prefiere cambiar todos los que se ven al sonreír. Lo revisamos juntos en tu valoración."
+        },
+        {
+          "q": "¿Cuántas citas se necesitan?",
+          "a": "Las de resina inyectada suelen quedar en 1 o 2 citas. Las de cerámica llevan unas citas más porque se fabrican en laboratorio."
+        },
+        {
+          "q": "¿Las carillas se manchan?",
+          "a": "La cerámica casi no se mancha. La resina puede tomar algo de color con el tiempo (café, vino, cigarro), pero se puede pulir en tus revisiones."
+        },
+        {
+          "q": "¿Cómo cuido mis carillas?",
+          "a": "Cepíllate y usa hilo dental como siempre, evita morder cosas muy duras como hielo o plumas y acude a tus limpiezas y revisiones. Te damos las indicaciones al terminar."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Agenda por WhatsApp",
+      "title": "¿Listo para tu nueva sonrisa?",
+      "subtitle": "Escríbenos y agenda tu valoración para carillas dentales con la Dra. Alondra Robles en Guadalajara.",
+      "ctaWhatsApp": "Agendar por WhatsApp",
+      "ctaCall": "Llamar ahora",
+      "trust1": "Precio claro antes de empezar",
+      "trust2": "Resultado natural",
       "trust3": "Horarios flexibles"
     }
   }

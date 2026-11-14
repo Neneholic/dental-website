@@ -20,7 +20,8 @@
     "megaCta": "Book on WhatsApp",
     "megaTreatments": "Treatments",
     "megaAll": "See all services",
-    "megaCall": "Call"
+    "megaCall": "Call",
+    "veneers": "Dental Veneers"
   },
   "hero": {
     "title1": "Smiles",
@@ -50,6 +51,10 @@
       "endodontics": {
         "title": "Root Canal",
         "desc": "Stop the pain and save your tooth"
+      },
+      "veneers": {
+        "title": "Dental Veneers",
+        "desc": "A natural smile, made for you"
       }
     }
   },
@@ -592,6 +597,156 @@
       "ctaCall": "Call now",
       "trust1": "Clear price before we start",
       "trust2": "Local anesthesia",
+      "trust3": "Flexible hours"
+    }
+  },
+  "veneers": {
+    "metadata": {
+      "title": "Dental veneers in Guadalajara | Dr. Alondra Robles",
+      "description": "Dental veneers in Guadalajara with Dr. Alondra Robles: injected composite veneers from $2,900 MXN and ceramic veneers from $6,000 MXN per tooth. Book your consultation on WhatsApp."
+    },
+    "hero": {
+      "badge": "Design your new smile",
+      "title1": "Dental veneers in Guadalajara:",
+      "titleHighlight": "a natural smile",
+      "title2": "made for you",
+      "subtitle": "Improve the color, shape and size of your teeth with injected composite or ceramic veneers, done by your dentist, Dr. Alondra Robles.",
+      "safe": "Natural-looking result",
+      "duration": "Composite from $2,900",
+      "ctaPrimary": "Book your consultation",
+      "ctaSecondary": "See how it works"
+    },
+    "stats": {
+      "experience": "Years of experience",
+      "rating": "Google rating",
+      "types": "Veneer types: composite and ceramic",
+      "visits": "Visits for composite veneers, approx."
+    },
+    "candidates": {
+      "label": "Are they for you?",
+      "title": "What can veneers fix?",
+      "subtitle": "Veneers cover the visible side of the tooth. They're ideal if you want to change how your smile looks.",
+      "color": "Stained or dark teeth",
+      "colorDesc": "Stains that whitening can't remove, or teeth darker than the rest.",
+      "shape": "Uneven shape",
+      "shapeDesc": "Uneven, pointed or worn teeth you'd like to even out.",
+      "gaps": "Gaps between teeth",
+      "gapsDesc": "Small gaps that can be closed without braces.",
+      "chipped": "Chipped teeth",
+      "chippedDesc": "Broken or worn edges that make your smile look uneven.",
+      "size": "Small teeth",
+      "sizeDesc": "Teeth that look short or small and that you'd like to look balanced.",
+      "makeover": "Smile makeover",
+      "makeoverDesc": "Changing several teeth at once for an even, harmonious smile."
+    },
+    "benefits": {
+      "label": "Benefits",
+      "title": "Why get your veneers with us?",
+      "subtitle": "Dental veneers in Guadalajara with Dr. Alondra Robles, designed to look like your own teeth.",
+      "natural": "They look natural",
+      "naturalDesc": "We choose the color and shape of each veneer to match your face and smile.",
+      "twoOptions": "Two clear options",
+      "twoOptionsDesc": "Injected composite from $2,900 or ceramic from $6,000 MXN per tooth. We help you choose the right one.",
+      "design": "We plan your smile",
+      "designDesc": "Before we start, we review the color, shape and how many teeth to treat with you.",
+      "conservative": "We care for your teeth",
+      "conservativeDesc": "We make sure your teeth and gums are healthy before placing veneers.",
+      "fast": "Results in a few visits",
+      "fastDesc": "Injected composite veneers are usually done in 1 or 2 visits. Ceramic veneers are made in a lab and take a few more.",
+      "doctor": "Care from the doctor",
+      "doctorDesc": "Dr. Alondra Robles treats you from start to finish and explains every step."
+    },
+    "process": {
+      "label": "Process",
+      "title": "How are veneers placed?",
+      "subtitle": "A simple process in 4 steps",
+      "step1": "Consultation",
+      "step1Desc": "We check your teeth and gums, talk about what you want to change and recommend the right type of veneer.",
+      "step2": "Smile design",
+      "step2Desc": "Together we choose the color, shape and size of each veneer.",
+      "step3": "Preparation",
+      "step3Desc": "We prepare your teeth and, for ceramic veneers, take impressions for the lab.",
+      "step4": "Placement",
+      "step4Desc": "We place your veneers, adjust your bite and give you care instructions."
+    },
+    "pricing": {
+      "label": "Prices",
+      "title": "Dental veneer prices",
+      "subtitle": "Two types of veneers, priced per tooth.",
+      "from": "From",
+      "perTooth": "per tooth",
+      "resin": {
+        "name": "Injected composite veneers",
+        "desc": "An affordable option to improve the color and shape of your teeth quickly.",
+        "features": [
+          "High-aesthetic composite",
+          "Shade chosen with you",
+          "Few visits",
+          "Can be repaired if chipped"
+        ]
+      },
+      "ceramic": {
+        "name": "Ceramic veneers",
+        "desc": "The most aesthetic and longest-lasting option, custom-made in a lab.",
+        "features": [
+          "Lab-made ceramic",
+          "Stable color that doesn't stain",
+          "Shine and translucency like a natural tooth",
+          "Longer lasting"
+        ]
+      },
+      "badge": "Includes consultation",
+      "note": "The final price depends on how many teeth you want to treat. We give you the exact quote at your consultation, before we start.",
+      "cta": "Ask about veneers on WhatsApp",
+      "consultation": "Send us a photo of your smile and we'll guide you"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Frequently asked questions",
+      "subtitle": "Answers about dental veneers",
+      "questions": [
+        {
+          "q": "How much do dental veneers cost in Guadalajara?",
+          "a": "With Dr. Alondra Robles, injected composite veneers start at $2,900 MXN per tooth and ceramic veneers at $6,000 MXN per tooth. We give you the exact quote at your consultation based on how many teeth you want to treat."
+        },
+        {
+          "q": "What's the difference between composite and ceramic veneers?",
+          "a": "Injected composite veneers are more affordable and take fewer visits. Ceramic veneers are made in a lab, keep their color better, look more natural and last longer. We help you choose based on your goals and budget."
+        },
+        {
+          "q": "What is injected composite?",
+          "a": "It's a technique where composite is placed using a guide made to fit your smile, so the veneers come out even and uniform."
+        },
+        {
+          "q": "Do veneers hurt?",
+          "a": "No. Placement is comfortable and, if the tooth needs preparation, we use local anesthesia."
+        },
+        {
+          "q": "How many teeth do I need?",
+          "a": "It depends on your smile. Some people only need one or two teeth, others prefer to change all the teeth that show when they smile. We decide together at your consultation."
+        },
+        {
+          "q": "How many visits does it take?",
+          "a": "Injected composite veneers are usually done in 1 or 2 visits. Ceramic veneers take a few more because they are made in a lab."
+        },
+        {
+          "q": "Do veneers stain?",
+          "a": "Ceramic barely stains. Composite can pick up some color over time (coffee, wine, smoking), but it can be polished at your checkups."
+        },
+        {
+          "q": "How do I care for my veneers?",
+          "a": "Brush and floss as usual, avoid biting very hard things like ice or pens, and keep up with your cleanings and checkups. We give you instructions when we finish."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Book via WhatsApp",
+      "title": "Ready for your new smile?",
+      "subtitle": "Message us and book your dental veneers consultation with Dr. Alondra Robles in Guadalajara.",
+      "ctaWhatsApp": "Book via WhatsApp",
+      "ctaCall": "Call now",
+      "trust1": "Clear price before we start",
+      "trust2": "Natural-looking result",
       "trust3": "Flexible hours"
     }
   }

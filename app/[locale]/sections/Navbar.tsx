@@ -111,6 +111,7 @@ export function Navbar({ solid = false }: NavbarProps = {}) {
     { key: 'whitening', href: '/servicios/blanqueamiento-dental' },
     { key: 'crowns', href: '/servicios/coronas-dentales' },
     { key: 'endodontics', href: '/servicios/endodoncia' },
+    { key: 'veneers', href: '/servicios/carillas-dentales' },
   ].map(({ key, href }) => ({
     name: t(key),
     desc: th(`services.${key}.desc`),

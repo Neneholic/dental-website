@@ -40,6 +40,7 @@ export async function generateMetadata({
           'implantes dentales guadalajara',
           'ortodoncia guadalajara',
           'endodoncia guadalajara',
+          'carillas dentales guadalajara',
           'dra alondra robles',
           'dentista ladrón de guevara',
         ]
@@ -184,6 +185,11 @@ function DentistJsonLd({ locale }: { locale: string }) {
         '@type': 'MedicalProcedure',
         name: isEs ? 'Endodoncia (tratamiento de conducto)' : 'Root canal treatment',
         url: `${SITE_URL}${localePath(locale, '/servicios/endodoncia')}`,
+      },
+      {
+        '@type': 'MedicalProcedure',
+        name: isEs ? 'Carillas dentales' : 'Dental veneers',
+        url: `${SITE_URL}${localePath(locale, '/servicios/carillas-dentales')}`,
       },
       { '@type': 'MedicalProcedure', name: isEs ? 'Implantes dentales' : 'Dental implants' },
       { '@type': 'MedicalProcedure', name: isEs ? 'Ortodoncia' : 'Orthodontics' },

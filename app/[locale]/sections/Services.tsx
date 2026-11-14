@@ -84,6 +84,24 @@ const SERVICE_SLIDES = [
       en: 'Hello, I would like to book a root canal evaluation',
     },
   },
+  {
+    key: 'veneers',
+    href: '/servicios/carillas-dentales',
+    lordicon: '/icons/lordicon/veneers.json',
+    image: '/images/carillas-dentales-guadalajara-hero.webp',
+    imagePosition: 'object-[85%_center]',
+    alt: {
+      es: 'La Dra. Alondra Robles con la guía de color para carillas dentales en Guadalajara',
+      en: 'Dr. Alondra Robles with the shade guide for dental veneers in Guadalajara',
+    },
+    tint: 'bg-[#E8D5F2]/30',
+    accent: 'bg-[#E8D5F2]',
+    checklist: ['natural', 'twoOptions', 'design', 'conservative', 'fast', 'doctor'],
+    whatsapp: {
+      es: 'Hola, me gustaría agendar una valoración para carillas dentales',
+      en: 'Hello, I would like to book a dental veneers consultation',
+    },
+  },
 ] as const
 
 const SWIPE_THRESHOLD = 60
