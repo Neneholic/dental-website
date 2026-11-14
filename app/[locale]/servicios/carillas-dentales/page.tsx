@@ -168,11 +168,11 @@ export default async function CarillasPage({ params }: Props) {
       <Navbar />
       <main className="min-h-screen">
         <ServiceHero />
+        <SmileDesign />
         <ServiceStats />
         <ServiceCandidates />
         <ParallaxSection />
         <ServiceBenefits />
-        <SmileDesign />
         <ServiceProcess />
         <PricingCards />
         <ServiceFaq />
