@@ -7,7 +7,7 @@ import { useLocale } from 'next-intl'
 import { AnimatedSection } from '../components/AnimatedSection'
 
 // RESEÑAS REALES DE GOOGLE MY BUSINESS - DRA. ALONDRA ROBLES
-export const realGoogleReviews = {
+const realGoogleReviews = {
   es: [
     {
       id: 1,

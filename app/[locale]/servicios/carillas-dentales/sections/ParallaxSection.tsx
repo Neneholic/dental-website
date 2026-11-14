@@ -5,10 +5,51 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import { Star } from 'lucide-react';
 import { useLocale } from 'next-intl';
-import { realGoogleReviews } from '../../../sections/Testimonials';
 
-// Reseñas reales de Google (las mismas del inicio) sobre la foto de la doctora
-const REVIEW_IDS = [5, 2, 4];
+// Reseñas reales y recientes del perfil de Google (copiadas tal cual, nov 2026).
+// Son distintas a las del inicio a propósito.
+const REVIEWS = {
+  es: [
+    {
+      id: 'adrian',
+      name: 'Adrian Velazquez',
+      avatar: 'AV',
+      content: '¡La mejor odontóloga! Me he hecho varios tratamientos con ella y el resultado siempre ha sido perfecto. Su atención es impecable, muy profesional y con un trato super amable. ¡Totalmente recomendada!',
+    },
+    {
+      id: 'linette',
+      name: 'Linette Durante',
+      avatar: 'LD',
+      content: 'Quedé feliz con los resultados. La Dra. Alondra Robles explica detalladamente los procedimientos y es muy cuidadosa al momento de realizarlos',
+    },
+    {
+      id: 'jud',
+      name: 'Jud Aburto',
+      avatar: 'JA',
+      content: 'Excelente trato de la doctora, muy atenta, trabaja con cautela y aclara tus dudas sobre cada detalle del procedimiento, lo cual te brinda seguridad y confianza. Súper recomendada.',
+    },
+  ],
+  en: [
+    {
+      id: 'adrian',
+      name: 'Adrian Velazquez',
+      avatar: 'AV',
+      content: 'The best dentist! I’ve had several treatments with her and the result has always been perfect. Her care is impeccable, very professional and super kind. Totally recommended!',
+    },
+    {
+      id: 'linette',
+      name: 'Linette Durante',
+      avatar: 'LD',
+      content: 'I was happy with the results. Dr. Alondra Robles explains procedures in detail and is very careful when performing them.',
+    },
+    {
+      id: 'jud',
+      name: 'Jud Aburto',
+      avatar: 'JA',
+      content: 'Excellent care from the doctor: very attentive, works carefully and answers your questions about every detail of the procedure, which gives you security and confidence. Highly recommended.',
+    },
+  ],
+};
 
 function GoogleG({ className }: { className?: string }) {
   return (
@@ -24,7 +65,7 @@ function GoogleG({ className }: { className?: string }) {
 export function ParallaxSection() {
   const ref = useRef<HTMLDivElement>(null);
   const locale = useLocale() as 'es' | 'en';
-  const reviews = REVIEW_IDS.map((id) => realGoogleReviews[locale].find((r) => r.id === id)!).filter(Boolean);
+  const reviews = REVIEWS[locale];
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -67,7 +108,7 @@ export function ParallaxSection() {
                   <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
                 ))}
               </span>
-              <span className="text-white/80">{locale === 'es' ? 'en Google' : 'on Google'}</span>
+              <span className="text-white/80">{locale === 'es' ? '· 30 reseñas en Google' : '· 30 Google reviews'}</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold drop-shadow">
               {locale === 'es' ? 'Lo que dicen los pacientes de la Dra. Alondra Robles' : 'What Dr. Alondra Robles’ patients say'}
