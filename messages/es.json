@@ -663,7 +663,7 @@
       "step1": "Valoración",
       "step1Desc": "Revisamos tus dientes y encías, platicamos qué quieres cambiar y te decimos qué tipo de carilla te conviene.",
       "step2": "Diseño de tu sonrisa",
-      "step2Desc": "Elegimos contigo el color, la forma y el tamaño de cada carilla.",
+      "step2Desc": "Diseñamos tu sonrisa en digital con la forma y el color que elegimos contigo, y la apruebas antes de empezar.",
       "step3": "Preparación",
       "step3Desc": "Preparamos tus dientes y, en el caso de cerámica, tomamos las medidas para el laboratorio.",
       "step4": "Colocación",
@@ -748,6 +748,20 @@
       "trust1": "Precio claro antes de empezar",
       "trust2": "Resultado natural",
       "trust3": "Horarios flexibles"
+    },
+    "smileDesign": {
+      "label": "Diseño de sonrisa",
+      "title": "Primero diseñamos tu sonrisa",
+      "subtitle": "Antes de colocar cualquier carilla, la Dra. Alondra Robles diseña tu nueva sonrisa en digital. Así ves cómo quedará y decides con calma.",
+      "step1": "Fotos y análisis",
+      "step1Desc": "Tomamos fotos de tu sonrisa y revisamos tus dientes, encías y la forma de tu cara.",
+      "step2": "Diseño digital",
+      "step2Desc": "Diseñamos en el iPad la forma, el tamaño y el color de cada diente para que se vea natural en ti.",
+      "step3": "Lo revisas y apruebas",
+      "step3Desc": "Te mostramos el diseño, hacemos los ajustes que quieras y lo apruebas.",
+      "step4": "Empiezan tus carillas",
+      "step4Desc": "Con tu diseño aprobado, iniciamos el proceso de tus carillas de resina o de cerámica.",
+      "note": "Tu diseño es la guía de todo el tratamiento: nada se coloca hasta que te guste."
     }
   }
 }

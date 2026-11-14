@@ -7,6 +7,7 @@ import { ServiceHero } from './sections/ServiceHero'
 import { ServiceStats } from './sections/ServiceStats'
 import { ServiceCandidates } from './sections/ServiceCandidates'
 import { ServiceBenefits } from './sections/ServiceBenefits'
+import { SmileDesign } from './sections/SmileDesign'
 import { ServiceProcess } from './sections/ServiceProcess'
 import { ParallaxSection } from './sections/ParallaxSection'
 import { PricingCards } from './sections/PricingCards'
@@ -171,6 +172,7 @@ export default async function CarillasPage({ params }: Props) {
         <ServiceCandidates />
         <ParallaxSection />
         <ServiceBenefits />
+        <SmileDesign />
         <ServiceProcess />
         <PricingCards />
         <ServiceFaq />

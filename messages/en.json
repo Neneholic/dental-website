@@ -663,7 +663,7 @@
       "step1": "Consultation",
       "step1Desc": "We check your teeth and gums, talk about what you want to change and recommend the right type of veneer.",
       "step2": "Smile design",
-      "step2Desc": "Together we choose the color, shape and size of each veneer.",
+      "step2Desc": "We design your smile digitally with the shape and color chosen with you, and you approve it before we start.",
       "step3": "Preparation",
       "step3Desc": "We prepare your teeth and, for ceramic veneers, take impressions for the lab.",
       "step4": "Placement",
@@ -748,6 +748,20 @@
       "trust1": "Clear price before we start",
       "trust2": "Natural-looking result",
       "trust3": "Flexible hours"
+    },
+    "smileDesign": {
+      "label": "Smile design",
+      "title": "First, we design your smile",
+      "subtitle": "Before placing any veneer, Dr. Alondra Robles designs your new smile digitally. You see how it will look and decide calmly.",
+      "step1": "Photos and analysis",
+      "step1Desc": "We take photos of your smile and check your teeth, gums and facial features.",
+      "step2": "Digital design",
+      "step2Desc": "On the iPad we design the shape, size and color of each tooth so it looks natural on you.",
+      "step3": "You review and approve",
+      "step3Desc": "We show you the design, make any changes you want, and you approve it.",
+      "step4": "Your veneers begin",
+      "step4Desc": "With your approved design, we start the process for your composite or ceramic veneers.",
+      "note": "Your design guides the whole treatment: nothing is placed until you love it."
     }
   }
 }
