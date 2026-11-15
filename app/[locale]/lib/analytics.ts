@@ -17,6 +17,7 @@ export type WhatsAppClickLocation =
   | 'works'
   | 'footer_social'
   | 'footer_social_link'
+  | 'footer_cta'
   | 'pricing_whitening'
   | 'final_cta_whitening'
   | 'service_hero_whitening'
