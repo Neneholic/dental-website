@@ -11,7 +11,11 @@ export const routing = defineRouting({
   // Default locale ('es') serves at '/' without prefix; '/en' for English.
   // Old '/es/*' URLs still work (next-intl redirects them to '/*' preserving SEO).
   // Avoids the root-redirect that can drop gclid/utm params for Ads traffic.
-  localePrefix: 'as-needed'
+  localePrefix: 'as-needed',
+
+  // No redirigir según el idioma del navegador: quien llega de un anuncio en
+  // español a /servicios/... debe ver esa página, sin redirección a /en.
+  localeDetection: false
 });
 
 // Helper: build a locale-aware path (default locale has no prefix)
