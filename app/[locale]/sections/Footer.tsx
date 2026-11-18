@@ -103,7 +103,7 @@ export function Footer() {
   const linkClass = 'text-[#164e63]/75 hover:text-[#164e63] transition-colors'
 
   return (
-    <footer className="bg-gradient-to-b from-[#B8D4E8]/70 to-[#B8D4E8] text-[#164e63] rounded-t-3xl mx-4 sm:mx-6 lg:mx-8 pt-10 md:pt-14 pb-8 overflow-hidden">
+    <footer className="bg-gradient-to-b from-[#EAF2F8] via-[#B8D4E8]/60 via-35% to-[#B8D4E8] text-[#164e63] pt-16 md:pt-24 pb-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Franja de cierre */}
         <motion.div
