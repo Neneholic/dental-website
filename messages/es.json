@@ -632,8 +632,8 @@
       "shapeDesc": "Dientes desparejos, puntiagudos o con bordes desgastados que quieres emparejar.",
       "gaps": "Espacios entre dientes",
       "gapsDesc": "Pequeños espacios o separaciones que se pueden cerrar sin ortodoncia.",
-      "chipped": "Dientes despostillados",
-      "chippedDesc": "Bordes rotos o desgastados que hacen que tu sonrisa se vea dispareja.",
+      "oldFillings": "Resinas viejas que se notan",
+      "oldFillingsDesc": "Resinas o arreglos anteriores que cambiaron de color o se ven distintos a tus dientes.",
       "size": "Dientes pequeños",
       "sizeDesc": "Dientes que se ven cortos o pequeños y que quieres que se vean proporcionados.",
       "makeover": "Diseño de sonrisa",
@@ -682,7 +682,7 @@
           "Resina de alta estética",
           "Color elegido contigo",
           "Pocas citas",
-          "Se pueden reparar si se despostillan"
+          "Acabado pulido y natural"
         ]
       },
       "ceramic": {

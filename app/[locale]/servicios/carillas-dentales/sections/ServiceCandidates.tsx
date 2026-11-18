@@ -8,7 +8,7 @@ const candidateKeys = [
   { key: 'color', icon: Palette },
   { key: 'shape', icon: Ruler },
   { key: 'gaps', icon: Split },
-  { key: 'chipped', icon: Layers },
+  { key: 'oldFillings', icon: Layers },
   { key: 'size', icon: Smile },
   { key: 'makeover', icon: Sparkles },
 ];

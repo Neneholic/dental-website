@@ -632,8 +632,8 @@
       "shapeDesc": "Uneven, pointed or worn teeth you'd like to even out.",
       "gaps": "Gaps between teeth",
       "gapsDesc": "Small gaps that can be closed without braces.",
-      "chipped": "Chipped teeth",
-      "chippedDesc": "Broken or worn edges that make your smile look uneven.",
+      "oldFillings": "Old fillings that show",
+      "oldFillingsDesc": "Previous fillings or repairs that changed color or look different from your teeth.",
       "size": "Small teeth",
       "sizeDesc": "Teeth that look short or small and that you'd like to look balanced.",
       "makeover": "Smile makeover",
@@ -682,7 +682,7 @@
           "High-aesthetic composite",
           "Shade chosen with you",
           "Few visits",
-          "Can be repaired if chipped"
+          "Polished, natural finish"
         ]
       },
       "ceramic": {
